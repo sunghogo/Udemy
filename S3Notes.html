@@ -35,3 +35,31 @@ Click the emoji button next to the space bar, and the alphabetical keys will con
 Put the cursor in any text field you’d like to insert an emoji. This could be Microsoft Word, Chrome, or Notepad app.
 Press the WIN + . (full stop) keyboard shortcut, or else the WIN + ; (semicolon). Either will open an emoji picker over the text field.
 Emoji are divided into several categories: smiley faces and animals, people, celebrations and objects, food and plants, transportation and places, symbols.-->
+
+<!--HTML Forms-->
+<!--https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form-->
+<form> <!--form HTML element-->
+    <label>Name:</label> <!--label HTML element open/closing tags that displays label text-->
+    <input type="text"> <!--input HTML element self-closing tag that prompts user text input-->
+    <input type="color"> <!--"" choose color-->
+    <input type="checkbox"> <!--"" creates checkbox-->
+    <input type="submit"> <!--"" creates a submit button-->
+    <input type="file"> <!--"" choose file upload button-->
+    <input type="date"> <!--"" choose date from calendar-->
+    <input type="radio"> <!--"" radio prompt-->
+    <input type="range"> <!--"" choose range-->
+</form>
+
+<form action="" method="get" class="form-example">
+    <div class="form-example">
+      <label for="name">Enter your name: </label>
+      <input type="text" name="name" id="name" required>
+    </div>
+    <div class="form-example">
+      <label for="email">Enter your email: </label>
+      <input type="email" name="email" id="email" required>
+    </div>
+    <div class="form-example">
+      <input type="submit" value="Subscribe!">
+    </div>
+  </form>
