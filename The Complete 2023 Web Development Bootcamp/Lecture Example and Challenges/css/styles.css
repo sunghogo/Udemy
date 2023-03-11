@@ -1,0 +1,29 @@
+body {
+  background-color: #EAF6F6;
+}
+
+h1, h3 {
+  color: #66BFBF;
+
+}
+
+hr {
+  /* No longer need bg color
+  background-color: white;
+  */
+  /* Alternative way to implement single line of dots
+  border-style: none;
+  border-top-style: dotted;
+  */
+  /* Default height is 0px
+  height: 0px;
+  */
+  border-style: dotted none none none;
+  border-color: grey;
+  border-width: 5px;
+  width: 5%;
+}
+
+img {
+  height: 200px;
+}
