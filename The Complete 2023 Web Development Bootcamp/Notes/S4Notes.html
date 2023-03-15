@@ -100,7 +100,14 @@ background-color: unset;
 <!--CSS Precendence-->
 <!--
   Works in order of what gets processed first:
-  Inline CSS > Internal CSS > Exterior CSS
+  Inline CSS > Internal CSS > Exterior CSS > ID Selector > Class Selector > Tag Selector
 
-  For same scope, depends on whether what comes first. Tag selector vs class selector does not matter, only what gets processed first.
+  For same scope, depends on whether what comes first. Class and ID selectors take precedence over general tag selectors.
 -->
+
+<!--Classes vs. Ids-->
+<!--Only one instance of ID can be used-->
+<!--Each html element can have more than one class, but only one ID-->
+
+<!--Pseudoclasses-->
+<!--Preceded by a colon like img:hover-->
