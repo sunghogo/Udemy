@@ -1,0 +1,23 @@
+Question 1:
+What is the correct HTML for referring to an external CSS stylesheet? 
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+
+Question 2:
+Where in an HTML document is the correct place to refer to an internal style sheet?
+In the <head> section
+
+Question 3:
+Which HTML attribute is used to define inline styles?
+style
+
+Question 4:
+Which HTML tag is used to define an internal style sheet?
+<style>
+
+Question 5:
+Which is the correct CSS syntax?
+body {color:black;}
+
+Question 6:
+Which is more specific as a selector?
+id
