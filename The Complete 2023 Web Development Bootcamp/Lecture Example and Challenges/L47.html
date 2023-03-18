@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<!--The lecture method of display: inline-block doesn't get rid of inline spacing-->
+<style>
+.red {
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    position: relative;
+    /*
+    left: 200px;
+    */
+    display: inline-block;
+    left: 200px;
+    /*
+    left: 20px;
+    right: 200px;
+    top: 50px;
+    */
+    /* box gets pusehed ouside of element visibility but doesn't increase dimensions */
+}
+
+.blue {
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    position: relative;
+    /*
+    bottom: 100px;
+    */
+    display: inline-block;
+    right: 100px;
+}
+
+.yellow {
+    height: 100px;
+    width: 100px;
+    background-color: yellow;
+    position: relative;
+    /*
+    left: 100px;
+    bottom: 200px;
+    */
+    display: inline-block;
+    right: 100px;
+}
+</style>
+
+<html>
+    <body>
+        <div class="red">
+        </div>
+
+        <div class="blue">
+        </div>
+
+        <div class="yellow">
+        </div>
+    </body>
+</html>
