@@ -33,3 +33,7 @@ h1 {
     border: solid 10px;
     margin-left: 500px;
 }
+
+.pro {
+    text-decoration: underline;
+}
