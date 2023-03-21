@@ -4,6 +4,7 @@ body {
     margin: 0;
     text-align: center;
     font-family: 'Merriweather', serif;
+    color: #40514E;
     /*
     font-size: 2em;
     font-size: 200%;
@@ -44,23 +45,38 @@ h3 {
     font-family: 'Montserrat', sans-serif;
 }
 
-a {
-    color: #11999E;
-}
+hr {
+    border-style: dotted none none none;
+    border-color: lightgray;
+    border-width: 5px;
+    width: 5%;
+    margin: 100px auto 100px auto;
+  }
+
 
 /*** CLASS SELECTORS ***/
 .top-container {
-    background-color: #E4F9F5;
+    background-color: #EAf6F6;
     position: relative;
     padding-top: 100px;
+    margin-bottom: 100px;
 }
 
 .middle-container {
-
+    background-color: white;
 }
 
 .bottom-container {
-    
+    background-color: #66BFBF;
+    padding: 40px 0 40px 0;
+    text-align: center;
+}
+
+.profile {
+    width: 50%;
+    margin: 50px auto 50px auto;
+    text-align: center;
+    line-height: 2;
 }
 
 .skill-row {
@@ -83,11 +99,29 @@ a {
 }
 
 .code-skill-description {
-    clear: left;
 }
 
 .chilli-skill-description {
-    clear: right;
+}
+
+.contact-me {
+    width: 50%;
+    margin: 50px auto 50px auto;
+    text-align: center;
+    line-height: 2;
+}
+
+.footer-link {
+    color: #11999E;
+    margin: 0 1rem 0 1rem;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.footer-copyright {
+    margin: 40px 0 0 0;
+    color: #EAf6F6;
+    font-size: 0.75rem;
 }
 
 .pro {
