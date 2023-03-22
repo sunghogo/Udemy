@@ -31,4 +31,31 @@ L10 Values and Variables
 
     JS Variable names should be descriptive for cleaner code
 
+L12 Data Types
+    Every JS value is an Object or Primitive value
 
+    7 Primitive Data Types:
+    Numbers: In JS, all floating point numbers used for decimals and integers
+    String: Sequence of characters used for text
+    Boolean: Logical type that can only be true or false used for decision making
+    Undefined: Value taken by a variable that is not yet defined ('empty value')
+    Null: Also means 'empty value' in different context
+    Symbol (ES2015): Value that is unique and cannot be chaned [Not useful for now]
+    BigInt (ES2020): Larger integers than the Number type can hold
+
+    JS has dynamic typing: We do not have to manually define the data type of hte value stored in a variable (VALUE has type, NOT variable). Instead, data types are determined automatically
+
+    Code comments are not executed
+    '//' for single line commenting
+    '/* */' for multi line commenting
+    CTRL + / to create single line comments
+
+    JS is sequentially exectued
+
+    'typeof' operator to see data type of value
+
+    String values needs matching single or double quotes
+
+    'let' is only used for declaring a variable for the first time
+
+    null outputs an object type, which is a bug preserved for legacy resasons
