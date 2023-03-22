@@ -13,3 +13,22 @@ L9 Linking a JavaScrip File
     Ctrl + B in VSCode to get rid of side popout
 
     Linking to <script src=""></script> is usually at the end of the html body tag
+
+L10 Values and Variables
+    Variables store literal values
+
+    Great for managing and retrieving values
+
+    Camelcase is common in JS, snakecase in Ruby and etc.
+
+    JS variables cannot start with a number; variable names can only contain letters, numbers, underscores, or dollar sign
+
+    JS variables also cannot be exactly named after reserved keywords like 'new' or 'function'; They can be named after nonreserverd keywords like 'name' but not good practice
+
+    JS variables also should not begin with upper case for convention
+
+    JS Variables that are all in uppercase are reserved for constants like 'PI'
+
+    JS Variable names should be descriptive for cleaner code
+
+
