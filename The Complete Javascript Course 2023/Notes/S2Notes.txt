@@ -1,12 +1,15 @@
 JavaScript Fundamentals - Part 1
+L7 Hello World!
     Install Chrome and open Developer Console
     Can compile and execute JS code from the browser
 
-JavaScript versions are ES# (ECMAScript)
-    Modern JS is ES6(2015)-ES11(2020)
-    
-';' at the end as delimiter is not necessary but good practice
+L8 A Brief Introduction to JavaScript
+    JavaScript versions are ES# (ECMAScript)
+        Modern JS is ES6(2015)-ES11(2020)
 
-Ctrl + B in VSCode to get rid of side popout
+L9 Linking a JavaScrip File
+    ';' at the end as delimiter is not necessary but good practice
 
-Linking to <script src=""></script> is usually at the end of the html body tag
+    Ctrl + B in VSCode to get rid of side popout
+
+    Linking to <script src=""></script> is usually at the end of the html body tag
