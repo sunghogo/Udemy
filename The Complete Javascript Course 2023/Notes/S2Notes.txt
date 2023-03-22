@@ -1,4 +1,5 @@
 JavaScript Fundamentals - Part 1
+
 L7 Hello World!
     Install Chrome and open Developer Console
     Can compile and execute JS code from the browser
@@ -59,3 +60,21 @@ L12 Data Types
     'let' is only used for declaring a variable for the first time
 
     null outputs an object type, which is a bug preserved for legacy resasons
+
+L13 let, const, var
+    let and const were introduced in ES6/Modern JS
+    var is the old way of declaring variables prior to ES6
+
+    reassigning a value to variable is also called "mutating" a variable
+
+    let is declare (mutable) variables that are supposed to have changing values
+
+    const is declare (immutable) variables that are not supposed to/cannot change; so we cannot declare empty const variables
+
+    good practice to have as little variable mutation so declare accordingly
+
+    let and var is pretty different under the hood, and var is depcrecated/no longer used
+
+    let is block-scoped and var is function-scoped
+
+    not declaring a variable and assigning a value does not actually create a variable within the scope, but a property on the global object
