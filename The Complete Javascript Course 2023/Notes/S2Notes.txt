@@ -121,3 +121,15 @@ L14 Basic Operators
 
     Console has access to variables from script
 
+L15 Operator Precedence
+    Check operator precedence table at MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
+
+    Math operators are generally executed before comparison operators
+
+    Most operators are executed left-to-right except Assignment Operators and Exponentiation
+
+    You can declare multiple variables in one line separated by a comma; You can assignm multiple variables in one line separated by '=';
+
+    Grouping/Parentheses has highest precedence
+
+    PEMDAS Mathematical precedence holds
