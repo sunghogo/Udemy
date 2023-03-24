@@ -133,3 +133,5 @@ L15 Operator Precedence
     Grouping/Parentheses has highest precedence
 
     PEMDAS Mathematical precedence holds
+
+    L17 Strings and Template Literals
