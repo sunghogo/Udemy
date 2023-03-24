@@ -71,10 +71,53 @@ L13 let, const, var
 
     const is declare (immutable) variables that are not supposed to/cannot change; so we cannot declare empty const variables
 
-    good practice to have as little variable mutation so declare accordingly
+    good practice to have as little variable mutation so use const/declare accordingly
 
     let and var is pretty different under the hood, and var is depcrecated/no longer used
 
     let is block-scoped and var is function-scoped
 
     not declaring a variable and assigning a value does not actually create a variable within the scope, but a property on the global object
+
+L14 Basic Operators
+    Operators does work with values
+
+    Different Types of Operators:
+    Mathematical
+    Comparison
+    Logical
+    Assignment
+    Etc.
+
+    console.log(value1, value2, value3, ...);
+
+    replace literal values used multiple times with variables
+
+    Mathematical operators:
+    Addition & Concatenation: +
+    Subtration: -
+    Multiplication: *
+    Division: /
+    Exponentiation: **
+
+    Operator precedence such that mathematical operators calculated first before assignment operator
+
+    Assignment operators:
+    Assignment: =
+    Add then assign: +=
+    Subtract then assign: -=
+    Multiply then assign: *=
+    Divide then assign: /=
+    Increment by 1: ++
+    Decrement by 1: --
+
+    Comparison operators:
+    ltt: <
+    gtt: >
+    lte: <=
+    gte: >=
+
+    Normally save the output of these operators/calculations in a variable
+
+    Console has access to variables from script
+
