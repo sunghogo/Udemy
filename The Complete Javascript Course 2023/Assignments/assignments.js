@@ -42,5 +42,9 @@ const averagePopulation = 33;
 const populationGreaterAverage = population < averagePopulation;
 console.log(populationGreaterAverage);
 
-const description = country + " is in " + continent + ", and its " + population + " million people speak " + language; 
+let description = country + " is in " + continent + ", and its " + population + " million people speak " + language; 
+console.log(description);
+
+// L17 Strings and Template Literals
+description = `${country} is in ${continent}, and its ${population} million people speak ${language}`;
 console.log(description);
