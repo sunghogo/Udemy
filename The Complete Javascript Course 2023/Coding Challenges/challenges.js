@@ -6,7 +6,7 @@ let heightJohn = 1.95;
 
 let BMIMark = massMark / heightMark ** 2;
 let BMIJohn = massJohn / (heightJohn * heightJohn);
-let markHigherBMI = BMIMark > BMIJohn;
+// let markHigherBMI = BMIMark > BMIJohn;
 
 // console.log(BMIMark, BMIJohn, markHigherBMI);
 if (BMIMark > BMIJohn) {
@@ -24,7 +24,7 @@ heightJohn = 1.76;
 
 BMIMark = massMark / heightMark ** 2;
 BMIJohn = massJohn / (heightJohn * heightJohn);
-markHigherBMI = BMIMark > BMIJohn;
+// markHigherBMI = BMIMark > BMIJohn;
 
 // console.log(BMIMark, BMIJohn, markHigherBMI);
 if (BMIMark > BMIJohn) {
