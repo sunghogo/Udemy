@@ -144,3 +144,14 @@ L17 Strings and Template Literals
     Some developers use backticks for all strings
 
     Before ES6, multiple line strings required '\n\' character but with template literals, it processes new lines naturally
+
+L18 Taking Decisions if / else Statements
+    if the conditions in the () is true, then the block of code in {} is executed; else it executes the else block {} and moves on if there is no else
+
+    condition is any code that returnes a true / false boolean value
+
+    WIN + . is the emoji shortcut on windows
+
+    this if / else statement is a control structure that controls how the code is executed
+
+    variables declared inside the code block is not accessible outside the code block / scope
