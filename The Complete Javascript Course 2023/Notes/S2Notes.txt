@@ -134,4 +134,13 @@ L15 Operator Precedence
 
     PEMDAS Mathematical precedence holds
 
-    L17 Strings and Template Literals
+L17 Strings and Template Literals
+    Numbers are automatically type converted into string for string concactenations
+
+    Template literals (ES6+) used to assemble strings in more a natural way
+
+    Literals begin/end with backticks `` and variables are dereferenced using '${variable}'
+
+    Some developers use backticks for all strings
+
+    Before ES6, multiple line strings required '\n\' character but with template literals, it processes new lines naturally
