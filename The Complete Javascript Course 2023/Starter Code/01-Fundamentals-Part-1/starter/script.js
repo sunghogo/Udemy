@@ -132,7 +132,6 @@ lines");
 console.log(`String
 multiple
 lines`);
-*/
 
 // L18 Taking Decisions if / else Statements
 const age = 15;
@@ -154,3 +153,6 @@ if (birthYear <= 2000) {
 }
 
 console.log(century);
+*/
+
+// L20 Type Conversion and Coercion

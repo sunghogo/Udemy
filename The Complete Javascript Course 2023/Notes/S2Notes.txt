@@ -137,7 +137,7 @@ L15 Operator Precedence
 L17 Strings and Template Literals
     Numbers are automatically type converted into string for string concactenations
 
-    Template literals (ES6+) used to assemble strings in more a natural way
+    Template literals (ES6+) can be used to assemble strings in more a natural way
 
     Literals begin/end with backticks `` and variables are dereferenced using '${variable}'
 
@@ -155,3 +155,5 @@ L18 Taking Decisions if / else Statements
     this if / else statement is a control structure that controls how the code is executed
 
     variables declared inside the code block is not accessible outside the code block / scope
+
+L20 Type Conversion and Coercion
