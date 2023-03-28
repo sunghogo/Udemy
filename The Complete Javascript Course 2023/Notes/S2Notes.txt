@@ -171,3 +171,17 @@ L20 Type Conversion and Coercion
     -, *, /, ** operators triggers coercion to number
 
     Many believe that type coercion is not good practice because of unexpected bugs, but it can useful/powerful when understood
+
+L21 Truthy and Falsy Values
+    Falsy values are values that are not exactly false but will become false if we try to convert them
+
+    JS has 5 falsy values:
+    0
+    ""
+    undefined
+    null
+    NaN
+
+    Everything else is a truthy value that will converted to true
+
+    Type coercions to booleans happen when using logical operators or logical context like if / else condition statement
