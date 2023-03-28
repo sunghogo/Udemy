@@ -153,7 +153,6 @@ if (birthYear <= 2000) {
 }
 
 console.log(century);
-*/
 
 // L20 Type Conversion and Coercion
 
@@ -182,3 +181,34 @@ console.log(n);
 
 console.log(2 + 3 + 4 + '5'); // '95'
 console.log('10' - '4' - '3' - 2  + '5') // '15'
+*/
+
+// L21 Truthy and Falsy Values
+
+// 5 falsy values: 0, '', undefined, null, NaN
+console.log(Boolean(0));
+console.log(Boolean(""));
+console.log(Boolean(undefined));
+console.log(Boolean(null));
+console.log(Boolean(NaN));
+console.log(Boolean());
+console.log(Boolean('Jonas'));
+console.log(Boolean({})); // empty object
+
+// const money = 0;
+const money = 100;
+
+if (money) {
+    console.log("Don't Spend it all");
+} else {
+    console.log('You should get a job!');
+}
+
+// let height;
+let height = 0;
+
+if (height) {
+    console.log('YAY! Height is defined');
+} else {
+    console.log('Height is UNDEFINED');
+}
