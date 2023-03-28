@@ -185,3 +185,12 @@ L21 Truthy and Falsy Values
     Everything else is a truthy value that will converted to true
 
     Type coercions to booleans happen when using logical operators or logical context like if / else condition statement
+
+L22 Equality Operators: == vs. ===
+    === strict equality operator does not perform type coercion and return true if both values are exactly the same
+
+    == loose equality operator does type coercion before comparing values
+
+    The loose operators can introduce weird behavior and bugs
+    
+    Best practice for clean code is to always use the strict equality operator

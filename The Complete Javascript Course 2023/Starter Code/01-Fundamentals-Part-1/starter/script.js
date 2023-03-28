@@ -181,7 +181,6 @@ console.log(n);
 
 console.log(2 + 3 + 4 + '5'); // '95'
 console.log('10' - '4' - '3' - 2  + '5') // '15'
-*/
 
 // L21 Truthy and Falsy Values
 
@@ -212,3 +211,14 @@ if (height) {
 } else {
     console.log('Height is UNDEFINED');
 }
+*/
+
+// L22 Equality Operators: == vs. ===
+// const age = 18;
+const age = '18';
+
+if (age === 18) console.log('You just became an adult :D (strict)');
+if (age == 18) console.log('You just became an adult :D (loose)');
+
+console.log('18' == 18);
+console.log('18' === 18);
