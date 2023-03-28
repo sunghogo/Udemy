@@ -157,3 +157,17 @@ L18 Taking Decisions if / else Statements
     variables declared inside the code block is not accessible outside the code block / scope
 
 L20 Type Conversion and Coercion
+    In JS, there is type conversion (manually/explicitly type convert/cast) and type coercion (when JS automatically/implicitly converts types for us behind the scenes)
+
+    Converting a string that is not a valid number returns a 'NaN' which is not a number/not a valid number (still type number)
+
+    Conversion Functions:
+    Number()
+    String()
+
+    Type coercion happens when two values have different types, and JS converts behind the scenes
+
+    + operator triggers coercion to string
+    -, *, /, ** operators triggers coercion to number
+
+    Many believe that type coercion is not good practice because of unexpected bugs, but it can useful/powerful when understood
