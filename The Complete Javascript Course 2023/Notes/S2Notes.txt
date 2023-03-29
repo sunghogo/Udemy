@@ -194,3 +194,10 @@ L22 Equality Operators: == vs. ===
     The loose operators can introduce weird behavior and bugs
     
     Best practice for clean code is to always use the strict equality operator
+
+    prompt() to get string input from user
+
+    if / else if / else - 'else if' can be used to check for additional conditions
+
+    !== strict not equal operator
+    != loose not equal operator
