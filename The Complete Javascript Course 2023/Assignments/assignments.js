@@ -64,3 +64,14 @@ console.log('19' - '13' + '17'); // '617'
 console.log('19' - '13' + 17); // 23
 console.log('123' < 57); // false
 console.log(5 + 6 + '4' + 9 - 4 - 2); // 1143
+
+// L22 Equality Operators: == vs. ===
+const numNeighbours = Number(prompt('How many neightbour countries does your country have?'));
+
+if (numNeighbours === 1) {
+    console.log('Only 1 border!');
+} else if (numNeighbours > 1) {
+    console.log('More than 1 border');
+} else {
+    console.log('No borders');
+}
