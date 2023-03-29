@@ -205,10 +205,15 @@ L22 Equality Operators: == vs. ===
 L23 Boolean Logic
     Boolean logic is a branch of CS that uses true and false values to solve complex problems 
 
-    AND: And operator returns true only if A and B are both true
+    AND operator returns true only if A and B are both true
 
-    OR: Or operator returns true if A or B are either true
+    OR operator returns true if A or B are either true
     
-    !: Not operator inverts true/false value
+    NOT operator inverts true/false value
 
-    !/NOT operator has precedence over AND and OR
+    NOT operator has precedence over AND and OR
+
+L24 Logical Operators
+    &&: AND
+    ||: OR
+    !: NOT
