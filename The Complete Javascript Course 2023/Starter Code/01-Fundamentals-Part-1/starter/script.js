@@ -211,7 +211,6 @@ if (height) {
 } else {
     console.log('Height is UNDEFINED');
 }
-*/
 
 // L22 Equality Operators: == vs. ===
 // const age = 18;
@@ -239,3 +238,17 @@ if (favourite === 23) { // 23 === 23
 }
 
 if (favourite !== 23) console.log('Why not 23?'); 
+*/
+
+// L23 Boolean Logic
+const age = 16
+const A = age >= 20; // false
+const B = age < 30; // true
+
+console.log(A); // false
+console.log(B); // true
+console.log(!A); // true
+console.log(A && B); // false
+console.log(A || B); // true
+console.log(!A && B); // true
+console.log(A || !B); // false
