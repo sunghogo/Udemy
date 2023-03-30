@@ -21,6 +21,7 @@ console.log(continent);
 console.log(population);\
 */
 
+
 // Lecture 13 let, const and var
 const language = "english";
 const country = "United States";
@@ -28,6 +29,7 @@ const continent = "North America";
 let population = "331.9";
 const isIsland = false;
 // isIsland = true;
+
 
 // Lecture 14: Basic Operators
 const halfPopulation = population / 2;
@@ -45,9 +47,11 @@ const populationGreaterAverage = population < averagePopulation;
 let description = country + " is in " + continent + ", and its " + population + " million people speak " + language; 
 // console.log(description);
 
+
 // L17 Strings and Template Literals
 description = `${country} is in ${continent}, and its ${population} million people speak ${language}`;
 // console.log(description);
+
 
 // L18 Taking Decisions if / else Statements
 /*
@@ -60,6 +64,7 @@ if (population > 33) {
 }
 */
 
+
 // L20 Type Conversion and Coercion
 /*
 console.log('9' - '5'); // 4
@@ -68,6 +73,7 @@ console.log('19' - '13' + 17); // 23
 console.log('123' < 57); // false
 console.log(5 + 6 + '4' + 9 - 4 - 2); // 1143
 */
+
 
 // L22 Equality Operators: == vs. ===
 /*
@@ -81,13 +87,14 @@ if (numNeighbours === 1) {
     console.log('No borders');
 }
 
+
 // L24 Logical Operators
 if ( language === 'english' && population < 50 && !isIsland) {
     console.log(`You should live in ${country} :)`);
 } else {
     console.log(`${country} does not meet your criteria :('`);
 }
-*/
+
 
 // L26 The switch Statement
 switch(language) {
@@ -111,3 +118,7 @@ switch(language) {
         console.log('Great language too :D');
         break;
 }
+*/
+
+
+// L28 The Conditional (Ternary) Operator
