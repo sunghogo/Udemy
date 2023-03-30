@@ -225,6 +225,6 @@ L26 The switch Statement
 
     switch() cases compares in strict equality
 
-    Need a 'break' statement at the end of each case otherwise the code will continue executing into other cases
+    Need a 'break' statement at the end of each case otherwise the code will continue executing into other cases, which may be useful for multiple cases to have the same output
 
     Set a 'default' case that will be executed if all the other cases fail
