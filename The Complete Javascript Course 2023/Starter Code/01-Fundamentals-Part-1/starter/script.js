@@ -238,7 +238,6 @@ if (favourite === 23) { // 23 === 23
 }
 
 if (favourite !== 23) console.log('Why not 23?'); 
-*/
 
 // L23 Boolean Logic
 const age = 16
@@ -252,3 +251,25 @@ console.log(A && B); // false
 console.log(A || B); // true
 console.log(!A && B); // true
 console.log(A || !B); // false
+*/
+
+// L24 Logical Operators
+const hasDriversLicense = true; // A
+// const hasGoodVision = false; // B
+const hasGoodVision = true; // B
+
+console.log(hasDriversLicense && hasGoodVision); // false
+console.log(hasDriversLicense || hasGoodVision); // true
+console.log(!hasDriversLicense); // false
+
+// const shouldDrive = hasDriversLicense && hasGoodVision;
+
+// const isTired = false // C
+const isTired = true; // C
+console.log(hasDriversLicense && hasGoodVision && isTired);
+
+if (hasDriversLicense && hasGoodVision && !isTired) {
+    console.log('Sarah is able to drive!');
+} else {
+    console.log('Someone else should drive...');
+}
