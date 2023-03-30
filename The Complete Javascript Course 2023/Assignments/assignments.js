@@ -122,3 +122,4 @@ switch(language) {
 
 
 // L28 The Conditional (Ternary) Operator
+console.log(`${country}'s population is ${population > 33 ? 'above' : 'below'} average`);
