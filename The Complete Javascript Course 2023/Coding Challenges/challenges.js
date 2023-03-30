@@ -36,7 +36,9 @@ if (BMIMark > BMIJohn) {
 }
 */
 
+
 // Coding Challenge #3
+/*
 // Data 1
 let scoreDolphins = (96 + 108 + 89) / 3;
 let scoreKoalas = (88 + 91 + 110) / 3;
@@ -79,3 +81,19 @@ if (scoreDolphins > scoreKoalas && scoreDolphins >= 100) {
 } else {
     console.log('No one wins the trophy 😭');
 }
+*/
+
+
+// Coding Challenge #4
+// Data 1
+let bill = 275;
+let tip = 50 <= bill && bill <= 300 ? bill * 0.15 : bill * 0.2;
+console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`);
+
+bill = 40;
+tip = 50 <= bill && bill <= 300 ? bill * 0.15 : bill * 0.2;
+console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`);
+
+bill = 430;
+tip = 50 <= bill && bill <= 300 ? bill * 0.15 : bill * 0.2;
+console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`);
