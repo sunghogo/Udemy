@@ -272,7 +272,6 @@ if (hasDriversLicense && hasGoodVision && !isTired) {
 } else {
     console.log('Someone else should drive...');
 }
-*/
 
 // L26 The switch Statement
 // const day = 'monday';
@@ -318,3 +317,24 @@ if (day === 'monday') {
 } else {
     console.log('Not a valid day!');
 }
+*/
+
+// L27 Statements and Expressions
+// Expressions that produce a value
+3 + 4
+1991
+true && false && !false
+
+// Statement that doesn't produce a value
+if (23 > 10) {
+    const str = 
+    '23 is bigger'; // this string is an expression
+    // the whole line is a statement
+}
+
+console.log(`I'm ${2037 - 1991} years old`); // this works
+/*
+console.log(`I'm ${if (23 > 10) {
+    const str = '23 is bigger';
+}} years old`); 
+*/ // this does not work
