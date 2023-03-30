@@ -241,3 +241,22 @@ L27 Statements and Expressions
     Template literals can only insert expressions but statements
 
     Variables are also expressions
+
+L28 The Conditional (Ternary) Operator
+    Three ways of writing conditions:
+    if / else statements
+    switch statements
+    conditional (ternary) operator
+
+    The Conditional Operator allows if / else functionality all in one line
+
+    ?: Conditional/Ternary Operator
+
+    The Conditional Operator has three parts:
+    condition ? if part : else part
+
+    An operator always produces a values; an operator is an expression so the Conditional/Ternary operator is an expression
+
+    Conditional/Ternary operator useful for declaring variables conditionally, otherwise have to declare and then assign variable separately
+
+    Conditional/Ternary Operator is not a replacement for bigger if else statements with multiple conditions/else ifs
