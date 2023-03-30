@@ -38,41 +38,44 @@ if (BMIMark > BMIJohn) {
 
 // Coding Challenge #3
 // Data 1
-let averageDolphins = (96 + 108 + 89) / 3;
-let averageKoalas = (88 + 91 + 110) / 3;
+let scoreDolphins = (96 + 108 + 89) / 3;
+let scoreKoalas = (88 + 91 + 110) / 3;
+console.log(scoreDolphins, scoreKoalas);
 
-if (averageDolphins > averageKoalas) {
-    console.log("Dolphins win!");
-} else if (averageDolphins === averageKoalas) {
-    console.log("It's a draw!");
+if (scoreDolphins > scoreKoalas) {
+    console.log("Dolphins win the tropy 🏆");
+} else if (scoreKoalas > scoreDolphins) {
+    console.log("Koalas win the tropy 🏆");
 } else {
-    console.log("Koalas win!");
+    console.log("Both win the trophy!");
 }
 
 // Bonus Data 1
-averageDolphins = (97 + 112 + 101) / 3;
-averageKoalas = (109 + 95 + 123) / 3;
+scoreDolphins = (97 + 112 + 101) / 3;
+scoreKoalas = (109 + 95 + 123) / 3;
+console.log(scoreDolphins, scoreKoalas);
 
-if (averageDolphins > averageKoalas && averageDolphins >= 100) {
-    console.log("Dolphins win!");
-} else if (averageDolphins === averageKoalas && averageDolphins >= 100) {
-    console.log("It's a draw!");
-} else if (averageDolphins < averageKoalas && averageKoalas >= 100) {
-    console.log("Koalas win!");
+if (scoreDolphins > scoreKoalas && scoreDolphins >= 100) {
+    console.log("Dolphins win the tropy 🏆");
+} else if (scoreKoalas > scoreDolphins && scoreKoalas >= 100) {
+    console.log("Koalas win the tropy 🏆");
+} else if (scoreDolphins === scoreKoalas && scoreDolphins >= 100 && scoreKoalas >= 100) {
+    console.log("Both win the trophy!");
 } else {
-    console.log("Nobody wins!");
+    console.log('No one wins the trophy 😭');
 }
 
 // Bonus Data 2
-averageDolphins = (97 + 112 + 101) / 3;
-averageKoalas = (109 + 95 + 106) / 3;
+scoreDolphins = (97 + 112 + 101) / 3;
+scoreKoalas = (109 + 95 + 106) / 3;
+console.log(scoreDolphins, scoreKoalas);
 
-if (averageDolphins > averageKoalas && averageDolphins >= 100) {
-    console.log("Dolphins win!");
-} else if (averageDolphins === averageKoalas && averageDolphins >= 100) {
-    console.log("It's a draw!");
-} else if (averageDolphins < averageKoalas && averageKoalas >= 100) {
-    console.log("Koalas win!");
+if (scoreDolphins > scoreKoalas && scoreDolphins >= 100) {
+    console.log("Dolphins win the tropy 🏆");
+} else if (scoreKoalas > scoreDolphins && scoreKoalas >= 100) {
+    console.log("Koalas win the tropy 🏆");
+} else if (scoreDolphins === scoreKoalas && scoreDolphins >= 100 && scoreKoalas >= 100) {
+    console.log("Both win the trophy!");
 } else {
-    console.log("Nobody wins!");
+    console.log('No one wins the trophy 😭');
 }
