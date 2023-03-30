@@ -264,8 +264,8 @@ console.log(!hasDriversLicense); // false
 
 // const shouldDrive = hasDriversLicense && hasGoodVision;
 
-// const isTired = false // C
-const isTired = true; // C
+// const isTired = true; // C
+const isTired = false; // C
 console.log(hasDriversLicense && hasGoodVision && isTired);
 
 if (hasDriversLicense && hasGoodVision && !isTired) {
