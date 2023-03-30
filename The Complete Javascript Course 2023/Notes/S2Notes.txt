@@ -228,3 +228,16 @@ L26 The switch Statement
     Need a 'break' statement at the end of each case otherwise the code will continue executing into other cases, which may be useful for multiple cases to have the same output
 
     Set a 'default' case that will be executed if all the other cases fail
+
+L27 Statements and Expressions
+    An expression is a piece of code that produces a value
+
+    A declaration/statement is like a complete sentence while expressions are words that up the sentence
+
+    Statenents do no produce a value like an if / else statement and switch statement
+
+    JS expects statements and expressions in different places
+
+    Template literals can only insert expressions but statements
+
+    Variables are also expressions
