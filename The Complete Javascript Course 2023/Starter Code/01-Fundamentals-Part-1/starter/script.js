@@ -29,6 +29,7 @@ let job2 = "teacher";
 
 console.log(myFirstJob);
 
+
 // L!2 Data Types
 let javascriptIsFun= true;
 console.log(true);
@@ -49,6 +50,7 @@ year = 1991;
 console.log(typeof year);
 
 console.log(typeof null);
+
 
 // L13 let, const, var
 let age = 30;
@@ -96,6 +98,7 @@ const isFullAge = ageSarah >= 18;
 
 console.log(now - 1991 > now - 2018);
 
+
 // L15 Operator Precedence
 const now = 2037
 const ageJonas = now - 1991;
@@ -109,6 +112,7 @@ console.log(x, y);
 
 const averageAge = (ageJonas + ageSarah) / 2
 console.log(ageJonas, ageSarah);
+
 
 // L17 Strings and Template Literals
 
@@ -133,6 +137,7 @@ console.log(`String
 multiple
 lines`);
 
+
 // L18 Taking Decisions if / else Statements
 const age = 15;
 
@@ -153,6 +158,7 @@ if (birthYear <= 2000) {
 }
 
 console.log(century);
+
 
 // L20 Type Conversion and Coercion
 
@@ -181,6 +187,7 @@ console.log(n);
 
 console.log(2 + 3 + 4 + '5'); // '95'
 console.log('10' - '4' - '3' - 2  + '5') // '15'
+
 
 // L21 Truthy and Falsy Values
 
@@ -212,6 +219,7 @@ if (height) {
     console.log('Height is UNDEFINED');
 }
 
+
 // L22 Equality Operators: == vs. ===
 // const age = 18;
 const age = '18';
@@ -238,6 +246,7 @@ if (favourite === 23) { // 23 === 23
 }
 
 if (favourite !== 23) console.log('Why not 23?'); 
+
 
 // L23 Boolean Logic
 const age = 16
@@ -272,6 +281,7 @@ if (hasDriversLicense && hasGoodVision && !isTired) {
 } else {
     console.log('Someone else should drive...');
 }
+
 
 // L26 The switch Statement
 // const day = 'monday';
@@ -317,7 +327,7 @@ if (day === 'monday') {
 } else {
     console.log('Not a valid day!');
 }
-*/
+
 
 // L27 Statements and Expressions
 // Expressions that produce a value
@@ -333,8 +343,8 @@ if (23 > 10) {
 }
 
 console.log(`I'm ${2037 - 1991} years old`); // this works
-/*
-console.log(`I'm ${if (23 > 10) {
-    const str = '23 is bigger';
-}} years old`); 
-*/ // this does not work
+// console.log(`I'm ${const str = '23 is bigger'} years old`);  // this does not work
+*/
+
+
+// L28 The Conditional (Ternary) Operator
