@@ -217,3 +217,14 @@ L24 Logical Operators
     &&: AND
     ||: OR
     !: NOT
+
+L26 The switch Statement
+    switch statement used to compare one value to multiple different values; alternative to conditional statements
+
+    Most of data comes from user input so in the real world, we would not be hard coding inputs like this
+
+    switch() cases compares in strict equality
+
+    Need a 'break' statement at the end of each case otherwise the code will continue executing into other cases
+
+    Set a 'default' case that will be executed if all the other cases fail
