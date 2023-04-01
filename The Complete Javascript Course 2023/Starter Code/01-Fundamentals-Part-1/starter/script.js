@@ -366,3 +366,6 @@ if (age >= 18) {
 console.log(drink2);
 
 console.log(`I like to drink ${age >= 18 ? 'wine 🍷' : 'water 💧'}`);
+
+
+// L30 JavaScript Releases: ES5, ES6+ and ESNext
