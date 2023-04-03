@@ -12,6 +12,7 @@ L32 Activating Strict Mode
 
     Prevents short list of variable names that are reserved for features that may be added to the language later; Similar to prventing the use of keywords as variable names
 
+
 L33 Functions
     Function is reusable chunks of code that allows us to write more maintainable code; like variables but for whole blocks of code
 
@@ -43,6 +44,7 @@ L33 Functions
 
     Once again, you can type variable names in the developer console to see their values
 
+
 L34 Function Declarations vs. Expressions
     Function declarations using the function keyword and a name
 
@@ -55,6 +57,7 @@ L34 Function Declarations vs. Expressions
     The main difference between function declarations and expressions is that you can call function declarations before they are defined in the code but not with expressions - this is due to a process called hoisting
 
     Both have their uses, and based on developer's preference
+
 
 L35 Arrow Functions
     Arrow function is a special form function expression that is shorter and faster to write
@@ -80,6 +83,7 @@ L35 Arrow Functions
     In VSCode, shortcut to switch tabs:
     CTRL + pg up/ pg dn
 
+
 L36 Functions Calling Other Functions
     Functions can call other functions, which is useful for the DRY principle and cleaner/maintainable code
 
@@ -90,6 +94,7 @@ L36 Functions Calling Other Functions
 
     In VSCode, shortcut to go to line:
     CTRL + G, input line number
+
 
 L37 Reviewing Functions
     Two functions can have the same parameter names because they are not related/in scope of each other (similar to local variables)
@@ -131,6 +136,7 @@ L37 Reviewing Functions
     Removed page lines scrolling, remapped to:
     CTRL + up arrow/down arrow
 
+
 L39 Introduction to Arrays
     Data structures that are like big containers where we can store variables/values, and then return it
 
@@ -151,7 +157,7 @@ L39 Introduction to Arrays
 
     Inside the brackets, we can put in any expression but not statements
 
-    Array values are mutable
+    Arrays are mutable (in values and size)
 
     'const' makes only primitive values immutable, not data structures due to how JS stores things in memory; however, we cannot reassign a new array to a const variable
 
@@ -162,3 +168,19 @@ L39 Introduction to Arrays
     Adding to an array does type coercian to the array, turning it into a  string with all the array values in 'value1, value2, etc..' format before concatenation
 
     Other mathematical operations on an array will return 'NaN'
+
+
+L40 Basic Array Operations (Methods)
+    JS has some built-in functions that apply to arrays, and these array operations are called methods
+
+    .push() is a method that appends a new value to the end of array, and returns the length of the new array
+
+    .unshift() is a method that prepends a new value to the start of array, and returns the length of the new array
+
+    .pop() is a method that removes the last value from the end of array, and returns the popped value
+    
+    .shift() is a method that removes the first value from the start of array, and returns the shifted value
+
+    .indexOf() is a method that returns the index of the passed element we want to reference, and returns -1 if not found
+
+    .includes() is an ES6+ method that returns trule if the passed element is in the array, and false if not; this method uses strict equality
