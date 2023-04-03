@@ -161,7 +161,6 @@ console.log(age1, age2, age3);
 
 const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length - 1])];
 console.log(ages);
-*/
 
 
 // L40 Basic Array Operations (Methods)
@@ -200,4 +199,23 @@ if (friends.includes('Peter')) {
     console.log('You have a friend called Peter');
 } else if (friends.includes('Steven')) {
     console.log('You have a friend called Steven');
+}
+*/
+
+
+// L42 Introduction to Objects
+const jonasArray = [
+    'Jonas',
+    'Schmedtmann',
+    2037 - 1991,
+    'teacher',
+    ['Michael', 'Peter', 'Steven']
+]
+
+const jonas = {
+    firstName: 'Jonas',
+    lastName: 'Schmedtmann',
+    age: 2037 - 1991,
+    job: 'teacher',
+    friends: ['Michael', 'Peter', 'Steven']
 }
