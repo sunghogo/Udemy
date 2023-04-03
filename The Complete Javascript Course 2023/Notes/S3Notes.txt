@@ -74,10 +74,10 @@ L35 Arrow Functions
     In VSCode, to wrap word in parentheses/other characters:
     Select word, () / ' / " / {} / etc.
 
-    In VSCode, to scroll to beginning/end line:
+    In VSCode, shortcut to scroll to beginning/end line:
     CTRL + home/end
 
-    In VSCode, to switch tabs:
+    In VSCode, shortcut to switch tabs:
     CTRL + pg up/ pg dn
 
 L36 Functions Calling Other Functions
@@ -87,3 +87,6 @@ L36 Functions Calling Other Functions
     2 is passed to apples paramenter of fruitProcessor(), which then passed to fruit paramenter of cutFruitPieces(), and storedi n variable applePieces
 
     Similarly, 3 is passed to oranges of both parameters, and stored into variable orangePieces
+
+    In VSCode, shortcut to go to line:
+    CTRL + G, input line number
