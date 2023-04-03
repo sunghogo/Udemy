@@ -65,7 +65,7 @@ const percentages = [
     percentageOfWorld1(population[0]), percentageOfWorld1(population[1]), percentageOfWorld1(population[2]), percentageOfWorld1(population[3])
 ];
 console.log(percentages);
-*/
+
 
 // L40 Basic Array Operations (Methods)
 const neighbours = ['Canada', 'Mexico'];
@@ -82,3 +82,15 @@ if (!neighbours.includes('Germany')) {
 
 neighbours[neighbours.indexOf('Canada')] = "People's Republic of Canada";
 console.log(neighbours);
+*/
+
+
+// L42 Introduction to Objects
+const myCountry = {
+    country: 'United States',
+    capital: 'Washington, D.C.',
+    language: 'english',
+    population: 332,
+    neighbours: ['Canada', 'Mexico']
+};
+console.log(myCountry);
