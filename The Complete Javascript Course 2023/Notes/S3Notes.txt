@@ -13,3 +13,32 @@ L32 Activating Strict Mode
     Prevents short list of variable names that are reserved for features that may be added to the language later; Similar to prventing the use of keywords as variable names
 
 L33 Functions
+    Function is reusable chunks of code that allows us to write more maintainable code; like variables but for whole blocks of code
+
+    Variables hold a value, functions hold one or more complete lines of code
+
+    'function' keyword
+
+    function name(inputs) {
+        "function buddy"
+    }
+
+    Using/Executing the function is also called invoking, running, or calling the function
+
+    We can pass and return data to/from a function
+
+    Parameters are like input variables that are specific only to this function, and are defined once the function is called
+
+    'return' keyword to return values from the function that we can store in variables
+
+    When invoking a function, we pass in real values that will be assigned to the parameters, which are called the arguments of a function
+
+    Specifying arguments or writing functions that are not called will not be executed
+
+    Functions that do not return a value will return a 'undefined' value
+
+    Clean Code: DRY Principle - Don't Repeat Yourself
+
+    console.log(), Number(), String() are built-in functions
+
+    Once again, you can type variable names in the developer console to see their values
