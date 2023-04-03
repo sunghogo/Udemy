@@ -229,6 +229,18 @@ L26 The switch Statement
 
     Set a 'default' case that will be executed if all the other cases fail
 
+    switch('variable name') {
+        case 'value 1':
+        case 'value 2':
+            "case body"
+            break;
+        case 'value 3':
+            "case body"
+            break;
+        default: 
+            "default body"
+    }
+
 L27 Statements and Expressions
     An expression is a piece of code that produces a value
 
