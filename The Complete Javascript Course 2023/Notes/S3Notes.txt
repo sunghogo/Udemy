@@ -188,7 +188,7 @@ L40 Basic Array Operations (Methods)
     .includes() is an ES6+ method that returns trule if the passed element is in the array, and false if not; this method uses strict equality
 
 
-L41 Introduction to Objects
+L42 Introduction to Objects
     Using multiple lines in data structure declaration is good for seeing the overview of the structure and cleaner code
 
     In arrays, there is no way to reference elements by name, only by their index number
@@ -198,14 +198,14 @@ L41 Introduction to Objects
     New Objects are declared using '{}', which is different from the curly braces used to define code blocks in if / else, switch, function body statements
 
     const 'variable name' = {
-        'key variable name 1' : 'value 1',
-        'key variable name 2' : 'value 2',
+        'propery 1' : 'value 1',
+        'property 2' : 'value 2',
         etc..
     }
 
     Each of the keys are also called properties
 
-    Two ways to create an objectarray:
+    To create an object:
         Object Literal Syntax/"Curly Braces":
         const 'object name' = {'value 1', 'value 2', etc..}
 
