@@ -30,7 +30,6 @@ console.log(percentageOfWorld1(popUS), percentageOfWorld1(popFinland), percentag
 
 
 console.log(percentageOfWorld2(popUS), percentageOfWorld2(popFinland), percentageOfWorld2(popPortugal));
-*/
 
 
 // L35 Arrow Functions
@@ -41,3 +40,15 @@ const percentageFinaland = percentageOfWorld3(6);
 const percentagePortugal = percentageOfWorld3(10);
 
 console.log(percentageUS, percentageFinaland, percentagePortugal);
+*/
+
+
+// L36 Functions Calling Other Functions
+function percentageOfWorld1(population) {
+    return (population / 7900) * 100;
+}
+
+const describePopulation = (country, population) => `${country} has ${population} million people, which is about ${percentageOfWorld1(population)}% of the world.`;
+
+console.log(describePopulation('US', 332), describePopulation('Finaland', 6), describePopulation('Portugal', 10));
+
