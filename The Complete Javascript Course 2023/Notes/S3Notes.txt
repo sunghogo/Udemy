@@ -42,3 +42,16 @@ L33 Functions
     console.log(), Number(), String() are built-in functions
 
     Once again, you can type variable names in the developer console to see their values
+
+L34 Function Declarations vs. Expressions
+    Function declarations using the function keyword and a name
+
+    Function expressions are using the function keyword without a name, also called an "anonymous function" 
+
+    Parameters are like the placeholders for the inputs of a function, while the arguments are the actual values
+
+    You can store functions in a variable as they are expressions that produce a value; you can then call the function using the variable name
+
+    The main difference between function declarations and expressions is that you can call function declarations before they are defined in the code but not with expressions - this is due to a process called hoisting
+
+    Both have their uses, and based on developer's preference
