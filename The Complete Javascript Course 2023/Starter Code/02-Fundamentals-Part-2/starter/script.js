@@ -121,7 +121,6 @@ const yearsUntilRetirement = function (birthYear, firstName) {
 
 console.log(yearsUntilRetirement(1991, 'Jonas'));
 console.log(yearsUntilRetirement(1970, 'Mike'));
-*/
 
 
 // L39 Introduction to Arrays
@@ -162,3 +161,43 @@ console.log(age1, age2, age3);
 
 const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length - 1])];
 console.log(ages);
+*/
+
+
+// L40 Basic Array Operations (Methods)
+const friends = ['Micahel', 'Steven', 'Peter'];
+
+// Add elements
+let newLength = friends.push('Jay');
+console.log(friends);
+console.log(newLength);
+
+
+newLength = friends.unshift('John');
+console.log(friends);
+console.log(newLength);
+
+// Remove elements
+friends.pop(); // Last element
+const popped = friends.pop();
+console.log(friends);
+console.log(popped);
+
+const shifted = friends.shift(); // First element
+console.log(friends);
+console.log(shifted);
+
+console.log(friends.indexOf('Steven'));
+console.log(friends.indexOf('Bob'));
+
+friends.push(23);
+console.log(friends.includes('Steven'));
+console.log(friends.includes('Bob'));
+console.log(friends.includes('23'));
+console.log(friends.includes(23));
+
+if (friends.includes('Peter')) {
+    console.log('You have a friend called Peter');
+} else if (friends.includes('Steven')) {
+    console.log('You have a friend called Steven');
+}
