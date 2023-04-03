@@ -213,3 +213,22 @@ L42 Introduction to Objects
         const 'array name' = new Array('value 1', 'value 2', etc..)
 
     The big difference between objects and array is that in objects, the order of the properties does not matter but in arrays, the order of elements does matter
+
+
+L43 Dot vs. Bracket Notation
+    Two ways to retrieve values from objects:
+        Dot Notation:
+            'object name'.'property name'
+
+        Brack Notation:
+            'object name'[" 'property name' "]
+    
+    '.' is an operator that will go to the specified object, and in this case, retrieve from the specified property
+
+    The big difference in the two notations is that with bracket notation, we can put any expression we like as long as it computes to appropriate proprty string
+
+    Use the dot notation which is cleaner when expressions does not need to be calculated for the property name
+
+    Accessing an undefined property returns 'undefined'
+
+    To add new properties to the object:

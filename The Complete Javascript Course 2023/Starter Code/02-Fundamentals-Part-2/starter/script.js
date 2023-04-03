@@ -200,7 +200,6 @@ if (friends.includes('Peter')) {
 } else if (friends.includes('Steven')) {
     console.log('You have a friend called Steven');
 }
-*/
 
 
 // L42 Introduction to Objects
@@ -218,4 +217,38 @@ const jonas = {
     age: 2037 - 1991,
     job: 'teacher',
     friends: ['Michael', 'Peter', 'Steven']
+}
+*/
+
+
+// L43 Dot vs. Bracket Notation
+const jonas = {
+    firstName: 'Jonas',
+    lastName: 'Schmedtmann',
+    age: 2037 - 1991,
+    job: 'teacher',
+    friends: ['Michael', 'Peter', 'Steven']
+}
+console.log(jonas);
+
+// Dot Notation
+console.log(jonas.lastName);
+
+// Bracket Notation
+console.log(jonas['lastName']);
+
+// Expression difference in notations
+const nameKey = 'Name';
+console.log(jonas['first' + nameKey]);
+console.log(jonas['last' + nameKey]);
+
+// console.log(jonas.'last' + nameKey);
+
+const interestedIn = prompt('What do you want to know abotu Jonas? Choose between firstName, lastName, age, job, and friends');
+// console.log(jonas.interestedIn) // This looks for the property 'interestedIn' instead of returned prompt
+
+if (jonas[interestedIn]) {
+    console.log(jonas[interestedIn]);
+} else {
+    console.log('Wrong request! Choose between firstName, lastName, age, job, and friends');
 }
