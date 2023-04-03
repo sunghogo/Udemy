@@ -1,15 +1,15 @@
 'use strict';
 
 // Coding Challenge #1
-const calcAverage = (score1, score2, score3) => (score1 + score2 + score3) / 3;
+const calcAverage = (a, b, c) => (a + b + c) / 3;
 
 const createWinner = function (avgDolphins, avgKoalas) {
-    if (avgDolphins > avgKoalas && avgDolphins >= avgKoalas * 2) {
-        console.log(`Dolphins win (${avgDolphins} vs. ${avgKoalas})`);
-    } else if (avgDolphins < avgKoalas && avgDolphins * 2 <= avgKoalas) {
-        console.log(`Koalas win (${avgKoalas} vs. ${avgDolphins})`);        
+    if (avgDolphins >= avgKoalas * 2) {
+        console.log(`Dolphins win 🏆 (${avgDolphins} vs. ${avgKoalas})`);
+    } else if (avgDolphins * 2 <= avgKoalas) {
+        console.log(`Koalas win 🏆 (${avgKoalas} vs. ${avgDolphins})`);        
     } else {
-        console.log('Neither team wins');
+        console.log('No team wins...');
     }
 }
 
