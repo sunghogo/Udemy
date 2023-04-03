@@ -14,7 +14,6 @@ if (hasDriversLicense) console.log('I can drive :D');
 // const interface = 'Audio';
 // const private = 534;
 // const if = 23;
-*/
 
 
 // L33 Functions
@@ -41,3 +40,29 @@ const appleOrangeJuice = fruitProcessor(2, 4);
 console.log(appleOrangeJuice);
 
 const num = Number('23');
+*/
+
+
+// L34 Function Declarations vs. Expressions
+// Function declaration
+const age1 = calcAge1(1991);
+
+function calcAge1(birthYear) {
+    // const age = 2037 - birthYear;
+    // return age;
+    return 2037 - birthYear;
+}
+
+// const age1 = calcAge1(1991);
+
+// Function expression
+// const age2 = calcAge2(1991);
+
+const calcAge2 = function (birthYear) {
+    return 2037 - birthYear;
+
+}
+
+const age2 = calcAge2(1991);
+
+console.log(age1, age2);
