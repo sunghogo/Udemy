@@ -20,7 +20,7 @@ L33 Functions
     'function' keyword
 
     function name(inputs) {
-        "function buddy"
+        "function body"
     }
 
     Using/Executing the function is also called invoking, running, or calling the function
@@ -59,7 +59,7 @@ L34 Function Declarations vs. Expressions
 L35 Arrow Functions
     Arrow function is a special form function expression that is shorter and faster to write
 
-    parameter => "Function Buddy"
+    parameter => "Function Body"
 
     No need for curly braces and return happens implicitly; excellent for simple one liners
 
@@ -90,3 +90,43 @@ L36 Functions Calling Other Functions
 
     In VSCode, shortcut to go to line:
     CTRL + G, input line number
+
+L37 Reviewing Functions
+    Two functions can have the same parameter names because they are not related/in scope of each other (similar to local variables)
+
+    Similarly paramenter can have the same name as a declared variable as they are NOT related
+
+    Functions are NOT TYPED, can return values of different types
+
+    Once a function returns, all code after the return statement will not be executed as the function will immediately exit
+
+    Function Review:
+        Function declaration - Functions that can be used before it's declared
+        Function expression - Essentially a funciton stored in a value
+        Arrow function - Great for one-line functions. Has no 'this' keyword.
+
+    Function Anatomy:
+        function 'function name'('parameter 1', parameter 2', etc...) {
+            'function body'
+            return 'return expression';
+        }
+    
+    Function Call:
+        const 'variable name' = 'function name'('parameter 1', parameter 2', etc...);
+
+    In VSCode, shortcut to move line up/down:
+    ALT + up key/down key 
+    In VSCode, short to select and move to next occurence:
+
+    In VSCode CTRL + D to selecet all occurences, CTRL + D select first occurence, CTRL + D to create new cursor and move/select onto next occurence
+
+    In VSCode, to move to different splt tab window:
+    CTRL + 1/2/3/...
+    
+    In VSCode, to move current tab to new splt tab window:
+    CTRL + ALT + right key/right key
+
+    In VSCode, to move cursor to start/end of line:
+    CTRL + K, CTRL + S: Edit cursorLineStart/cursorLineEnd
+    Removed page lines scrolling, remapped to:
+    CTRL + up arrow/down arrow
