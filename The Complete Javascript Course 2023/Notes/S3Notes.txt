@@ -67,9 +67,12 @@ L35 Arrow Functions
 
     For more than one arguments, need parteneses around the arguments
 
-    To automatically wrap word in parentheses/other characters in VSCode:
-    Select word, () / ' / " / {} / etc.
-
     Arrow functions lose their advantage in longer functions
 
     Arrow functions do not get a so called 'this' keyword
+
+    In VSCode, to wrap word in parentheses/other characters:
+    Select word, () / ' / " / {} / etc.
+
+    In VSCode, to scroll to beginning/end line:
+    CTRL + home/end
