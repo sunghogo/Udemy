@@ -130,3 +130,35 @@ L37 Reviewing Functions
     CTRL + K, CTRL + S: Edit cursorLineStart/cursorLineEnd
     Removed page lines scrolling, remapped to:
     CTRL + up arrow/down arrow
+
+L39 Introduction to Arrays
+    Data structures that are like big containers where we can store variables/values, and then return it
+
+    Two most important data structures in JavaScript are:
+        Arrays
+        Objects
+
+    Two ways to create an array:
+        Literal Syntax/"Brackets":
+        const 'array name' = ['value 1', 'value 2', etc..]
+
+        'new' keyword:
+        const 'array name' = new Array('value 1', 'value 2', etc..)
+
+    Array index/positions start from 0
+
+    We can get the length of an array using .length property (of array objects)
+
+    Inside the brackets, we can put in any expression but not statements
+
+    Array values are mutable
+
+    'const' makes only primitive values immutable, not data structures due to how JS stores things in memory; however, we cannot reassign a new array to a const variable
+
+    Arrays can hold values of different types, and also hold other arrays
+
+    In the developer console, you can expand an array to see additional details
+
+    Adding to an array does type coercian to the array, turning it into a  string with all the array values in 'value1, value2, etc..' format before concatenation
+
+    Other mathematical operations on an array will return 'NaN'
