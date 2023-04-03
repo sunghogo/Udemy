@@ -76,3 +76,14 @@ L35 Arrow Functions
 
     In VSCode, to scroll to beginning/end line:
     CTRL + home/end
+
+    In VSCode, to switch tabs:
+    CTRL + pg up/ pg dn
+
+L36 Functions Calling Other Functions
+    Functions can call other functions, which is useful for the DRY principle and cleaner/maintainable code
+
+    Function Data/Control Flow for example: 
+    2 is passed to apples paramenter of fruitProcessor(), which then passed to fruit paramenter of cutFruitPieces(), and storedi n variable applePieces
+
+    Similarly, 3 is passed to oranges of both parameters, and stored into variable orangePieces
