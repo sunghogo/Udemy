@@ -1,0 +1,11 @@
+L32 Activating Strict Mode
+    Activate strict mode to write more secure JS code by writing this string at the beginning:
+    'use strict'; 
+
+    This string has to be the very first statement otherwise it will not be activated; comments are allowed
+
+    We can also activate strict mode for a specific block or function
+
+    Strict mode forbids us to do certain things, and will create visible errors in certain situations leading to more secure code
+
+    Short list of variable names that are reserved for features that may be added to the language later; Similar to using keywords as variable names
