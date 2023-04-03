@@ -50,7 +50,6 @@ function percentageOfWorld1(population) {
 const describePopulation = (country, population) => `${country} has ${population} million people, which is about ${percentageOfWorld1(population)}% of the world.`;
 
 console.log(describePopulation('US', 332), describePopulation('Finaland', 6), describePopulation('Portugal', 10));
-*/
 
 
 // L39 Introduction to Arrays
@@ -65,4 +64,21 @@ function percentageOfWorld1(population) {
 const percentages = [
     percentageOfWorld1(population[0]), percentageOfWorld1(population[1]), percentageOfWorld1(population[2]), percentageOfWorld1(population[3])
 ];
-console.log(percentages);   
+console.log(percentages);
+*/
+
+// L40 Basic Array Operations (Methods)
+const neighbours = ['Canada', 'Mexico'];
+
+neighbours.push('Utopia');
+console.log(neighbours);
+
+neighbours.pop();
+console.log(neighbours);
+
+if (!neighbours.includes('Germany')) {
+    console.log('Probably not a central European country :D');
+}
+
+neighbours[neighbours.indexOf('Canada')] = "People's Republic of Canada";
+console.log(neighbours);
