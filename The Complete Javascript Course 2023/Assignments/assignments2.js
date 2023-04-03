@@ -40,7 +40,6 @@ const percentageFinaland = percentageOfWorld3(6);
 const percentagePortugal = percentageOfWorld3(10);
 
 console.log(percentageUS, percentageFinaland, percentagePortugal);
-*/
 
 
 // L36 Functions Calling Other Functions
@@ -51,4 +50,19 @@ function percentageOfWorld1(population) {
 const describePopulation = (country, population) => `${country} has ${population} million people, which is about ${percentageOfWorld1(population)}% of the world.`;
 
 console.log(describePopulation('US', 332), describePopulation('Finaland', 6), describePopulation('Portugal', 10));
+*/
 
+
+// L39 Introduction to Arrays
+const population = [332, 6, 10, 38];
+
+console.log(population.length === 4);
+
+function percentageOfWorld1(population) {
+    return (population / 7900) * 100;
+}
+
+const percentages = [
+    percentageOfWorld1(population[0]), percentageOfWorld1(population[1]), percentageOfWorld1(population[2]), percentageOfWorld1(population[3])
+];
+console.log(percentages);   
