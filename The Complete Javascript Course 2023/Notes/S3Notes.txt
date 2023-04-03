@@ -144,8 +144,10 @@ L39 Introduction to Arrays
         Arrays
         Objects
 
+    Arrays store values, also referred to as elements, in order
+
     Two ways to create an array:
-        Literal Syntax/"Brackets":
+        Array Literal Syntax/"Brackets":
         const 'array name' = ['value 1', 'value 2', etc..]
 
         'new' keyword:
@@ -184,3 +186,30 @@ L40 Basic Array Operations (Methods)
     .indexOf() is a method that returns the index of the passed element we want to reference, and returns -1 if not found
 
     .includes() is an ES6+ method that returns trule if the passed element is in the array, and false if not; this method uses strict equality
+
+
+L41 Introduction to Objects
+    Using multiple lines in data structure declaration is good for seeing the overview of the structure and cleaner code
+
+    In arrays, there is no way to reference elements by name, only by their index number
+
+    Objects define key/value pairs
+
+    New Objects are declared using '{}', which is different from the curly braces used to define code blocks in if / else, switch, function body statements
+
+    const 'variable name' = {
+        'key variable name 1' : 'value 1',
+        'key variable name 2' : 'value 2',
+        etc..
+    }
+
+    Each of the keys are also called properties
+
+    Two ways to create an objectarray:
+        Object Literal Syntax/"Curly Braces":
+        const 'object name' = {'value 1', 'value 2', etc..}
+
+        'new' keyword:
+        const 'array name' = new Array('value 1', 'value 2', etc..)
+
+    The big difference between objects and array is that in objects, the order of the properties does not matter but in arrays, the order of elements does matter
