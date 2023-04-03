@@ -55,3 +55,21 @@ L34 Function Declarations vs. Expressions
     The main difference between function declarations and expressions is that you can call function declarations before they are defined in the code but not with expressions - this is due to a process called hoisting
 
     Both have their uses, and based on developer's preference
+
+L35 Arrow Functions
+    Arrow function is a special form function expression that is shorter and faster to write
+
+    parameter => "Function Buddy"
+
+    No need for curly braces and return happens implicitly; excellent for simple one liners
+
+    For more than one lines, need curly braces and explicit return statement for that block
+
+    For more than one arguments, need parteneses around the arguments
+
+    To automatically wrap word in parentheses/other characters in VSCode:
+    Select word, () / ' / " / {} / etc.
+
+    Arrow functions lose their advantage in longer functions
+
+    Arrow functions do not get a so called 'this' keyword
