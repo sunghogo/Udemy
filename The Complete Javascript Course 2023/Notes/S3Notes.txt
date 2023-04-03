@@ -8,4 +8,6 @@ L32 Activating Strict Mode
 
     Strict mode forbids us to do certain things, and will create visible errors in certain situations leading to more secure code
 
-    Short list of variable names that are reserved for features that may be added to the language later; Similar to using keywords as variable names
+    Checks for variable definitions
+    
+    Prevents short list of variable names that are reserved for features that may be added to the language later; Similar to prventing the use of keywords as variable names
