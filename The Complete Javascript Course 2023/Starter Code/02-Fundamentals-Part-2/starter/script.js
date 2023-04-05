@@ -252,3 +252,7 @@ if (jonas[interestedIn]) {
 } else {
     console.log('Wrong request! Choose between firstName, lastName, age, job, and friends');
 }
+
+jonas.location = 'Portugal';
+jonas['twitter'] = '@jonasschmedtman'
+console.log(jonas);

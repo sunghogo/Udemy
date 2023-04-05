@@ -220,7 +220,7 @@ L43 Dot vs. Bracket Notation
         Dot Notation:
             'object name'.'property name'
 
-        Brack Notation:
+        Bracket Notation:
             'object name'[" 'property name' "]
     
     '.' is an operator that will go to the specified object, and in this case, retrieve from the specified property
@@ -232,3 +232,8 @@ L43 Dot vs. Bracket Notation
     Accessing an undefined property returns 'undefined'
 
     To add new properties to the object:
+        Dot Notation:
+        'object name'.'property name' = 'value'
+
+        Bracket Notation:
+        'object name'[" 'property name' "] = 'value'
