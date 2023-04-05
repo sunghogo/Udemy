@@ -82,7 +82,6 @@ if (!neighbours.includes('Germany')) {
 
 neighbours[neighbours.indexOf('Canada')] = "People's Republic of Canada";
 console.log(neighbours);
-*/
 
 
 // L42 Introduction to Objects
@@ -94,3 +93,26 @@ const myCountry = {
     neighbours: ['Canada', 'Mexico']
 };
 console.log(myCountry);
+*/
+
+
+// L43 Dot vs. Bracket Notation
+const myCountry = {
+    country: 'United States',
+    capital: 'Washington, D.C',
+    language: 'english',
+    population: 332,
+    neighbours: ['Canada', 'Mexico']
+};
+
+console.log(
+    `${myCountry.country} has ${myCountry.population} million ${myCountry.language}-speaking people, ${myCountry.neighbours.length} neighbouring countries and a capital called ${myCountry.capital}.`
+);  
+
+myCountry.population += 2;
+console.log(myCountry.population);
+
+myCountry['population'] -= 2;
+console.log(myCountry.population);
+
+
