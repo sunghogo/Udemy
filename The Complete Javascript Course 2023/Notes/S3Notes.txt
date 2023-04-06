@@ -239,3 +239,13 @@ L43 Dot vs. Bracket Notation
         'object name'[" 'property name' "] = 'value'
 
         Going back to operator precdence, Member Access/'.' and Computer Member Access/'[]' have really high priority, just below Grouping/'()'
+
+
+L44 Object Methods
+    Objects can hold any values, including arrays and other objects
+
+    Functions (expressions) are just another type of value, so we can create key:value pairs where values are functions
+
+    Any function attached to an object is called a method; methods are actually properties holding a function value
+
+    Function declaration/statements do not work in objects
