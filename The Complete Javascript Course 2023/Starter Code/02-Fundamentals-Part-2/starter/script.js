@@ -218,7 +218,6 @@ const jonas = {
     job: 'teacher',
     friends: ['Michael', 'Peter', 'Steven']
 }
-*/
 
 
 // L43 Dot vs. Bracket Notation
@@ -228,7 +227,7 @@ const jonas = {
     age: 2037 - 1991,
     job: 'teacher',
     friends: ['Michael', 'Peter', 'Steven']
-}
+};
 console.log(jonas);
 
 // Dot Notation
@@ -260,3 +259,22 @@ console.log(jonas);
 // Challenge
 // "Jonas has 3 friends, and his best friend is called Micahel"
 console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`);
+*/
+
+
+// L44 Object Methods
+const jonas = {
+    firstName: 'Jonas',
+    lastName: 'Schmedtmann',
+    birthYear: 1991,
+    job: 'teacher',
+    friends: ['Michael', 'Peter', 'Steven'],
+    hasDriversLicense: true,
+
+    calcAge: function(birthYear) {
+        return 2037 - birthYear;
+    }
+};
+
+console.log(jonas.calcAge(1991));
+console.log(jonas['calcAge'](1991));
