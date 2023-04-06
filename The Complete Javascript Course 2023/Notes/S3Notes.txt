@@ -88,7 +88,7 @@ L36 Functions Calling Other Functions
     Functions can call other functions, which is useful for the DRY principle and cleaner/maintainable code
 
     Function Data/Control Flow for example: 
-    2 is passed to apples paramenter of fruitProcessor(), which then passed to fruit paramenter of cutFruitPieces(), and storedi n variable applePieces
+    2 is passed to apples paramenter of fruitProcessor(), which is then passed to fruit paramenter of cutFruitPieces(), and stored in variable applePieces
 
     Similarly, 3 is passed to oranges of both parameters, and stored into variable orangePieces
 
@@ -128,7 +128,7 @@ L37 Reviewing Functions
     In VSCode, to move to different splt tab window:
     CTRL + 1/2/3/...
     
-    In VSCode, to move current tab to new splt tab window:
+    In VSCode, to move current tab to new spl5t tab window:
     CTRL + ALT + right key/right key
 
     In VSCode, to move cursor to start/end of line:
