@@ -84,3 +84,11 @@ L57 Learning How to Code
         3. Pit of despair (Understanding how far behind to build proper applications - Learn with other people and keep challenging yourself)
         4. Back to awesome (Start learning new technologies or rounding out your skill set)
         5. Job Ready (Need good portfolio but you will never stop learning)
+
+    
+L58 How to Think Like a Developer: Become a Problem Solver!
+    Problem Solving Process:
+        1. Make sure 100% understand the problem. Ask the right questions to get a clear picture of the problem.
+        2. Divide and conquer: Break a big problem into smaller sub-problems
+        3. Don't be afraid to do as much reasearch as you have to
+        4. For bigger problems, write pseudo-code before writing the actual code
