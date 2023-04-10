@@ -1,0 +1,40 @@
+L55 Setting up Prettier and VS Code
+    Prettier - strong opinionated code formatter
+        Makes assumptions on good code format upon saving like:
+            white spaces
+            double quotes
+            arrow function parameter parentheses
+
+        Steps:
+            1. Install extension
+            2. Make Prettier our default formatters:
+            3. File -> Preferences -> Settings (CTRL + ,)
+            4. Default Formatter: esbenp.prettier-vscode
+            5. Format on Save: Checked
+        
+        Change default options listed on the site:
+        https://prettier.io/docs/en/options.html
+        
+        Create a '.prettierrc' JSON/YAML configuration file, and then create an object ('{}') with the changed option properties and their values 
+
+    VSCode User Snippets:
+        1. File -> Preferences -> Configure User Snippets
+        2. Create New Global Snippets File
+        3. Example Snippet for console.log:
+            Define scope for which languages it works
+            Define prefix/shortcut for autocomplete
+            Define body ($1 defines where the cursor goes)
+            Define description
+
+    Other Notable VSCode Extensions:
+        Auto Close Tag
+        Auto Rename Tag
+        ESLint
+        Image preview
+        Monokai Pro
+        Prettier
+        Settings Sync (Deprecated: Use in-built Settings Sync)
+        TODO Highlight:
+            1. File -> Preferences -> Settings (CTRL + ,)
+            2. Open Settings (JSON) icon
+            3. Specify settings ("todohighlight.")            
