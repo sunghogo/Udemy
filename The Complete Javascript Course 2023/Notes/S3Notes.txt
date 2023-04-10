@@ -297,4 +297,9 @@ L47 Looping Arrays, Breaking and Continuing
     'continue' is to exit the current iteration of the loop and continue to the next one
 
     'break' is used to completely terminate the whole loop
-    
+
+
+L48 Looping Backwards and Loops in Loops
+    You can loop backwards by setting the counter to the length of the object and decrementing the counter
+
+    You can nest loops; inner loops can access variables from outer loops
