@@ -38,3 +38,30 @@ L55 Setting up Prettier and VS Code
             1. File -> Preferences -> Settings (CTRL + ,)
             2. Open Settings (JSON) icon
             3. Specify settings ("todohighlight.")            
+
+
+L56 Installing Node.js and Setting Up a Dev Environment
+    Everyone uses tools to automatically refresh pages to see changes (web development environment)
+
+    Two Approaches:
+        Live Server VS Code Extension
+        Node.js and live server npm package (more professional environment)
+
+    Live Server:
+        1. "Go Live" button at the bottom of VS Code
+        2. Opens browser with local host server and port that automatically updates
+
+    Node.js is a way of running JS outside the browser, and also running development tools
+
+    Node.js:
+        1. https://nodejs.org/en
+        2. Download and Install latest LTS version
+        3. Open the VS Code Terminal (CTLR + ~)
+        4. 'node -v' to check Node.js installation version (For Windows, if the path is not specified, go into User Accounts and change environmental variables, create a new variable "node" with value "C:\Program Files\nodejs")
+        5. 'npm install live-server -g' (npm is the node package manager, install is the command to install, live-server is the package name, and -g means the option to install globally)
+        6. 'live-server' to run live server in a browser (If powershell shows an error about "cannot be loaded because running scripts is disabled on this system", type:
+         'Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted')
+         7. 'CTRL + C' in the terminal to turn off the server
+    
+    In VS Code terminal, shortcut to clear terminal:
+    CTRL + K (Doesn't work for me)
