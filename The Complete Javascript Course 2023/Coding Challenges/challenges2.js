@@ -65,23 +65,39 @@ console.log(bills, tips, total);
 
 // Coding Challenge #3
 const mark = {
-    name: 'Mark Miller',
+    fullName: 'Mark Miller',
     mass: 78,
     height: 1.69,
+    // bmi: this.mass / this.height ** 2,
     calcBMI: function() {
-        this.BMI = this.mass / this.height ** 2; 
-        return this.BMI;
+        this.bmi = this.mass / this.height ** 2; 
+        return this.bmi;
     }
 }
 
 const john = {
-    name: 'John Smith',
+    fullName: 'John Smith',
     mass: 92,
     height: 1.95,
+    // bmi: this.mass / this.height ** 2,
     calcBMI: function() {
-        this.BMI = this.mass / this.height ** 2; 
-        return this.BMI;
+        this.bmi = this.mass / this.height ** 2; 
+        return this.bmi;
     }
 }
 
-console.log(`${john.name}'s BMI is (${john.calcBMI()}) is ${john.calcBMI() > mark.calcBMI() ? 'higher' : 'not higher'} than ${mark.name}'s BMI (${mark.calcBMI()})! `);
+// console.log(mark.bmi, john.bmi)
+mark.calcBMI();
+john.calcBMI();
+
+console.log(mark.bmi, john.bmi)
+
+/* console.log(`${john.fullName}'s BMI is (${john.calcBMI()}) is ${john.calcBMI() > mark.calcBMI() ? 'higher' : 'not higher'} than ${mark.fullName}'s BMI (${mark.calcBMI()})! `); */
+
+if (mark.bmi > john.bmi) {
+    console.log(`${john.fullName}'s BMI is (${john.bmi}) is lower than ${mark.fullName}'s BMI (${mark.bmi})! `); 
+} else if (mark.bmi < john.bmi) {
+    console.log(`${john.fullName}'s BMI is (${john.bmi}) is higher than ${mark.fullName}'s BMI (${mark.bmi})! `)
+} else {
+    console.log(`${john.fullName}'s BMI is (${john.bmi}) is equal to ${mark.fullName}'s BMI (${mark.bmi})! `)
+}
