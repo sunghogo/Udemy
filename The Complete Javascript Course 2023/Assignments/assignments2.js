@@ -141,7 +141,6 @@ console.log(myCountry);
 for (let voter = 1; voter <= 50; voter++) {
     console.log(`Voter number ${voter} is currently voting`);
 }
-*/
 
 
 // L47 Looping Arrays, Breaking and Continuing
@@ -157,3 +156,18 @@ for (let i = 0; i < population.length; i++){
 }
 
 console.log(percentages2);
+*/
+
+
+// L48 Looping Backwards and Loops in Loops
+const listOfNeighbours = [
+    ['Canada', 'Mexico'], 
+    ['Spain'], 
+    ['Norway', 'Sweden', 'Russia']
+];
+
+for (let i = 0; i < listOfNeighbours.length; i++) {
+    for (let j = 0; j < listOfNeighbours[i].length; j++) {
+        console.log(`Neighbour: ${listOfNeighbours[i][j]}`);
+    }
+}
