@@ -105,3 +105,21 @@ L59 Using Google, StackOverflow and MDN
         MDN: Useful for documentation on in-built methods and functionality
 
     'array 1'.concat('array 2') method to concat two arrays together
+
+
+L60 Debugging (Fixing Errors)
+   Software bug: Defect or problem in a computer program. Basically, any unexpected or unintended behavior of a computer program is a software bug
+
+   Bugs are completely normal in software development
+
+   Debugging: Process of finding, fixing, and preventing bugs
+
+   Debugging Process:
+    1. Identify - Becoming aware that there is a bug:
+        During development, testing software, user reports during production, context: browsers, users, etc.
+    2. Find - Isolating where exactly the bug is happening in the code:
+        Developer console (simple code), debugger (complex code)
+    3. Fix - Correct the bug:
+        Replace wrong solution with correct solution
+    4. Prevent - Preventing in from happening again:
+        Searching for the same bug in a similar code, writing tests using testing software
