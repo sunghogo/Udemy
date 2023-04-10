@@ -65,3 +65,22 @@ L56 Installing Node.js and Setting Up a Dev Environment
     
     In VS Code terminal, shortcut to clear terminal:
     CTRL + K (Doesn't work for me)
+
+
+L57 Learning How to Code
+    Process:
+        1. Have a clear, realistic, and well-defined goal
+        2. Always type and understand code
+        3. Reinforce new features and concepts (try codewars challenges)
+        4. Practice coding on your own / Come up with your own project ideas
+        5.  Do not get stuck or frustrated with the quality of code
+        6. Accept that you will never understand everything about web development / Keep motivation up
+        7. Do not learn in isolation
+        8. Courses are just starting points
+
+    Journey:
+        1. Everything is awesome (Most courses will start and end here)
+        2. Cliff of confusion (Coding on your own)
+        3. Pit of despair (Understanding how far behind to build proper applications - Learn with other people and keep challenging yourself)
+        4. Back to awesome (Start learning new technologies or rounding out your skill set)
+        5. Job Ready (Need good portfolio but you will never stop learning)
