@@ -263,3 +263,7 @@ L44 Object Methods
 
     Arrays are actually special objects that have built-in methods
 
+L45 Coding Challenge #3
+    Calling object methods without '()' returns the entire function in string as a value
+
+    Object properties cannot be initially defined using other properties as properties are not intialized/are undefined
