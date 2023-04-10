@@ -135,10 +135,25 @@ const myCountry = {
 myCountry.describe();
 myCountry.checkIsIsland();
 console.log(myCountry);
-*/
 
 
 // L46 Iteration: The for Loop
 for (let voter = 1; voter <= 50; voter++) {
     console.log(`Voter number ${voter} is currently voting`);
 }
+*/
+
+
+// L47 Looping Arrays, Breaking and Continuing
+const population = [10, 1441, 332, 83];
+const percentages2 = [];
+
+function percentageOfWorld1(population) {
+    return (population / 7900) * 100;
+}
+
+for (let i = 0; i < population.length; i++){
+    percentages2[i] = percentageOfWorld1(population[i]);
+}
+
+console.log(percentages2);
