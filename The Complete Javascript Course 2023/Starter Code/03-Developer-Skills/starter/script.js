@@ -13,7 +13,6 @@ console.log(x);
 
 // L56 Installing Node.js and Setting Up a Dev Environment
 console.log(calcAge(1991));
-*/
 
 // L59 Using Google, StackOverflow and MDN
 // PROBLEM 1:
@@ -80,3 +79,26 @@ const calcTempAmplitudeNew = function (t1, t2) {
 
 const amplitudeNew = calcTempAmplitudeNew([3, 5, 1], [9, 0, 5]);
 console.log(amplitudeNew);
+*/
+
+// L61 Debugging with the Console and Breakpoints
+const measureKelvin = function () {
+  const measurement = {
+    type: 'temp',
+    unit: 'celcius',
+
+    // C) FIX
+    value: Number(prompt('Degrees celcius')),
+  };
+
+  console.table(measurement);
+
+  //   console.log(measurement.value);
+  //   console.warn(measurement.value);
+  //   console.error(measurement.value);
+
+  const kelvin = measurement.value + 273;
+  return kelvin;
+};
+// A) IDENTIFY
+console.log(measureKelvin());
