@@ -249,3 +249,17 @@ L44 Object Methods
     Any function attached to an object is called a method; methods are actually properties holding a function value
 
     Function declaration/statements do not work in objects
+
+    In JS, every method has a access to a special variable called 'this'; This is equaivalent to the object calling the method
+
+    In VSCode, shortcut to multi-line comment:
+    SHIFT + ALT + A
+
+    Can also reference the object by name, but it violates the DRY principle (ie. changing the object name means having to change object references)
+
+    Can use the object methods to calculate and store the result in a new/existing property
+
+    Arrow function expression access global object; can't be used to access object properties
+
+    Arrays are actually special objects that have built-in methods
+
