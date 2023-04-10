@@ -273,11 +273,11 @@ L45 Coding Challenge #3
 L46 Iteration: The for Loop
     Control Strucutres:
         Conditionals: if/else statements, case statements, conditional ternary operator
-        Loops
+        Loops: for loop, while loop
 
     for loop is a loop with a counter that continues looping while the loop condition is true
 
-    Loop Anatomy:
+    for Loop Anatomy:
     for('counter declaration'; 'loop condition'; 'counter increment') {
         "loop body"
     } 
@@ -303,3 +303,21 @@ L48 Looping Backwards and Loops in Loops
     You can loop backwards by setting the counter to the length of the object and decrementing the counter
 
     You can nest loops; inner loops can access variables from outer loops
+
+
+L49 The while Loop
+    The while loop can only specify a condition; more versatile than the for loop as all it needs is a condition that dooes not have to be associated with a counter
+
+    while Loop Anatomy:
+    while ('loop condition') {
+        "loop body"
+    }
+
+    while (true) {
+        "loop body"
+    }
+
+    Infinite loops will crash the browser
+
+    while loop is for when you do not know how many iterations the loop will have; otherwise use the for loop
+
