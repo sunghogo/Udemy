@@ -93,7 +93,6 @@ const myCountry = {
     neighbours: ['Canada', 'Mexico']
 };
 console.log(myCountry);
-*/
 
 
 // L43 Dot vs. Bracket Notation
@@ -114,5 +113,28 @@ console.log(myCountry.population);
 
 myCountry['population'] -= 2;
 console.log(myCountry.population);
+*/
+
+
+// L44 Object Methods
+const myCountry = {
+    country: 'United States',
+    capital: 'Washington, D.C',
+    language: 'english',
+    population: 332,
+    neighbours: ['Canada', 'Mexico'],
+    describe: function() {
+        return console.log(
+            `${this.country} has ${this.population} million ${this.language}-speaking people, ${this.neighbours.length} neighbouring countries and a capital called ${this.capital}.`
+        )
+    },
+    checkIsIsland: function() {
+        this.IsIsland = this.neighbours.length === 0 ? true : false; 
+    }
+};
+
+myCountry.describe();
+myCountry.checkIsIsland();
+console.log(myCountry);
 
 
