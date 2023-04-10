@@ -151,12 +151,11 @@ function percentageOfWorld1(population) {
     return (population / 7900) * 100;
 }
 
-for (let i = 0; i < population.length; i++){
+for (let i = 0; i < population.length; i++) {
     percentages2[i] = percentageOfWorld1(population[i]);
 }
 
 console.log(percentages2);
-*/
 
 
 // L48 Looping Backwards and Loops in Loops
@@ -171,3 +170,22 @@ for (let i = 0; i < listOfNeighbours.length; i++) {
         console.log(`Neighbour: ${listOfNeighbours[i][j]}`);
     }
 }
+*/
+
+
+// L49 The while Loop
+const population = [10, 1441, 332, 83];
+const percentages3 = [];
+
+function percentageOfWorld1(population) {
+    return (population / 7900) * 100;
+}
+
+let i = 0;
+while (i < population.length) {
+    const perc = percentageOfWorld1(population[i]);
+    percentages3.push(perc);
+    i++;
+}
+
+console.log(percentages3);
