@@ -269,12 +269,45 @@ const jonas = {
     birthYear: 1991,
     job: 'teacher',
     friends: ['Michael', 'Peter', 'Steven'],
-    hasDriversLicense: true,
+    hasDriversLicense: false,
 
+    /*
     calcAge: function(birthYear) {
         return 2037 - birthYear;
     }
+    */
+
+    /* 
+    calcAge: function() {
+        // console.log(this);
+        return 2037 - this.birthYear;
+        // return 2037 - jonas.birthYear;        
+    }
+    */
+
+    calcAge: function() {
+        this.age = 2037 - this.birthYear;
+        return this.age;
+    },
+
+    getSummary: function() {
+        return `${this.firstName} is a ${this.calcAge()} year old ${this.job}, and he has ${this.hasDriversLicense ? 'a' : 'no' } driver's license.`;
+    },
+    
+    getSummary2: () => `${console.log(this)} ${this.firstName} is a ${this.age} year old ${this.job}, and he ${this.hasDriversLicense ? 'has' : 'does not have'} a driver's license`  
 };
 
-console.log(jonas.calcAge(1991));
-console.log(jonas['calcAge'](1991));
+// console.log(jonas.calcAge(1992));
+// console.log(jonas['calcAge'](1991));
+
+console.log(jonas.calcAge());
+
+console.log(jonas.age);
+console.log(jonas.age);
+console.log(jonas.age);
+
+// Challenge
+// "Jonas is a 46 year old teacher, and he has a driver's licesnse."
+
+console.log(jonas.getSummary())
+console.log(jonas.getSummary2())
