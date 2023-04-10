@@ -11,4 +11,4 @@ console.log(x);
 // BUG, FIXME
 
 // L56 Installing Node.js and Setting Up a Dev Environment
-console.log(calcAge(1992));
+console.log(calcAge(1991));
