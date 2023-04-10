@@ -259,7 +259,6 @@ console.log(jonas);
 // Challenge
 // "Jonas has 3 friends, and his best friend is called Micahel"
 console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`);
-*/
 
 
 // L44 Object Methods
@@ -271,20 +270,16 @@ const jonas = {
     friends: ['Michael', 'Peter', 'Steven'],
     hasDriversLicense: false,
 
-    /*
-    calcAge: function(birthYear) {
-        return 2037 - birthYear;
-    }
-    */
+    // calcAge: function(birthYear) {
+    //     return 2037 - birthYear;
+    // }
 
-    /* 
-    calcAge: function() {
-        // console.log(this);
-        return 2037 - this.birthYear;
-        // return 2037 - jonas.birthYear;        
-    }
-    */
-
+    // calcAge: function() {
+    //     // console.log(this);
+    //     return 2037 - this.birthYear;
+    //     // return 2037 - jonas.birthYear;        
+    // }
+   
     calcAge: function() {
         this.age = 2037 - this.birthYear;
         return this.age;
@@ -311,3 +306,30 @@ console.log(jonas.age);
 
 console.log(jonas.getSummary())
 console.log(jonas.getSummary2())
+*/
+
+
+// L46 Iteration: The for Loop
+// console.log('Lifting weights repetition 1 🏋️');
+// console.log('Lifting weights repetition 2 🏋️');
+// console.log('Lifting weights repetition 3 🏋️');
+// console.log('Lifting weights repetition 4 🏋️');
+// console.log('Lifting weights repetition 5 🏋️');
+// console.log('Lifting weights repetition 6 🏋️');
+// console.log('Lifting weights repetition 7 🏋️');
+// console.log('Lifting weights repetition 8 🏋️');
+// console.log('Lifting weights repetition 9 🏋️');
+// console.log('Lifting weights repetition 10 🏋️');
+
+// for loop keeps runnning while condition is TRUE
+// for (let rep = 1; rep <= 10; rep++) {
+//     console.log(`Lifting weights repetition ${rep} 🏋️`);
+// }
+
+// for (let rep = 5; rep <= 10; rep++) {
+//     console.log(`Lifting weights repetition ${rep} 🏋️`);
+// }
+
+for (let rep = 1; rep <= 30; rep++) {
+    console.log(`Lifting weights repetition ${rep} 🏋️`);
+}
