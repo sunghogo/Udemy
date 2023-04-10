@@ -92,3 +92,16 @@ L58 How to Think Like a Developer: Become a Problem Solver!
         2. Divide and conquer: Break a big problem into smaller sub-problems
         3. Don't be afraid to do as much reasearch as you have to
         4. For bigger problems, write pseudo-code before writing the actual code
+
+
+L59 Using Google, StackOverflow and MDN
+    Ask the right questions to a problem to break down the proper specifications
+
+    Divide the problem into sub-problems
+
+    Resarch answers into problems/sub-problems using:
+        Google: Useful for searching questions
+        StackOverflow: Useful for researching answers
+        MDN: Useful for documentation on in-built methods and functionality
+
+    'array 1'.concat('array 2') method to concat two arrays together
