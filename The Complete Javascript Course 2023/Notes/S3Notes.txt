@@ -267,3 +267,20 @@ L45 Coding Challenge #3
     Calling object methods without '()' returns the entire function in string as a value
 
     Object properties cannot be initially defined using other properties as properties are not intialized/are undefined
+
+L46 Iteration: The for Loop
+    Control Strucutres:
+        Conditionals: if/else statements, case statements, conditional ternary operator
+        Loops
+
+    for loop is a loop with a counter that continues looping while the loop condition is true
+
+    Loop Anatomy:
+    for('counter declaration'; 'loop condition'; 'counter increment') {
+        "loop body"
+    } 
+
+    for (let counter = 0; counter <= 10; counter increment/decrement) {
+        "loop body"
+    }
+
