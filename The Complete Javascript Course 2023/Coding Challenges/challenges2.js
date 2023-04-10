@@ -41,7 +41,7 @@ avgDolphins = calcAverage(scoreDolphins1, scoreDolphins2, scoreDolphins3);
 avgKoalas = calcAverage(scoreKoalas1, scoreKoalas2, scoreKoalas3);
 
 createWinner(avgDolphins, avgKoalas);
-*/
+
 
 // Coding Challenge #2
 const calcTip = bill => (50 <= bill && bill <= 300) ? bill * 0.15 : bill * 0.2;
@@ -60,3 +60,28 @@ const total = [
 ]
 
 console.log(bills, tips, total);
+*/
+
+
+// Coding Challenge #3
+const mark = {
+    name: 'Mark Miller',
+    mass: 78,
+    height: 1.69,
+    calcBMI: function() {
+        this.BMI = this.mass / this.height ** 2; 
+        return this.BMI;
+    }
+}
+
+const john = {
+    name: 'John Smith',
+    mass: 92,
+    height: 1.95,
+    calcBMI: function() {
+        this.BMI = this.mass / this.height ** 2; 
+        return this.BMI;
+    }
+}
+
+console.log(`${john.name}'s BMI is (${john.calcBMI()}) is ${john.calcBMI() > mark.calcBMI() ? 'higher' : 'not higher'} than ${mark.name}'s BMI (${mark.calcBMI()})! `);
