@@ -59,3 +59,31 @@ L65 Attributes, Classes and IDs
     The convention in HTML and CSS is to sepearate words with a '-'
 
     Semantic HTML is the idea of using the appropriate element according to the content in it
+
+
+L66 Basic Styling with CSS
+    CSS - Cascading Style Sheets:
+        Used to style HTML
+
+    <style> element goes in the <head> section to specify internal CSS
+
+    Different ways to style using CSS:
+        1. Element Selector - specify HTML elements
+            element {}
+        2. Class Selector - specify classes
+            .class {}
+        3. ID Selector - specify IDs
+            #id {}
+
+    Create objects using selectors, and specify styling properties
+
+    CSS Properties:
+        background-color: specify background color
+        font-family: specify font family
+        color: specify text color
+        border: specify border settings
+
+    CSS is usually in an external file; Need to link the file in <head> section:
+        <link href="css file name" rel="stylehseet">
+
+    Some CSS properties are inherited by child elements, like font-family and font-size 
