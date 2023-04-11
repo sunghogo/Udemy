@@ -1,0 +1,20 @@
+L64 Basic HTML Structure and Elements
+    HTML - Hypertext Markup Language:
+        Used to describe the content of webpages
+    
+    HTML document is made up of elements:
+            <html>: main element enclosing the document
+            <head>: contains the settings for the website
+                <title>: the name of our website
+            <body>: contains the visible elements of the webstie
+                <h1>, ... , <h6>: describe headings lvl 1-6
+                <p>: describe a paragraph
+    
+    Body elements have some sort of formatting
+
+    HTML VS Code Extensions:
+        Auto Close Tags
+        Auto Rename Tags
+
+    VS Code HTML Boilerplate shortcut:
+        '!' +  TAB
