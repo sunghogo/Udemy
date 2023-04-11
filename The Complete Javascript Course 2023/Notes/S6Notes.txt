@@ -18,3 +18,44 @@ L64 Basic HTML Structure and Elements
 
     VS Code HTML Boilerplate shortcut:
         '!' +  TAB
+
+
+L65 Attributes, Classes and IDs
+    Some elements can have attributes that describe elements
+
+    You can nest elements in another as child elements
+
+    HTML elements/attributes:
+        <a>: anchor element
+        <a href="">: hypertext reference attribute
+        <img>: image element, no closing tag since there is no additional content
+        <img src="">: source attribute
+        <div>: generic box element
+        <input>: input element, no closing tag
+        <input type="">: input type attribute
+        <input placeholder="">: input placeholder attribute
+        <button>: button element
+        <form>: special form element
+
+
+    Inline elements falls in line with the rest of the text: <a>, <img>
+    Block elements are not in line with the previous element: <h1> ... <h6>, <p>
+
+    Class vs ID:
+        Classes and ID are crucial for identifying elements
+
+        The main difference between classes and IDs are that IDs have to be unique to one element
+
+        Class attribute:
+            <element class="class name">
+        
+        ID attribute:
+            <element id="id name">
+
+        In usages, classes are mostly used while IDs are only rarely used as it is better practice
+
+    Best way to make boxes in HTML is use <div>
+
+    The convention in HTML and CSS is to sepearate words with a '-'
+
+    Semantic HTML is the idea of using the appropriate element according to the content in it
