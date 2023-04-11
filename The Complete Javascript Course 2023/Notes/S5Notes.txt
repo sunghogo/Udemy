@@ -133,3 +133,9 @@ L61 Debugging with the Console and Breakpoints
     Debugger in Google Chrome:
         1. Open Chrome Developer Tools -> Sources -> JS script file
         2. Navigate to two debugger panels
+        3. Go to line of interest, and click to the left the line number to add/remove a breakpoint (after reloading, the code execution will stop at the breakpoint and show values in code)
+        4. You can check values either in the Scope tab or by hovering over them in the script
+        5. You can Step into the code execution line by line
+        6. You can Resume to continue the code execution until the next breakpoint/end
+
+    'debugger' keyword in JS will set up an inline breakpoint and open up the browser debugger at the line
