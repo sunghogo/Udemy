@@ -1,0 +1,7 @@
+L70 PROJECT #1: Guess My Number!
+    We can select elements in JS just like in CSS:
+        document.querySelector('./#/ / selector');
+
+    To get the text content instead of the entire HTML element, use '.textContent' method after selector:
+        document.querySelector('selector'.textContent);
+
