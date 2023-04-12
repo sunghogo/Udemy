@@ -68,3 +68,15 @@ L76 Coding Challenge #1
 
 
 L77 Implementing Highscores
+
+
+L78 Refactoring Our Code: The DRY Principle
+    DRY = Don't Repeat Yourself
+
+    You don't want duplicate code because if you want tmake changes, you have to change it in multiple sections
+
+    It's ok to start out with duplicate code but you will want to refactor later on
+
+    Refactoring is restructing the code without changing functionality
+
+    Another good refactoring technique is to create functions; In this case, setting the text content and generating the secret number
