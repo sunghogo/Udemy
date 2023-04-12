@@ -37,10 +37,29 @@ document.querySelector('.check').addEventListener('click', function () {
 
 // L74 Implementing the Game Logic
 // L75 Manipulating CSS Styles
-const secretNumber = Math.trunc(Math.random() * 20) + 1;
-let score = Number(document.querySelector('.score').textContent);
-document.querySelector('.number').textContent = secretNumber;
+// L76 Coding Challenge #1
+const genSecretNumber = () => Math.trunc(Math.random() * 20) + 1;
 
+const scoreInitial = Number(document.querySelector('.score').textContent);
+let secretNumber = genSecretNumber();
+let score = scoreInitial;
+let scoreHigh = Number(document.querySelector('.highscore').textContent);
+
+// Again Button Listener
+document.querySelector('.again').addEventListener('click', function () {
+  // Reset score and secret number
+  score = scoreInitial;
+  secretNumber = genSecretNumber();
+  document.querySelector('.score').textContent = score;
+  document.querySelector('.number').textContent = '?';
+
+  // Reset message and CSS
+  document.querySelector('.message').textContent = 'Start guessing...';
+  document.querySelector('body').style.backgroundColor = '#222';
+  document.querySelector('.number').style.width = '15rem';
+});
+
+// Check Button listener
 document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
   console.log(guess, typeof guess);
@@ -57,10 +76,16 @@ document.querySelector('.check').addEventListener('click', function () {
   // When player wins
   else if (guess === secretNumber) {
     document.querySelector('.message').textContent = '🎉 Correct Number!';
+    document.querySelector('.number').textContent = secretNumber;
 
     document.querySelector('body').style.backgroundColor = '#60b347';
-
     document.querySelector('.number').style.width = '30rem';
+
+    // New high score
+    if (score > scoreHigh) {
+      scoreHigh = score;
+      document.querySelector('.highscore').textContent = scoreHigh;
+    }
   }
 
   // When guess is too high
