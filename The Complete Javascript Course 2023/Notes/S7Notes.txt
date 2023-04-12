@@ -5,3 +5,20 @@ L70 PROJECT #1: Guess My Number!
     To get the text content instead of the entire HTML element, use '.textContent' method after selector:
         document.querySelector('selector'.textContent);
 
+
+L71 What's the DOM and DOM Manipulation
+    DOM - Document Object Model:
+        Structured represenation of HTML documents. Allows JS to acces HTML elements and styles to manipulate them.
+
+    DOM is a connection point betweem HTML documents and JavasSript; DOM specification ensures the same functionality across different browsers
+
+    DOM is automatically generated as soon as HTML loads, and is stored in a tree structure containing each HTML element
+
+    Parent elemet, child element, sibling element terms used to refer to the nodes and their relationships
+
+    DOM always starts with the special 'Document' object at the very top
+
+    DOM -> <html> element -> <head> and <body> element -> etc..
+
+    DOM Methods and Properties for DOM Manipulation IS NOT a part of JS; Instead they are part of the Web APIs (timers, fetch API, etc.) which can interact with JS
+
