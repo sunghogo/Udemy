@@ -95,9 +95,29 @@ L80 Working With Classes
 
     .classList property has a couple methods:
         classList.remove('class name') (class name does not need '.' in front)
-        
+
         classList.add('class name')
+
+        ckassList.contains(`class name`)
     
     You could manually change each style property value, but it is better to aggregrate all the properties into a class, and then add/remove the class from the element wherever needed 
 
     When passing functions to .addEventListener, use the variable without the '()' as that will only refrence/define the function instead of calling it 
+
+
+L81 Handling an "Esc" Keypress Event
+    Keyboard events are global events that do not happen on one specific element, and usually listen on the whole document:
+        document.addEventListener()
+
+    For key event listeners, there are three types:
+        1. 'keypress' - When the key is pressed down continously
+        2. 'keyup' - When the key is released
+        3. 'keydown' - When the key is pressed
+
+        These listen for ANY keys, 
+
+    When an event occurs, JS creates an object containing information about the event itself, which is passed to the first parameter in the addEventListenr() event handler function
+
+    For key events, use 'key' or 'code' property to find which key was pressed
+
+    You can aggregrate conditions with '&&': AND as well as '||': OR
