@@ -87,3 +87,45 @@ L66 Basic Styling with CSS
         <link href="css file name" rel="stylehseet">
 
     Some CSS properties are inherited by child elements, like font-family and font-size 
+
+
+L67 Introduction to the CSS Box Model
+    The Box Model fundamentally defines how elements are displayed on a page and how they are sized
+
+    The Box Model shows that each element has 4 sizes:
+        1. Margin:
+            space outside the box / between boxes
+        2. Border:
+            goes around the padding and the content
+        3. Padding:
+            transparent area around the content, inside the box
+        4. Content Height x Width:
+            text, images, etc.
+    
+    Fill Area:
+        area that gets filled with background color or images - includes content, padding, border
+
+    Global Reset to remove the default margins and paddings applied automatically to some elements:
+        Use the '*' selector to select all elements
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        box-sizing: border-box; sets the dimensions of the box to include/account for borders and padding
+
+    CSS Units:
+        px, %, em, rem  
+
+    You can add padding, margins, borders to specific sides of the box model
+
+    Use Chrome Dev Tools and Elements tab / Inspector tool to see the box model of each element easily
+
+    Can specify multiple selectors using a comma in between 
+
+    Child Selectors:
+        'parent selector' 'child selector' {}
+
+    More imporant topics include positioning, flexbox, css grid
