@@ -42,3 +42,13 @@ L73 Handling Click Events
     Usually when we get something from the user interface, it usually in 'string'
 
     For input fields, check for cases when there are no inputs; In this case for 'input type="number"', an empty field defaults to 0 so it is a falsy value
+
+
+L74 Implementing the Game Logic
+    Math is an object that JS gives us:
+        Math.random() gives us a value from 0 to 1
+        Math.trunc() gives us a truncated/rounded value
+
+    Save data from the DOM that will be often manipulated in a variable in code
+
+    Application state and state variables which are relevant to the application
