@@ -3,7 +3,7 @@ L70 PROJECT #1: Guess My Number!
         document.querySelector('./#/ / selector');
 
     To get the text content instead of the entire HTML element, use '.textContent' method after selector:
-        document.querySelector('selector'.textContent);
+        document.querySelector('selector').textContent;
 
 
 L71 What's the DOM and DOM Manipulation
@@ -21,4 +21,12 @@ L71 What's the DOM and DOM Manipulation
     DOM -> <html> element -> <head> and <body> element -> etc..
 
     DOM Methods and Properties for DOM Manipulation IS NOT a part of JS; Instead they are part of the Web APIs (timers, fetch API, etc.) which can interact with JS
+
+
+L72 Selecting and Manipulating Elements
+    You can assign new values to '.querySelector()' and '.textContent' using JS '='
+
+    Use .'value' to get the value (of input)
+
+    Once again, in VS Code, to move a line up or down, use ALT + UP/DOWN
 
