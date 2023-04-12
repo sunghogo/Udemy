@@ -12,7 +12,6 @@ document.querySelector('.score').textContent = 20;
 
 document.querySelector('.guess').value = 23;
 console.log(document.querySelector('.guess').value);
-*/
 
 // L73 Handling Click Events
 const x = function () {
@@ -32,5 +31,42 @@ document.querySelector('.check').addEventListener('click', function () {
 
   if (!guess) {
     document.querySelector('.message').textContent = '⛔ No Number!';
+  }
+});
+*/
+
+// L74 Implementing the Game Logic
+const secretNumber = Math.trunc(Math.random() * 20) + 1;
+let score = Number(document.querySelector('.score').textContent);
+document.querySelector('.number').textContent = secretNumber;
+
+document.querySelector('.check').addEventListener('click', function () {
+  const guess = Number(document.querySelector('.guess').value);
+  console.log(guess, typeof guess);
+
+  if (score <= 0) {
+    document.querySelector('.message').textContent = '💥 You Lost the Game!';
+  }
+
+  if (!guess) {
+    document.querySelector('.message').textContent = '⛔ No Number!';
+  } else if (guess === secretNumber) {
+    document.querySelector('.message').textContent = '🎉 Correct Number!';
+  } else if (guess > secretNumber) {
+    if (score > 1) {
+      document.querySelector('.message').textContent = '📈 Too High!';
+      document.querySelector('.score').textContent = --score;
+    } else {
+      document.querySelector('.message').textContent = '💥 You Lost the Game!';
+      document.querySelector('.score').textContent = 0;
+    }
+  } else if (guess < secretNumber) {
+    if (score > 1) {
+      document.querySelector('.message').textContent = '📉 Too Low!';
+      document.querySelector('.score').textContent = --score;
+    } else {
+      document.querySelector('.message').textContent = '💥 You Lost the Game!';
+      document.querySelector('.score').textContent = 0;
+    }
   }
 });
