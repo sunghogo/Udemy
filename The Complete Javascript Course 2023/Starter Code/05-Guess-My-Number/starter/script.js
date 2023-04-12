@@ -38,6 +38,7 @@ document.querySelector('.check').addEventListener('click', function () {
 // L74 Implementing the Game Logic
 // L75 Manipulating CSS Styles
 // L76 Coding Challenge #1
+// L77 Implementing Highscores
 const genSecretNumber = () => Math.trunc(Math.random() * 20) + 1;
 
 const scoreInitial = Number(document.querySelector('.score').textContent);
