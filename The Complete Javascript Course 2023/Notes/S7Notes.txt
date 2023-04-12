@@ -30,3 +30,15 @@ L72 Selecting and Manipulating Elements
 
     Once again, in VS Code, to move a line up or down, use ALT + UP/DOWN
 
+
+L73 Handling Click Events
+    An event is something that happens on the page
+
+    Add event listeners to wait for certain events to happen and then react to it using:
+        '.addEventListener('type/name of event', 'function expression')'
+
+    The event handler is a function that is executed in reaction to an event; The JS engine will run the function even though it is not called anywhere in the script
+
+    Usually when we get something from the user interface, it usually in 'string'
+
+    For input fields, check for cases when there are no inputs; In this case for 'input type="number"', an empty field defaults to 0 so it is a falsy value
