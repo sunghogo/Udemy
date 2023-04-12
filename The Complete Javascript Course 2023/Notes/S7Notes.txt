@@ -61,3 +61,6 @@ L75 Manipulating CSS Styles
         The properties will be converted to camel case instead of use '-'
 
     This styles are set as inline styles so will have precedence over internal & external CSS
+
+L76 Coding Challenge #1
+    Handler functions without a name are once again called anonymous functions`

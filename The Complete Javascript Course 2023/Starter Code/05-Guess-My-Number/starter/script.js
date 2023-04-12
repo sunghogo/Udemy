@@ -45,20 +45,6 @@ let secretNumber = genSecretNumber();
 let score = scoreInitial;
 let scoreHigh = Number(document.querySelector('.highscore').textContent);
 
-// Again Button Listener
-document.querySelector('.again').addEventListener('click', function () {
-  // Reset score and secret number
-  score = scoreInitial;
-  secretNumber = genSecretNumber();
-  document.querySelector('.score').textContent = score;
-  document.querySelector('.number').textContent = '?';
-
-  // Reset message and CSS
-  document.querySelector('.message').textContent = 'Start guessing...';
-  document.querySelector('body').style.backgroundColor = '#222';
-  document.querySelector('.number').style.width = '15rem';
-});
-
 // Check Button listener
 document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
@@ -109,4 +95,21 @@ document.querySelector('.check').addEventListener('click', function () {
       document.querySelector('.score').textContent = 0;
     }
   }
+});
+
+// Again Button Listener
+document.querySelector('.again').addEventListener('click', function () {
+  // Reset score and secret number
+  score = scoreInitial;
+  secretNumber = genSecretNumber();
+
+  // Reset text and input
+  document.querySelector('.message').textContent = 'Start guessing...';
+  document.querySelector('.score').textContent = score;
+  document.querySelector('.number').textContent = '?';
+  document.querySelector('.guess').value = '';
+
+  // Reset CSS
+  document.querySelector('body').style.backgroundColor = '#222';
+  document.querySelector('.number').style.width = '15rem';
 });
