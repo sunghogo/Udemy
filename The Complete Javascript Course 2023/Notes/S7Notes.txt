@@ -80,3 +80,11 @@ L78 Refactoring Our Code: The DRY Principle
     Refactoring is restructing the code without changing functionality
 
     Another good refactoring technique is to create functions; In this case, setting the text content and generating the secret number
+
+
+L79 PROJECT #2: Modal Window
+    Usually organize all the selected elements at the beginning/top into variables
+
+    document.querySelector() only shows the first match
+    
+    Use document.querySelectorAll() to select all instances of element/class as a NodeList which is similar to an array; iterate through the list to access each element
