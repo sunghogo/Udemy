@@ -52,3 +52,12 @@ L74 Implementing the Game Logic
     Save data from the DOM that will be often manipulated in a variable in code
 
     Application state and state variables which are relevant to the application
+
+
+L75 Manipulating CSS Styles
+    DOM also incluse CSS styles
+
+    To select and change CSS style use '.style.'name of property'' method and then assign the string value:
+        The properties will be converted to camel case instead of use '-'
+
+    This styles are set as inline styles so will have precedence over internal & external CSS
