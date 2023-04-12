@@ -88,3 +88,16 @@ L79 PROJECT #2: Modal Window
     document.querySelector() only shows the first match
     
     Use document.querySelectorAll() to select all instances of element/class as a NodeList which is similar to an array; iterate through the list to access each element
+
+
+L80 Working With Classes
+    You can iterate through a NodeList and .addEventListener() to each element
+
+    .classList property has a couple methods:
+        classList.remove('class name') (class name does not need '.' in front)
+        
+        classList.add('class name')
+    
+    You could manually change each style property value, but it is better to aggregrate all the properties into a class, and then add/remove the class from the element wherever needed 
+
+    When passing functions to .addEventListener, use the variable without the '()' as that will only refrence/define the function instead of calling it 
