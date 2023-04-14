@@ -34,7 +34,28 @@ L89 An High-Level Overview of JavaScript
 
         Proto-based object-orientated:
             Almost everything in JS are objects (other than primitive data types)
-        First-class functions
-        Dynamically
-        Single-threaded
-        Non-blocking event loop
+
+
+            For example, arrays are created from an array blueprint called Prototypes, which contain all the array methods and is inherited from the prototype
+
+        First-class functions:
+            In a language with first-class functions, functions are simply treated as variables. We can pass them into other functions, and return them from functions. (ex Passing functions into .addEventListener())
+
+        Dynamic:
+            Dynamically-typed language:
+                No data type definitions. Types becomes known at runtime.
+
+                Data type of variable is automically changed.
+
+                JavaScript variant with strong typing is TypeScript
+
+
+        Single-threaded:
+            Concurrency model - How the JS engine handles multiple tasks happening at the same time.
+
+            JS runs in one single thread (a set of instructions executed by the CPU), so it can only do one thing at a time.
+
+            Sounds like it would block the single thread with long-running tasks. However, we want non-blocking behavior. This is achieved by using an event loop: 
+
+        Non-blocking event loop:
+            Event loop - takes long running tasks, executed them in the "background", and puts them abck in the main thread once they are finished.
