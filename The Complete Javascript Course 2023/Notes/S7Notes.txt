@@ -141,3 +141,7 @@ L83 Rolling the Dice
 L84 Switching the Active Player
     You can toggle classes so that if it is there, it removes it, and if it isn't, it adds it:
         document.querySelector('elemnt name').classList.toggle('class name')
+
+
+L85 Holding Current Score
+    Create state variables determine the state of the system
