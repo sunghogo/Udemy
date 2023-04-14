@@ -1,6 +1,8 @@
 L87 Section Intro
 
+
 L88 Section Roadmap
+
 
 L89 An High-Level Overview of JavaScript
     JavaScript is a high-level, prototype-based, object-oriented, multi-paradigm, interpreted or just-in-time compiled, dynamic, single threaded, garbage-collected programming language with first-class functions and a non-blocking event loop concurrency model
@@ -49,7 +51,6 @@ L89 An High-Level Overview of JavaScript
 
                 JavaScript variant with strong typing is TypeScript
 
-
         Single-threaded:
             Concurrency model - How the JS engine handles multiple tasks happening at the same time.
 
@@ -59,3 +60,53 @@ L89 An High-Level Overview of JavaScript
 
         Non-blocking event loop:
             Event loop - takes long running tasks, executed them in the "background", and puts them abck in the main thread once they are finished.
+
+
+L90 The JavaScript Engine and Runtime
+    JS Engine - A program that executes JS code
+
+    Many JS Engines, but the most well known is Google's V8 Engine that powers chrome and Node.js
+
+    Any JS Engine contains:
+        1. Call Stack - Is where your code is executed using execution context
+        2. Heal - Where all the objects are stored in memory
+
+    Compilation vs Interpretation:
+        Compilation - Entire code is converted into machine code at once, and written to a binary file that can be executed by a computer
+            Soure Code -Compilation-> Portable file: machine code -Execution(can happen later)-> Program running
+
+        Interpretation - Interpreter runs through the source code and executes it line by line
+            Source Code -Conversion and Execution Line By Line-> Program Running
+        
+        JS used to be an interpreted language, but now modern engines use a mix of compilation and interpretation
+
+        Just-in-time (JIT) compilation - Entire code is converted into machine code at once, then executed immediately
+            Source Code -Compilation-> Machine Code(Not a portable file) -Execution-> Program running.
+
+    Modern Just-In-Time Compilation of JavaScript:
+        As JS code enters the JS engine:
+            1. Parsing - To read the code:
+                Code is parsed into a data structure called the Abstract Syntax Tree (AST). Each line of code is split up into pieces that is meaningful to the language, and then saving it to the tree in a structured way.
+
+                Also checks for syntax errors, and the resulting tree will later be used to generate machine code 
+
+                This AST is not related to the DOM
+
+            2. Compilation - Takes the generated AST and compiles it into machine code (JIT compilation)
+
+            3. Execution - This machine code is executed immediately (Happens in the Call Stack)
+
+            4. Optimization - Very unoptimized version of machine code in the beginning, then this code is optimized and recompiled in the background during the already running program execution, later executing the optimized code as it is recompiled+
+
+    JavaScript Runtime:
+        JS Runtime in the Browser - Contaienr including all the things we need to use JS (in this case in the browser):
+            1. The heart of the JS Runtime is the JS Engine
+            2. Web APIs - Functionalities provided to/not part of the engine, accessible on the global window object
+            3. Callback Queue - This is a data structure that contains all the callback functions that are ready to be executed (ex. callback frunction from DOM event listener):
+                As a event happens, the callback function will be called.
+
+                The callback function is put on the callback queue, and when the call stack becomes empty, the callback function is passed onto the stack for exexcution. This process is known as 'event loop'
+
+                Event loop is essential for non-blocking concurrency model
+
+        JS Runtime in node.js - Similar to JS Runtime in browser, but has access to C++ Bindings & Thread Pool instead of Web APIs
