@@ -121,3 +121,8 @@ L81 Handling an "Esc" Keypress Event
     For key events, use 'key' or 'code' property to find which key was pressed
 
     You can aggregrate conditions with '&&': AND as well as '||': OR
+
+
+L82 PROJECT #3: Pig Game
+    Flow Chart:
+        It's a representation of everything that can happen in the application
