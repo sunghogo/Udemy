@@ -126,3 +126,6 @@ L81 Handling an "Esc" Keypress Event
 L82 PROJECT #3: Pig Game
     Flow Chart:
         It's a representation of everything that can happen in the application
+    
+    Another way to get ID Selector:
+        document.getElementById('id name')
