@@ -133,6 +133,11 @@ L82 PROJECT #3: Pig Game
 
 L83 Rolling the Dice
     Comments are good way to structure the code (pseudocode)
-    
+
     You can specify and change the source attribute:
         document.querySelector('element name').src
+
+
+L84 Switching the Active Player
+    You can toggle classes so that if it is there, it removes it, and if it isn't, it adds it:
+        document.querySelector('elemnt name').classList.toggle('class name')
