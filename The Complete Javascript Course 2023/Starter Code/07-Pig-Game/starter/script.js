@@ -68,7 +68,7 @@ btnHold.addEventListener('click', function () {
       scores[activePlayer];
 
     // 2. Check if player's score is >= 100
-    if (scores[activePlayer] >= 20) {
+    if (scores[activePlayer] >= 100) {
       // Finish the game
       playing = false;
       document
@@ -83,4 +83,23 @@ btnHold.addEventListener('click', function () {
       switchPlayer();
     }
   }
+});
+
+// New game functionality
+btnNew.addEventListener('click', function () {
+  // Reset State
+  playing = true;
+  activePlayer = 0;
+  player0El.classList.remove('player--winner', 'player--active');
+  player1El.classList.remove('player--winner', 'player--active');
+  player0El.classList.add('player--active');
+  diceEl.classList.remove('hidden');
+
+  // Reset Score
+  scores[0] = scores[1] = 0;
+  currentScore = 0;
+  score0El.textContent = 0;
+  score1El.textContent = 0;
+  current0El.textContent = 0;
+  current1El.textContent = 0;
 });

@@ -145,3 +145,10 @@ L84 Switching the Active Player
 
 L85 Holding Current Score
     Create state variables determine the state of the system
+
+
+L86. Resetting the Game
+    You can assign multiple variables:
+        a = b = c = 1;
+    
+    You can .add() and .remove() multiple classes at once, as well as .remove() classes that are already removed
