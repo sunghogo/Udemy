@@ -129,3 +129,10 @@ L82 PROJECT #3: Pig Game
     
     Another way to get ID Selector:
         document.getElementById('id name')
+
+
+L83 Rolling the Dice
+    Comments are good way to structure the code (pseudocode)
+    
+    You can specify and change the source attribute:
+        document.querySelector('element name').src
