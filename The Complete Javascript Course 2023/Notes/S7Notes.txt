@@ -151,4 +151,6 @@ L86. Resetting the Game
     You can assign multiple variables:
         a = b = c = 1;
     
-    You can .add() and .remove() multiple classes at once, as well as .remove() classes that are already removed
+    You can .add() and .remove() multiple classes at once, as well as .remove() classes that are already removed or add() classes that are already added without duplication
+
+    Variables are only accessible in the scope that they are declared - variables in function cannot be accessed outside the function
