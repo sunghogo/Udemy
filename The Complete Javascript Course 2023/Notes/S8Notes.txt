@@ -69,7 +69,7 @@ L90 The JavaScript Engine and Runtime
 
     Any JS Engine contains:
         1. Call Stack - Is where your code is executed using execution context
-        2. Heal - Where all the objects are stored in memory
+        2. Heap - Where all the objects are stored in memory
 
     Compilation vs Interpretation:
         Compilation - Entire code is converted into machine code at once, and written to a binary file that can be executed by a computer
@@ -110,3 +110,45 @@ L90 The JavaScript Engine and Runtime
                 Event loop is essential for non-blocking concurrency model
 
         JS Runtime in node.js - Similar to JS Runtime in browser, but has access to C++ Bindings & Thread Pool instead of Web APIs
+
+
+L91 Execution Contexts and The Call Stack
+    What is an Execution Context:
+        Execution Context - Environment in which a piece of JavaScript is executed. Stores all the necessary information for some code to be executed.
+
+        Exactly one global execution (EC):
+            Default context, created for code that is not inside any function (top-level)
+
+        One execution context per function: 
+            For each function call, a new execution context is created. All together make up the call stack.
+
+        After Compilation, Execution process starts:
+            1. Creation of global execution context (for top-level code - code that is not inside a function)
+
+            2. Execution of top-level code (inside global EC)
+
+            3. Execution of functions and waiting for callbacks (functions)
+
+    What's Inside Execution Context? - Generated during "creation phase", right before execution
+        1. Variable Environment:
+            let, const, and var declarations
+            Functions
+            arguments object (All the arguments passed into the function that the current execution context belongs to; An array hold each passed arguments)
+
+        2. Scope Chain:
+            Consists of references to variables that are located outside the current function
+
+        3. this keyword
+
+        Arrow functions do NOT have arguments object and this keyword, allowing them to use the arguments object and this keyword to their regular function parents
+
+        None of the values become known during the creation phase, only during the execution phase
+
+    The Call Stack - "Place" in memory where execution contexts get stacked on top of each other, to keep track of where we are in execution:
+        Execution context on top of stack is what is currently running
+
+        Once an execution context is finished and popped off, it executes the execution context in the call stack before it
+
+        Execution context is paused as soon as another execution context is pushed on top of the stack; This is because JS only have one thread of execution
+
+        Global Execution Context is only finished and popped off when the browser is exited and closed, otherwise waiting for callback functions
