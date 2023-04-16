@@ -213,4 +213,30 @@ L93 Scoping in Practice
 L94 Variable Environment: Hoisting and The TDZ
     Execution Context: Looking into the Variable Environment
 
-    
+    Hoisting:
+        Hoisting - Makes some types of variables accessible/usable in the code before they are actually declared. "Variables lifted to the top of their scope":
+
+        Before execution, code is scanned for variable declarations, and for each variable, a new property is created in the variable environment object
+
+    Hoisting has different behavior depending on the variable types:
+        function declarations:
+            hoisted, initial value = actual function, block scoped (in strict mode)
+
+        var variables:
+            hoisted, initial value = undefined, function scoped
+
+        let and const variables:
+            not hoisted (technically yes, but not in practice), initial value = <uninitialized>, Temporal Debt Zone (TDZ is the region where the variables are not accessible from beginning of scope to where they are declared), block scoped
+
+        function expressions and arrow functions:
+            depends if using var or let/const
+
+    Temporal Dead Zone (TDZ) (ES6) - Is the region of scope in which the variable is defined, but is not accessible. After it is defined, the variable is taken out of the TDZ where it can be used:
+        Useful for two main reasons:
+            1. TDZ makes it easier to avoid and catch errors: accessing before decalaration is bad practice and should be avoided
+
+            2. Makes const variables actually work - We cannot reassign const variables, so is only assigned when execution reaches declaration
+
+    Reasons for Hoisting: of 
+        1. Creattor of JS implemented this so that we could use functions before actual declarations, which is essential for programming techniques like mutual recursion
+        2. var hoisting is just a byproduct, which was later rectified with let/const
