@@ -240,3 +240,23 @@ L94 Variable Environment: Hoisting and The TDZ
     Reasons for Hoisting: of 
         1. Creattor of JS implemented this so that we could use functions before actual declarations, which is essential for programming techniques like mutual recursion
         2. var hoisting is just a byproduct, which was later rectified with let/const
+
+
+L95 Hoisting and TDZ in Practice
+    Accessing var before declaration result in undefined
+
+    Accessing let/const before declaration result in ReferenceError
+
+    Calling function declarations before declaration is works fine
+    
+    Calling function expressions/arrow functions before declaration result in ReferenceError if using let/const, and TypeError if using var (since you are effecivtely calling 'undefined('params')')
+
+    Careful using falsy values since hoisting var declaractions will result in undefined falsy value 
+
+    Best Practices/cleaner code:
+        1. Don't use vars to declare variables, use const most of the time and let if variables need to change
+        2. Declare variables at the top of each scope
+        3. Declare funtions first, and only use them after the declaration (even for function declarations)
+
+    'window' object is the global object of JS in the broswer (can check it in the dev console):
+        var declarations create 'window' properties with their value, but let/const do not
