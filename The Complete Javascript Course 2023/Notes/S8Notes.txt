@@ -360,3 +360,14 @@ L99 Primitives vs. Objects (Primitive vs. Reference Types)
         1. Prototypal Inheritance - Object Orientated Programming (OOP) with JS
         2. Event Loop - Asynchronous JS Promises, Async/Await and AJAX
         3. How the DOM Really Works - Advanced DOM and Events
+
+
+L100 Primitives vs. Objects in Practice
+    For const objects, we cannot reassign a new object / memory value in the stack, but this works for let declarations
+
+    Two ways to copy objects as a new separate object:
+        1. Object.assign({}, 'object name'):
+            Object.assign() merges two objects into a new object but we can mergw with an empty object
+
+            Object.assign() only works on the first level (shallow copy/clone) so that if we have inner/nested objects, it will still point to the same inner object in heap memory
+        2.  Deep cloning done through exteneral libraries like Lo-Dash
