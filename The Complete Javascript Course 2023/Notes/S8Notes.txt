@@ -59,7 +59,7 @@ L89 An High-Level Overview of JavaScript
             Sounds like it would block the single thread with long-running tasks. However, we want non-blocking behavior. This is achieved by using an event loop: 
 
         Non-blocking event loop:
-            Event loop - takes long running tasks, executed them in the "background", and puts them abck in the main thread once they are finished.
+            Event loop - takes long running tasks, executed them in the "background", and puts them back in the main thread once they are finished.
 
 
 L90 The JavaScript Engine and Runtime
@@ -105,7 +105,7 @@ L90 The JavaScript Engine and Runtime
             3. Callback Queue - This is a data structure that contains all the callback functions that are ready to be executed (ex. callback frunction from DOM event listener):
                 As a event happens, the callback function will be called.
 
-                The callback function is put on the callback queue, and when the call stack becomes empty, the callback function is passed onto the stack for exexcution. This process is known as 'event loop'
+                The callback function is put on the callback queue, and when the call stack becomes empty, the callback function is passed onto the stack for execution. This process is known as 'event loop'
 
                 Event loop is essential for non-blocking concurrency model
 
@@ -152,3 +152,27 @@ L91 Execution Contexts and The Call Stack
         Execution context is paused as soon as another execution context is pushed on top of the stack; This is because JS only have one thread of execution
 
         Global Execution Context is only finished and popped off when the browser is exited and closed, otherwise waiting for callback functions
+
+
+L92 Scope and The Scope Chain
+        Scoping - How our program's variables are organized and accessed.
+
+        JS has Lexical Scoping - Scoping is controlled by placement of funtions and blocks in the code
+
+        Scope - Space or environment in which a certain variable is declared (variable environment in case of functions). There is a global scope, function scope, and block scope
+
+        Scope of a variable - Region of our code whwre a certain variable can be accessed
+
+        The 3 Types of Scope:
+            Global Scope:
+                Outside of any function or block
+                Variables declared in global scope are accessible everywhere 
+
+            Fucntion Scope:
+                Variables are accessible only inside function, NOT outside
+                Also called "local scope"
+
+            Block Scope (ES6):
+                Variables are accessible only inside block (block scoped)
+                HOWEVER, this only applies to let and const variables!
+                Functions are also block scoped (only in strict mode)
