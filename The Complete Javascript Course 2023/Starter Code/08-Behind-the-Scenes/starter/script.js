@@ -132,7 +132,6 @@ matilda.calcAge(); // this points to matilda object and not jonas object
 
 const f = jonas.calcAge;
 f(); // Undefined, since this is undefined and so is this.year
-*/
 
 // L98 Regular Functions vs. Arrow Functions
 var firstName = 'Matilda';
@@ -185,4 +184,21 @@ var addArrow = (a, b) => {
   return a + b;
 };
 
-// addArrow(2, 5, 8); // RefereneError
+// addArrow(2, 5, 8); // RefereneError since arrow functions do not have arguments keyword
+*/
+
+// L99 Primitives vs. Objects (Primitive vs. Reference Types)
+let age = 30;
+let oldAge = age; // points to old stack address holding 30
+age = 31; // points to new stack address holding 31
+console.log(age, oldAge);
+
+const me = {
+  name: 'Jonas',
+  age: 30,
+};
+
+const friend = me; // points to same object as me on heap
+friend.age = 27; // changes value on heap object, thus changing both me.age and friend.age
+console.log('Friend', friend);
+console.log('Me', me);
