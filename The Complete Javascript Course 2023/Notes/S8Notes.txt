@@ -274,8 +274,18 @@ L96 The this Keyword
             this = undefined (only in strict mode otherwise points to the global object/'window' in the browser)
         3. Arrow Functions (dont get own this):
             this = <this of surrounding function (lexical this)>
-        4. Event Listner:
+        4. Event Listener:
             this = <DOM element that the handler is attached to>
         5. new, call, apply, bind keywords/methods
 
     'this' does NOT point to the function itself, and also NOT the variable environment
+
+    
+L97 The this Keyword in Practice
+    Functions get undefined this in strict mode, otherwise global object
+
+    Arrow functions get lexical this so that it gets the this of its parent scope
+
+    For object methods, the this keyword points to the object calling the method, not the object the method is in (this is dynamic)
+
+    Method borrowing - Assigning method properties from one object to another
