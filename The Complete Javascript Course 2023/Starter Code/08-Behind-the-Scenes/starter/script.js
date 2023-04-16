@@ -42,7 +42,7 @@ const firstName = 'Jonas'; // Global Variable
 calcAge((1991); // Code in function only executed once it is called
 // console.log(age); // Error: Cannot access to a child scope
 // printAge(); // Error: In global scope, do not have access to any variables defined in child scopes
-*/
+
 
 // L95 Hoisting and TDZ in Practice
 
@@ -98,3 +98,38 @@ const z = 3;
 console.log(x === window.x);
 console.log(y === window.y);
 console.log(z === window.z);
+*/
+
+// L97 The this Keyword in Practice
+console.log(this);
+
+const calcAge = function (birthYear) {
+  console.log(2037 - birthYear);
+  console.log(this); // Undefined in strict mode
+};
+calcAge(1991);
+
+const calcAgeArrow = birthYear => {
+  console.log(2037 - birthYear);
+  console.log(this); // window, since arrow functions get lexical this
+};
+calcAgeArrow(1980);
+
+const jonas = {
+  year: 1991,
+  calcAge: function () {
+    console.log(this); // jonas object
+    console.log(2037 - this.year);
+  },
+};
+jonas.calcAge();
+
+const matilda = {
+  year: 2017,
+};
+
+matilda.calcAge = jonas.calcAge; // Method borrowing
+matilda.calcAge(); // this points to matilda object and not jonas object
+
+const f = jonas.calcAge;
+f(); // Undefined, since this is undefined and so is this.year
