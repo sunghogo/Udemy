@@ -268,7 +268,7 @@ L96 The this Keyword
     'this' is NOT static. It depends on how the function is called, and its value is only assigned when the function is actually called
 
     Ways to call a function:
-        1. Method (Call):
+        1. Method (Call / Function that is a object property):
             this = <Object that is calling that method>
         2. Simple Function Call:
             this = undefined (only in strict mode otherwise points to the global object/'window' in the browser)
@@ -315,3 +315,48 @@ L98 Regular Functions vs. Arrow Functions
         You can actually pass more arguments than specified by the parameter
 
         No longer use arguments keyword to handle multiple parameters
+
+
+L99 Primitives vs. Objects (Primitive vs. Reference Types)
+    Primitives / Primitive Types:
+         Number
+         string
+         Boolean
+         Undefined
+         Null
+         Symbol
+         BigInt
+
+    Objects / Reference Types:
+        Object literal
+        Arrays
+        Functions
+        Many more
+
+    All our object/reference types will be stored on the heap, while the primitive types will be stored on the call stack in the execution context where they are declared
+
+    Primitives:
+        In JS Engine Call Stack, it will create on variable declaration:
+            1. unique identifier with the variable name
+            2. allocated memory with address
+            3. value stored at the specified address
+
+        The identifier points to the address which holds the value, and not the value itself
+
+        The value at a certain stack memmory address is immutable, so reassigning value creates and points to a new address with the new value
+
+    Objects:
+        In JS Engine Heap. it will create on new reference object declaration:
+            1. allocated memory address
+            2. value(s)
+
+        Upon object declaration, it will create an identifier on the call stack that points to an address on the stack whose value references the memory address on the heap
+
+        Memory on the stack is limited but memory on the heap is near unlimited
+
+        The value at heap memory addres is mutable, so this allows us to use const declarations and change properties since the call stack address is the same with the same value that references the object on heap memory
+
+    Other Important Future Topics:
+        1. Prototypal Inheritance - Object Orientated Programming (OOP) with JS
+        2. Event Loop - Asynchronous JS Promises, Async/Await and AJAX
+        3. How the DOM Really Works - Advanced DOM and Events
