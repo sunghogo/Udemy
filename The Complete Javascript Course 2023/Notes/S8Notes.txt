@@ -194,3 +194,17 @@ L92 Scope and The Scope Chain
             Order in which functions are written in the code. Has NOTHING to do with order in which functions were called.
 
             One can say that a scope in a scope chain is equal to the sum of all the variable environments of itself and its parent scopes
+
+
+L93 Scoping in Practice
+    Code in function only executed once it is called, so it has access to variables in scope that are declared after declaration but before the execution
+
+    For scoping and variable lookup, the paramenters of a function work just like normal variables
+
+    In ES6, functions are blocked scoped so cannot be accessed outside it scope chain ONLY IN STRICT MODE
+
+    Variable lookup starts with the curernt scope, and looks up if it isn't. So variable lookups for variables with the same name is determined by scope chain.
+
+    You can variables with the same name as long as they are declared in the different scopes. Same reason with you can have parameter names that are the same as another variable.
+
+    Redefining/Reassigning a outer/parent scope variable in a inner/child scope is carried over to parent scope due to it being already defined, and only the value is changed
