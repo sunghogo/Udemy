@@ -260,3 +260,22 @@ L95 Hoisting and TDZ in Practice
 
     'window' object is the global object of JS in the broswer (can check it in the dev console):
         var declarations create 'window' properties with their value, but let/const do not
+
+
+L96 The this Keyword
+    'this' keyword/variable - Special variable that is created for every execution context (every function). Takes the value of (points to) the "owner" of the funciton in which the 'this' keyword is used
+
+    'this' is NOT static. It depends on how the function is called, and its value is only assigned when the function is actually called
+
+    Ways to call a function:
+        1. Method:
+            this = <Object that is calling that method>
+        2. Simple Function Call:
+            this = undefined (only in strict mode otherwise points to the global object/'window' in the browser)
+        3. Arrow Functions (dont get own this):
+            this = <this of surrounding function (lexical this)>
+        4. Event Listner:
+            this = <DOM element that the handler is attached to>
+        5. new, call, apply, bind keywords/methods
+
+    'this' does NOT point to the function itself, and also NOT the variable environment
