@@ -1,4 +1,4 @@
-L101 Section Intro
+L101 Section Intro:
     Will cover:
         1. Built-in data structures like objects, maps, and arrays
         2. Modern ES6+ operators like destructuring nad optional chaining
@@ -8,3 +8,30 @@ L102 Section Roadmap
 
 
 L103 Destructuring Arrays:
+    Destructuring (ES6) - Way of unpacking of values in an array or object into separate variables. (Break a complex data structure down into a simpler data structure like a variable)
+
+    In VS Code, you can duplicate selection
+    
+    Simple way to destructure an array:
+        const ['var 1', var 2', etc...] = 'array name'
+
+        Destructuring assignment assigns leftmost variables starting from index 0
+
+        Can also skip an index with an empty space like this:
+            const ['var 1', ,'var 2'] = 'array name'
+
+    Destructuring also allows us to easily switch variable values:
+        ['var 1', 'var 2'] = ['var 1', 'var 2']
+
+    You can destructure arrays returned from functions
+
+    You can also destructure nested arrays used nested destructuring:
+            const ['var 1', [var 2', 'var 3'], etc...] = 'array name'
+
+    We can set default values for the variables when we are destructuring/extracting them:
+        const ['var 1' = 'default value 1', 'var 2' = 'default value 2', etc...] = 'array name'
+
+        
+        Useful for when we do not know the length of the array
+
+    Destructuring an array for a non existant index returns an undefined
