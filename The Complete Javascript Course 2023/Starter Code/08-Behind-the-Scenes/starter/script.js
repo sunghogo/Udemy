@@ -185,7 +185,6 @@ var addArrow = (a, b) => {
 };
 
 // addArrow(2, 5, 8); // RefereneError since arrow functions do not have arguments keyword
-*/
 
 // L99 Primitives vs. Objects (Primitive vs. Reference Types)
 let age = 30;
@@ -202,3 +201,39 @@ const friend = me; // points to same object as me on heap
 friend.age = 27; // changes value on heap object, thus changing both me.age and friend.age
 console.log('Friend', friend);
 console.log('Me', me);
+*/
+
+// L100 Primitives vs. Objects in Practice
+// Primitive types
+let lastName = 'Williams';
+let oldLastName = lastName;
+lastName = 'Davis';
+console.log(lastName, oldLastName);
+
+// Rerefernce types
+const jessica = {
+  firstName: 'Jessica',
+  lastName: 'Williams',
+  age: 27,
+};
+const marriedJessica = jessica;
+marriedJessica.lastName = 'Davis';
+console.log('Before Marriage', jessica);
+console.log('After Marriage', marriedJessica);
+// marriedJessica = {};
+
+// Copying objects
+const jessica2 = {
+  firstName: 'Jessica',
+  lastName: 'Williams',
+  age: 27,
+  family: ['Alice', 'Bob'],
+};
+
+const jessicaCopy = Object.assign({}, jessica2);
+jessicaCopy.lastName = 'Davis';
+
+jessicaCopy.family.push('Mary', 'John'); // Deep nested object wiill still be referenced for both jessica2 and jessicaCopy
+
+console.log('Before Marriage', jessica2);
+console.log('After Marriage', jessicaCopy);
