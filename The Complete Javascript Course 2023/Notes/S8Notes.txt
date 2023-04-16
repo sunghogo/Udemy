@@ -268,7 +268,7 @@ L96 The this Keyword
     'this' is NOT static. It depends on how the function is called, and its value is only assigned when the function is actually called
 
     Ways to call a function:
-        1. Method:
+        1. Method (Call):
             this = <Object that is calling that method>
         2. Simple Function Call:
             this = undefined (only in strict mode otherwise points to the global object/'window' in the browser)
@@ -289,3 +289,29 @@ L97 The this Keyword in Practice
     For object methods, the this keyword points to the object calling the method, not the object the method is in (this is dynamic)
 
     Method borrowing - Assigning method properties from one object to another
+
+
+L98 Regular Functions vs. Arrow Functions
+    Arrow function does not get its own this keyword, it will get it from its surrounding
+
+    Object literal syntax is NOT a code block
+
+    When we try to access a property that doesn't exist on an object, we get 'undefined' instead of an an error
+
+    var declaration creates a property on the window object, which can also lead to bugs
+
+    Best practice is to never use an arrow function as a method to avoid improperly using this
+
+    For functions defined within methods, these function calls identify as regular function calls, so this keyword is 'undefined':
+        Two Solutions to this:
+            1. Assign the this keyword while it is still referencing the object to a variable like 'self' or 'that' (this is a pre-ES6 solution)
+            2. Arrow functions use the this keyword  of its parent scope, so it can be used to reference the parent scope/object
+
+    Reference to this as an object property will refer to the parent scope/global object
+
+    arguments keyword:
+        'arguments' keyword in a function returns an array containing the parameters passed to the function, but arrow functions DO NOT have arguments keyword and will return an error
+
+        You can actually pass more arguments than specified by the parameter
+
+        No longer use arguments keyword to handle multiple parameters
