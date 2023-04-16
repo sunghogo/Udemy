@@ -35,3 +35,26 @@ L103 Destructuring Arrays:
         Useful for when we do not know the length of the array
 
     Destructuring an array for a non existant index returns an undefined
+
+
+L104 Destructuring Objects
+    Similar to destructuring arrays, except key differences:
+        const {'property 1', property 2', etc...} = 'object name'
+
+        Objects are unordered so do not need to skip, however need to specify the exact property name as the variable name
+
+        Extremely useful for dealing with API call results
+
+    Can specify variable names in destructuring objects:
+        const {'property 1': 'variable 1', property 2': 'variable 2', etc...} = 'object name'
+
+    Cam also specify default values in destructuring objects:
+        const {'property 1' = 'default value 1', property 2' = 'default value 2', etc...} = 'object name'
+
+    Mutating variables with object destructuring:
+        We can't just do:
+            {'property 1', 'property 2'} = 'object name'
+        since JS expects this to be a code block, and we cannot assign to a code block as it will create a SyntaxError
+
+        To propertly reassign variables using destructuring objects, need to wrap the entire statement in parentheses:
+            ({'property 1', 'property 2'} = 'object name')
