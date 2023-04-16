@@ -1,0 +1,10 @@
+L101 Section Intro
+    Will cover:
+        1. Built-in data structures like objects, maps, and arrays
+        2. Modern ES6+ operators like destructuring nad optional chaining
+        3. How to work with strings
+
+L102 Section Roadmap
+
+
+L103 Destructuring Arrays:
