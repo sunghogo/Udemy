@@ -98,7 +98,6 @@ const z = 3;
 console.log(x === window.x);
 console.log(y === window.y);
 console.log(z === window.z);
-*/
 
 // L97 The this Keyword in Practice
 console.log(this);
@@ -133,3 +132,57 @@ matilda.calcAge(); // this points to matilda object and not jonas object
 
 const f = jonas.calcAge;
 f(); // Undefined, since this is undefined and so is this.year
+*/
+
+// L98 Regular Functions vs. Arrow Functions
+var firstName = 'Matilda';
+
+const jonas = {
+  firstName: 'Jonas',
+  year: 1991,
+  calcAge: function () {
+    console.log(this); // jonas object
+    console.log(2037 - this.year);
+
+    // Solution 1
+    // const self = this; // self or that
+    // const isMillenial = function () {
+    //   // console.log(this); // undefined
+    //   // console.log(this.year >= 1981 && this.year <= 1996);
+    //   console.log(self); // jonas
+    //   console.log(self.year >= 1981 && self.year <= 1996);
+    // };
+
+    // Solution 2
+    // Arrow funciton inherits the this keyword parent scopre
+    const isMillenial = () => {
+      console.log(this); // jonas
+      console.log(this.year >= 1981 && this.year <= 1996);
+    };
+
+    isMillenial(); // this is regular function call so the this keyword must be undefined
+  },
+
+  greet: () => {
+    console.log(this);
+    console.log(`Hey, ${this.firstName}`);
+  }, // this refers to parent scope, which is global scope/object
+};
+jonas.greet();
+jonas.calcAge();
+// console.log(this.firstName); // window object, undefined unless var firstName declaration
+
+// arguments keyword
+const addExpr = function (a, b) {
+  console.log(arguments);
+  return a + b;
+};
+addExpr(2, 5);
+addExpr(2, 5, 8, 12);
+
+var addArrow = (a, b) => {
+  console.log(arguments);
+  return a + b;
+};
+
+// addArrow(2, 5, 8); // RefereneError
