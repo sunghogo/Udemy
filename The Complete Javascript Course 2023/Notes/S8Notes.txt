@@ -205,6 +205,12 @@ L93 Scoping in Practice
 
     Variable lookup starts with the curernt scope, and looks up if it isn't. So variable lookups for variables with the same name is determined by scope chain.
 
-    You can variables with the same name as long as they are declared in the different scopes. Same reason with you can have parameter names that are the same as another variable.
+    You can have variables with the same name as long as they are declared in the different scopes. Same reason with you can have parameter names that are the same as another variable.
 
     Redefining/Reassigning a outer/parent scope variable in a inner/child scope is carried over to parent scope due to it being already defined, and only the value is changed
+
+
+L94 Variable Environment: Hoisting and The TDZ
+    Execution Context: Looking into the Variable Environment
+
+    
