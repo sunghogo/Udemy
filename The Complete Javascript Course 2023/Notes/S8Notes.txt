@@ -201,11 +201,11 @@ L93 Scoping in Practice
 
     For scoping and variable lookup, the paramenters of a function work just like normal variables
 
-    In ES6, functions are blocked scoped so cannot be accessed outside it scope chain ONLY IN STRICT MODE
+    In ES6 and ONLY IN STRICT MODE, functions are blocked scoped so cannot be accessed outside its scope chain
 
     Variable lookup starts with the curernt scope, and looks up if it isn't. So variable lookups for variables with the same name is determined by scope chain.
 
-    You can have variables with the same name as long as they are declared in the different scopes. Same reason with you can have parameter names that are the same as another variable.
+    You can have variables with the same name as long as they are declared in the different scopes. Same reason why you can have parameter names that are the same as another variable.
 
     Redefining/Reassigning a outer/parent scope variable in a inner/child scope is carried over to parent scope due to it being already defined, and only the value is changed
 
@@ -247,9 +247,9 @@ L95 Hoisting and TDZ in Practice
 
     Accessing let/const before declaration result in ReferenceError
 
-    Calling function declarations before declaration is works fine
+    Calling function declarations before declaration works fine
     
-    Calling function expressions/arrow functions before declaration result in ReferenceError if using let/const, and TypeError if using var (since you are effecivtely calling 'undefined('params')')
+    Calling function expressions/arrow functions before declaration result in ReferenceError if using let/const due to TDZ, and TypeError if using var (since you are effecivtely calling 'undefined('params')')
 
     Careful using falsy values since hoisting var declaractions will result in undefined falsy value 
 
@@ -282,17 +282,17 @@ L96 The this Keyword
 
     
 L97 The this Keyword in Practice
-    Functions get undefined this in strict mode, otherwise global object
+    Functions get undefined 'this' in strict mode, otherwise global object
 
-    Arrow functions get lexical this so that it gets the this of its parent scope
+    Arrow functions get lexical this so that it gets the 'this' of its parent scope
 
-    For object methods, the this keyword points to the object calling the method, not the object the method is in (this is dynamic)
+    For object methods, the 'this' keyword points to the object calling the method, not the object the method is in (this is dynamic)
 
     Method borrowing - Assigning method properties from one object to another
 
 
 L98 Regular Functions vs. Arrow Functions
-    Arrow function does not get its own this keyword, it will get it from its surrounding
+    Arrow function does not get its own 'this' keyword, it will get it from its surrounding
 
     Object literal syntax is NOT a code block
 
@@ -307,7 +307,7 @@ L98 Regular Functions vs. Arrow Functions
             1. Assign the this keyword while it is still referencing the object to a variable like 'self' or 'that' (this is a pre-ES6 solution)
             2. Arrow functions use the this keyword  of its parent scope, so it can be used to reference the parent scope/object
 
-    Reference to this as an object property will refer to the parent scope/global object
+    Reference to 'this' as an object property will refer to the parent scope/global object
 
     arguments keyword:
         'arguments' keyword in a function returns an array containing the parameters passed to the function, but arrow functions DO NOT have arguments keyword and will return an error
@@ -370,4 +370,5 @@ L100 Primitives vs. Objects in Practice
             Object.assign() merges two objects into a new object but we can mergw with an empty object
 
             Object.assign() only works on the first level (shallow copy/clone) so that if we have inner/nested objects, it will still point to the same inner object in heap memory
+            
         2.  Deep cloning done through exteneral libraries like Lo-Dash
