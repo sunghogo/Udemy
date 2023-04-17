@@ -16,6 +16,17 @@ const restaurant = {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
 
+  orderDelivery: function ({
+    starterIndex = 1,
+    mainIndex = 1,
+    time = '20:00',
+    address,
+  }) {
+    console.log(
+      `Order received ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
+    );
+  },
+
   openingHours: {
     thu: {
       open: 12,
@@ -105,7 +116,24 @@ const obj = {
   b: 7,
   c: 14,
 };
+// { a, b } = obj; // SyntaxError
 ({ a, b } = obj);
 console.log(a, b);
 
 // Nested objects
+const {
+  fri: { open: o, close: c },
+} = openingHours; // Destructured variable from before
+console.log(o, c);
+
+restaurant.orderDelivery({
+  time: '22:30',
+  address: 'Via del Sole, 21',
+  mainIndex: 2,
+  starterIndex: 2,
+});
+
+restaurant.orderDelivery({
+  address: 'Via del Sole, 21',
+  starterIndex: 1,
+});
