@@ -21,7 +21,7 @@ L103 Destructuring Arrays:
             const ['var 1', ,'var 2'] = 'array name'
 
     Destructuring also allows us to easily switch variable values:
-        ['var 1', 'var 2'] = ['var 1', 'var 2']
+        ['var 1', 'var 2'] = ['var 2', 'var 1']
 
     You can destructure arrays returned from functions
 
@@ -58,3 +58,7 @@ L104 Destructuring Objects
 
         To propertly reassign variables using destructuring objects, need to wrap the entire statement in parentheses:
             ({'property 1', 'property 2'} = 'object name')
+
+    Nested Objects:
+        Similarly, we can specify and destructure nested objects:
+            const {'nested object name' : {'property name 1', 'property name 2', etc...} = 'object name'

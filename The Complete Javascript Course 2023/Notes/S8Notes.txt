@@ -237,8 +237,8 @@ L94 Variable Environment: Hoisting and The TDZ
 
             2. Makes const variables actually work - We cannot reassign const variables, so is only assigned when execution reaches declaration
 
-    Reasons for Hoisting: of 
-        1. Creattor of JS implemented this so that we could use functions before actual declarations, which is essential for programming techniques like mutual recursion
+    Reasons for Hoisting:
+        1. Creator of JS implemented this so that we could use functions before actual declarations, which is essential for programming techniques like mutual recursion
         2. var hoisting is just a byproduct, which was later rectified with let/const
 
 
