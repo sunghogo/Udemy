@@ -62,3 +62,12 @@ L104 Destructuring Objects
     Nested Objects:
         Similarly, we can specify and destructure nested objects:
             const {'nested object name' : {'property name 1', 'property name 2', etc...} = 'object name'
+
+    You can define objects as parameters for a function:
+        This is useful for functions with many multiple parameters as you don't have to keep track of the parameter order, and destructure the object right away in the function parameters
+
+        'object name' = {'property 1', 'property 2', etc..}
+        'function name' = function ({'property 1', 'property 2', etc..}) {
+            "function body"
+        }
+        'function name' ({'property 1', 'property 2', etc..});
