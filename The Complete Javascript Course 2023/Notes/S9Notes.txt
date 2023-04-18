@@ -71,3 +71,10 @@ L104 Destructuring Objects
             "function body"
         }
         'function name' ({'property 1', 'property 2', etc..});
+
+
+L105 The Spread Operator (...):
+    We can use the spread operator to expand an array into all its elements, unpacking all the array elements at once
+
+    Spread Operator (ES6) - Takes all the values out of an array, and writes the values individually in sequence
+        ...'array name'
