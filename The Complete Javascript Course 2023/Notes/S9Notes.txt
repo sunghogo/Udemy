@@ -121,3 +121,20 @@ L106 Rest Pattern and Parameters
         If there are no rest arguments, the rest parameter returns an empty array
 
     So the spread operator is used where we would write values (or object property:value pairs) separated by a comma, and the rest pattern is used where we would write variable names separated by commas
+
+
+107 Short Circuiting (&& and ||)
+    Logical Operators are limited to boolean types, so they can:
+        1. Use ANY data type
+        2. Return ANY data type
+        3. Short-circuit Evaluation / Short-circuiting
+
+    Short-circuiting - It will evaluate for the first expression, and short-circuit the rest of the evaluation:
+        ||: It will evaluate the expression until the first truthy value, then return that value. If all the values are falsy, then it will return the last value even if the last value is falsy as well
+
+        &&: It will evaluate the expresion an the first falsy value, the return that value. If all value are true, then it will return the last v alue even if the last value is truthy as well
+
+        Useful for replacing ternary operators (for longer evaluations) and if / else statements:
+            Useful to use || to set default values and && to execute code in the second operand if the first operand is true        
+
+
