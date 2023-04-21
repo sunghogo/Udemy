@@ -1,4 +1,4 @@
-L101 Section Intro:
+L101 Section Intro
     Will cover:
         1. Built-in data structures like objects, maps, and arrays
         2. Modern ES6+ operators like destructuring nad optional chaining
@@ -7,7 +7,7 @@ L101 Section Intro:
 L102 Section Roadmap
 
 
-L103 Destructuring Arrays:
+L103 Destructuring Arrays
     Destructuring (ES6) - Way of unpacking of values in an array or object into separate variables. (Break a complex data structure down into a simpler data structure like a variable)
 
     In VS Code, you can duplicate selection
@@ -73,7 +73,7 @@ L104 Destructuring Objects
         'function name' ({'property 1', 'property 2', etc..});
 
 
-L105 The Spread Operator (...):
+L105 The Spread Operator (...)
     We can use the spread operator to expand an array into all its elements, unpacking all the array elements at once
 
     Spread Operator (ES6) - Takes all the values out of an array, and writes the values individually in sequence
@@ -132,7 +132,7 @@ L106 Rest Pattern and Parameters
     Short-circuiting - It will evaluate for the first expression, and short-circuit the rest of the evaluation:
         ||: It will evaluate the expression until the first truthy value, then return that value. If all the values are falsy, then it will return the last value even if the last value is falsy as well
 
-        &&: It will evaluate the expresion an the first falsy value, the return that value. If all value are true, then it will return the last v alue even if the last value is truthy as well
+        &&: It will evaluate the expresion until the first falsy value, then return that value. If all value are true, then it will return the last value even if the last value is truthy as well
 
         Useful for replacing ternary operators (for longer evaluations) and if / else statements:
             Useful to use || to set default values and && to execute code in the second operand if the first operand is true        
@@ -143,3 +143,17 @@ L108 The Nullish Coalescing Operator (??)
         ??: Similar to || but it instead works with concept of nullish values ('null' abd 'undefined'). It will evaluate the expression for the first non-nullish value, and short-circuit/return it. Otherwise, it will return the last value even if it is nullish.
 
         Basically, it is || if 0 and '' were treated as truthy values
+
+
+109 Logical Assignment Operators
+    Logical Assignment Operators (ES2021+):
+        Logical OR Assignment Operator -
+            ||=: Assigns the value in the second operand to the first operand if the value in the first operand is falsy
+
+        Logical Nullish Assignment Operator =
+            ??=: Assigns the value in the second operand to the first operand if the value in the first operand is a nullish value
+
+        Logical AND Assignmer Operator -
+            &&=: Assigns the value in the second operand to the first operand if the value in the first operand is a truthy value
+
+        Useful for shorthand way of assigining variable using logical operators
