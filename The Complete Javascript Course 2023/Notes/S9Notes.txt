@@ -80,7 +80,7 @@ L105 The Spread Operator (...):
         ...'array name'
 
         Spread operator creates expressions with the array values and commas in between, which does not create new variables by itself, and is used specifically within arrays:
-        ...'arrary name' === `val1, val2, ... , etc`
+        ...'array name' === `val1, val2, ... , etc`
     
     We create new arrays using Array Literal Syntax to declare and copy an array with a spread operator
 
@@ -94,4 +94,30 @@ L105 The Spread Operator (...):
 
     use '\' to escape characters from string for example
 
-    In (ES2018+), spread objects DO WORK on objects even though they are not iterables, and can be used to pass object property:value pairs to create new object copys
+    In (ES2018+), spread objects DO WORK on objects even though they are not iterables, and can be used to pass object property:value pairs to create new object copys:
+        const 'new object name' === { 'new property': 'value', ...'object name', etc.. }
+
+
+L106 Rest Pattern and Parameters
+    Rest Patterns use same syntax as spread operators but does the opposite by collecting multiple elements, and condensing them into an array 
+
+    Rest Patterns (ES6) - Takes the rest of the elements, and puts them into an array:
+        const ['var 1', 'var 2', ...'var 3'] = 'array name'
+
+        Rest element must be the very last element / There can only be one est element in a destructuring assignment
+
+        Does not include any skipped elements in the destructuring
+
+    Also works in objects (ES2018+):
+        const {'property 1', 'property 2', ...'rest variable name'} = 'object name'
+
+    We can also use the rest parameters to implement the opposite of spread operator to pass any number of arguments (in an array) to a function parameter:
+        const 'function name' = function (...'rest parameter name') { "function body" }
+
+        This useful so that a function can take both an array and all single values extract from a spread operator simultaneously
+
+        Also feels more natural, and used frequently
+
+        If there are no rest arguments, the rest parameter returns an empty array
+
+    So the spread operator is used where we would write values (or object property:value pairs) separated by a comma, and the rest pattern is used where we would write variable names separated by commas
