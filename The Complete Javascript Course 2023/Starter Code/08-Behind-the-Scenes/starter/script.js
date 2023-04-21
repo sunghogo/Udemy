@@ -201,7 +201,7 @@ const friend = me; // points to same object as me on heap
 friend.age = 27; // changes value on heap object, thus changing both me.age and friend.age
 console.log('Friend', friend);
 console.log('Me', me);
-*/
+
 
 // L100 Primitives vs. Objects in Practice
 // Primitive types
@@ -237,3 +237,44 @@ jessicaCopy.family.push('Mary', 'John'); // Deep nested object wiill still be re
 
 console.log('Before Marriage', jessica2);
 console.log('After Marriage', jessicaCopy);
+*/
+
+// Addition this keyword sandboxing
+function decl() {
+  console.log('decl', this);
+}
+const expr = function () {
+  console.log('expr', this);
+};
+const arrow = () => {
+  console.log('arrow', this);
+};
+const obj = {
+  one: console.log(this),
+  two: function sneed() {
+    console.log(this);
+  },
+  three: () => {
+    console.log(this);
+  },
+  four: 4,
+  five: 5,
+  six: this.four + this.five,
+  seven() {
+    console.log(this.four * this.five);
+  },
+};
+
+console.log(this); // window object
+// By default, this refers to the global object which is window in browser UNLESS using strict mode which is undefined
+decl(); // undefined
+expr(); // undefined
+// Has no own this keyword, which is determined lexically based on surrounding scope
+arrow(); // window object
+
+// Properties by themselves cannot access this keyword as it is undefined, need to be inside a function declaration, and be called as a method
+console.log('obj 1', obj.one); // undefined
+obj.two(); // obj object
+obj.three(); // window object
+console.log(`obj 6`, obj.six); // NaN
+obj.seven(); // 28
