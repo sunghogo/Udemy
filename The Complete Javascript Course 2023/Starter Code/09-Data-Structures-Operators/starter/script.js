@@ -264,7 +264,6 @@ if (restaurant.orderPizza) {
 
 // Short-circuitig method
 restaurant.orderPizza && restaurant.orderPizza('mushroom', 'spinach');
-*/
 
 // L108 The Nullish Coalescing Operator (??)
 restaurant.numGuests = 0;
@@ -274,3 +273,39 @@ console.log(guests); // 10, 0 is a falsy value so does not evaluate it
 // Nullish: null and undefined (NOT 0 or '')
 const guestsCorrect = restaurant.numGuests ?? undefined;
 console.log(guestsCorrect);
+*/
+
+// 109 Logical Assignment Operators
+const rest1 = {
+  name: 'Capri',
+  // numGuests: 20,
+  numGuests: 0,
+};
+
+const rest2 = {
+  name: 'La Piazza',
+  owner: 'Giovanni Rossi',
+};
+
+// Short-circuit method || assignment
+// rest1.numGuests = rest1.numGuests || 10;
+// rest2.numGuests = rest2.numGuests || 10;
+
+// OR assignemnt operator
+// rest1.numGuests ||= 10;
+// rest2.numGuests ||= 10;
+
+// Nullish assignment operator
+rest1.numGuests ??= 10;
+rest2.numGuests ??= 10;
+
+// Short-circuit method && assignment
+// rest1.owner = rest1.owner && '<ANONYMOUS>';
+// rest2.owner = rest2.owner && '<ANONYMOUS>';
+
+// AND assignment operator
+rest1.owner &&= '<ANONYMOUS'>
+rest2.owner &&= '<ANONYMOUS'>
+
+console.log(rest1);
+console.log(rest2);
