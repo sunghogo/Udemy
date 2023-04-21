@@ -230,7 +230,6 @@ add(...x);
 
 restaurant.orderPizza('mushrooms', 'onion', 'olives', 'spinach');
 restaurant.orderPizza('mushrooms');
-*/
 
 // 107 Short Circuiting (&& and ||)
 // Use ANY data type, return ANY data type, short-circuit evaluation/short-circuiting
@@ -265,3 +264,13 @@ if (restaurant.orderPizza) {
 
 // Short-circuitig method
 restaurant.orderPizza && restaurant.orderPizza('mushroom', 'spinach');
+*/
+
+// L108 The Nullish Coalescing Operator (??)
+restaurant.numGuests = 0;
+const guests = restaurant.numGuests || 10;
+console.log(guests); // 10, 0 is a falsy value so does not evaluate it
+
+// Nullish: null and undefined (NOT 0 or '')
+const guestsCorrect = restaurant.numGuests ?? undefined;
+console.log(guestsCorrect);
