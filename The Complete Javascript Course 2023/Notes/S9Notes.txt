@@ -78,3 +78,20 @@ L105 The Spread Operator (...):
 
     Spread Operator (ES6) - Takes all the values out of an array, and writes the values individually in sequence
         ...'array name'
+
+        Spread operator creates expressions with the array values and commas in between, which does not create new variables by itself, and is used specifically within arrays:
+        ...'arrary name' === `val1, val2, ... , etc`
+    
+    We create new arrays using Array Literal Syntax to declare and copy an array with a spread operator
+
+    Two use cases for the Spread Operator are:
+        1. Create shallow copies of arrays (similar to object.assign)
+        2. Merge two arrays together
+
+    The spread operators works on all iterables, which are data structures like arrays, strings, maps, or sets BUT NOT objects (unles ES2018+)
+
+    You cannot use the spread operator in template literals because this is not a place where it expects multiple values separated by a comma; this is only expected when passing arguments to a function or building a new array
+
+    use '\' to escape characters from string for example
+
+    In (ES2018+), spread objects DO WORK on objects even though they are not iterables, and can be used to pass object property:value pairs to create new object copys
