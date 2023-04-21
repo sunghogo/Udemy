@@ -157,3 +157,8 @@ L108 The Nullish Coalescing Operator (??)
             &&=: Assigns the value in the second operand to the first operand if the value in the first operand is a truthy value
 
         Useful for shorthand way of assigining variable using logical operators
+
+        Assigning properties that did not exist as 'undefined' does not change the object, and the property will not show up/remain undefined
+
+
+L110 Coding Challenge #1
