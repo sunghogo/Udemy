@@ -269,6 +269,7 @@ console.log(this); // window object
 // By default, this refers to the global object which is window in browser UNLESS using strict mode which is undefined
 decl(); // undefined
 expr(); // undefined
+
 // Has no own this keyword, which is determined lexically based on surrounding scope
 arrow(); // window object
 
