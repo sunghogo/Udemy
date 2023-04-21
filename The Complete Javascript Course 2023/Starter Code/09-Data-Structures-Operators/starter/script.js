@@ -195,7 +195,6 @@ const restaurantCopy = { ...restaurant };
 restaurantCopy.name = 'Ristorante Roma';
 console.log(restaurantCopy.name); // Name is different, so we made a copy
 console.log(restaurant.name);
-*/
 
 // L106 Rest Pattern and Parameters
 // 1) Destructuring
@@ -231,3 +230,38 @@ add(...x);
 
 restaurant.orderPizza('mushrooms', 'onion', 'olives', 'spinach');
 restaurant.orderPizza('mushrooms');
+*/
+
+// 107 Short Circuiting (&& and ||)
+// Use ANY data type, return ANY data type, short-circuit evaluation/short-circuiting
+console.log('---- OR ----');
+console.log(3 || 'Jonas'); // 3
+console.log('' || 'Jonas'); // 'Jonas'
+console.log(true || 0); // true
+console.log(undefined || null); // null
+
+console.log(undefined || 0 || '' || 'Hello' || 23 || null); // 'Hello'
+
+// Old way of doing it
+// restaurant.numGuests = 23;
+// restaurant.numGues = 0; // Unexpected behavior as 0 is a falsy value
+const guests1 = restaurant.numGuests ? restaurant.numGuests : 10; // 23 if defined, otheriwse 10
+console.log(guests1);
+// Short-circuiting method
+const guests2 = restaurant.numGuests || 10; // 23 otherwise 10
+console.log(guests2);
+
+console.log('---- AND ----');
+console.log(0 && 'Jonas'); // 0
+console.log(7 && 'Jonas'); // 'Jonas'
+
+console.log('Hello' && 23 && null && 'jonas'); // null
+
+// Practical Example
+// Old way of doing it
+if (restaurant.orderPizza) {
+  restaurant.orderPizza('mushroom', 'spinach');
+}
+
+// Short-circuitig method
+restaurant.orderPizza && restaurant.orderPizza('mushroom', 'spinach');
