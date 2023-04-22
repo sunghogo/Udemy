@@ -97,16 +97,13 @@ const { team1, x: draw, team2 } = game.odds;
 console.log(team1, draw, team2);
 
 // 6.
-function printGoals(...numPlayers) {
-  for (let i = 0; i < numPlayers.length; i++) {
-    const goals = game.scored.includes(numPlayers[i]) || 0;
-    const numGoals = (...goalsPlayers) => {
-        let numGoals = 0;
-        {for (let j = 0; j < goalsPlayers.length < j++) {
-            // numPlayer[i] === goalsPlayer[j]   
-        }
-    }
-    goals ??= 
-    console.log(`${numPlayers[i]} scored ${goals} goals.`);
-  }
+function printGoals(...players) {
+  console.log(players);
+  console.log(`${players.length} goals were scored`);
 }
+printGoals('Davies', 'Muller', 'Lewandowski', 'Kimmich');
+printGoals(...game.scored);
+
+// 7.
+team1 < team2 && console.log(`Team 1 is more likely to win`);
+team1 > team2 && console.log(`Team 2 is more likely to win`);
