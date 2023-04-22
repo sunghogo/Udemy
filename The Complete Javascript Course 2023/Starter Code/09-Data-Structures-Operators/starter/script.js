@@ -273,7 +273,6 @@ console.log(guests); // 10, 0 is a falsy value so does not evaluate it
 // Nullish: null and undefined (NOT 0 or '')
 const guestsCorrect = restaurant.numGuests ?? undefined;
 console.log(guestsCorrect);
-*/
 
 // 109 Logical Assignment Operators
 const rest1 = {
@@ -309,3 +308,8 @@ rest2.owner &&= '<ANONYMOUS>';
 
 console.log(rest1);
 console.log(rest2);
+*/
+
+// L111 Looping Arrays: The for-of Loop
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+for (const item of menu) console.log(item);

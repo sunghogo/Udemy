@@ -162,3 +162,8 @@ L108 The Nullish Coalescing Operator (??)
 
 
 L110 Coding Challenge #1
+
+
+L111 Looping Arrays: The for-of Loop
+    for-of loop (ES6+) - it will automatically loop over the entire array, and give us access to the current element at each iteration:
+        for (const 'iteration variable' of 'array') { "loop body"}
