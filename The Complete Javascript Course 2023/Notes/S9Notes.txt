@@ -232,3 +232,6 @@ L114 Looping Objects: Object Keys, Values, and Entries
     These are not methods called directly on the object, but protoype functions
 
     You can for-of loop through the entries, and destructure the loop variables to access the key and value information
+
+
+L115 Coding Challenge #2
