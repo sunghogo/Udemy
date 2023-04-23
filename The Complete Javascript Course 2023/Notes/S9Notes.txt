@@ -108,13 +108,13 @@ L106 Rest Pattern and Parameters
 
         Does not include any skipped elements in the destructuring
 
-    Also works in objects (ES2018+):
+    Also works in objects (ES2018+/ES9+):
         const {'property 1', 'property 2', ...'rest variable name'} = 'object name'
 
-    We can also use the rest parameters to implement the opposite of spread operator to pass any number of arguments (in an array) to a function parameter:
+    We can also use the rest parameters to implement the opposite of spread operator to pass any number of arguments (which is then packed into an array) as a function parameter:
         const 'function name' = function (...'rest parameter name') { "function body" }
 
-        This useful so that a function can take both an array and all single values extract from a spread operator simultaneously
+        This is useful so that a function can take both an array (using a spread operator) and all single values extract from a spread operator simultaneously
 
         Also feels more natural, and used frequently
 
