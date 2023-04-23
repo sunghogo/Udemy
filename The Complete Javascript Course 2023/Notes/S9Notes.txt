@@ -271,3 +271,9 @@ L116 Sets
         The spread operator is used on the intermediate set to extract the values for the new Array literal
 
     Whenever you need to store values, and manipulate them, use arrays. But sets are important to know and utilize with arrays due to their unique values.
+
+
+L117 Maps: Fundamentals
+    Maps are data structures to map values to keys, just like in keys.
+
+    The main difference between maps and objects is that in maps, the properties/keys can be any type while in objects, they are always strings

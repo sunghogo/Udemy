@@ -382,7 +382,6 @@ console.log(entries); // Array with elements that are arrays with elements that 
 for (const [key, { open, close }] of entries) {
   console.log(`On ${key} we open at ${open} and close at ${close}`);
 }
-*/
 
 // L116 Sets
 const ordersSet = new Set([
@@ -417,3 +416,6 @@ console.log(staffUnique);
 console.log(new Set(staff).size);
 
 console.log(new Set('jonasschmedtmann').size);
+*/
+
+// L117 Maps: Fundamentals
