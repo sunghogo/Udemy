@@ -174,4 +174,25 @@ L111 Looping Arrays: The for-of Loop
 
     .entries() array method returns an Array Iterator, which is an array with elements that are also arrays that contain ['index number', 'element at that index']
 
-    You can use for-of loop on an 'array'.entries() to also be able to access its index numbers
+ You can use for-of loop on an 'array'.entries() to also be able to access its index numbers
+
+
+L112 Enhanced Object Literals
+    ES6 introduced three ways to make writing Object Literal Syntax easier:
+        1. If you are storing outside variables as same name properties, you can just declare the property name without the value assignment:
+            const obj = "..."/{"..."}
+            const obj2 = {
+                obj,
+            }
+        2. You can assign functions as a property without the function keyword and value assignment (aka without a function expression):
+            const obj = {
+                'function name'('parameter') {
+                    "functon body"
+                },
+            }
+        3. You can compute property names (use expressions) instead of writing them out literally:
+            const obj = {
+                ("expression"): 'value'
+            }
+
+    Before you could only use expressions when assigning property values, but now you can do it for property names as well (as long as it outputs a single string)
