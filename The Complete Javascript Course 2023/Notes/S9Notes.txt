@@ -235,3 +235,39 @@ L114 Looping Objects: Object Keys, Values, and Entries
 
 
 L115 Coding Challenge #2
+
+
+L116 Sets
+    Objects and arrays were originally the only in-built data structures
+
+    Sets and Maps introduced in (ES6/ES2015)
+
+    Sets are collections with unique values that cannot have any duplicates:
+        const 'variable name' = new Set(['value 1', 'value 2', etc...])
+
+        Sets are also iterables that look similar to Arrays
+
+        Duplicate values in sets will automatically be erased
+
+        Ordering of elements in Sets are irrelevant
+
+    Strings are also iterables that can be declated as a set using the new Set() keyword
+
+    .size method is used to get the length of a set (NOT .length for arrays)
+
+    .has() method is used to see whether a set contains a value (similar to the .include() method for arrays)
+
+    .add() and .delete() methods are used to add/delete values to/from a set
+
+    No way/need to retrieve a value from a set since values are unique and their order does not matter, only need to see if the set has a value
+
+    .clear() method to completely empty out a set
+
+    You can still access values in a set by iterating through it with the for-of loop
+
+    Sets are practically used to removed duplicate values from an array:
+        const 'new array' = [...new Set('old array')]
+
+        The spread operator is used on the intermediate set to extract the values for the new Array literal
+
+    Whenever you need to store values, and manipulate them, use arrays. But sets are important to know and utilize with arrays due to their unique values.
