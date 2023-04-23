@@ -198,20 +198,19 @@ average /= odds.length;
 console.log(average);
 
 // 3.
-const team1 = game.team1;
-const team2 = game.team2;
-console.log(`Odd of victory ${team1}: ${game.odds.team1}
-Odd of draw: ${game.odds.x}
-Odd of victory ${team2}: ${game.odds.team2}`);
+for (const [team, odd] of Object.entries(game.odds)) {
+  const teamStr = team === 'x' ? 'draw' : `victory ${game[team]}`;
+  console.log(`Odd of ${teamStr}: ${odd}`);
+}
 
 // 4. Bonus
-const scorers = {};
+game.scorers = {};
 for (const player of game.scored) {
   // if property undefined, set to 1, otherwise add 1
   //   game.scorers[player] = game.scorers[player] ? game.scorers[player] + 1 : 1;
 
   // if property is defined, add one, otherwise set to 1
-  scorers[player] = (scorers[player] && scorers[player] + 1) || 1;
+  game.scorers[player] =
+    (game.scorers[player] && game.scorers[player] + 1) || 1;
 }
-game.scorers = scorers;
 console.log(game.scorers);
