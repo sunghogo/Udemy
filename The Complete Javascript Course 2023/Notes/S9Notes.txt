@@ -61,7 +61,7 @@ L104 Destructuring Objects
 
     Nested Objects:
         Similarly, we can specify and destructure nested objects:
-            const {'nested object name' : {'property name 1', 'property name 2', etc...} = 'object name'
+            const {'nested object name' : {'property name 1', 'property name 2', etc...}} = 'object name'
 
     You can define objects as parameters for a function:
         This is useful for functions with many multiple parameters as you don't have to keep track of the parameter order, and destructure the object right away in the function parameters
@@ -139,14 +139,14 @@ L106 Rest Pattern and Parameters
 
 
 L108 The Nullish Coalescing Operator (??)
-    Nullish Coalescing Operator:
+    Nullish Coalescing Operator (ES2020+/ES11+):
         ??: Similar to || but it instead works with concept of nullish values ('null' abd 'undefined'). It will evaluate the expression for the first non-nullish value, and short-circuit/return it. Otherwise, it will return the last value even if it is nullish.
 
         Basically, it is || if 0 and '' were treated as truthy values
 
 
 109 Logical Assignment Operators
-    Logical Assignment Operators (ES2021+):
+    Logical Assignment Operators (ES2021+/ES12+):
         Logical OR Assignment Operator -
             ||=: Assigns the value in the second operand to the first operand if the value in the first operand is falsy
 
@@ -196,3 +196,25 @@ L112 Enhanced Object Literals
             }
 
     Before you could only use expressions when assigning property values, but now you can do it for property names as well (as long as it outputs a single string)
+
+
+L113 Optional Chaining (?.)
+    For deeply nested objects, if we were to check for whether every object property exists, it would easily get out of hand and easier to create bugs
+    
+    Optional Chaining (ES2020+/ES11+) - If a certain property or element does not exist (aka nullish property of being 'undefined'/'null'), then undefined is returned immediately:
+        'object name'.'property'.'property 2'?.'property 3'
+
+        'object name'.'method'?.('parameters')
+        ?? "Method does not exist"
+
+        It can also be used to access objects inside of arrays:
+            'array name'['index']?.'property name' ?? 'User array empty'
+
+        The '?' chaining operator checks if that property exists, and if it doesn't, short-circuits and returns undefined
+
+        It can be used for object methods as well, and should be paried with the null coalescing operator to return default values if it does not exist
+
+    Remember if we want to use a variable as the property name, we must use the bracket notation as it makes a distinction between variables and string literals:
+        'object name'['variable for property name']
+
+    Useful for Web APIs
