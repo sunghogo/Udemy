@@ -358,7 +358,6 @@ console.log(users[1]?.name ?? 'User array empty');
 // users = [];
 if (users.length > 0) console.log(users[0].name);
 else console.log('user array Empty');
-*/
 
 // L114 Looping Objects: Object Keys, Values, and Entries
 // Property NAMES / KEYS
@@ -383,3 +382,38 @@ console.log(entries); // Array with elements that are arrays with elements that 
 for (const [key, { open, close }] of entries) {
   console.log(`On ${key} we open at ${open} and close at ${close}`);
 }
+*/
+
+// L116 Sets
+const ordersSet = new Set([
+  'Pasta',
+  'Pizza',
+  'Pizza',
+  'Risotto',
+  'Pasta',
+  'Pizza',
+]);
+console.log(ordersSet);
+
+console.log(new Set('Jonas'));
+
+console.log(ordersSet.size);
+console.log(ordersSet.has('Pizza'));
+console.log(ordersSet.has('Bread'));
+ordersSet.add('Garlic Bread');
+ordersSet.add('Garlic Bread');
+ordersSet.delete('Risotto');
+// ordersSet.clear();
+console.log(ordersSet);
+
+// console.log(ordersSet[0]); // undefined since sets do not have indexes
+
+for (const order of ordersSet) console.log(order);
+
+// Example
+const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter'];
+const staffUnique = [...new Set(staff)];
+console.log(staffUnique);
+console.log(new Set(staff).size);
+
+console.log(new Set('jonasschmedtmann').size);
