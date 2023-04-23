@@ -323,7 +323,6 @@ for (const [i, el] of menu.entries()) {
   console.log(`${i + 1}: ${el}`);
 }
 // console.log([...menu.entries()]);
-*/
 
 // L113 Optional Chaining (?.)
 // Original Method
@@ -359,3 +358,28 @@ console.log(users[1]?.name ?? 'User array empty');
 // users = [];
 if (users.length > 0) console.log(users[0].name);
 else console.log('user array Empty');
+*/
+
+// L114 Looping Objects: Object Keys, Values, and Entries
+// Property NAMES / KEYS
+const properties = Object.keys(openingHours);
+console.log(properties); // Array with 'thur', 'fri', 'sat'
+
+let openStr = `We are open on ${properties.length} days: `;
+for (const day of properties) {
+  openStr += `${day}, `;
+}
+console.log(openStr);
+
+// Property VALUES
+const values = Object.values(openingHours);
+console.log(values); // Array with elements that are objects with hours
+
+// Entire Object
+const entries = Object.entries(openingHours);
+console.log(entries); // Array with elements that are arrays with elements that are keys and objects with hours
+
+// key, value
+for (const [key, { open, close }] of entries) {
+  console.log(`On ${key} we open at ${open} and close at ${close}`);
+}
