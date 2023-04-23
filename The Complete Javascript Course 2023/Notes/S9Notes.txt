@@ -167,3 +167,11 @@ L110 Coding Challenge #1
 L111 Looping Arrays: The for-of Loop
     for-of loop (ES6+) - it will automatically loop over the entire array, and give us access to the current element at each iteration:
         for (const 'iteration variable' of 'array') { "loop body"}
+
+    for-of loops are still able to use continue and break
+
+    Do not need code blocks for conditional and loop statements if there is only one line to execute
+
+    .entries() array method returns an Array Iterator, which is an array with elements that are also arrays that contain ['index number', 'element at that index']
+
+    You can use for-of loop on an 'array'.entries() to also be able to access its index numbers
