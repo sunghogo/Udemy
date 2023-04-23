@@ -218,3 +218,17 @@ L113 Optional Chaining (?.)
         'object name'['variable for property name']
 
     Useful for Web APIs
+
+
+L114 Looping Objects: Object Keys, Values, and Entries
+    Object property names are also called keys
+
+    Object.keys('object name') returns an array with the keys of an object
+
+    Object.values('object name') returns an array with the values of an object
+
+    Objects.entries('object name') returns an array containing elements that are also arrays with both the key and value pairs of an object
+
+    These are not methods called directly on the object, but protoype functions
+
+    You can for-of loop through the entries, and destructure the loop variables to access the key and value information
