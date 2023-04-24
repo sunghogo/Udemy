@@ -474,3 +474,21 @@ L122 Working With Strings - Part 2
 
     Regular expressions can be used to specify strings:
         /"string"/g - specifies all instances of the strong globally
+
+L123 Working With Strings - Part 3
+    .splt('split substring') method returns an array with all substrings created after splitting the string by the split substring, otherwise returns an array with the entire string (CASE SENSITIVE)
+
+    'substring array'.join('join substring') method on an array of substrings returns a string joining the substrings with the join substring in between (CASE SENSITIVE)
+
+    .padStart('length of new string', 'padding subtring') method returns a string that is padded at the start to the specified length with the padding substring
+
+    .padEnd('length of new string', 'padding subtring') method returns a string that is padded at the end to the specified length with the padding substring
+
+    .repeat('number of repeats') method returns a new string that is repeated by the number of repeats
+
+    Very useful to use destructuring with .split() to create variables with the split substrings
+
+    Padding - Adding a certain number of characters to a string until the string reaches a desired length
+
+    You can concatenate an empty string to a number to quickly type coercion to a string instead of using String()
+
