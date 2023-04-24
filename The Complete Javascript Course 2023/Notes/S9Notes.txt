@@ -441,3 +441,36 @@ L121 Working With Strings - Part 1
             const 'string name' = new String("string")
 
         String methods will automatically convert boxes and return a string primitive
+
+
+L122 Working With Strings - Part 2
+    .toLowerCase() method returns a string into all lower case letters
+
+    .toUpperCase() method returns a string into all upper case letters
+
+    .trim() methods removes all white spacing and new lines
+
+    .trimStart() method removes all white spacing from the start of string
+
+    .trimEnd() method removes all white spacing from end of string
+
+    .replace("replaced substring", "replacement substring") method replaces the first instance of a substring with another subtstring (CASE SENSITIVE)
+
+    .replaceAll("replaced substring", "replacement substring") (ES2021/ES12) method replaces all instances of a substring with another subtstring (CASE SENSITIVE)
+
+    .includes("substring") method returns a boolean depending on whether the substring exists in the string (CASE SENSITIVE)
+
+    .startsWith("substring") method returns a boolean depending on whether the string starts with the substring (CASE SENSITIVE)
+
+    .endsWith("substring") method returns a boolean depending on whether the string ends with the substring (CASE SENSITIVE)
+
+    You can use these methods with string concatenation to create standard/proper strings
+
+    You can also chain string methods since they all return strings
+
+    In Europe, commas are used instead of periods for decimal separators
+
+    It is good practice to call .toLowerCase() on all strings before comparing or calling string methods as many string methods are case sensitive
+
+    Regular expressions can be used to specify strings:
+        /"string"/g - specifies all instances of the strong globally
