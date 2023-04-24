@@ -454,7 +454,6 @@ rest.set(arr, 'Test');
 console.log(rest.get(arr));
 
 rest.set(document.querySelector('h1'), 'Heading');
-*/
 
 // L118 Maps: Iteration
 const question = new Map([
@@ -488,3 +487,24 @@ console.log([...question]);
 console.log([...question.entries()]);
 console.log([...question.keys()]);
 console.log([...question.values()]);
+*/
+
+// L119 Summary: Which Data Structure to Use?
+// Storing functions in maps
+// Cannot call map functions directly, and cannot access this
+const hi = function () {
+  console.log('Hii');
+};
+
+const map = new Map([
+  [
+    'func',
+    function hi() {
+      console.log('Hi');
+      console.log(this);
+    },
+  ],
+]);
+
+const func = map.get('func');
+func();
