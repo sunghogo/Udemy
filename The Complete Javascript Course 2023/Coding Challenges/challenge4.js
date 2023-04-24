@@ -235,48 +235,6 @@ whether it's in the first half or second half (after 45 min) of the game, like t
     ⚽ GOAL
 
 GOOD LUCK 😀
-*/
-
-const game = {
-  team1: 'Bayern Munich',
-  team2: 'Borrussia Dortmund',
-  players: [
-    [
-      'Neuer',
-      'Pavard',
-      'Martinez',
-      'Alaba',
-      'Davies',
-      'Kimmich',
-      'Goretzka',
-      'Coman',
-      'Muller',
-      'Gnarby',
-      'Lewandowski',
-    ],
-    [
-      'Burki',
-      'Schulz',
-      'Hummels',
-      'Akanji',
-      'Hakimi',
-      'Weigl',
-      'Witsel',
-      'Hazard',
-      'Brandt',
-      'Sancho',
-      'Gotze',
-    ],
-  ],
-  score: '4:0',
-  scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
-  date: 'Nov 9th, 2037',
-  odds: {
-    team1: 1.33,
-    x: 3.25,
-    team2: 6.5,
-  },
-};
 
 const gameEvents = new Map([
   [17, '⚽ GOAL'],
@@ -316,3 +274,62 @@ for (const [key, value] of gameEvents) {
   const half = key < 45 ? 'FIRST' : 'SECOND';
   console.log(`[${half} HALF] ${key}, ${value}`);
 }
+*/
+
+// Coding Challenge #4
+/* 
+Write a program that receives a list of variable names written in underscore_case
+and convert them to camelCase.
+The input will come from a textarea inserted into the DOM (see code below to
+insert the elements), and conversion will happen when the button is pressed.
+
+Test data (pasted to textarea, including spaces):
+underscore_case
+first_name
+Some_Variable
+calculate_AGE
+delayed_departure
+
+Should produce this output (5 separate console.log outputs):
+underscoreCase ✅
+firstName ✅✅
+someVariable ✅✅✅
+calculateAge ✅✅✅✅
+delayedDeparture ✅✅✅✅✅
+
+Hints:
+§ Remember which character defines a new line in the textarea 😉
+§ The solution only needs to work for a variable made out of 2 words, like a_b
+§ Start without worrying about the ✅. Tackle that only after you have the variable
+name conversion working 😉
+§ This challenge is difficult on purpose, so start watching the solution in case
+you're stuck. Then pause and continue!
+
+Afterwards, test with your own test data!
+
+GOOD LUCK 😀
+*/
+
+document.body.append(document.createElement('textarea'));
+document.body.append(document.createElement('button'));
+
+const textEl = document.querySelector('textarea');
+const buttonEl = document.querySelector('button');
+
+function snakeToCamel(str) {
+  let retStr = str;
+  while (retStr.includes('_')) {
+    retStr = retStr.replace(
+      /_./,
+      retStr[retStr.indexOf('_') + 1].toUpperCase()
+    );
+  }
+  return retStr;
+}
+
+buttonEl.addEventListener('click', function () {
+  const inputText = textEl.value.toLowerCase().trim().split('\n');
+  for (const [i, word] of inputText.entries()) {
+    console.log(`${snakeToCamel(word)} ${'✅'.repeat(i + 1)}`);
+  }
+});

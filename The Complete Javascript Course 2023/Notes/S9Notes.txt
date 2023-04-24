@@ -320,6 +320,9 @@ L118 Maps: Iteration
     This format is very similar to Object.entries(), so you can transform an object into map like this:
         const 'map name' = new Map(Object.entries('object name'))
 
+    You can also convert a map into an object using the Object.fromEntries() function that takes in object entries similar in format to maps:
+        const 'object name' = Object.fromEntries('map name')
+
     Objects ARE NOT iterables, but can be converted into one using Object.entries()
 
     Maps are iterables, and can be directly iterated through using a for-of loop
@@ -448,7 +451,7 @@ L122 Working With Strings - Part 2
 
     .toUpperCase() method returns a string into all upper case letters
 
-    .trim() methods removes all white spacing and new lines
+    .trim() methods removes all white spacing (but NOT new lines '\n')
 
     .trimStart() method removes all white spacing from the start of string
 
@@ -492,3 +495,5 @@ L123 Working With Strings - Part 3
 
     You can concatenate an empty string to a number to quickly type coercion to a string instead of using String()
 
+
+L124 Coding Challenge #4
