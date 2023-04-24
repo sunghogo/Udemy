@@ -301,12 +301,18 @@ gameEvents.delete(64);
 console.log(gameEvents);
 
 // 3.
-const average = numEvents => 90 / numEvents;
+const time =
+  ([...gameEvents.keys()].pop() > 90 && [...gameEvents.keys()].pop()) || 90;
+const average = (numEvents, time) => time / numEvents;
 console.log(
-  `An event happened, on average, every ${average(gameEvents.size)} minutes`
+  `An event happened, on average, every ${average(
+    gameEvents.size,
+    time
+  )} minutes`
 );
 
 // 4.
 for (const [key, value] of gameEvents) {
-  console.log(`[${key < 45 ? 'FIRST' : 'SECOND'} HALF] ${key}, ${value}`);
+  const half = key < 45 ? 'FIRST' : 'SECOND';
+  console.log(`[${half} HALF] ${key}, ${value}`);
 }
