@@ -88,7 +88,7 @@ L105 The Spread Operator (...)
         1. Create shallow copies of arrays (similar to object.assign)
         2. Merge two arrays together
 
-    The spread operators works on all iterables, which are data structures like arrays, strings, maps, or sets BUT NOT objects (unles ES2018+)
+    The spread operators works on all iterables, which are data structures like arrays, strings, maps, or sets BUT NOT objects (unless ES2018+/ES9+)
 
     You cannot use the spread operator in template literals because this is not a place where it expects multiple values separated by a comma; this is only expected when passing arguments to a function or building a new array
 
@@ -129,7 +129,7 @@ L106 Rest Pattern and Parameters
         2. Return ANY data type
         3. Short-circuit Evaluation / Short-circuiting
 
-    Short-circuiting - It will evaluate for the first expression, and short-circuit the rest of the evaluation:
+    Short-circuiting (implemented before ES6) - It will evaluate for the first expression, and short-circuit the rest of the evaluation:
         ||: It will evaluate the expression until the first truthy value, then return that value. If all the values are falsy, then it will return the last value even if the last value is falsy as well
 
         &&: It will evaluate the expresion until the first falsy value, then return that value. If all value are true, then it will return the last value even if the last value is truthy as well
@@ -304,3 +304,34 @@ L117 Maps: Fundamentals
     DOM elements are nothing more than special type of objects, and you can use maps to do some advanced interactions
     
     You can use expressions to set keys and values
+
+
+L118 Maps: Iteration
+    New maps can be declared with a 2D array containing initial key-value pairs:
+        const 'map name' = new Map(
+            [
+                ['key 1', 'value 1'],
+                ['key 2', 'value 2'],
+                etc,,
+            ]
+        )
+
+    This format is very similar to Object.entries(), so you can transform an object into map like this:
+        const 'map name' = new Map(Object.entries('object name'))
+
+    Objects ARE NOT iterables, but can be converted into one using Object.entries()
+
+    Maps are iterables, and can be directly iterated through using a for-of loop
+
+    You can convert a map to an array using the spread operator since maps are iterables that are practically 2D arrays:
+        const 'array name' = [...'map name']
+
+    Similar to array methods, you can also use the following methods and then convert them into an array:
+        .entries() - Returns a Map Iterator of all the key-value pairs:
+            const 'array name' = [...question.entries()] which is the same as the process above
+
+        .keys() - Return a Map Iterator of all the keys:
+            const 'array name' = [...question.keys()]
+
+        .values() Returns a Map Iterator of all the vlaues:
+            const 'array name' = [...question.values()]
