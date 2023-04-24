@@ -405,3 +405,39 @@ L119 Summary: Which Data Structure to Use?
 
 
 L120 Coding Challenge #3
+
+
+L121 Working With Strings - Part 1
+    You can access characters in strings using the bracket notation just like in arrays
+
+    String methods are similar to array methods:
+        .length method returns the length of the string
+
+        .indexOf("string") method returns the index of the first occurence, otherwise -1 (CASE SENSITIVE)
+
+       .lastIndexOf("string") method returns the index of the last occurence, otherwise -1 (CASE SENSITIVE)
+
+       .slice('starting index', 'end index') method extracts the substring in that index range:
+            Extracted strings are called "Substrings"
+
+            This does NOT change the underlying string
+
+            The end index is NOT included, and the length of the substring will always be the 'end index' - 'start index'
+
+            The end index argument does not need to be passed, and will extract from the start index to the end of the string
+
+            A negative number as the start index will extract backwards starting from the end of the string for that number of characters
+
+            A negative number as the end index will extract until the end of the string EXCLUDING that number of characters
+
+    Strings are immutable since they are a primitive type
+
+    .indexOf() and .lastIndexOf() are useful for determing indexes for the .slice() method of string extraction
+
+    Why do Strings have methods even though it is a primitive?
+        Boxing - When a method is called on a string, JS will automatically convert the string primitive to a string object, which is our "box", and then call that method on the box
+
+        Constructing a string will return an object similar to our box:
+            const 'string name' = new String("string")
+
+        String methods will automatically convert boxes and return a string primitive
