@@ -483,9 +483,9 @@ L123 Working With Strings - Part 3
 
     'substring array'.join('join substring') method on an array of substrings returns a string joining the substrings with the join substring in between (CASE SENSITIVE)
 
-    .padStart('length of new string', 'padding subtring') method returns a string that is padded at the start to the specified length with the padding substring
+    .padStart('length of new string', 'padding subtring') method returns a string that is padded at the start to the specified length with the padding substring (No padding substring defaults to whitespace)
 
-    .padEnd('length of new string', 'padding subtring') method returns a string that is padded at the end to the specified length with the padding substring
+    .padEnd('length of new string', 'padding subtring') method returns a string that is padded at the end to the specified length with the padding substring (No padding substring defaults to whitespace)
 
     .repeat('number of repeats') method returns a new string that is repeated by the number of repeats
 

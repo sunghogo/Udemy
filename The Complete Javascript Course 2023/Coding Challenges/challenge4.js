@@ -328,8 +328,25 @@ function snakeToCamel(str) {
 }
 
 buttonEl.addEventListener('click', function () {
-  const inputText = textEl.value.toLowerCase().trim().split('\n');
-  for (const [i, word] of inputText.entries()) {
-    console.log(`${snakeToCamel(word)} ${'✅'.repeat(i + 1)}`);
+  const text = textEl.value;
+  const textArr = text.toLowerCase().trim().split('\n');
+  for (const [i, word] of textArr.entries()) {
+    console.log(`${snakeToCamel(word.trim()).padEnd(20)}${'✅'.repeat(i + 1)}`);
   }
 });
+
+// Lecture Example (less robust)
+// buttonEl.addEventListener('click', function () {
+//   const text = textEl.value;
+//   const rows = text.split('\n');
+
+//   for (const [i, row] of rows.entries()) {
+//     const [first, second] = row.toLowerCase().trim().split('_');
+
+//     const output = `${first}${second.replace(
+//       second[0],
+//       second[0].toUpperCase()
+//     )}`;
+//     console.log(`${output.padEnd(20)}${'✅'.repeat(i + 1)}`);
+//   }
+// });
