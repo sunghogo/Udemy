@@ -277,3 +277,30 @@ L117 Maps: Fundamentals
     Maps are data structures to map values to keys, just like in keys.
 
     The main difference between maps and objects is that in maps, the properties/keys can be any type while in objects, they are always strings
+
+    Use the constructor to create maps:
+        const 'variable name' = new Map()
+
+    .set('key', 'value') method is used to add new key-value pairs, and then returns the updated map:
+        You can chain the .seT() method like this:
+            'map name'.set().set().set()
+
+    .get('key') method is used to retrieve the value associated with the key, and returns 'undefined' if the key doesn't exist (data types MATTER)
+
+    .delete('key') method is used to remove a key-value pair from the map, and returns true if it deleted and false if not
+
+    .has('key') method is used to see if a map contains the key-value pair, and returns the boolean
+    
+    .clear() method is used to empty out the map
+
+    .size method is used to get the size/length of the map
+
+    You can use booleans as map keys to evaluate as expressions using comparison and logical operators
+
+    Map methods for insertion, deletion, retrieval, has, and clearing are much more efficient than Objects (all O(1))
+
+    When comparing objects, they are usually not the same object in heap even if what they contain are the same; need to specify the object using a variable
+
+    DOM elements are nothing more than special type of objects, and you can use maps to do some advanced interactions
+    
+    You can use expressions to set keys and values
