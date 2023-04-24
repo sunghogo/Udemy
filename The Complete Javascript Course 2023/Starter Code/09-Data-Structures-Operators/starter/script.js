@@ -487,7 +487,6 @@ console.log([...question]);
 console.log([...question.entries()]);
 console.log([...question.keys()]);
 console.log([...question.values()]);
-*/
 
 // L119 Summary: Which Data Structure to Use?
 // Storing functions in maps
@@ -508,3 +507,46 @@ const map = new Map([
 
 const func = map.get('func');
 func();
+*/
+
+// L121 Working With Strings - Part 1
+const airline = 'TAP Air Portugal';
+const plane = 'A320';
+
+console.log(plane[0]);
+console.log(plane[1]);
+console.log(plane[2]);
+console.log('B737'[0]);
+
+console.log(airline.length);
+console.log('B737'.length);
+
+console.log(airline.indexOf('r'));
+console.log(airline.lastIndexOf('r'));
+console.log(airline.indexOf('Portufal'));
+
+console.log(airline.slice(4));
+console.log(airline.slice(4, 7));
+
+console.log(airline.slice(0, airline.indexOf(' ')));
+console.log(airline.slice(airline.lastIndexOf(' ') + 1));
+
+console.log(airline.slice(-1));
+console.log(airline.slice(-2));
+console.log(airline.slice(1, -1));
+
+const checkMiddleSeat = function (seat) {
+  //B and E are middle seats
+  const s = seat.slice(-1);
+  s === 'B' || s === 'E'
+    ? console.log('You got the middle seat 😬')
+    : console.log('You got lucky 😎');
+};
+
+const seats = ['11B', '23C', '3E'];
+for (const seat of seats) checkMiddleSeat(seat);
+
+console.log(new String('Jonas')); // Similar to our string box
+console.log(typeof new String('Jonas')); // Object
+
+console.log(typeof new String('Jonas').slice(1)); // String
