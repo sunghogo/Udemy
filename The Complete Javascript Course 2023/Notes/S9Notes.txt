@@ -231,8 +231,9 @@ L114 Looping Objects: Object Keys, Values, and Entries
 
     These are not methods called directly on the object, but protoype functions
 
-    You can for-of loop through the entries, and destructure the loop variables to access the key and value information
+    You can for-of loop through the entries using the .entries() method since objects are NOT iterables, and destructure the loop variables to access the key and value information
 
+    No way in-built function to get the size of an object, but can call .length on the arrays returned from the above methods
 
 L115 Coding Challenge #2
 
@@ -335,3 +336,71 @@ L118 Maps: Iteration
 
         .values() Returns a Map Iterator of all the vlaues:
             const 'array name' = [...question.values()]
+
+
+L119 Summary: Which Data Structure to Use?
+    Sources of Data:
+        1. From the program itself: Data written directly in the source code(e.g. status messages)
+        2. From the UI: Data input from the user or data written in DOM (e.g tasks in todo app)
+        3. From external sources: Data fetched for example from web API (Application Programing Interface) (e.g recipe objects)
+
+    Collections of data are then stored and organized in data structures:
+        1. Simple List? - Arrays or Sets
+        2. Key/Value Pairs? - Objects or Maps
+
+        Keys allow us to describe values
+
+        Data from Web APIs is usually in a special data format called JSON, which is just text but can easily converted into JS objects because it uses the same formatting
+
+        In JSON, data is often nested within arrays and objects according to the needs
+
+    Other Built-In Data Structures: 
+        1.WeakMap
+        2. WeakSet
+
+    Not Built-In:
+        1. Stacks
+        2. Queues
+        3. Linked Lists
+        4. Trees
+        5. Hash Tables
+
+    Arrays vs Sets:
+        Arrays: 
+            Use when you need ORDERED list of values (might contain duplicates)
+            
+            Use when you need to manpulate data
+
+        Sets:
+            Use when you need to work with UNIQUE values
+
+            Use when high-performance is really important (searching for an element, deleting an element is high efficient on sets compared to arrays)
+
+            Used to removed duplicate values from an arrays
+
+    Objects vs Maps:
+        Objects:
+            More "traditional" key/value store (Since maps were implemented in ES6, and developers "abused" objects using it as key/value stores despite technical difficulties)
+        
+            Easier to write and access values with . and [] operators/notations
+
+            Use when you need to include FUNCTIONS (methods) as you can directly call methods from the object
+            
+            Similarly, working with this keyword to access same properties in an object (accessing this is impossible in maps)
+
+            Use when working with JSON (can convert to map)
+
+        Maps:
+            Better performance
+
+            Keys can have ANY data type
+
+            Easy to iterate
+
+            Easy to compute size
+
+            Use when you simply need to map keys to values
+            
+            Use when you need keys that are NOT strings
+
+
