@@ -346,7 +346,7 @@ for (const day of days) {
 
 // Methods
 console.log(restaurant.order?.(0, 1) ?? 'Method does not exist');
-console.log(restaurant.orderRisotto?.(0, 1) ?? 'Method does not exist');
+console.log(restaurant.orderRisotto?.(0, 1) ?? 'Method does not exist'); // undefined / logs statement
 
 // Arrays
 let users = [{ name: 'Jonas', email: 'hello@jonas.io' }];
