@@ -63,8 +63,15 @@ L130 First-Class and Higher-Order Functions
 
     Higher-order functions are in practice possible due to first-class function support
 
+    Callback funciions are named that way because we do not call themselves, but call JS to tell them later
 
 L131 Functions Accepting Callback Functions
-    When we're passing in functions as argumentsm, we are passing in the function WITHOUT calling it (without the ())
+    When we're passing in callback functions as arguments, we are passing in the function WITHOUT calling it (without the ())
 
     .name is a function property that gives the function name
+
+    .forEach('callback function name') is a array property, where you can pass in a callback function that executes for each element in the array
+
+    Callback functions allows us to:
+        1. Split our code into more reusable and interconnected parts
+        2. They allow us to create abstractions (hide the details of code implementation, and allows us think about problems at a higher abstraction level)
