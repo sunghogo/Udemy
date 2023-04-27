@@ -1,6 +1,8 @@
 L126 Section Intro
 
+
 L127 Section Roadmap
+
 
 L128 Default Parameters
     Before ES6, would have to specify default values for function parameters separately using the undefined falsy values and logical assignment using ||
@@ -11,3 +13,23 @@ L128 Default Parameters
         The default paramters can be expressions, but the order of parameter declaration matters
 
         You cannot skip arguments, but what you can do is set them to udnefined, which is practically the same
+
+
+L129 How Passing Arguments Works: Value vs. Reference
+    Generally speaking, it is not good practice to change the argument value
+
+    When we pass a primitive type as an argument to a function, it creates a copy of that original value and not the actual original value in the stack
+
+    When we pass a reference type as an argument to a function, the copy is just the reference to the object in heap memory, so both the original value and argument reference and manipulate the same object
+
+    In large codebases, this behavior by objects can have consequences and introduce bugs
+
+    Scientific notation can be implmeented like this:
+        1 * 10 ** 6 === 1 * e+6
+
+    Two terms for passing arguments in JS:
+        1. Passing by reference - You can pass a reference to any value instead a value itself (ex. pointers in C++)
+
+        2. Passing by value - You pass the value itself and not the reference (even in JS, we pass a value that is a memory address of an object, and not a reference itself)
+
+        JS does NOT have passing by reference, only passing by value
