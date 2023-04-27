@@ -33,3 +33,34 @@ L129 How Passing Arguments Works: Value vs. Reference
         2. Passing by value - You pass the value itself and not the reference (even in JS, we pass a value that is a memory address of an object, and not a reference itself)
 
         JS does NOT have passing by reference, only passing by value
+
+
+L130 First-Class and Higher-Order Functions
+    First-Class Functions:
+        JS treats functions as first-class citizens
+
+        This means that functions are simply values
+
+        Functions are just another "type" of object
+    
+    Since JS treats functions are first-class, they have interesting properties:
+         1. Store functions in variables or object properties
+         2. Pass functions as arguments to OTHER functions (ex. .addEventListener())
+         3. Return functions FROM functions
+         4. Call methodson functions (ex. .bind())
+
+    Higher-Order Functions:
+        A function that RECEIVES another function as an argument, that RETURNS a new function, or BOTH
+
+        This is only possible because of first-class functions
+
+        Types:
+            1. Function (Higher-order function) that receives another function (Callback function) (ex. addEventListener())
+
+            2. Functions (Higher-order functions) that returns new function (Returned functions)
+
+    First-class functions is just a feature that a programming language has or doesn't have, a concept that all functions are values and not the practical application
+
+    Higher-order functions are in practice possible due to first-class function support
+
+
