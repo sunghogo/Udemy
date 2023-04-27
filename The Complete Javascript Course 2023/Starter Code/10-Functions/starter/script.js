@@ -30,7 +30,6 @@ createBooking('LH123', 5);
 
 // createBooking('LH123', 1000);
 createBooking('LH123', undefined, 1000);
-*/
 
 // L129 How Passing Arguments Works: Value vs. Reference
 const flight = 'LH234';
@@ -64,3 +63,6 @@ const newPassport = function (person) {
 
 newPassport(jonas); // original object is changed
 checkIn(flight, jonas); // Wrong passport!
+*/
+
+// L130 First-Class and Higher-Order Functions
