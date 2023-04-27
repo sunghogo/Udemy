@@ -1,0 +1,13 @@
+L126 Section Intro
+
+L127 Section Roadmap
+
+L128 Default Parameters
+    Before ES6, would have to specify default values for function parameters separately using the undefined falsy values and logical assignment using ||
+
+    Default Parameters (ES6) - You can now set default values for paramters in the function declaration:
+        function 'function name' ('paramter 1' =  'default value', etc..) { "function body" }
+
+        The default paramters can be expressions, but the order of parameter declaration matters
+
+        You cannot skip arguments, but what you can do is set them to udnefined, which is practically the same
