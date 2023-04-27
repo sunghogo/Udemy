@@ -64,3 +64,7 @@ L130 First-Class and Higher-Order Functions
     Higher-order functions are in practice possible due to first-class function support
 
 
+L131 Functions Accepting Callback Functions
+    When we're passing in functions as argumentsm, we are passing in the function WITHOUT calling it (without the ())
+
+    .name is a function property that gives the function name
