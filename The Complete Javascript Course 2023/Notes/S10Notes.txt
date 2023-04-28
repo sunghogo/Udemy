@@ -10,7 +10,7 @@ L128 Default Parameters
     Default Parameters (ES6) - You can now set default values for paramters in the function declaration:
         function 'function name' ('paramter 1' =  'default value', etc..) { "function body" }
 
-        The default paramters can be expressions, but the order of parameter declaration matters
+        The default paramters can be expressions, but the order of parameter declaration matters (when the parameters access each other)
 
         You cannot skip arguments, but what you can do is set them to udnefined, which is practically the same
 
@@ -155,4 +155,27 @@ L136 Immediately Invoked Function Expressions (IIFE)
 
     Since ES6 introduced let and const variable declaration and scoping (inside blocks), IIFE is no longer really used for data encapsulation
 
-     
+
+L137 Closures
+    Closures are not a feature that we explicity use by creating them manually; Closures happens automatically under certain situations
+
+    Any function always has access to the variable environment in which the function was created, even AFTER that execution context is gone
+
+    Closure - The VE attached to the function, exactly as it was at the time and place the function was created
+
+    When can say a function "closed" over its parents scope / parent VE, and is able to carry it around and use it forever
+
+    Closures have PRIORITY over the scope chain
+
+    Closure (formal def) - A closure is the closed-over VARIABLE ENVIRONMENT of the execution context IN WHICH A FUNCTION WAS CREATED, even AFTER that execution context is gone 
+
+    Closure (less formal) - A closure gives a function access to all the variable environment OF ITS PARENT FUNCTION, even AFTER that parent function has returned. The function keeps a REFERENCE to its outer scope, which PRESERVES the scope chain throughout time.
+
+    Closure (least formal) - A closure makes sure that a function doesn't lose connection to VARIBALES THAT EXISTED AT THE FUNCTION'S BIRTH PLACe
+
+    A closure is like a BACKPACK that a function carries around wherever it goes. This backpack has all the VARIABLES THAT WERE PRESENT IN THE ENVIRONMENT WHERE THE FUNCTION WAS CREATED.
+
+    We do NOT have to manually create closures, this is a JS feature that happens automatically. We can't even access closed-over variables explicity. A closure is NOT a tangible JS object that we can access.
+
+    We can however see the closure through console.dir('variable'), and then access the [[Scopes]]:
+        Anything in '[[]]' means that it is an internal property that cannot be accessed from code
