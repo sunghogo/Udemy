@@ -41,7 +41,8 @@ Test data for bonus:
 
 Hints: Use many of the tools you learned about in this and the last section 😉
 
-GOOD LUCK 😀 
+GOOD LUCK 😀
+*/
 
 const poll = {
   question: 'What is your favourite programming language?',
@@ -96,29 +97,3 @@ poll.displayResults.call({ answers: [5, 2, 3] });
 poll.displayResults.call({ answers: [5, 2, 3] }, 'string');
 poll.displayResults.call({ answers: [1, 5, 3, 9, 6, 1] });
 poll.displayResults.call({ answers: [1, 5, 3, 9, 6, 1] }, 'string');
-*/
-
-// L136 Immediately Invoked Function Expressions (IIFE)
-const runOnce = function () {
-  console.log(`This will never run again`);
-};
-runOnce(); // But this can be called again later on
-
-// IIFE
-(function () {
-  console.log(`This will never run again`);
-  const isPrivate = 23;
-})();
-
-// console.log(isPrivate); // ReferenceError
-
-// IIFE arrow function
-(() => console.log(`This will ALSO never run again`))();
-
-{
-  const isPrivate = 24;
-  var notPrivate = 25;
-}
-
-// console.log(isPrivate); // ReferenceError
-console.log(notPrivate);

@@ -117,7 +117,6 @@ greet('Hello')('Jonas');
 const greetArr = greeting => name => console.log(`${greeting} ${name}`);
 
 greetArr('Hello')('Jonas');
-*/
 
 // L133 The call and apply Methods
 // L134 The bind Method
@@ -224,3 +223,29 @@ console.log(addVAT2(100));
 console.log(addVAT2(23));
 
 // L136 Immediately Invoked Function Expressions (IIFE)
+const runOnce = function () {
+  console.log(`This will never run again`);
+};
+runOnce(); // But this can be called again later on
+
+// IIFE
+(function () {
+  console.log(`This will never run again`);
+  const isPrivate = 23;
+})();
+
+// console.log(isPrivate); // ReferenceError
+
+// IIFE arrow function
+(() => console.log(`This will ALSO never run again`))();
+
+{
+  const isPrivate = 24;
+  var notPrivate = 25;
+}
+
+// console.log(isPrivate); // ReferenceError
+console.log(notPrivate);
+*/
+
+// L137 Closures
