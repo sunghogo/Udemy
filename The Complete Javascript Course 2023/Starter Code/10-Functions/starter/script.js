@@ -120,6 +120,7 @@ greetArr('Hello')('Jonas');
 */
 
 // L133 The call and apply Methods
+// L134 The bind Method
 const lufthansa = {
   airline: 'Lufthansa',
   iataCode: 'LH',
@@ -169,3 +170,55 @@ const flightData = [583, 'George Cooper'];
 book.apply(swiss, flightData);
 
 book.call(swiss, ...flightData);
+
+// Bind method
+// book.call(eurowings, 23, 'Sarah Williams');
+const bookEW = book.bind(eurowings);
+const bookLH = book.bind(lufthansa);
+const bookLX = book.bind(swiss);
+
+bookEW(23, 'Steven Williams');
+
+const bookEW23 = book.bind(eurowings, 23);
+bookEW23('Jonas Schmedtmann');
+bookEW23('Martha Cooper');
+
+// With Event Listeners
+lufthansa.planes = 300;
+lufthansa.buyPlane = function () {
+  console.log(this);
+
+  this.planes++;
+  console.log(this.planes);
+};
+// lufthansa.buyPlane()
+
+document
+  .querySelector('.buy')
+  .addEventListener('click', lufthansa.buyPlane.bind(lufthansa)); // NaN, this keyword is the button
+
+const arr = [this];
+const obj = {
+  t: this,
+};
+console.log(arr[0], obj.t);
+
+// Partial application
+const addTax = (rate, value) => value + value * rate;
+console.log(addTax(0.1, 200));
+
+// const addVAT = value => value + value * 0.23
+const addVAT = addTax.bind(null, 0.23);
+console.log(addVAT(100));
+console.log(addVAT(23));
+
+// Higher-order function similar to bind method partial application
+const addTaxRate = function (rate) {
+  return function (value) {
+    return value + value * rate;
+  };
+};
+
+const addVAT2 = addTaxRate(0.23);
+console.log(addVAT2(100));
+console.log(addVAT2(23));
