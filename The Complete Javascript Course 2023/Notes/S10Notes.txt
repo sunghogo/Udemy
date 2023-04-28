@@ -122,3 +122,7 @@ L134 The bind Method
         Since the event handler needs a functions, we have to use the .bind() function instead of the .call() method
 
     This is different from setting default paramters to a function, since we are creating a new specific function from a more general function using .bind()
+
+
+L135 Coding Challenge #1
+    .fill('value') method fills the array with the specified value
