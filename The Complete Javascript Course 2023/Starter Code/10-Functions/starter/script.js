@@ -249,3 +249,20 @@ console.log(notPrivate);
 */
 
 // L137 Closures
+const passengerCount = 10; // Closure has priority over global variables
+
+const secureBooking = function () {
+  let passengerCount = 0;
+
+  return function () {
+    passengerCount++;
+    console.log(`${passengerCount} passengers`);
+  };
+};
+
+const booker = secureBooking(); // secureBooking() is popped off the stack and its EC including passengerCount should be no longer be accessible but...
+
+for (const i of new Array(3)) booker(); // 1 2 3
+
+console.dir(booker);
+console.log(booker.scopes);
