@@ -95,9 +95,30 @@ L133 The call and apply Methods
 
     There are three function methods to specify the 'this' keyword:
         1. .call('this keyword value', 'argument 1', 'argument 2', etc...)
+            Returns the function call with the 'keyword' set to specifed value
 
         2. .apply('this keyword value', ['argument 1', 'argument 2', etc...])
+            Returns the function call with the 'keyword' set to specifed value
 
         3. .bind()
 
     .apply() is not used that much anymore because you can use .call() with the spread operator on the array to specify the arguments
+
+
+L134 The bind Method
+    The .bind() method returns a new function where the 'this' keyword is bound:
+        const 'bind function name' = 'original funciton name'.bind('this keyword value', 'argument 1', 'argument 2', etc..)
+
+        'bind function name'('argument 1', 'argument 2', etc...)
+
+    Partial Application - Parts of arguments of the original functions are already applied:
+        We can specify the arguments in the .bind() method to set the arguments beforehand
+
+        When we are partially applying arguments using .bind() method without changing 'this' keyword, best practice to set the 'this' argument to 'null'
+
+    The .bind() method is useful with Event Listeners:
+        In an event handling function, the 'this' keyword always points to the element that the handler is attached to
+
+        Since the event handler needs a functions, we have to use the .bind() function instead of the .call() method
+
+    This is different from setting default paramters to a function, since we are creating a new specific function from a more general function using .bind()
