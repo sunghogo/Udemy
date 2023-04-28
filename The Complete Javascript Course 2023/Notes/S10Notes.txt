@@ -126,3 +126,12 @@ L134 The bind Method
 
 L135 Coding Challenge #1
     .fill('value') method fills the array with the specified value
+
+    Remember, you can pass objects in as function parameters, this is useful for setting 'this' keyword and properties for method borrowing
+
+    .join('join substring') string method takes in an array, and is useful for printing out the array as a formatting string using ' ', ', ', or '\n' as the join substirng
+
+    Logical operators and short-circuiting can be used for complex conditional statements once you get familiar with it
+
+
+L136 Immediately Invoked Function Expressions (IIFE)
