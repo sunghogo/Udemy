@@ -53,7 +53,7 @@ const poll = {
   displayResults(type = 'array') {
     type === 'array'
       ? console.log(this.answers)
-      : console.log(`Poll results are ${String(...this.answers)}}`);
+      : console.log(`Poll results are ${this.answers}`);
   },
   // 1. 4.
   registerNewAnswer() {
@@ -84,4 +84,6 @@ const testData2 = {
   answers: [1, 5, 3, 9, 6, 1],
 };
 poll.displayResults.call(testData1);
+poll.displayResults.call(testData1, 'string');
 poll.displayResults.call(testData2);
+poll.displayResults.call(testData2, 'string');
