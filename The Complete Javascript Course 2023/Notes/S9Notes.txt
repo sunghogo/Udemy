@@ -146,7 +146,7 @@ L108 The Nullish Coalescing Operator (??)
 
 
 109 Logical Assignment Operators
-    Logical Assignment Operators (ES2021+/ES12+):
+    Logical Assignment Operators (ES2021/ES12):
         Logical OR Assignment Operator -
             ||=: Assigns the value in the second operand to the first operand if the value in the first operand is falsy
 
@@ -283,7 +283,7 @@ L117 Maps: Fundamentals
         const 'variable name' = new Map()
 
     .set('key', 'value') method is used to add new key-value pairs, and then returns the updated map:
-        You can chain the .seT() method like this:
+        You can chain the .set() method like this:
             'map name'.set().set().set()
 
     .get('key') method is used to retrieve the value associated with the key, and returns 'undefined' if the key doesn't exist (data types MATTER)
@@ -438,7 +438,7 @@ L121 Working With Strings - Part 1
     .indexOf() and .lastIndexOf() are useful for determing indexes for the .slice() method of string extraction
 
     Why do Strings have methods even though it is a primitive?
-        Boxing - When a method is called on a string, JS will automatically convert the string primitive to a string object, which is our "box", and then call that method on the box
+        Boxing - When a method is called on a string, JS will automatically convert the string primitive to a temporary string object, which is our "box", and then call that method on the box
 
         Constructing a string will return an object similar to our box:
             const 'string name' = new String("string")
