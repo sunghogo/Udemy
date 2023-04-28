@@ -135,3 +135,24 @@ L135 Coding Challenge #1
 
 
 L136 Immediately Invoked Function Expressions (IIFE)
+    Immediately Invoked Function Expressions (IIFE) (Pre-ES6) - A function that is executed once and disappears after
+        (function () {
+            "function body"
+        })()
+
+        (() => "function line")();
+
+        Wrapping the anonymous function declaration in parentheses turns it into an (acceptable) function expression, and then '()' after it calls the function
+
+    Need this for something called Async/Await
+
+    This is useful because functions create scopes so that inner scope variables are not inaccessible:
+        All data defined inside a scope is "private", and that this data is "encapsulated"
+
+    This scoping protects data and variables from being accessed and modified from outside functions and modules
+
+    IIFE is less of a feature, and more of a pattern that JS developers came up with
+
+    Since ES6 introduced let and const variable declaration and scoping (inside blocks), IIFE is no longer really used for data encapsulation
+
+     
