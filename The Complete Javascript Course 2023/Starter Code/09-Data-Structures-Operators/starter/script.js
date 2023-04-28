@@ -608,6 +608,7 @@ const checkBaggage = function (items) {
 checkBaggage('I have a Laptop, some Food and a Pocket Knife');
 checkBaggage('Socks and camera');
 checkBaggage('Got some snacks and a gun for protection');
+*/
 
 // L123 Working With Strings - Part 3
 console.log('a+very+nice+string'.split('+'));
@@ -661,20 +662,3 @@ const planesInLine = function (n) {
 planesInLine(5);
 planesInLine(3);
 planesInLine(12);
-*/
-
-// 125. String Methods Practice
-// console.log(flights.split('+'));
-const getCode = str => str.slice(0, 3).toUpperCase();
-
-for (const flight of flights.split('+')) {
-  // console.log(flight);
-  const [type, from, to, time] = flight.split(';');
-  const output = `${type.startsWith('_Delayed') ? '🔴' : ''} ${type
-    .replaceAll('_', ' ')
-    .trimStart()} ${getCode(from)} ${getCode(to)} (${time.replace(
-    ':',
-    'h'
-  )})`.padStart(50);
-  console.log(output);
-}
