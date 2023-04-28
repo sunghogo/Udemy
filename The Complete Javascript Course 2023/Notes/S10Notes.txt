@@ -70,8 +70,19 @@ L131 Functions Accepting Callback Functions
 
     .name is a function property that gives the function name
 
-    .forEach('callback function name') is a array property, where you can pass in a callback function that executes for each element in the array
+    .forEach('callback function name') is a array method, where you can pass in a callback function that executes for each element in the array
 
     Callback functions allows us to:
         1. Split our code into more reusable and interconnected parts
         2. They allow us to create abstractions (hide the details of code implementation, and allows us think about problems at a higher abstraction level)
+
+L132 Functions Returning Functions
+    Higher-order functions are able to pass down its arguments to lower-order functions due to "closure":
+        'higher-order function name'('paramter')('returned function paramter')
+
+    Functions returning other functions is extremely useful for functional programming paradigm
+
+    For declaring higher-order functions, you can used nested arrow functions:
+        const 'higher-order function name' = ('paramter') => ('nested parameter') => { "function body" }
+
+        Remember, arrow functions has no 'this' and 'arguments' keyword
