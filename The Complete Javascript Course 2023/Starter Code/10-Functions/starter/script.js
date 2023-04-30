@@ -246,7 +246,6 @@ runOnce(); // But this can be called again later on
 
 // console.log(isPrivate); // ReferenceError
 console.log(notPrivate);
-*/
 
 // L137 Closures
 const passengerCount = 10; // Closure has priority over global variables
@@ -266,3 +265,48 @@ for (const i of new Array(3)) booker(); // 1 2 3
 
 console.dir(booker);
 console.log(booker.scopes);
+*/
+
+// L138 More Closure Examples
+let f;
+
+const g = function () {
+  const a = 23;
+  f = function () {
+    console.log(a * 2);
+  };
+};
+
+const h = function () {
+  const b = 777;
+  f = function () {
+    console.log(b * 2);
+  };
+};
+
+g(); // sets f()
+f(); // 46 so f closes over VE of g()
+console.dir(f); // closure of g
+
+// Re-assigning f function
+h(); // resets f()
+f(); // 1554 so f closes over VE of h()
+console.dir(f); // closure of h
+
+// Example 2
+const boardPassengers = function (n, wait) {
+  const perGroup = n / 3;
+
+  setTimeout(function () {
+    console.log(`We are now boarding all ${n} passengers`);
+    console.log(`There are 3 groups, each with ${perGroup} passengers`);
+  }, wait * 1000);
+
+  console.log(`Will start boarding in ${wait} seconds`);
+};
+
+// setTimeout(function () {
+//   console.log('TIMER');
+// }, 1000);
+
+boardPassengers(180, 3);

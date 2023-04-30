@@ -179,3 +179,14 @@ L137 Closures
 
     We can however see the closure through console.dir('variable'), and then access the [[Scopes]]:
         Anything in '[[]]' means that it is an internal property that cannot be accessed from code
+
+
+L138 More Closure Examples
+    Even if the variable is defined in the global/parent scope, it is still able to close over the VE of a child scope even after it has finished execution
+
+    There can only be one closure at a time, so reassigning a variable will replace the old closure with the new closure
+
+    setTimeout('function to be executed', 'timer in ms'):
+        This is a callback function that executes only the function only once after the specifed time has passed
+
+    Callback functions executes independently in its scope
