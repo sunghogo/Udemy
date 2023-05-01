@@ -43,7 +43,7 @@ L143 The new at Method
 L144 Looping Arrays: forEach
     So far, you can use for/while and for-of loops to iterate through arrays
 
-    .forEach('callback function'('current element', 'current index', 'entire array')) array method (ES5/ES2009) is a higher-order function that requires a callback function:
+    .forEach('callback function'('current element', 'current index', 'entire array')) array method (ES5) is a higher-order function that requires a callback function:
         The current element in each iteration is passed as an argument to the callback function
 
         The index is passed as the second paramenter, and the entire array is passed as the third paramter (ORDER matters)
