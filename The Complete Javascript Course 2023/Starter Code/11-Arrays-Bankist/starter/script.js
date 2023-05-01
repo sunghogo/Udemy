@@ -152,7 +152,6 @@ console.log('jonas'.at(-1));
   // 2: function (-400)
   // ...
 }
-*/
 
 // L145 forEach With Maps and Sets
 {
@@ -174,3 +173,6 @@ currenciesUnique.forEach(function (value, _, set) {
   // console.log(`${key}: ${value}`, set);
   console.log(`${value}: ${value}`, set);
 });
+*/
+
+// L146 PROJECT: "Bankist" App

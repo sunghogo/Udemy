@@ -59,3 +59,7 @@ L145 forEach With Maps and Sets
         In sets, the keys are the same as the values since sets has no order and has unique values (and developers wanted to keep the syntax consistent) so you can use '_' for the second paramter
 
     In JS, '_' signifies a throw away variable that is unecessary
+
+
+L146 PROJECT: "Bankist" App
+    
