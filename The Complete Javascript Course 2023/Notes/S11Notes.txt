@@ -1,0 +1,33 @@
+L140 Section Intro
+
+
+L141 Section Roadmap
+
+
+L142 Simple Array Methods
+    Methods are simply functions we can call on objects / that are attached to objects
+
+    .slice('start index', 'end index') array method extracts and returns a new ARRAY containing that slice WITHOUT mutating the original array:
+        The end parameter does not have to be specified
+
+        The end paramter is NOT included 
+
+        A negative number as the start extracts that number of elements starting from the end
+
+        A negative number as the end parameter extracts from the start index to the end excluding the specified number of elements
+
+        Can also not pass any parameters to create a shallow copy of the array
+
+    .splice('start index', 'delete count') array method extracts and returns a new ARRAY containing that slice while MUTATING the original array:
+        The original array will contain the leftovers
+
+        Most used case is to .splice(-1) to get rid of the last element
+
+    .reverse() array method reverses and MUTATES the original array
+
+    .concat('array 2') method concatenates two arrays into a single array WITHOUT mutating the original arrays
+
+    .join('separator substring') returns a string that contains the contents of the array that has its commas replaced by the separator substring
+        No parameters keeps the commas without whitespace
+
+    .push(), .pop(), .unshift(), shift(), .indexOf(), .includes() from previous sections
