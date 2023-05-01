@@ -127,7 +127,6 @@ console.log(arr.at(-1));
 
 console.log('jonas'.at(0));
 console.log('jonas'.at(-1));
-*/
 
 // L144 Looping Arrays: forEach
 {
@@ -153,3 +152,25 @@ console.log('jonas'.at(-1));
   // 2: function (-400)
   // ...
 }
+*/
+
+// L145 forEach With Maps and Sets
+{
+  const currencies = new Map([
+    ['USD', 'United States dollar'],
+    ['EUR', 'Euro'],
+    ['GBP', 'Pound sterling'],
+  ]);
+}
+
+currencies.forEach(function (value, key, map) {
+  console.log(`${key}: ${value}`, map);
+});
+
+// Set
+const currenciesUnique = new Set(['USD', 'GBP', 'USD', 'EUR', 'EUR']);
+console.log(currenciesUnique);
+currenciesUnique.forEach(function (value, _, set) {
+  // console.log(`${key}: ${value}`, set);
+  console.log(`${value}: ${value}`, set);
+});
