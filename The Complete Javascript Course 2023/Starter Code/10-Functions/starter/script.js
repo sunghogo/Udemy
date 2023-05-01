@@ -309,4 +309,5 @@ const boardPassengers = function (n, wait) {
 //   console.log('TIMER');
 // }, 1000);
 
+const perGroup = 1000; // Not used since closure has priority
 boardPassengers(180, 3);
