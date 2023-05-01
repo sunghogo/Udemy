@@ -31,3 +31,9 @@ L142 Simple Array Methods
         No parameters keeps the commas without whitespace
 
     .push(), .pop(), .unshift(), shift(), .indexOf(), .includes() from previous sections
+
+L143 The new at Method
+    .at('index paramter') (ES2022) string/array method lets us access array elements as an alternative to bracket notation:
+        If the index paramter is a negative parameter, it starts accessing from the end of the array
+
+        Also useful for method chaining
