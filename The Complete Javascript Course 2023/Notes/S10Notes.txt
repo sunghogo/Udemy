@@ -192,3 +192,6 @@ L138 More Closure Examples
     Callback functions executes independently in its scope, but is still able to access closed variables due to closure
 
     Closure has priority over the scope chain
+
+
+L139 Coding Challenge #2
