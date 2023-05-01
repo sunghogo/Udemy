@@ -52,3 +52,10 @@ L144 Looping Arrays: forEach
         .forEach() CANNOT use break and continue keywords, for loops can
 
         .forEach() can be slightly cleaner and easier to utilize
+
+
+L145 forEach With Maps and Sets
+    .forEach('callback function'('value', 'key', 'map')) also works with objects and sets:
+        In sets, the keys are the same as the values since sets has no order and has unique values (and developers wanted to keep the syntax consistent) so you can use '_' for the second paramter
+
+    In JS, '_' signifies a throw away variable that is unecessary
