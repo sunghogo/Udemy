@@ -189,4 +189,6 @@ L138 More Closure Examples
     setTimeout('function to be executed', 'timer in ms'):
         This is a callback function that executes only the function only once after the specifed time has passed
 
-    Callback functions executes independently in its scope
+    Callback functions executes independently in its scope, but is still able to access closed variables due to closure
+
+    Closure has priority over the scope chain
