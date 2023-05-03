@@ -68,4 +68,21 @@ L145 forEach With Maps and Sets
 
 
 L146 PROJECT: "Bankist" App
+
+
+L147 Creating DOM Elements
+    It is not good practice to start writing code in the global context, better to encapsulate it inside a function
+
+    Also, should pass data into a function instead of having the function work with a global variable
     
+    Template literals are great for making html template strings
+
+    .insertAdjacentHTML("'position'", 'html string') is a DOM menthod that inserts HTML string after the specified position:
+        'beforebegin' - outside above the element opening tag
+        'afterbegin' - inside right after the element opening tag 
+        'beforeend' - inside right before element end tag
+        'afterend' - outside right below element end tag
+    
+    .innerHTML is a DOM property that returns the entire HTML including the tags
+    
+    .textContent is a DOM property that returns only the text contained inside the HTML
