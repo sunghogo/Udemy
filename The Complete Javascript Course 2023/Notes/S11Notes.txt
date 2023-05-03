@@ -30,7 +30,13 @@ L142 Simple Array Methods
     .join('separator substring') returns a string that contains the contents of the array that has its commas replaced by the separator substring
         No parameters keeps the commas without whitespace
 
-    .push(), .pop(), .unshift(), shift(), .indexOf(), .includes() from previous sections
+    From  from previous sections:
+        .push(), 
+        .pop(), 
+        .unshift(), 
+        .shift(), 
+        .indexOf(), 
+        .includes()
 
 
 L143 The new at Method
@@ -55,7 +61,7 @@ L144 Looping Arrays: forEach
 
 
 L145 forEach With Maps and Sets
-    .forEach('callback function'('value', 'key', 'map')) also works with objects and sets:
+    .forEach('callback function'('value', 'key', 'map')) also works with maps and sets (but NOT objects):
         In sets, the keys are the same as the values since sets has no order and has unique values (and developers wanted to keep the syntax consistent) so you can use '_' for the second paramter
 
     In JS, '_' signifies a throw away variable that is unecessary

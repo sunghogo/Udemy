@@ -155,24 +155,25 @@ console.log('jonas'.at(-1));
 
 // L145 forEach With Maps and Sets
 {
-  const currencies = new Map([
+  // Map
+  currencies = new Map([
     ['USD', 'United States dollar'],
     ['EUR', 'Euro'],
     ['GBP', 'Pound sterling'],
   ]);
+
+  currencies.forEach(function (value, key, map) {
+    console.log(`${key}: ${value}`, map);
+  });
+
+  // Set
+  const currenciesUnique = new Set(['USD', 'GBP', 'USD', 'EUR', 'EUR']);
+  console.log(currenciesUnique);
+  currenciesUnique.forEach(function (value, _, set) {
+    // console.log(`${key}: ${value}`, set);
+    console.log(`${value}: ${value}`, set);
+  });
 }
-
-currencies.forEach(function (value, key, map) {
-  console.log(`${key}: ${value}`, map);
-});
-
-// Set
-const currenciesUnique = new Set(['USD', 'GBP', 'USD', 'EUR', 'EUR']);
-console.log(currenciesUnique);
-currenciesUnique.forEach(function (value, _, set) {
-  // console.log(`${key}: ${value}`, set);
-  console.log(`${value}: ${value}`, set);
-});
 */
 
 // L146 PROJECT: "Bankist" App
