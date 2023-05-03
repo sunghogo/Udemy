@@ -156,7 +156,7 @@ console.log('jonas'.at(-1));
 // L145 forEach With Maps and Sets
 {
   // Map
-  currencies = new Map([
+  const currencies = new Map([
     ['USD', 'United States dollar'],
     ['EUR', 'Euro'],
     ['GBP', 'Pound sterling'],
