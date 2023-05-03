@@ -177,13 +177,3 @@ console.log('jonas'.at(-1));
 */
 
 // L146 PROJECT: "Bankist" App
-const arr = [];
-for (let i = 0; i < 10000; i++) {
-  arr[i] = -i;
-}
-
-for (const e of arr) {
-  if ((e.toString(2) ^ 0xf000) < 0) {
-    console.log(`positive number detected`);
-  }
-}
