@@ -77,7 +77,7 @@ const displayMovements = function (movements) {
       i + 1
     } ${type}</div>
         <div class="movements__date"></div>
-        <div class="movements__value">${mov}</div>
+        <div class="movements__value">${mov}€</div>
       </div>`;
 
     containerMovements.insertAdjacentHTML('afterbegin', html);
@@ -94,6 +94,31 @@ const calcDisplayBalance = function (movements) {
 
 // #FIXME
 calcDisplayBalance(account1.movements);
+
+const calcDisplaySummary = function (movements) {
+  const incomes = movements
+    .filter(mov => mov > 0)
+    .reduce((acc, mov) => acc + mov, 0);
+  labelSumIn.textContent = `${incomes}€`;
+
+  const out = movements
+    .filter(mov => mov < 0)
+    .reduce((acc, mov) => acc + mov, 0);
+  labelSumOut.textContent = `${Math.abs(out)}€`;
+
+  const interest = movements
+    .filter(mov => mov > 0)
+    .map(deposit => (deposit * 1.2) / 100)
+    .filter((int, i, arr) => {
+      // console.log(arr);
+      return int >= 1;
+    })
+    .reduce((acc, int) => acc + int, 0);
+  labelSumInterest.textContent = `${interest}€`;
+};
+
+// #FIXME
+calcDisplaySummary(account1.movements);
 
 const createUsernames = function (accs) {
   accs.forEach(function (acc) {
@@ -271,7 +296,6 @@ console.log('jonas'.at(-1));
   const withdrawals = movements.filter(mov => mov < 0);
   console.log(withdrawals);
 }
-*/
 
 // L153 The reduce Method
 {
@@ -301,4 +325,24 @@ console.log('jonas'.at(-1));
     movements[0]
   );
   console.log(max);
+}
+*/
+
+// L155 The Magic of Chaining Methods
+{
+  const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+  const eurToUSD = 1.1;
+  console.log(movements);
+
+  // PIPELINE
+  const totalDepositsUSD = movements
+    .filter(mov => mov > 0)
+    .map((mov, i, arr) => {
+      // console.log(arr);
+      return mov * eurToUSD;
+    })
+    // .map(mov => mov * eurToUSD)
+    .reduce((acc, mov) => acc + mov, 0);
+  console.log(totalDepositsUSD);
 }
