@@ -139,3 +139,13 @@ L153 The reduce Method
 
 L154 Coding Challenge #2
     .forEach() and other array iterations IS AFFECTED by array mutation side-effects (e.g. splice)
+
+
+L155 The Magic of Chaining Methods
+    Method chaining can be thought as a pipeline that processes our data
+
+    However, it can be difficult to debug if any of the steps messes up; Can log the array parameter to check the data as it transforms
+
+    Do not overuse chaining, since chaining tons of methods can cause performance issues for huge arrays; Look for wys to optimize the chaining
+
+    It is bad practice in JS to chain methods that mutate the underlying original array, such as .splice() and .reverse()
