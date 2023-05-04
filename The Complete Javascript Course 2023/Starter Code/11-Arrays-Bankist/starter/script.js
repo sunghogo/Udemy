@@ -326,7 +326,6 @@ console.log('jonas'.at(-1));
   );
   console.log(max);
 }
-*/
 
 // L155 The Magic of Chaining Methods
 {
@@ -345,4 +344,49 @@ console.log('jonas'.at(-1));
     // .map(mov => mov * eurToUSD)
     .reduce((acc, mov) => acc + mov, 0);
   console.log(totalDepositsUSD);
+}
+*/
+
+// L157 The find Method
+{
+  const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+  const firstWithdrawal = movements.find(mov => mov < 0);
+
+  console.log(movements);
+  console.log(firstWithdrawal);
+
+  console.log(accounts);
+
+  const account = accounts.find(acc => acc.owner === 'Jessica Davis');
+  console.log(account);
+
+  // Challenge: Use for of loop, map, and filter
+  let accountForOf;
+  for (const account of accounts) {
+    if (account.owner === 'Jessica Davis') {
+      accountForOf = account;
+    }
+  }
+  console.log(accountForOf);
+
+  const accountMap = accounts
+    .map(account => {
+      if (account.owner === 'Jessica Davis') {
+        return account;
+      }
+    })
+    .reduce((acc, account) => {
+      if (account != undefined && account.owner === 'Jessica Davis') {
+        return account;
+      } else {
+        return acc;
+      }
+    }, undefined);
+  console.log(accountMap);
+
+  const accountFilter = accounts.filter(
+    acc => acc.owner === 'Jessica Davis'
+  )[0];
+  console.log(accountFilter);
 }
