@@ -149,3 +149,6 @@ L155 The Magic of Chaining Methods
     Do not overuse chaining, since chaining tons of methods can cause performance issues for huge arrays; Look for wys to optimize the chaining
 
     It is bad practice in JS to chain methods that mutate the underlying original array, such as .splice() and .reverse()
+
+
+L156 Coding Challenge #3

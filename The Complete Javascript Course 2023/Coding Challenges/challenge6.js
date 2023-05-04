@@ -94,31 +94,64 @@ Test data:
 GOOD LUCK 😀
  */
 
-const data = [
-  [5, 2, 4, 1, 15, 8, 3],
-  [16, 6, 10, 5, 6, 1, 4],
-];
+/*
+{
+  const data = [
+    [5, 2, 4, 1, 15, 8, 3],
+    [16, 6, 10, 5, 6, 1, 4],
+  ];
 
-function calcAverageHumanAge(ages) {
-  // 1.
-  let humanAges = ages.map(age => (age > 2 ? 16 + age * 4 : 2 * age));
-  console.log(humanAges);
+  function calcAverageHumanAge(ages) {
+    // 1.
+    let humanAges = ages.map(age => (age > 2 ? 16 + age * 4 : 2 * age));
+    console.log(humanAges);
 
-  // 2.
-  const adults = humanAges.filter(age => age >= 18);
-  console.log(adults);
+    // 2.
+    const adults = humanAges.filter(age => age >= 18);
+    console.log(adults);
 
-  //3
-  //.Lecture Example
-  //   const average = adults.reduce(
-  //     (acc, age, i, arr) => acc + age / arr.length,
-  //     0
-  //   );
+    //3
+    //.Lecture Example
+    //   const average = adults.reduce(
+    //     (acc, age, i, arr) => acc + age / arr.length,
+    //     0
+    //   );
 
-  const average = adults.reduce((acc, age) => acc + age, 0) / adults.length;
-  console.log(average);
+    const average = adults.reduce((acc, age) => acc + age, 0) / adults.length;
+    console.log(average);
+  }
+
+  // 4.
+  calcAverageHumanAge(data[0]);
+  calcAverageHumanAge(data[1]);
 }
+*/
 
-// 4.
-calcAverageHumanAge(data[0]);
-calcAverageHumanAge(data[1]);
+/*
+// Coding Challenge #3
+
+Rewrite the 'calcAverageHumanAge' function from Challenge #2, but this time
+as an arrow function, and using chaining!
+
+Test data:
+§ Data 1: [5, 2, 4, 1, 15, 8, 3]
+§ Data 2: [16, 6, 10, 5, 6, 1, 4]
+
+GOOD LUCK 😀
+*/
+
+{
+  const data = [
+    [5, 2, 4, 1, 15, 8, 3],
+    [16, 6, 10, 5, 6, 1, 4],
+  ];
+
+  const calcAverageHumanAge = ages =>
+    ages
+      .map(age => (age > 2 ? 16 + age * 4 : 2 * age))
+      .filter(age => age >= 18)
+      .reduce((acc, age, _, arr) => acc + age / arr.length, 0);
+
+  console.log(calcAverageHumanAge(data[0]));
+  console.log(calcAverageHumanAge(data[1]));
+}
