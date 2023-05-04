@@ -98,3 +98,16 @@ L149 Data Transformations: map, filter, reduce
         2. .filter() - Returns a NEW array containing the array elements that passed a specifed test condition
 
         3. .reduce() - Reduces all array elements down to one single "reduced" value (e.g. adding all elements together)
+
+
+L150 The map Method
+    'array name'.map(function('current element', 'current index', 'array') { "callback function body" })
+
+    Using array methods to solve problems (e.g. .map() to transform each eleemnt) is in more line with functional programming paradigm
+
+    In modern JS, there is a push for functional programming
+
+    Using arrow functions for small callback functions leads to smaller, cleaner code but people argue that the lack of function and return keyword leads to back readability
+
+    When we iterate through the array and perform some action (e.g. console.log()), these are called 'side effects'. However with the array methods, all we do is return a new array, that we can then perform actions on (e.g. console.log()), thus having no side effects.
+    This is an important concept in functional programming.
