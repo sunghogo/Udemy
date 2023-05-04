@@ -63,6 +63,8 @@ const inputClosePin = document.querySelector('.form__input--pin');
 
 // L146 PROJECT: "Bankist" App
 // L147 Creating DOM Elements
+// L151 Computing Usernames
+// L153 The reduce Method
 const displayMovements = function (movements) {
   containerMovements.innerHTML = '';
 
@@ -85,7 +87,14 @@ const displayMovements = function (movements) {
 // #FIXME
 displayMovements(account1.movements);
 
-// L151 Computing Usernames
+const calcDisplayBalance = function (movements) {
+  const balance = movements.reduce((acc, mov) => acc + mov, 0);
+  labelBalance.textContent = `${balance} EUR`;
+};
+
+// #FIXME
+calcDisplayBalance(account1.movements);
+
 const createUsernames = function (accs) {
   accs.forEach(function (acc) {
     acc.username = acc.owner
@@ -243,7 +252,6 @@ console.log('jonas'.at(-1));
   );
   console.log(movementsDescriptions);
 }
-*/
 
 // L152 The filter Method
 {
@@ -262,4 +270,35 @@ console.log('jonas'.at(-1));
 
   const withdrawals = movements.filter(mov => mov < 0);
   console.log(withdrawals);
+}
+*/
+
+// L153 The reduce Method
+{
+  const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+  console.log(movements);
+
+  // accumulator -> SNOWBALL
+  const balance = movements.reduce(function (acc, cur, i, arr) {
+    console.log(`Iteration ${i}: ${acc}`);
+    return acc + cur;
+  }, 0);
+  console.log(balance);
+
+  // Same result but without .reduce() method
+  let balance2 = 0;
+  for (const move of movements) balance2 += move;
+  console.log(balance2);
+
+  // Callback arrow function
+  const balanceArrow = movements.reduce((acc, cur) => acc + cur, 0);
+  console.log(balanceArrow);
+
+  // Maximum value
+  const max = movements.reduce(
+    (acc, mov) => (acc > mov ? acc : mov),
+    movements[0]
+  );
+  console.log(max);
 }
