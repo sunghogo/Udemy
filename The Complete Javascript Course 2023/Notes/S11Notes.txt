@@ -86,3 +86,6 @@ L147 Creating DOM Elements
     .innerHTML is a DOM property that returns the entire HTML including the tags
     
     .textContent is a DOM property that returns only the text contained inside the HTML
+
+
+L148 Coding Challenge #1
