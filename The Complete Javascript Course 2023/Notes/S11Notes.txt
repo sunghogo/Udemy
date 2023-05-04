@@ -152,3 +152,15 @@ L155 The Magic of Chaining Methods
 
 
 L156 Coding Challenge #3
+
+
+L157 The find Method
+    .find() method can be used to retrieve one element from an array based on a condition:
+        Does not return a new array but the FIRST element that satisfies the condition
+
+    'array name'.find(function('current elemnet', 'current index', 'array') { "callback function body that returns a BOOLEAN value})
+
+    The main difference between .filter() vs .find():
+        1. .filter() returns all the elements that match the condition while .find() only returns the first one
+
+        2. .filter() returns a new array while .find() returns only the element itself
