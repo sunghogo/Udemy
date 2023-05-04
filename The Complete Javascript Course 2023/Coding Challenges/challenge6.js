@@ -152,6 +152,5 @@ GOOD LUCK 😀
       .filter(age => age >= 18)
       .reduce((acc, age, _, arr) => acc + age / arr.length, 0);
 
-  console.log(calcAverageHumanAge(data[0]));
-  console.log(calcAverageHumanAge(data[1]));
+  console.log(calcAverageHumanAge(data[0]), calcAverageHumanAge(data[1]));
 }
