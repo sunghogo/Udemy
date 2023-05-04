@@ -226,7 +226,7 @@ console.log('jonas'.at(-1));
   console.log(movements);
   console.log(movementsUSD);
 
-  // Same result but without functions
+  // Same result but without .map() method
   const movementsUSDfor = [];
   for (const mov of movements) movementsUSDfor.push(mov * eurToUSD);
   console.log(movementsUSDfor);
@@ -244,3 +244,22 @@ console.log('jonas'.at(-1));
   console.log(movementsDescriptions);
 }
 */
+
+// L152 The filter Method
+{
+  const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+  const deposits = movements.filter(function (mov) {
+    return mov > 0;
+  });
+  console.log(movements);
+  console.log(deposits);
+
+  // Same result but without .filter() method
+  const depositsFor = [];
+  for (const mov of movements) if (mov > 0) depositsFor.push(mov);
+  console.log(depositsFor);
+
+  const withdrawals = movements.filter(mov => mov < 0);
+  console.log(withdrawals);
+}
