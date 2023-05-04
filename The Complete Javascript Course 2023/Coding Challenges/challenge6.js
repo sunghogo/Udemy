@@ -101,15 +101,21 @@ const data = [
 
 function calcAverageHumanAge(ages) {
   // 1.
-  let humanAge = ages.map(age => (age > 2 ? 16 + age * 4 : 2 * age));
-  //   console.log(humanAge);
+  let humanAges = ages.map(age => (age > 2 ? 16 + age * 4 : 2 * age));
+  console.log(humanAges);
 
   // 2.
-  humanAge = humanAge.filter(age => age >= 18);
-  console.log(humanAge);
+  const adults = humanAges.filter(age => age >= 18);
+  console.log(adults);
 
-  //3.
-  const average = humanAge.reduce((acc, e) => acc + e, 0) / humanAge.length;
+  //3
+  //.Lecture Example
+  //   const average = adults.reduce(
+  //     (acc, age, i, arr) => acc + age / arr.length,
+  //     0
+  //   );
+
+  const average = adults.reduce((acc, age) => acc + age, 0) / adults.length;
   console.log(average);
 }
 
