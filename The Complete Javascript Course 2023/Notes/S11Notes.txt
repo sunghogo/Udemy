@@ -111,3 +111,9 @@ L150 The map Method
 
     When we iterate through the array and perform some action (e.g. console.log()), these are called 'side effects'. However with the array methods, all we do is return a new array, that we can then perform actions on (e.g. console.log()), thus having no side effects.
     This is an important concept in functional programming.
+
+
+L151 Computing Usernames
+    To repeat a previous important point, functions should receive the data it should work with instead of using a global variable
+
+    If we just want to transform/mutate an object, then there is no need to return anything and will just have to iterate and mutate as a side effect
