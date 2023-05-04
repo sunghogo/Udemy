@@ -30,3 +30,36 @@ Hints: Use tools from all lectures in this section so far 😉
 
 GOOD LUCK 😀
  */
+const data = {
+  Julia: [
+    [3, 5, 2, 12, 7],
+    [9, 16, 6, 8, 3],
+  ],
+  Kate: [
+    [4, 1, 15, 8, 3],
+    [10, 5, 6, 1, 4],
+  ],
+};
+
+function checkDogs(dogsJulia, dogsKate) {
+  // 1.
+  const dogsJuliaCorrected = dogsJulia.slice(1, -2);
+
+  // 2.
+  const dogs = [...dogsJuliaCorrected, ...dogsKate];
+
+  // 3.
+  dogs.forEach(function (age, i) {
+    const isAdult = age => age >= 3;
+    const str = `Dog number ${i} ${
+      isAdult(age)
+        ? `is an adult, and is ${age} years old`
+        : `is still a puppy 🐶`
+    }`;
+    console.log(str);
+  });
+}
+
+// 4.
+checkDogs(data.Julia[0], data.Kate[0]);
+checkDogs(data.Julia[1], data.Kate[1]);
