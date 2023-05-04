@@ -122,6 +122,8 @@ L151 Computing Usernames
 L152 The filter Method
     `array name`.filter(function('current element', 'current index', 'array') { "callback function body returns BOOLEAN value" })
 
+    Keeps the elements that returns 'true' in the callback function
+
     We use the transformation array methods for more functional code, as well as for chaining arrays
 
 
@@ -133,3 +135,7 @@ L153 The reduce Method
     Without .reduce() transformation array methods, we would have to rely on an external accumulator variable which does not lead to functional code
 
     Once again, callback arrow functions can compant and clean up the .reduce() method call
+
+
+L154 Coding Challenge #2
+    .forEach() and other array iterations IS AFFECTED by array mutation side-effects (e.g. splice)
