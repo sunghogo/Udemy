@@ -85,6 +85,20 @@ const displayMovements = function (movements) {
 // #FIXME
 displayMovements(account1.movements);
 
+// L151 Computing Usernames
+const createUsernames = function (accs) {
+  accs.forEach(function (acc) {
+    acc.username = acc.owner
+      .toLowerCase()
+      .split(' ')
+      .map(name => name[0])
+      .join('');
+  });
+};
+
+createUsernames(accounts);
+// #FIXME
+console.log(accounts);
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
@@ -198,7 +212,6 @@ console.log('jonas'.at(-1));
     console.log(`${value}: ${value}`, set);
   });
 }
-*/
 
 // L149 Data Transformations: map, filter, reduce
 // L150 The map Method
@@ -230,3 +243,4 @@ console.log('jonas'.at(-1));
   );
   console.log(movementsDescriptions);
 }
+*/
