@@ -123,3 +123,13 @@ L152 The filter Method
     `array name`.filter(function('current element', 'current index', 'array') { "callback function body returns BOOLEAN value" })
 
     We use the transformation array methods for more functional code, as well as for chaining arrays
+
+
+L153 The reduce Method
+    'array name'.reduce( function('accumulator', 'current element', 'current index', 'array') { "callback function body returns new ACCUMULATOR value }, 'initial accumulator value')
+
+    The accumulator snowball effects; Can be any action as long as we reduce the array into a single value
+
+    Without .reduce() transformation array methods, we would have to rely on an external accumulator variable which does not lead to functional code
+
+    Once again, callback arrow functions can compant and clean up the .reduce() method call
