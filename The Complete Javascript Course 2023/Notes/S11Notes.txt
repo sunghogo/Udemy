@@ -122,4 +122,4 @@ L151 Computing Usernames
 L152 The filter Method
     `array name`.filter(function('current element', 'current index', 'array') { "callback function body returns BOOLEAN value" })
 
-    We use the transformation array methods for more functional code, as well as for chaining array methods
+    We use the transformation array methods for more functional code, as well as for chaining arrays
