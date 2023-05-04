@@ -61,6 +61,7 @@ const inputLoanAmount = document.querySelector('.form__input--loan-amount');
 const inputCloseUsername = document.querySelector('.form__input--user');
 const inputClosePin = document.querySelector('.form__input--pin');
 
+// L146 PROJECT: "Bankist" App
 // L147 Creating DOM Elements
 const displayMovements = function (movements) {
   containerMovements.innerHTML = '';
@@ -165,10 +166,10 @@ console.log('jonas'.at(-1));
 
   // forEach() method
   console.log(`---- FOREACH -----`);
-  movements.forEach(function (move, i, arr) {
-    move > 0
-      ? console.log(`Movement ${i + 1}: You depositied ${move}`)
-      : console.log(`Movement ${i + 1}: You withdrew ${Math.abs(move)}`);
+  movements.forEach(function (mov, i, arr) {
+    mov > 0
+      ? console.log(`Movement ${i + 1}: You depositied ${mov}`)
+      : console.log(`Movement ${i + 1}: You withdrew ${Math.abs(mov)}`);
   });
   // 0: function (200)
   // 1: function (450)
@@ -199,6 +200,33 @@ console.log('jonas'.at(-1));
 }
 */
 
-// L146 PROJECT: "Bankist" App
+// L149 Data Transformations: map, filter, reduce
+// L150 The map Method
+{
+  const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
-// 147. Creating DOM Elements
+  const eurToUSD = 1.1;
+
+  const movementsUSD = movements.map(function (mov) {
+    return mov * eurToUSD;
+  });
+  console.log(movements);
+  console.log(movementsUSD);
+
+  // Same result but without functions
+  const movementsUSDfor = [];
+  for (const mov of movements) movementsUSDfor.push(mov * eurToUSD);
+  console.log(movementsUSDfor);
+
+  // Callback function as arrow function
+  const movementsUSDArrow = movements.map(mov => mov * eurToUSD);
+  console.log(movementsUSDArrow);
+
+  const movementsDescriptions = movements.map(
+    (mov, i) =>
+      `Movement ${i + 1}: You ${mov > 0 ? 'deposited' : 'withdrew'} ${Math.abs(
+        mov
+      )}`
+  );
+  console.log(movementsDescriptions);
+}
