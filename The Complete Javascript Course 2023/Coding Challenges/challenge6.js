@@ -44,14 +44,16 @@ const data = {
 function checkDogs(dogsJulia, dogsKate) {
   // 1.
   const dogsJuliaCorrected = dogsJulia.slice(1, -2);
+  console.log(dogsJuliaCorrected);
 
   // 2.
   const dogs = [...dogsJuliaCorrected, ...dogsKate];
+  console.log(dogs);
 
   // 3.
   dogs.forEach(function (age, i) {
     const isAdult = age => age >= 3;
-    const str = `Dog number ${i} ${
+    const str = `Dog number ${i + 1} ${
       isAdult(age)
         ? `is an adult, and is ${age} years old`
         : `is still a puppy 🐶`
