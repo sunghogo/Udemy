@@ -101,7 +101,7 @@ L149 Data Transformations: map, filter, reduce
 
 
 L150 The map Method
-    'array name'.map(function('current element', 'current index', 'array') { "callback function body" })
+    'array name'.map(function('current element', 'current index', 'array') { "callback function body returns value" })
 
     Using array methods to solve problems (e.g. .map() to transform each eleemnt) is in more line with functional programming paradigm
 
@@ -117,3 +117,9 @@ L151 Computing Usernames
     To repeat a previous important point, functions should receive the data it should work with instead of using a global variable
 
     If we just want to transform/mutate an object, then there is no need to return anything and will just have to iterate and mutate as a side effect
+
+
+L152 The filter Method
+    `array name`.filter(function('current element', 'current index', 'array') { "callback function body returns BOOLEAN value" })
+
+    We use the transformation array methods for more functional code, as well as for chaining array methods
