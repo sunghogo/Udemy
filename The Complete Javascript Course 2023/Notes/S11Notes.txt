@@ -89,3 +89,12 @@ L147 Creating DOM Elements
 
 
 L148 Coding Challenge #1
+
+
+L149 Data Transformations: map, filter, reduce
+    3 important data transformation array methods:
+        1. .map() - Returns a NEW array containing the results of applying an operation on all original array elements
+
+        2. .filter() - Returns a NEW array containing the array elements that passed a specifed test condition
+
+        3. .reduce() - Reduces all array elements down to one single "reduced" value (e.g. adding all elements together)
