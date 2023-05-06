@@ -433,7 +433,7 @@ L121 Working With Strings - Part 1
 
             A negative number as the end index will extract until the end of the string EXCLUDING that number of characters
 
-    Strings are immutable since they are a primitive type
+    Strings are IMMUTABLE since they are a primitive type; This means all the strings methods do NOT change the underlying string
 
     .indexOf() and .lastIndexOf() are useful for determing indexes for the .slice() method of string extraction
 
