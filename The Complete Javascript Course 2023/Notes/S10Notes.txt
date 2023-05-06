@@ -47,7 +47,7 @@ L130 First-Class and Higher-Order Functions
          1. Store functions in variables or object properties
          2. Pass functions as arguments to OTHER functions (ex. .addEventListener())
          3. Return functions FROM functions
-         4. Call methodson functions (ex. .bind())
+         4. Call methods on functions (ex. .bind())
 
     Higher-Order Functions:
         A function that RECEIVES another function as an argument, that RETURNS a new function, or BOTH
@@ -64,6 +64,7 @@ L130 First-Class and Higher-Order Functions
     Higher-order functions are in practice possible due to first-class function support
 
     Callback funciions are named that way because we do not call themselves, but call JS to tell them later
+
 
 L131 Functions Accepting Callback Functions
     When we're passing in callback functions as arguments, we are passing in the function WITHOUT calling it (without the ())
@@ -119,7 +120,7 @@ L134 The bind Method
     The .bind() method is useful with Event Listeners:
         In an event handling function, the 'this' keyword always points to the element that the handler is attached to
 
-        Since the event handler needs a functions, we have to use the .bind() function instead of the .call() method
+        Since the event handler requires a callback function, we have to use the .bind() function instead of the .call() method
 
     This is different from setting default paramters to a function, since we are creating a new specific function from a more general function using .bind()
 
