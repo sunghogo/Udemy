@@ -180,3 +180,5 @@ L158 Implementing Login
 
     Remember you can assign multiple variables using '=' to chain the assignment:
         'var 1' = 'var 2' = ...etc. = 'value'
+
+    'selector'.blur() selector method blurs out the cursor hover
