@@ -28,7 +28,7 @@ L142 Simple Array Methods
     .concat('array 2') method concatenates two arrays into a single array WITHOUT mutating the original arrays
 
     .join('separator substring') returns a string that contains the contents of the array that has its commas replaced by the separator substring
-        No parameters keeps the commas without whitespace
+        No argument defaults to commas without whitespace (',')
 
     From  from previous sections:
         .push(), 
@@ -158,9 +158,25 @@ L157 The find Method
     .find() method can be used to retrieve one element from an array based on a condition:
         Does not return a new array but the FIRST element that satisfies the condition
 
+        If the element does not exist, returns undefined
+
     'array name'.find(function('current elemnet', 'current index', 'array') { "callback function body that returns a BOOLEAN value})
 
     The main difference between .filter() vs .find():
         1. .filter() returns all the elements that match the condition while .find() only returns the first one
 
         2. .filter() returns a new array while .find() returns only the element itself
+
+
+L158 Implementing Login
+    For a button element within an form element, the default behavior is for the button send the POST request and then reload the page
+
+    If you remember, the callback function for the event handeler is passed the event object as the first parameter that contains information regarding the event:
+        'selector'.addEventListener('event', function('event object') { "callback function body" } )
+    
+    'event object'.preventDefault() event object method prevents the default behavior for that event
+
+    Remember we can use optional chaining with '?' to check if objects exist before 
+
+    Remember you can assign multiple variables using '=' to chain the assignment:
+        'var 1' = 'var 2' = ...etc. = 'value'

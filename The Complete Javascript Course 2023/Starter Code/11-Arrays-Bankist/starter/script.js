@@ -65,6 +65,7 @@ const inputClosePin = document.querySelector('.form__input--pin');
 // L147 Creating DOM Elements
 // L151 Computing Usernames
 // L153 The reduce Method
+// L158 Implementing Login
 const displayMovements = function (movements) {
   containerMovements.innerHTML = '';
 
@@ -84,16 +85,10 @@ const displayMovements = function (movements) {
   });
 };
 
-// #FIXME
-displayMovements(account1.movements);
-
 const calcDisplayBalance = function (movements) {
   const balance = movements.reduce((acc, mov) => acc + mov, 0);
   labelBalance.textContent = `${balance} EUR`;
 };
-
-// #FIXME
-calcDisplayBalance(account1.movements);
 
 const calcDisplaySummary = function (movements) {
   const incomes = movements
@@ -110,15 +105,11 @@ const calcDisplaySummary = function (movements) {
     .filter(mov => mov > 0)
     .map(deposit => (deposit * 1.2) / 100)
     .filter((int, i, arr) => {
-      // console.log(arr);
       return int >= 1;
     })
     .reduce((acc, int) => acc + int, 0);
   labelSumInterest.textContent = `${interest}€`;
 };
-
-// #FIXME
-calcDisplaySummary(account1.movements);
 
 const createUsernames = function (accs) {
   accs.forEach(function (acc) {
@@ -130,9 +121,41 @@ const createUsernames = function (accs) {
   });
 };
 
+// Initializes usernames
 createUsernames(accounts);
-// #FIXME
-console.log(accounts);
+
+// Event Handler
+let currentAccount;
+
+btnLogin.addEventListener('click', function (e) {
+  // Prevent form from submitting
+  e.preventDefault();
+
+  currentAccount = accounts.find(
+    acc => acc.username === inputLoginUsername.value
+  );
+
+  if (currentAccount?.pin === Number(inputLoginPin.value)) {
+    // Display UI and welcome message
+    labelWelcome.textContent = `Welcome back ${
+      currentAccount.owner.split(' ')[0]
+    }`;
+    containerApp.style.opacity = 100;
+
+    // Clear input fields
+    inputLoginUsername.value = inputLoginPin.value = '';
+
+    // Display movements
+    displayMovements(currentAccount.movements);
+
+    // Display balance
+    calcDisplayBalance(currentAccount.movements);
+
+    // Display summary
+    calcDisplaySummary(currentAccount.movements);
+  }
+});
+
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
@@ -345,7 +368,6 @@ console.log('jonas'.at(-1));
     .reduce((acc, mov) => acc + mov, 0);
   console.log(totalDepositsUSD);
 }
-*/
 
 // L157 The find Method
 {
@@ -390,3 +412,4 @@ console.log('jonas'.at(-1));
   )[0];
   console.log(accountFilter);
 }
+*/
