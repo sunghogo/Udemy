@@ -155,7 +155,7 @@ L156 Coding Challenge #3
 
 
 L157 The find Method
-    .find() method can be used to retrieve one element from an array based on a condition:
+    .find() array method (ES6/ES2015) can be used to retrieve one element from an array based on a condition:
         Does not return a new array but the FIRST element that satisfies the condition
 
         If the element does not exist, returns undefined
@@ -186,3 +186,15 @@ L158 Implementing Login
 
 L159 Implementing Transfers
     Standard practice to disable default form behavior using .preventDefault() event objc method
+
+
+L160 The findIndex Method
+    .findIndex() array method (ES6/ES2015) can be used to retrieve the index of the first matching element in the array:
+        Does not return a new array but the INDEX of the FIRST element that satisfies the condition
+
+        If the element does not exist, returns -1
+
+    'array name'.findIndex(function('current elemnet', 'current index', 'array') { "callback function body that returns a BOOLEAN value})
+
+    The main difference between .findIndex() vs .indexOf():
+     For .indexOf() we can only search for a value that is in the array while for .findIndex(), we can specify a more complex condition in the callback function 
