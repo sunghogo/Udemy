@@ -482,7 +482,6 @@ console.log('jonas'.at(-1));
   )[0];
   console.log(accountFilter);
 }
-*/
 
 // L161 some and every
 console.log(movements);
@@ -505,3 +504,12 @@ const deposit = mov => mov > 0;
 console.log(movements.some(deposit));
 console.log(movements.every(deposit));
 console.log(movements.filter(deposit));
+*/
+
+// L162 flat and flatMap
+const arr = [[1, 2, 3], [4, 5, 6], 7, 8];
+console.log(arr.flat());
+
+const arrDeep = [[[1, 2], 3], [4, [5, 6]], 7, 8];
+console.log(arrDeep.flat());
+console.log(arrDeep.flat(2));

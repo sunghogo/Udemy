@@ -213,3 +213,8 @@ L161 some and every
         For .includes() method (ES7/2016) only tests for value equality, while .some() method can specify a more complex condition in the callback function
 
     For cleaner code, we can separate our callback function into a variable for reuse
+
+
+L162 flat and flatMap
+    .flat() and .flatMap() array methods (ES10/ES2019) "flattens" or removes nesting from an array:
+        .flat() only goes 1 level deep, and does not flatten deeply nested array
