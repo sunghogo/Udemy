@@ -182,3 +182,7 @@ L158 Implementing Login
         'var 1' = 'var 2' = ...etc. = 'value'
 
     'selector'.blur() selector method blurs out the cursor hover
+
+
+L159 Implementing Transfers
+    Standard practice to disable default form behavior using .preventDefault() event objc method
