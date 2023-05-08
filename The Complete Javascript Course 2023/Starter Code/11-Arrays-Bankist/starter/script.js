@@ -67,6 +67,7 @@ const inputClosePin = document.querySelector('.form__input--pin');
 // L153 The reduce Method
 // L158 Implementing Login
 // L159 Implementing Transfers
+// L160 The findIndex Method
 const displayMovements = function (movements) {
   containerMovements.innerHTML = '';
 
@@ -185,6 +186,27 @@ btnTransfer.addEventListener('click', function (e) {
   }
 });
 
+btnClose.addEventListener('click', function (e) {
+  e.preventDefault();
+
+  if (
+    currentAccount.username === inputCloseUsername.value &&
+    currentAccount.pin === Number(inputClosePin.value)
+  ) {
+    const index = accounts.findIndex(
+      acc => acc.username === currentAccount.username
+    );
+
+    // Delete account
+    accounts.splice(index, 1);
+
+    // Hide UI
+    containerApp.style.opacity = 0;
+  }
+
+  // Clear fields
+  inputCloseUsername.value = inputClosePin.value = '';
+});
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
