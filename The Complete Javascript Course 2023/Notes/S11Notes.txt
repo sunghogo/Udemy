@@ -92,7 +92,7 @@ L148 Coding Challenge #1
 
 
 L149 Data Transformations: map, filter, reduce
-    3 important data transformation array methods:
+    3 important data transformation array methods (ES5/ES2009):
         1. .map() - Returns a NEW array containing the results of applying an operation on all original array elements
 
         2. .filter() - Returns a NEW array containing the array elements that passed a specifed test condition
@@ -198,3 +198,18 @@ L160 The findIndex Method
 
     The main difference between .findIndex() vs .indexOf():
      For .indexOf() we can only search for a value that is in the array while for .findIndex(), we can specify a more complex condition in the callback function 
+
+
+L161 some and every
+    .some() array method (ES5/ES2009) iterates through the array, and returns true if ANY element matches the conditional callback function, or false otherwise
+
+    .every() array method (ES5/ES2009) iterates through the array, and returns true if EVERY element matches the conditional callback function, or false otherwise
+
+    'array name'.some(function('current elemnet', 'current index', 'array') { "callback function body that returns a BOOLEAN value})
+
+    'array name'.every(function('current elemnet', 'current index', 'array') { "callback function body that returns a BOOLEAN value})
+
+    The main difference between .some() vs .includes():
+        For .includes() method (ES7/2016) only tests for value equality, while .some() method can specify a more complex condition in the callback function
+
+    For cleaner code, we can separate our callback function into a variable for reuse

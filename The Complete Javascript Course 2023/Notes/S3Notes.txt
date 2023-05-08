@@ -185,7 +185,7 @@ L40 Basic Array Operations (Methods)
 
     .indexOf() is a method that returns the index of the passed element we want to reference, and returns -1 if not found
 
-    .includes() is an ES6+ method that returns true if the passed element is in the array, and false if not; this method uses strict equality
+    .includes() is an ES7/ES2016 method that returns true if the passed element is in the array, and false if not; this method uses strict equality
 
 
 L42 Introduction to Objects
