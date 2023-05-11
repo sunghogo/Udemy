@@ -216,5 +216,8 @@ L161 some and every
 
 
 L162 flat and flatMap
-    .flat() array method (ES10/ES2019) "flattens" or removes nesting from an array:
-        .flat() only goes 1 level deep, and does not flatten deeply nested array
+    .flat('depth') array method (ES10/ES2019) "flattens" or removes nesting from an array:
+        .flat('depth') only goes 1 level deep by default, and does not flatten deeply nested array unless specifed by 'depth'
+
+    .flattMap() array method (ES10/ES2019)performs .map() first, then .flat(), but flattens only 1 level deep
+        .flatMap(function('current element', 'current index', 'array'))
