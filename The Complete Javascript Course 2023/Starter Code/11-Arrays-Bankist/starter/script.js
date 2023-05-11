@@ -68,10 +68,12 @@ const inputClosePin = document.querySelector('.form__input--pin');
 // L158 Implementing Login
 // L159 Implementing Transfers
 // L160 The findIndex Method
-const displayMovements = function (movements) {
+const displayMovements = function (movements, sort = false) {
   containerMovements.innerHTML = '';
 
-  movements.forEach(function (mov, i) {
+  const movs = sort ? movements.slice().sort((a, b) => a - b) : movements;
+
+  movs.forEach(function (mov, i) {
     const type = mov > 0 ? 'deposit' : 'withdrawal';
 
     const html = `
@@ -226,6 +228,12 @@ btnLoan.addEventListener('click', function (e) {
   }
 });
 
+let sorted = false;
+btnSort.addEventListener('click', function (e) {
+  e.preventDefault();
+  displayMovements(currentAccount.movements, !sorted);
+  sorted = !sorted;
+});
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
@@ -504,7 +512,6 @@ const deposit = mov => mov > 0;
 console.log(movements.some(deposit));
 console.log(movemen ts.every(deposit));
 console.log(movements.filter(deposit));
-*/
 
 // L162 flat and flatMap
 const arr = [[1, 2, 3], [4, 5, 6], 7, 8];
@@ -513,12 +520,6 @@ console.log(arr.flat());
 const arrDeep = [[[1, 2], 3], [4, [5, 6]], 7, 8];
 console.log(arrDeep.flat());
 console.log(arrDeep.flat(2));
-
-// const accountMovements = accounts.map(acc => acc.movements); // Returns 2D array
-// const allMovements = accountMovements.flat();
-// console.log(allMovements);
-// const overallBalance = allMovements.reduce((acc, mov) => acc + mov, 0);
-// console.log(overallBalance);
 
 // flat with chaining
 const overallBalance = accounts
@@ -532,3 +533,31 @@ const overallBalance2 = accounts
   .flatMap(acc => acc.movements)
   .reduce((acc, mov) => acc + mov);
 console.log(overallBalance2);
+
+// L163 Sorting Arrays
+// Strings
+const owners = ['Jonas', 'Zach', 'Adam', 'Martha', 'adam', 'alice'];
+console.log(owners.sort());
+console.log(owners);
+
+// Numbers
+console.log(movements);
+// console.log(movements.sort()); // sorts array alphabetically
+
+// return < 0: A, B (keep order)
+// return > 0: B, A (switch order)
+
+// Ascending
+// movements.sort((a, b) => {
+//   return a > b ? 1 : -1;
+// });
+movements.sort((a, b) => a - b);
+console.log(movements);
+
+// Descending
+// movements.sort((a, b) => {
+//   return a > b ? -1 : 1;
+// });
+movements.sort((a, b) => b - a);
+console.log(movements);
+*/
