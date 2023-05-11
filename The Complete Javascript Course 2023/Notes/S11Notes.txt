@@ -232,3 +232,29 @@ L163 Sorting Arrays
         For arrays with mixed data types, do NOT use .sort()
 
     Remember, you can use .slice() method to create a copy of an array while method chaining
+
+
+L164 More Ways of Creating and Filling Arrays
+    When we have the data, we can create arrays with the passed data using bracket literal or the Array constructor
+
+    new Array() constructor method:
+        1. new Array('size') creates a new EMPTY array of that size
+
+        2. new Array('element 1', 'element 2', etc...) creates a new FILLED array with passed arguments
+
+    Using .map() to fill an EMPTY array does NOT work
+
+    .fill() array method (ES6/ES2015) fills an array with the specified data and MUTATES the original array:
+        .fill('fill data', 'starting index', 'end index')
+
+        .fill works on both EMPTY and FILLED arrays
+
+        Index specification works similar to the .slice() array methods
+
+    Array.from() constructor method (ES6/ES2015) can also be used to construct array programmatically:
+        Array.from({length: 'specified length'}, 'mapping function')
+
+        Array.from('array like structure', 'mapping function')
+
+        Can also be used to construct array from array-like structures such Iterables like Strings, Sets, Maps OR NodeLists commonly returned from .querySelectorAll():
+            Remember you can also convert them into an array using the spread operator
