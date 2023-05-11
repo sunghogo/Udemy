@@ -221,3 +221,14 @@ L162 flat and flatMap
 
     .flattMap() array method (ES10/ES2019)performs .map() first, then .flat(), but flattens only 1 level deep
         .flatMap(function('current element', 'current index', 'array'))
+
+
+L163 Sorting Arrays
+    .sort() array method sorts the array alphabetically AS STRINGS by default, and MUTATES the original array:
+        .sort(function('element 1', 'element 2') { "return < 0 (ex. -1) to KEEP order, return > 1 (ex 1) to SWITCH order"})
+
+        So returning a NEGATIVE number KEEPS the order the same, while returning a POSITIVE number SWITCHES the order 
+
+        For arrays with mixed data types, do NOT use .sort()
+
+    Remember, you can use .slice() method to create a copy of an array while method chaining
