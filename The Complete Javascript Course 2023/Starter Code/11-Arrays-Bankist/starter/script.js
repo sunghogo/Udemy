@@ -502,7 +502,7 @@ console.log(account4.movements.every(mov => mov > 0));
 // Seperate callback
 const deposit = mov => mov > 0;
 console.log(movements.some(deposit));
-console.log(movements.every(deposit));
+console.log(movemen ts.every(deposit));
 console.log(movements.filter(deposit));
 */
 
@@ -513,3 +513,22 @@ console.log(arr.flat());
 const arrDeep = [[[1, 2], 3], [4, [5, 6]], 7, 8];
 console.log(arrDeep.flat());
 console.log(arrDeep.flat(2));
+
+// const accountMovements = accounts.map(acc => acc.movements); // Returns 2D array
+// const allMovements = accountMovements.flat();
+// console.log(allMovements);
+// const overallBalance = allMovements.reduce((acc, mov) => acc + mov, 0);
+// console.log(overallBalance);
+
+// flat with chaining
+const overallBalance = accounts
+  .map(acc => acc.movements)
+  .flat()
+  .reduce((acc, mov) => acc + mov, 0);
+console.log(overallBalance);
+
+// flat map
+const overallBalance2 = accounts
+  .flatMap(acc => acc.movements)
+  .reduce((acc, mov) => acc + mov);
+console.log(overallBalance2);
