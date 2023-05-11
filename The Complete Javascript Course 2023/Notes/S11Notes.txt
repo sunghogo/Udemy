@@ -258,3 +258,58 @@ L164 More Ways of Creating and Filling Arrays
 
         Can also be used to construct array from array-like structures such Iterables like Strings, Sets, Maps OR NodeLists commonly returned from .querySelectorAll():
             Remember you can also convert them into an array using the spread operator
+
+
+L165 Summary: Which Array Method to Use?
+    Which array method to use?
+
+    To mutate original array
+        1. Add to original:
+            .push(), .unshift()
+        2. Remove from original:
+            .pop(), .shift(), .splice()
+        3. Others:
+            .reverse(), .sort(), .fill()
+    
+    (Create) A new array
+        1. Computed from original:
+            .map()
+        2. Filtered using condition:
+            .filter()
+        3. Portion of original:
+            .slice()
+        4. Adding original to other:
+            .concat()
+        5. Flattening the original:
+            .flat(), .flatMap()
+    
+    (Find) An array index
+        1. Based on value:
+            .indexOf()
+        2. Based on test condition:
+            .findIndex()
+
+    (Find) An array element: 
+        1. Based on test condition
+            .find()
+
+    Know if array includes
+        1. Based on value:
+            .includes()
+        2. Based on test condition:
+            .some(), .every()
+
+    A new string
+        1. Based on separator string:
+            .join()
+
+    To transform a value
+        1. Based on accumulator:
+            .reduce()
+            (Boil down array to a single value of any type: number, string, boolean, or even new array or object)
+    
+    To just loop an array
+        1. Based on callback:
+            .forEach()
+            (Does not create a new array, just loops over it)
+            
