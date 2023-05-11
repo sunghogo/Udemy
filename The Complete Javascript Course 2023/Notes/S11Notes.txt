@@ -312,4 +312,9 @@ L165 Summary: Which Array Method to Use?
         1. Based on callback:
             .forEach()
             (Does not create a new array, just loops over it)
-            
+
+
+L166 Array Methods Practice
+    'number'++ returns the OLD value while the prefixed ++'number' returns the NEW incremented value
+
+    .reduce() method is extremely versatile as you can set the accumulator to anything like an object AS LONG as you return the new accumulator
