@@ -171,7 +171,7 @@ L157 The find Method
 L158 Implementing Login
     For a button element within an form element, the default behavior is for the button send the POST request and then reload the page
 
-    If you remember, the callback function for the event handeler is passed the event object as the first parameter that contains information regarding the event:
+    If you remember, the callback function for the event handler is passed the event object as the first parameter that contains information regarding the event:
         'selector'.addEventListener('event', function('event object') { "callback function body" } )
     
     'event object'.preventDefault() event object method prevents the default behavior for that event
@@ -185,7 +185,7 @@ L158 Implementing Login
 
 
 L159 Implementing Transfers
-    Standard practice to disable default form behavior using .preventDefault() event objc method
+    Standard practice to disable default form behavior using .preventDefault() event object method
 
 
 L160 The findIndex Method
@@ -318,3 +318,6 @@ L166 Array Methods Practice
     'number'++ returns the OLD value while the prefixed ++'number' returns the NEW incremented value
 
     .reduce() method is extremely versatile as you can set the accumulator to anything like an object AS LONG as you return the new accumulator
+
+
+L167 Coding Challenge #4
