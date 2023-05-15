@@ -202,8 +202,10 @@ GOOD LUCK �
   ];
 
   // 1.
-  const recommendedFood = weight => weight ** 0.75 * 28;
-  dogs.forEach(dog => (dog.recFood = recommendedFood(dog.weight)));
+  const recommendedFood = weight => Math.trunc(weight ** 0.75 * 28);
+  dogs.calcRecFood = () =>
+    dogs.forEach(dog => (dog.recFood = recommendedFood(dog.weight)));
+  dogs.calcRecFood();
   console.log(dogs);
 
   // 2.
@@ -218,12 +220,10 @@ GOOD LUCK �
   // 3.
   const ownersEatTooMuch = dogs
     .filter(dog => dog.curFood > dog.recFood)
-    .map(dog => dog.owners)
-    .flat();
+    .flatMap(dog => dog.owners);
   const ownersEatTooLittle = dogs
     .filter(dog => dog.curFood < dog.recFood)
-    .map(dog => dog.owners)
-    .flat();
+    .flatMap(dog => dog.owners);
   console.log(ownersEatTooMuch, ownersEatTooLittle);
 
   // 4.
@@ -231,26 +231,20 @@ GOOD LUCK �
   console.log(`${ownersEatTooLittle.join(' and ')}'s dogs eat too little!`);
 
   // 5.
-  console.log(dogs.find(dog => dog.curFood === dog.recFood) ? true : false);
+  console.log(dogs.some(dog => dog.curFood === dog.recFood));
 
   // 6.
-  const okAmount = ({ curFood, recFood }) =>
-    recFood * 0.9 < curFood && curFood < recFood * 1.1;
-  console.log(
-    dogs.find(dog => okAmount({ curFood: dog.curFood, recFood: dog.recFood }))
-      ? true
-      : false
-  );
+  dogs.checkEatingOk = dog =>
+    dog.recFood * 0.9 < dog.curFood && dog.curFood < dog.recFood * 1.1;
+  console.log(dogs.some(dogs.checkEatingOk));
 
   // 7.
-  const dogsEatOk = dogs.filter(dog =>
-    okAmount({ curFood: dog.curFood, recFood: dog.recFood })
-  );
+  const dogsEatOk = dogs.filter(dogs.checkEatingOk);
   console.log(dogsEatOk);
 
   // 8.
-  const dogsSorted = dogs.sort((dog1, dog2) =>
-    dog1.recFood > dog2.recFood ? 1 : -1
-  );
+  const sortDogsAscRecFood = (a, b) => (a.recFood > b.recFood ? 1 : -1);
+  const dogsSorted = dogs.slice().sort(sortDogsAscRecFood);
   console.log(dogsSorted);
+  console.log(dogs);
 }
