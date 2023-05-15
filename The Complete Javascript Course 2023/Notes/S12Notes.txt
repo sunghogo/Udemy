@@ -1,0 +1,37 @@
+L168 Section Intro
+
+
+L169 Section Roadmap
+
+
+L170 Converting and Checking Numbers
+    In JS, all Numbers (primitives) are representeed internally as floating point numbers, 64 base 2 format
+
+    Since everything is representing in binary base 2, it is difficult to represent certain fractions even with JS roundings behind the scenes
+
+    Cannot do really precise scientific or financial calculations in JS, so do NOT compare floating points normally
+
+    Number() and '+"number"' is the shorthand way to type coerce strings to numbers (similar to concatenate an empty string to a number for quick string type coercion)
+
+    Number.parseInt('string', 'regex') is a function to parse a string into a number:
+    Number.parseFloat('string', 'regex') is a function to pase a string into a floating point number:
+        Number has to be at the START of the string otherwise it fails (parseFloat() additionally parse number after '.')
+
+        Failed parsing returns NaN
+
+        'regex' value specifies base numeral system (ex. 10), and defaults to base 10 when not specified
+        
+        Useful for extract CSS values from units
+
+    The Number functions are also global functions that can be called without 'Number.', but it is now encouraged in modern JS to call the functions with 'Number.' since it provides a (Number) namespace for these functions
+
+    Number.isNaN('input') is a Number namespace function that checks if the input is NaN
+
+    Number.isFinite('input') is a Number namespace function that checks if the input is a number AND finite
+
+    Number.isInteger('input') is a Numeber namespace function that checks if the input is an integer:
+        An floating point with '.0' is also an integer
+        
+    Converting an invalid string to a number returns NaN 
+
+    Dividing a number by 0 returns 'Infinity', which is still a number 
