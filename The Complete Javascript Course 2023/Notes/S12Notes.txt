@@ -105,3 +105,52 @@ L174 Working with BigInt
         3. String concatenation is ALLOWED since BigInt will be type coerced to String
 
         4. Division between BigInts will always give a TRUNCATED BigInt value
+
+
+L175 Creating Dates
+    new Date() constructor function is used to create Date objects:
+        String formats:
+            "'Day of Week' 'Month' 'Day' 'Year' 'Time' 'Timezone' 'DST'"
+
+            "'Date'-'Month'-'Day'T'Hour':'Min':'Second'.'Millisecond''Time Zone Symbol'"
+        
+        1. new Date ():
+            By default, no arguments gets the current date
+
+        2. new Date ('date and time string'):
+            A properly formatted string returns that date and time 
+            
+            Although JS can parse incomplete / misordered strings, it is unreliable and not recommended
+
+        3. new Date('year', 'month', 'day', 'hour', 'second', 'milliseconds')
+            The 'month' starts from 0 so, 0 is Jan, 1 is Feb, etc...
+
+        4. new Date(0):
+            Gives the Unix Epoch which is when time starts for Unix systems (Thu Jan 1 1970 0:00:00 GMT+0000(UTC)
+
+        5. new Date('day' * 24 * 60 * 60 * 1000):
+            Multiplying the 'day' * 24h/day * 60m/h * 60s/m * 1000ms/s gives us the number called the "timestamp"
+
+    Date methods:
+    Change "get" to "set" to set the number instead
+        .getFullYear() gets the full number year
+
+        .getYear() gets the number year since 1900
+
+        .getMonth() gets the number month (STARTING from 0 to 11)
+
+        .getDate() gets the number day
+
+        .getDay() gets the number day of the week (0: Sunday, ..., 6: Saturday)
+
+        .getHours() gets the number hour
+
+        .getMinutes() gets the number minutes
+
+        .getSeconds() gets the number seconds
+
+        .getTime() gets the number timestamp for that date
+        
+        .now() gets the number timestamp for the current time and date
+
+        .toISOString() converts to the date to international standard formatted string (ex. 2037-11-19T20:23:00.000Z)
