@@ -387,5 +387,35 @@ console.log(parseInt('230_000')); // 230
 // L174 Working with BigInt
 // Biggest Number value
 console.log(2 ** 53 - 1); // 9007199254740991
-console.log(Number.MAX_SAFE_INTEGER); // 9007199254740991
-console.log(2 ** 53 + 1);
+console.log(Number.MAX_SAFE_INTEGER); // 9_007_199_254_740_991
+
+console.log(2 ** 53 + 1); // 9007199254740992
+console.log(2 ** 53 + 2); // 9007199254740994
+console.log(2 ** 53 + 3); // 9007199254740996
+console.log(2 ** 53 + 4); // 9007199254740996
+
+console.log(4838430248342043823408394839483204);
+console.log(4838430248342043823408394839483204n); // BigInt
+console.log(BigInt('4838430248342043823408394839483204')); // BigInt but different value because the conversion takes place after JS misrepresents the number
+
+// Operations
+console.log(10000n + 10000n);
+console.log(36286372637263726376237263726372632n * 10000000n);
+
+const huge = 20289830237283728378237n;
+const num = 23;
+console.log(huge + BigInt(num));
+
+// Exceptions
+console.log(20n > 15); // true
+console.log(20n === 20); // false
+console.log(typeof 20n, typeof 20);
+console.log(20n == '20'); // true
+
+console.log(huge + ' is REALLY big!!!');
+
+// Divisions
+console.log(-11n / 3n);
+console.log(Math.floor(-11 / 3));
+
+console.log(10 / 3);
