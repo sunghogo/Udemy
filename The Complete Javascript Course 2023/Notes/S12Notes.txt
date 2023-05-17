@@ -168,10 +168,10 @@ L177 Operations With Dates
 
 
 L178 Internationalizing Dates (Intl)
-    JS has a new Internationalization API (ES6/ES2015) to easily format numbers and strings according to different languages (ex. dates, numbers, currency):
+    JS has a new Internationalization API (ES6/ES2015) to easily format numbers and strings according to different languages (ex. dates, numbers, currency) using the Intl Object:
         Not all Intl namespace features were introduced at once so have to check
 
-    new Intl.DateTimeFormat('locale string', 'options') constructor to create a formatter for the specified langauge:
+    new Intl.DateTimeFormat('locale string', 'options') constructor to create a time and date formatter for the specified langauge:
         'locale string' specifies the "'language'-'country'" format:
             ex.) 'en-US', 'en-GB', 'ar-SY'
 
@@ -180,7 +180,7 @@ L178 Internationalizing Dates (Intl)
             Normally get the 'locale string' from the browser using:
                 navigator.language
 
-        'options' is an object with that specifies which date and time to display using the following properties:
+        'options' is an object that specifies which date and time to display using the following properties:
             const 'options' = {
                 hour: 'format',
                 minute: 'format',
@@ -200,3 +200,33 @@ L178 Internationalizing Dates (Intl)
             No options object defaults to only the date in 'numeric'
 
         Call the .format('Date Object') method on the formatter to format the date object
+
+
+L179 Internationalizing Numbers (Intl)
+    new Intl.NumberFormat('locale', 'options').format('number') constructor to create a numeric formatter for the specified langauge:
+        'locale string' is the same format as above, and use navigator.language to get the locale from the browser
+
+        'options' is an object that specifies which date and time to display using the following properties:
+            const 'options' = {
+                style: 'format',
+                unit: 'format',
+                currency: 'format',
+                'useGrouping': 'format'
+            }
+
+            Certain values are limited to certain properties, and can be:
+                "style" values:
+                    1. 'unit' - specifies according to the "unit" property
+                    2. 'percent' - percentage and ignores "unit"
+                    3. 'currency' - specifies according the "currency" property and ignores "unit"
+                "unit" values:
+                    1. 'mile-per-hour'
+                    2. 'celcius'
+                "currency" values":
+                    1. 'EUR' - euro
+                    2.  'USD' - US dollar
+                "useGrouping" values:
+                    1. true - numeric separators used (default)
+                    2. false - numeric separators not used
+
+        Currency cannot be implied from the locale and has to be set manually
