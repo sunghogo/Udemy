@@ -67,3 +67,16 @@ L171 Math and Rounding
 L172 The Remainder Operator
     '%' is the remainder / "modulo" operator that gives the remainder after dividing the lefthand with the righthand number:
         Common usecase is to determine if a number is even if the remainder is 0 ('number' % 2 === 0)
+
+
+L173 Numeric Separators
+    Numeric Separators (ES2021/ES12) format numbers so they are more readable:
+        Use '_' between number digits to separate them visually (similar to ',')
+
+        Cannot place them at the start AND end of numbers OR period, and can't place multiple in a row
+
+        Does not affect the value of the number so can type convert into strings
+
+        ex.) 1_000_000 similar to 1,000,000
+
+    '_' does not register as a numeric separator when type convert/coerce strings into numbers (will be treated as a string character) so be careful
