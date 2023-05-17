@@ -154,3 +154,7 @@ L175 Creating Dates
         .now() gets the number timestamp for the current time and date
 
         .toISOString() converts to the date to international standard formatted string (ex. 2037-11-19T20:23:00.000Z)
+
+
+L176 Adding Dates to "Bankist" App
+    To add '0' for single digit date and time values for formatting, use .padStart('pad length', 'pad char')
