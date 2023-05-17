@@ -35,3 +35,30 @@ L170 Converting and Checking Numbers
     Converting an invalid string to a number returns NaN 
 
     Dividing a number by 0 returns 'Infinity', which is still a number 
+
+
+L171 Math and Rounding
+    Math namespace functions does type coercion BUT NOT parsing
+
+    Math.sqrt('number') is Math namespace function that calculates squareroot:
+        equivalent to ** (1/2)
+
+    Math.max('array') is a Math namepsace function that returns the maximum number from that array:
+
+    Math.min('array') is a Math namepsace function that returns the minimum number from that array:
+        Returns NaN or Infinity if it exists
+
+    Math.PI is a Math namespace constant representing pi
+
+    Math.random() is a Math namespace function that returns a number between [0,1)
+
+    Math.trunc() is a Math namespace function that truncates the decimal portion of floating points
+
+    Math.round() is a Math namespace function that rounds to the nearest integer
+
+    Math.ceil() is a Math namespace function that rounds up
+
+    Math.floor() is a Math namespace function that rounds down (works better than .trunc() for negative numbers)
+
+    'number'.toFixed('decimal place') is a Number method that returns a STRING of the number rounded to the specified decimal place:
+        Remember primitive types do not have methods so JS will use boxing to convert this to a Number Obj in the background to call the method
