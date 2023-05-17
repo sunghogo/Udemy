@@ -84,6 +84,24 @@ L173 Numeric Separators
 
 L174 Working with BigInt
     Remember Numbers primitives are represented internally as 64 bits, but only 53 bits are used to store the actual digits while 11 bits are used for storing the position of the decimal point and sizing:
-        Number.MAX_SAFE_INTGER === (2 ^ 53) - 1 is the largest number possible
+        Number.MAX_SAFE_INTGER === (2 ^ 53) - 1 is the largest number possible (9_007_199_254_740_991)
 
-    BigInt primitive type (ES2020/ES11)
+        Past this number, JS cannot accurately represent unsafe number and loses preicion
+
+        This happens with really large database IDs or 60 bit numbers used in other programming languages
+
+    BigInt primitive type (ES2020/ES11) allows JS to represent really large numbers:
+        Two ways:
+            'big integer''n'
+
+            BigInt('big integer')
+                The 'big integer' is still processed before being used to construct BigInt so pass it as a STRING to prevent this
+
+    You can use BigInt with the other operators normally EXCEPT:
+        1. You CANNOT perform mathematical operations between BigInt and other Numbers, or Math namespace function
+
+        2. Comparison or equality operators are ALLOWED since BigInt will be type coerced to Number
+
+        3. String concatenation is ALLOWED since BigInt will be type coerced to String
+
+        4. Division between BigInts will always give a TRUNCATED BigInt value
