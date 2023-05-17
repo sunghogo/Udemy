@@ -230,3 +230,16 @@ L179 Internationalizing Numbers (Intl)
                     2. false - numeric separators not used
 
         Currency cannot be implied from the locale and has to be set manually
+
+
+L180 Timers: setTimeout and setInterval
+    setTimeout('callback function', 'time in ms', ...'parameters to be passed to the callback function') calls the callback function ONCE after the specified time has elapsed
+
+    setInterval('callback function', 'time in ms', ...'parameters to be passed to the callback function') calls the callback function CONTINUOUSLY after the specified time has elapsed
+
+    setTimeout() and setInterval() does NOT stop the code execution:
+        JS registers the callback function to be called after the time has elapsed, and moves onto the next line of code it is time to execute the callback
+
+        This is called Asynchronous JS
+
+    clearTimeout('timeout function') can be used to stop/delete a timer (after assigning the timer to a variable for referencing)
