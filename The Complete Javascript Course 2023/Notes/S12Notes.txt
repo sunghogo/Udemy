@@ -158,3 +158,10 @@ L175 Creating Dates
 
 L176 Adding Dates to "Bankist" App
     To add '0' for single digit date and time values for formatting, use .padStart('pad length', 'pad char')
+
+
+L177 Operations With Dates
+    You can perform mathematical calculation using Date objects:
+        +'Date object' to quickly to type coerce it into its numerical timestamp value
+
+    If you need precise calculations such as time changes due to DST, use dot.js library that's free for JS developers
