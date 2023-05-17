@@ -62,3 +62,8 @@ L171 Math and Rounding
 
     'number'.toFixed('decimal place') is a Number method that returns a STRING of the number rounded to the specified decimal place:
         Remember primitive types do not have methods so JS will use boxing to convert this to a Number Obj in the background to call the method
+
+
+L172 The Remainder Operator
+    '%' is the remainder / "modulo" operator that gives the remainder after dividing the lefthand with the righthand number:
+        Common usecase is to determine if a number is even if the remainder is 0 ('number' % 2 === 0)
