@@ -165,3 +165,38 @@ L177 Operations With Dates
         +'Date object' to quickly to type coerce it into its numerical timestamp value
 
     If you need precise calculations such as time changes due to DST, use dot.js library that's free for JS developers
+
+
+L178 Internationalizing Dates (Intl)
+    JS has a new Internationalization API (ES6/ES2015) to easily format numbers and strings according to different languages (ex. dates, numbers, currency):
+        Not all Intl namespace features were introduced at once so have to check
+
+    new Intl.DateTimeFormat('locale string', 'options') constructor to create a formatter for the specified langauge:
+        'locale string' specifies the "'language'-'country'" format:
+            ex.) 'en-US', 'en-GB', 'ar-SY'
+
+            http://www.lingoes.net/en/translator/langcode.htm
+
+            Normally get the 'locale string' from the browser using:
+                navigator.language
+
+        'options' is an object with that specifies which date and time to display using the following properties:
+            const 'options' = {
+                hour: 'format',
+                minute: 'format',
+                day: 'format',
+                month: 'format',
+                year: 'format',
+                weekday: 'format'
+            }
+
+            Certain values are limited to certain properties, and can be:
+                1. 'numeric' - displays numeric value
+                2. '2-digit' - displays numeric value as 2 digits
+                3. 'long' - displays word value
+                4. 'short' - displays the shorthand (3 char) word value
+                5. 'narrow' - displays the symbolic (1 char) word value
+
+            No options object defaults to only the date in 'numeric'
+
+        Call the .format('Date Object') method on the formatter to format the date object
