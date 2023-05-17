@@ -330,7 +330,6 @@ console.log((2.7).toFixed(0)); // '3'
 console.log((2.7).toFixed(3)); // '2.700'
 console.log((2.344).toFixed(2)); // '2.34'
 console.log(+(2.345).toFixed(2)); // 2.35
-*/
 
 // L172 The Remainder Operator
 console.log(5 % 2); // 1
@@ -364,3 +363,23 @@ labelBalance.addEventListener('click', function (e) {
     if (i % 3 === 0) row.style.backgroundColor = 'blue';
   });
 });
+*/
+
+// L173 Numeric Separators
+// 287,460,000,000
+const diameter = 287_460_000_000;
+console.log(diameter, diameter + ''); //287460000000
+
+const price = 345_99;
+console.log(price); // 34599
+
+const transferFee1 = 15_00; // 1500
+const transferFee2 = 1_500; // 1500
+
+const PI = 3.14_15;
+// const PI = _3_._1415_; // illegal
+console.log(PI); // 3.1415
+
+console.log(Number('230000')); // 230000
+console.log(Number('230_000')); // NaN
+console.log(parseInt('230_000')); // 230
