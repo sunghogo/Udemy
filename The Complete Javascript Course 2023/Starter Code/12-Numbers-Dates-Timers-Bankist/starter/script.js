@@ -382,7 +382,6 @@ console.log(PI); // 3.1415
 console.log(Number('230000')); // 230000
 console.log(Number('230_000')); // NaN
 console.log(parseInt('230_000')); // 230
-*/
 
 // L174 Working with BigInt
 // Biggest Number value
@@ -415,7 +414,42 @@ console.log(20n == '20'); // true
 console.log(huge + ' is REALLY big!!!');
 
 // Divisions
-console.log(-11n / 3n);
-console.log(Math.floor(-11 / 3));
+console.log(11n / 3n); // 3n, truncates
+console.log(10 / 3); // 3.333
 
-console.log(10 / 3);
+// L175 Creating Dates
+// Create a date
+const now = new Date();
+console.log(typeof now, now); // Wed May 17 2023 09:34:58 GMT-0400 (Eastern Daylight Time)
+
+console.log(new Date('Wed May 17 2023 09:34:58'));
+console.log(new Date('December 24, 2015'));
+console.log(new Date(account1.movementsDates[0]));
+
+console.log(new Date(2037, 10, 19, 15, 23, 5)); // Thu Nov 19 2037...
+console.log(new Date(2037, 10, 31)); // Tue Dec 01 2037...
+console.log(new Date(2037, 10, 33)); // Thu Dec 01 2037...
+
+console.log(new Date(0)); // Wed Dec 31 1969 19:00:00 GMT-0500 (Eastern Standard Time)
+console.log(new Date(3 * 24 * 60 * 60 * 1000)); // Sat Jan 03 1970 19:00:00 GMT-0500 (Eastern Standard Time)
+*/
+
+// Working with dates
+const future = new Date(2037, 10, 19, 15, 23);
+console.log(future); // Thu Nov 19 2037 15:23:00 GMT-0500 (Eastern Standard Time)));
+console.log(future.getYear()); // 2037
+console.log(future.getMonth()); // 137
+console.log(future.getDate()); // 19
+console.log(future.getDay()); // 4
+console.log(future.getHours()); // 15
+console.log(future.getMinutes()); // 23
+console.log(future.getSeconds()); // 0
+console.log(future.toISOString()); // 037-11-19T20:23:00.000Z
+console.log(future.getTime()); // 2142274980000
+
+console.log(new Date(2142274980000)); // Thu Nov 19 2037 15:23:00 GMT-0500 (Eastern Standard Time)
+
+console.log(Date.now());
+
+future.setFullYear(2040);
+console.log(future);
