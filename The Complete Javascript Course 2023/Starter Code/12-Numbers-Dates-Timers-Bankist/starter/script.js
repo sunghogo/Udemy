@@ -363,7 +363,6 @@ labelBalance.addEventListener('click', function (e) {
     if (i % 3 === 0) row.style.backgroundColor = 'blue';
   });
 });
-*/
 
 // L173 Numeric Separators
 // 287,460,000,000
@@ -383,3 +382,10 @@ console.log(PI); // 3.1415
 console.log(Number('230000')); // 230000
 console.log(Number('230_000')); // NaN
 console.log(parseInt('230_000')); // 230
+*/
+
+// L174 Working with BigInt
+// Biggest Number value
+console.log(2 ** 53 - 1); // 9007199254740991
+console.log(Number.MAX_SAFE_INTEGER); // 9007199254740991
+console.log(2 ** 53 + 1);

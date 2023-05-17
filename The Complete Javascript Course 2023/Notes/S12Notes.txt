@@ -80,3 +80,10 @@ L173 Numeric Separators
         ex.) 1_000_000 similar to 1,000,000
 
     '_' does not register as a numeric separator when type convert/coerce strings into numbers (will be treated as a string character) so be careful
+
+
+L174 Working with BigInt
+    Remember Numbers primitives are represented internally as 64 bits, but only 53 bits are used to store the actual digits while 11 bits are used for storing the position of the decimal point and sizing:
+        Number.MAX_SAFE_INTGER === (2 ^ 53) - 1 is the largest number possible
+
+    BigInt primitive type (ES2020/ES11)
