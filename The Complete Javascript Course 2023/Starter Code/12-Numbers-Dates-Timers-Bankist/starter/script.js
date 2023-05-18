@@ -84,6 +84,7 @@ const inputClosePin = document.querySelector('.form__input--pin');
 // L177 Operations With Dates
 // L178 Internationalizing Dates (Intl)
 // L179 Internationalizing Numbers (Intl)
+// L181 Implementing a Countdown Timer
 
 // Functions
 const formatMovementDate = function (date, locale) {
@@ -189,14 +190,37 @@ const updateUI = function (acc) {
   calcDisplaySummary(acc);
 };
 
+const startLogOutTimer = function () {
+  const tick = function () {
+    const min = String(Math.trunc(time / 60)).padStart(2, 0);
+    const sec = String(time % 60).padStart(2, 0);
+
+    // In each call, print the remaing time to UI
+    labelTimer.textContent = `${min}:${sec}`;
+
+    // When 0 seconds, stop timer and log out user
+    if (time === 0) {
+      clearInterval(timer);
+      labelWelcome.textContent = 'Login to get started';
+      containerApp.style.opacity = 0;
+    }
+
+    // Decrease 1s
+    time--;
+  };
+
+  // Set time to 5 minutes
+  let time = 300;
+
+  // Call the timer every second
+  tick();
+  const timer = setInterval(tick, 1000);
+  return timer;
+};
+
 ///////////////////////////////////////
 // Event handlers
-let currentAccount;
-
-//  FAKE ALWAYS LOGGEDI IN #FIXME
-currentAccount = account1;
-updateUI(currentAccount);
-containerApp.style.opacity = 100;
+let currentAccount, timer;
 
 btnLogin.addEventListener('click', function (e) {
   // Prevent form from submitting
@@ -205,7 +229,7 @@ btnLogin.addEventListener('click', function (e) {
   currentAccount = accounts.find(
     acc => acc.username === inputLoginUsername.value
   );
-  console.log(currentAccount);
+  // console.log(currentAccount);
 
   if (currentAccount?.pin === +inputLoginPin.value) {
     // Display UI and message
@@ -243,6 +267,10 @@ btnLogin.addEventListener('click', function (e) {
     inputLoginUsername.value = inputLoginPin.value = '';
     inputLoginPin.blur();
 
+    // Timer
+    if (timer) clearInterval(timer);
+    timer = startLogOutTimer();
+
     // Update UI
     updateUI(currentAccount);
   }
@@ -272,6 +300,10 @@ btnTransfer.addEventListener('click', function (e) {
 
     // Update UI
     updateUI(currentAccount);
+
+    // Reset timer
+    clearInterval(timer);
+    timer = startLogOutTimer();
   }
 });
 
@@ -290,6 +322,10 @@ btnLoan.addEventListener('click', function (e) {
 
       // Update UI
       updateUI(currentAccount);
+
+      // Reset timer
+      clearInterval(timer);
+      timer = startLogOutTimer();
     }, 2500);
   }
   inputLoanAmount.value = '';
@@ -563,7 +599,6 @@ console.log(
   'Browser :',
   new Intl.NumberFormat(navigator.language, options).format(num)
 );
-*/
 
 // L180 Timers: setTimeout and setInterval
 // setTimeout()
@@ -587,3 +622,4 @@ setInterval(function () {
   }).format(now);
   console.log(time);
 }, 1000);
+*/
