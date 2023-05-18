@@ -1,0 +1,60 @@
+L244 Section Intro
+
+
+L245 Section Roadmap
+
+
+L246 Asynchronous JavaScript, AJAX and APIs
+    Synchronous:
+        Most code is Synchronous
+        
+        Synchronous code is executed Line by Line
+
+        Thread of Execution:
+            Part of execution context that actually executes the code in the computer's CPU
+
+        Each line of code waits for previous line to finish;
+
+        Long-running operations BLOCK code execution
+
+    Asynchronous:
+        Asynchronous code is executed AFTER a task that runs in the "background" finishes
+
+        Asynchronous code is NON-BLOCKING
+
+        Execution doesn't wait for asynchronous task to finish its work
+
+        Asynchronous programming is coordinating behavior of a program over a period of time
+
+        Callback functions alone do NOT make code asynchronous!
+
+        .addEventListener does NOT automatically make code asynchronous! (since there is no asynchronous behavior at all)
+
+    AJAX:
+        Asynchronous JavaScript And XML (AJAX): Allows us toc communicate with remote web servers in an ASYNCHRONOUS way. With AJAX calls, we can REQUEST DATA from web servers dynamically.
+
+        CLIENT (e.g browser) REQUEST (GET / POST / etc.) data from WEB SERVER (usually web API) that sends data back in RESPONSE
+
+    API:
+        Application Programming Interface: Piece of software that can be used by another piece of software, in order to allow APPLICATIONS to TALK to EACH OTHER
+
+        There are many types of APIs in web development:
+            DOM API, Geolocation API, Own Class API, "Online" API (Just "API")
+        
+        "Online" API: Application running on a server, that receives requests for data, and sends data back as response
+
+        We can build OUR OWN web API's (requires back-end development, e.g. with node.js) or use 3rd-party APIs
+
+        There is an API for everything:
+            - Weather data
+            - Data about countries
+            - Flights data
+            - Currency conversion data
+            - APIs for sending email or SMS
+            - Google Maps
+            - Millions of possibilites...
+    
+    AJAX:
+        XML is a data format that was popular in the past but is no longer used
+
+        JSON data format is the most popular API data format (since it is basically a JS object converted to a string)
