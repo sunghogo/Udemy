@@ -190,3 +190,39 @@ L250 Welcome to Callback Hell
 
     "Callback hell" is when there are a lot nested callbacks in order to complete asynchronous task synchronously:
         Makes the code very messy, difficult to maintain, and difficult to reason about -> BAD CODE
+
+
+L251 Promises and the Fetch API
+    The Fetch API is the modern way of making AJAX calls:
+        fetch('Endpoint URL')
+
+        returns a Promise object
+
+    Promise (ES6/ES2015):
+        Promise - An object that is used as a placeholder for the future result of an asynchronous operation
+        ->
+        Promise - A container for an asynchronously delivered value
+        ->
+        Promise - A container for a future value (Example: Response from AJAX call)
+
+        Two advantages:
+            1. We no longer need to rely on events and callbacks passed into asynchronous functions to handle asynchronous results
+
+            2. Instead of nesting callbacks, we can chain promises for a sequence of asynchronous operations: escaping callback hell
+
+    Since promises work with asynchronous operations they are time sensitive so promises can be in different states
+
+    Promise Lifecycle:
+        1. Pending - Before the future value is available
+        Async Task ->
+        2. Settled - Asynchronous task has finished
+        3.  Fulfilled - Success! The value is now available
+            Rejected - An error happened
+
+        We are able handle these different states in our code!
+
+        Also promises are only settled once, and the state remains unchanged forever
+
+        Build Promise - (e.g Fetch API returns promise)
+        ->
+        Consume Promise - When we already have a promise (e.g. promise returned from Fetch API)
