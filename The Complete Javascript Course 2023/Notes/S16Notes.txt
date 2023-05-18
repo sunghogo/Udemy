@@ -277,3 +277,15 @@ L254 Handling Rejected Promises
 
     .finally('callback function'('response/error object') { "callback function body") Promise method will ALWAYS call the callback method regardless whether the Promise was fulfilled or rejected:
         Useful for when we need a callback to happen regardless of the result of the promise (e.g. hiding the web loading spinner)
+
+
+L255 Throwing Errors Manually
+    Even when the fetch request 404s, the fetch still did not reject so in this case we have to manually handle the error:
+        When the fetch response fails, the 'response object'.ok is set to 'false' so we can use that condition to throw an error object:
+            throw new Error('error message')
+
+            'throw' keyword will immediately terminate the current function, and the execution flow will be passed to the first .catch() method with the thrown Error object
+            
+            The promise returned by the .then() handler will be a rejeceted promise, which will propagate down through the chain to the .catch() handler
+
+    It is bad practice to leave rejected promises and errors unhandled -- EXTREMELY IMPORTANT TO HANDLE ERRORS FOR BUILDING WEB APP UI
