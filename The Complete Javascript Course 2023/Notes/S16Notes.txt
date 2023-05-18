@@ -251,3 +251,29 @@ L253 Chaining Promises
 
     A common mistake in chaining promises is to chain the .then() method on the new nested promise directly within the callback, leading to callback hell
 
+
+L254 Handling Rejected Promises
+    A promise in which an error happens is a rejected promise
+
+    For fetch(), the only way the fetch promise rejects is if the user loses his internet connection:
+        To simulate losing internet connection, we can:
+            Developer Console -> Network -> First header with 'Preserve log', 'Disable Cache' ON, etc... -> Presets -> Offline
+
+    Two ways to handle rejections/errors:
+        1. Pass a second callback function into the .then() method which is called with an argument which the Error object itself
+
+        2. Call .catch('callback function'('error object') { "callback function body" }) Promise method at the very END of the chain:
+            .catch() is only called only when the Promise is REJECTED, and catches the error wherever they occur in the chain
+
+            .catch() also returns a Promise so it can be chained as well
+
+            The Error object traces the stack chain for the error
+
+            The Error object also has a .message property that can be printed out to the console
+
+    Remember to use console.error() for errors
+
+    'DOM selector'.insertAdjacentText('position', 'message') method is used to insert text instead of HTML
+
+    .finally('callback function'('response/error object') { "callback function body") Promise method will ALWAYS call the callback method regardless whether the Promise was fulfilled or rejected:
+        Useful for when we need a callback to happen regardless of the result of the promise (e.g. hiding the web loading spinner)
