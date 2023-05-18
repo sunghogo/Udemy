@@ -75,6 +75,7 @@ L247 IMPORTANT: API URL Change
 
         Search API Endpoint to look for URL
 
+
 L248 Our First AJAX Call: XMLHttpRequest
     new XMLHttpRequest() constructor function is the old school way of doing AJAX calls:
         .open('HTTP request type', 'URL') method opens the request to the specified Endpoint
@@ -89,3 +90,96 @@ L248 Our First AJAX Call: XMLHttpRequest
         JSON.parse() function to turn the retrieved data into an array of objects
 
     Having multiple AJAX calls in parallel (happening at the same time) will have different order when the data arrives
+
+
+L249 [OPTIONAL] How the Web Works: Requests and Responses
+    Request-response model or Client-server architecture:
+        CLIENT (e.g browser) REQUEST (GET / POST / etc.) data from WEB SERVER (usually web API) that sends data back in RESPONSE
+
+        Client:
+            https://restcountries.eu/rest/v2/alpha/PT
+            
+                Protocol (HTTP or HTTPS): 'https://'
+                Domain name: 'restcountries.eu'
+                Resource '/rest/v2/alpha/PT'
+
+            Steps:
+                1. Domain Name Server - A special server that acts like a phonebook for IP addresses
+                    DNS lookup to find the real IP address of a domain name
+
+                    https://104.27.142.889.443
+
+                        Protocol (HTTP or HTTPS): 'https://'
+                        IP address: '104.27.142.889'
+                        Port number (Default 443 for HTTPS. 80 for HTTP): '.443'
+
+                2. Transmission Control Protocol (TCP)/Internet Protocol (IP) socket connection is established between the browser and web server
+                    Connection is kept alive until all files of a website or all data has been transferred
+
+                    TCP/IP together are communication protocols that define how data travels accross the internet (Internet's fundamental control system)
+
+                3. Hypertext Transfer Protocol (HTTP) request is made from the browser to the web sever:
+                    HTTP is another communication protocol (a system of rules that allows two or more parties to communicate)
+
+                    HTTP allows clients and web servers to communicate by sending requests and response messages from clients to servers and back
+
+                    HTTP Request Message:
+             
+             
+                        GET /rest/v2/alpha/PT HTTP/1.1
+
+                        Host: www.google.com
+                        User.Agent: Mozilla/5.0
+                        Accept-Language: en-US
+
+                        <BODY>
+
+                        Start line: HTTP method + request target + HTTP version
+                            HTTP methods:
+                                1. GET - for reuqesting data
+                                2. POST - for sending data
+                                3. PUT / PATCH - to modify data
+                            Request target: Where the server is told where to access the specific resource
+                        
+                        HTTP request headers (many different possibilites):
+                            Information sent about the request itself
+
+                        Request body (only when sending data to server e.g. POST):
+                            Contains the data that were sending (e.g. data from HTML form)
+            
+            Web Server:
+                4. HTTP response is used to send data back to the browser from the server:
+
+                    HTTP Response Message:
+
+                        HTTP/1.1 200 OK
+
+                        Date:Fri, 18 Jan 2021
+                        Content-Type: text/html
+                        Tranfer-Encoding: chunked
+
+                        <BODY>
+
+                        Start line: HTTP version + status code + status message
+                            Status code and message - Used to let client know the request is ok (e.g. 200 is ok, 404 is failed)
+                        
+                        HTTP response (many different possibilities):
+                            Information about the response itself
+
+                        Response body (mostly response):
+                            Usually contains JSON data from API or html of website
+
+                5. Arrives back to client/web browser:
+                    1. index.html is first to be loaded
+                    2. Scanned for assets: JS, CSS, images
+                    3. Process is repeated for each file
+
+        HTTPS is encrypted using TLS or SSL, some more encryption protocols while HTTP is not
+
+        TCP/IP:
+            TCP breaks requests and responses down into small chunks of data called packets:
+                This is necessary so each packet can take a different route through the internet, and arrive faster
+            
+            The role of IP is send and route all the packets through the internet to the correct destination using IP address on each packet 
+            
+            Once all the small packets arrive at the final destination, TCP reassemble all packets into the original request or response
