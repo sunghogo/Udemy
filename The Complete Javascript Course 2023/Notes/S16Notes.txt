@@ -66,3 +66,26 @@ L247 IMPORTANT: API URL Change
     To:
         https://restcountries.com/v2/
 
+        https://restcountries.com/v3.1/
+
+    Public APIs:
+        https://github.com/public-apis/public-apis
+
+        Should have no authentication, HTTPS set to YES, and Cross Origin Resource Sharing (CORS) set to YES/Unknown 
+
+        Search API Endpoint to look for URL
+
+L248 Our First AJAX Call: XMLHttpRequest
+    new XMLHttpRequest() constructor function is the old school way of doing AJAX calls:
+        .open('HTTP request type', 'URL') method opens the request to the specified Endpoint
+
+        .send() method sends the request asynchronously
+
+        .addEventListener('load', 'callback function' {
+            const [data] = JSON.parse(this.responseText)
+        }) 
+        is used to retrieve the response that is sent back ('this' refers to the response, while .responseText is the property containing the data in JSON)
+
+        JSON.parse() function to turn the retrieved data into an array of objects
+
+    Having multiple AJAX calls in parallel (happening at the same time) will have different order when the data arrives
