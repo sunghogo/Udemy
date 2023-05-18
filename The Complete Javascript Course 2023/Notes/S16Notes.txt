@@ -226,3 +226,17 @@ L251 Promises and the Fetch API
         Build Promise - (e.g Fetch API returns promise)
         ->
         Consume Promise - When we already have a promise (e.g. promise returned from Fetch API)
+
+
+L252 Consuming Promises
+    The fetch('Endpoint URL') returns a promise that returns a response object when it resolves
+
+    .then('callback function'('response object') { "callback function body" }) Promise method takes in one parameter, which is a callback function which also gets the resulting response object passed into it as an argument:
+        All resolved response object also has a .json() method avaiable that is also an asynchronous function that returns a promise with the response object containing the JSON data
+
+    So, 
+        1. The fetch() method returns a promise, which is handled by the first .then() method 
+        2. The first .then() method's callback function calls the asynchronous .json() method on the resolved response object, returning a new promise
+        3. The second .then() method is then called on the new promise, which resolves to the actual JSON data
+
+    Promises don't get rid of callbacks, but gets rid of callback hell and leads to more concise code
