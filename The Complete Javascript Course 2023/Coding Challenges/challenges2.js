@@ -1,129 +1,103 @@
-'use strict';
-
+// Coding Challenge #1 and #2
 /*
-// Coding Challenge #1
-const calcAverage = (a, b, c) => (a + b + c) / 3;
+// Test Data 1
+let massMark = 78;
+let heightMark = 1.69;
+let massJohn = 92;
+let heightJohn = 1.95;
 
-const createWinner = function (avgDolphins, avgKoalas) {
-    if (avgDolphins >= avgKoalas * 2) {
-        console.log(`Dolphins win 🏆 (${avgDolphins} vs. ${avgKoalas})`);
-    } else if (avgDolphins * 2 <= avgKoalas) {
-        console.log(`Koalas win 🏆 (${avgKoalas} vs. ${avgDolphins})`);        
-    } else {
-        console.log('No team wins...');
-    }
+let BMIMark = massMark / heightMark ** 2;
+let BMIJohn = massJohn / (heightJohn * heightJohn);
+// let markHigherBMI = BMIMark > BMIJohn;
+
+// console.log(BMIMark, BMIJohn, markHigherBMI);
+if (BMIMark > BMIJohn) {
+    console.log(`Mark's BMI (${BMIMark}) is higher than John's (${BMIJohn})!`);
+} else {
+    console.log(`John's (${BMIJohn}) is higher than Mark's BMI (${BMIMark})`);
 }
 
-// Test Data 1
-let scoreDolphins1 = 44;
-let scoreDolphins2 = 23;
-let scoreDolphins3 = 71;
-
-let scoreKoalas1 = 65;
-let scoreKoalas2 = 54;
-let scoreKoalas3 = 49;
-
-let avgDolphins = calcAverage(scoreDolphins1, scoreDolphins2, scoreDolphins3);
-let avgKoalas = calcAverage(scoreKoalas1, scoreKoalas2, scoreKoalas3);
-
-createWinner(avgDolphins, avgKoalas);
 
 // Test Data 2
-scoreDolphins1 = 85;
-scoreDolphins2 = 54;
-scoreDolphins3 = 41;
+massMark = 95;
+heightMark = 1.88;
+massJohn  = 85;
+heightJohn = 1.76;
 
-scoreKoalas1 = 23;
-scoreKoalas2 = 34;
-scoreKoalas3 = 27;
+BMIMark = massMark / heightMark ** 2;
+BMIJohn = massJohn / (heightJohn * heightJohn);
+// markHigherBMI = BMIMark > BMIJohn;
 
-avgDolphins = calcAverage(scoreDolphins1, scoreDolphins2, scoreDolphins3);
-avgKoalas = calcAverage(scoreKoalas1, scoreKoalas2, scoreKoalas3);
-
-createWinner(avgDolphins, avgKoalas);
-
-
-// Coding Challenge #2
-const calcTip = bill => (50 <= bill && bill <= 300) ? bill * 0.15 : bill * 0.2;
-// console.log(calcTip(100));
-
-const bills = [125, 555, 44];
-const tips = [
-    calcTip(bills[0]), 
-    calcTip(bills[1]), 
-    calcTip(bills[2])
-]
-const total = [
-    bills[0] + tips[0],
-    bills[1] + tips[1],
-    bills[2] + tips[2]
-]
-
-console.log(bills, tips, total);
-
-
-// Coding Challenge #3
-const mark = {
-    fullName: 'Mark Miller',
-    mass: 78,
-    height: 1.69,
-    // bmi: this.mass / this.height ** 2,
-    calcBMI: function() {
-        this.bmi = this.mass / this.height ** 2; 
-        return this.bmi;
-    }
-}
-
-const john = {
-    fullName: 'John Smith',
-    mass: 92,
-    height: 1.95,
-    // bmi: this.mass / this.height ** 2,
-    calcBMI: function() {
-        this.bmi = this.mass / this.height ** 2; 
-        return this.bmi;
-    }
-}
-
-// console.log(mark.bmi, john.bmi)
-mark.calcBMI();
-john.calcBMI();
-
-console.log(mark.bmi, john.bmi)
-
-// console.log(`${john.fullName}'s BMI is (${john.calcBMI()}) is ${john.calcBMI() > mark.calcBMI() ? 'higher' : 'not higher'} than ${mark.fullName}'s BMI (${mark.calcBMI()})! `);
-
-if (mark.bmi > john.bmi) {
-    console.log(`${john.fullName}'s BMI is (${john.bmi}) is lower than ${mark.fullName}'s BMI (${mark.bmi})! `); 
-} else if (mark.bmi < john.bmi) {
-    console.log(`${john.fullName}'s BMI is (${john.bmi}) is higher than ${mark.fullName}'s BMI (${mark.bmi})! `)
+// console.log(BMIMark, BMIJohn, markHigherBMI);
+if (BMIMark > BMIJohn) {
+    console.log(`Mark's BMI (${BMIMark}) is higher than John's (${BMIJohn})!`);
 } else {
-    console.log(`${john.fullName}'s BMI is (${john.bmi}) is equal to ${mark.fullName}'s BMI (${mark.bmi})! `)
+    console.log(`John's (${BMIJohn}) is higher than Mark's BMI (${BMIMark})`);
 }
 */
 
+// Coding Challenge #3
+/*
+// Data 1
+let scoreDolphins = (96 + 108 + 89) / 3;
+let scoreKoalas = (88 + 91 + 110) / 3;
+console.log(scoreDolphins, scoreKoalas);
+
+if (scoreDolphins > scoreKoalas) {
+    console.log("Dolphins win the tropy 🏆");
+} else if (scoreKoalas > scoreDolphins) {
+    console.log("Koalas win the tropy 🏆");
+} else {
+    console.log("Both win the trophy!");
+}
+
+// Bonus Data 1
+scoreDolphins = (97 + 112 + 101) / 3;
+scoreKoalas = (109 + 95 + 123) / 3;
+console.log(scoreDolphins, scoreKoalas);
+
+if (scoreDolphins > scoreKoalas && scoreDolphins >= 100) {
+    console.log("Dolphins win the tropy 🏆");
+} else if (scoreKoalas > scoreDolphins && scoreKoalas >= 100) {
+    console.log("Koalas win the tropy 🏆");
+} else if (scoreDolphins === scoreKoalas && scoreDolphins >= 100 && scoreKoalas >= 100) {
+    console.log("Both win the trophy!");
+} else {
+    console.log('No one wins the trophy 😭');
+}
+
+// Bonus Data 2
+scoreDolphins = (97 + 112 + 101) / 3;
+scoreKoalas = (109 + 95 + 106) / 3;
+console.log(scoreDolphins, scoreKoalas);
+
+if (scoreDolphins > scoreKoalas && scoreDolphins >= 100) {
+    console.log("Dolphins win the tropy 🏆");
+} else if (scoreKoalas > scoreDolphins && scoreKoalas >= 100) {
+    console.log("Koalas win the tropy 🏆");
+} else if (scoreDolphins === scoreKoalas && scoreDolphins >= 100 && scoreKoalas >= 100) {
+    console.log("Both win the trophy!");
+} else {
+    console.log('No one wins the trophy 😭');
+}
+*/
 
 // Coding Challenge #4
-const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
-const tips = [];
-const totals = [];
+// Data 1
+let bill = 275;
+let tip = 50 <= bill && bill <= 300 ? bill * 0.15 : bill * 0.2;
+console.log(
+  `The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`
+);
 
-const calcTip = bill => (50 <= bill && bill <= 300) ? bill * 0.15 : bill * 0.2;
+bill = 40;
+tip = 50 <= bill && bill <= 300 ? bill * 0.15 : bill * 0.2;
+console.log(
+  `The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`
+);
 
-for (let i = 0; i < bills.length; i++) {
-    const tip = calcTip(bills[i]); 
-    tips.push(tip);
-    totals.push(bills[i] + tip);
-}
-
-console.log(bills, tips, totals);
-
-const calcAverage = function(arr) {
-    let sum = 0;
-    for (let i = 0; i < arr.length; i++) {
-        sum += arr[i];
-    }
-    return sum / arr.length;
-}
-
-console.log(calcAverage(totals))
+bill = 430;
+tip = 50 <= bill && bill <= 300 ? bill * 0.15 : bill * 0.2;
+console.log(
+  `The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`
+);
