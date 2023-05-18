@@ -243,3 +243,7 @@ L180 Timers: setTimeout and setInterval
         This is called Asynchronous JS
 
     clearTimeout('timeout function') can be used to stop/delete a timer (after assigning the timer to a variable for referencing)
+
+
+L181 Implementing a Countdown Timer
+    clearInterval('interval function') can be used to stop/delete a interval timer (after assigning the timer to a variable for referencing)
