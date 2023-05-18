@@ -292,3 +292,48 @@ L255 Throwing Errors Manually
 
 
 L256 Coding Challenge #1
+
+
+L257 Asynchronous Behind the Scenes: The Event Loop
+    Review: JavaScript Runtime:
+        JS Runtime in the Browser - "Container" which includes all the pieces ncessary to execute JS code
+
+        JS Engine - "Heart" of the runtime
+
+        Call Stack - Where code is actually executed
+            -> Only ONE thread of execution, No multitasking!
+
+        Heap - Where object are stored in memory
+
+        Web APIs - APIs provided to the engine (e.g. DOM, Timers, Fetch API, geolocation API, etc.)
+
+        Callback Queue - Data structure (ordered list) containing Ready-to-be-executed callback functions (coming from events)
+
+        Event loop - Sends callbacks from Callback Queue to Call Stack
+
+    How Asynchronous JavaScript Works Behind the Scenes:
+        How can asynchronous code be executed in a non-blocking way if there is only one thread of execution in the engine?
+
+        Web APIs - Where asynchronous tasks run (callbacks register in the Web API environment while the asynchronous tasks are resolved)
+
+        Once the events are resolved, asynchronous task / callbacks placed from Web API environment onto the Callback Queue:
+            This means that the callback may have to wait for other callbacks in front of the queue to finish
+
+            So the timers are NOT a gaurantee that it will take place after the specifed time has passed, but a minimum of time
+
+            DOM event callbacks, although not asynchronous behvaior, also line up in the Callback Queue
+        
+        Event loop looks into the Call Stack, and checks whether it is empty or not:
+            If it is empty, it takes the first callback from the Callback Queue, and places it in the Call Stack to be executed, also called "Event Loop Tick"
+
+            Event loop - Decides when each callback is executed: orchestration
+
+        JS language itself has no sense of time, the runtime manages all the asynchronous behavior and the event loop decides which code will be executed next, but the engine just executes
+
+        Promise callbacks have a special queue for themselves called the "Microtasks Queue"
+
+        Microtasks Queue - Like callback queue, but for callbacks related to PROMISES. Has PRIORITY over callback queue!:
+            So after an event loop tick, the Event Loop will check if there are any callbacks ("microtasks") in the Microtasks Queue and place them into the Call Stack even if Callback Queue is not empty
+
+            So Microtask Queue can technically starve the Callback Queue if microtasks keep adding new microtasks
+
