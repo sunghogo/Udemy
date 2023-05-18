@@ -181,5 +181,12 @@ L249 [OPTIONAL] How the Web Works: Requests and Responses
                 This is necessary so each packet can take a different route through the internet, and arrive faster
             
             The role of IP is send and route all the packets through the internet to the correct destination using IP address on each packet 
-            
+
             Once all the small packets arrive at the final destination, TCP reassemble all packets into the original request or response
+
+
+L250 Welcome to Callback Hell
+    The order of multiple AJAX calls running in parallel can be controlled using nested AJAX callbacks
+
+    "Callback hell" is when there are a lot nested callbacks in order to complete asynchronous task synchronously:
+        Makes the code very messy, difficult to maintain, and difficult to reason about -> BAD CODE
