@@ -78,7 +78,7 @@ L247 IMPORTANT: API URL Change
 
 L248 Our First AJAX Call: XMLHttpRequest
     new XMLHttpRequest() constructor function is the old school way of doing AJAX calls:
-        .open('HTTP request type', 'URL') method opens the request to the specified Endpoint
+        .open('HTTP request type', 'URL string') method opens the request to the specified Endpoint
 
         .send() method sends the request asynchronously
 
@@ -194,7 +194,7 @@ L250 Welcome to Callback Hell
 
 L251 Promises and the Fetch API
     The Fetch API is the modern way of making AJAX calls:
-        fetch('Endpoint URL')
+        fetch('Endpoint URL string')
 
         returns a Promise object
 
@@ -229,7 +229,7 @@ L251 Promises and the Fetch API
 
 
 L252 Consuming Promises
-    The fetch('Endpoint URL') returns a promise that returns a response object when it resolves
+    The fetch('Endpoint URL string') returns a promise that returns a response object when it resolves
 
     .then('callback function'('response object') { "callback function body" }) Promise method takes in one parameter, which is a callback function which also gets the resulting response object passed into it as an argument:
         All resolved response object also has a .json() method avaiable that is also an asynchronous function that returns a promise with the response object containing the JSON data
@@ -281,7 +281,7 @@ L254 Handling Rejected Promises
 
 L255 Throwing Errors Manually
     Even when the fetch request 404s, the fetch still did not reject so in this case we have to manually handle the error:
-        When the fetch response fails, the 'response object'.ok is set to 'false' so we can use that condition to throw an error object:
+        When the fetch response fails, the 'response object'.ok is set to 'false' so we can use that condition to throw an error object in the .then() callback:
             throw new Error('error message')
 
             'throw' keyword will immediately terminate the current function, and the execution flow will be passed to the first .catch() method with the thrown Error object
@@ -289,3 +289,6 @@ L255 Throwing Errors Manually
             The promise returned by the .then() handler will be a rejeceted promise, which will propagate down through the chain to the .catch() handler
 
     It is bad practice to leave rejected promises and errors unhandled -- EXTREMELY IMPORTANT TO HANDLE ERRORS FOR BUILDING WEB APP UI
+
+
+L256 Coding Challenge #1
