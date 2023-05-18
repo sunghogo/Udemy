@@ -58,3 +58,11 @@ L246 Asynchronous JavaScript, AJAX and APIs
         XML is a data format that was popular in the past but is no longer used
 
         JSON data format is the most popular API data format (since it is basically a JS object converted to a string)
+
+
+L247 IMPORTANT: API URL Change
+    API URL Changed from:
+        https://restcountries.eu/rest/v2/
+    To:
+        https://restcountries.com/v2/
+
