@@ -4,8 +4,10 @@ const btn = document.querySelector('.btn-country');
 const countriesContainer = document.querySelector('.countries');
 
 ///////////////////////////////////////
+/*
 // L248 Our First AJAX Call: XMLHttpRequest
 // L250 Welcome to Callback Hell
+// L251 Promises and the Fetch API
 
 const renderCountry = function (data, className = '') {
   const html = `
@@ -33,7 +35,7 @@ const getCountryAndNeighbor = function (country) {
 
   request.addEventListener('load', function () {
     const [data] = JSON.parse(this.responseText);
-    console.log(data);
+    // console.log(data);
 
     // Render country 1
     renderCountry(data);
@@ -50,7 +52,7 @@ const getCountryAndNeighbor = function (country) {
 
     request2.addEventListener('load', function () {
       const data2 = JSON.parse(this.responseText);
-      console.log(data2);
+      //   console.log(data2);
 
       // Render country 1
       renderCountry(data2, 'neighbour');
@@ -59,7 +61,7 @@ const getCountryAndNeighbor = function (country) {
 };
 
 // getCountryAndNeighbor('portugal');
-getCountryAndNeighbor('usa');
+// getCountryAndNeighbor('usa');
 
 // Callback hell
 setTimeout(() => {
@@ -74,3 +76,9 @@ setTimeout(() => {
     }, 1000);
   }, 1000);
 }, 1000);
+*/
+
+// L251 Promises and the Fetch API
+
+const request = fetch('https://restcountries.com/v2/name/portugal');
+console.log(request);
