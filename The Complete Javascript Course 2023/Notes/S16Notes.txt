@@ -240,3 +240,14 @@ L252 Consuming Promises
         3. The second .then() method is then called on the new promise, which resolves to the actual JSON data
 
     Promises don't get rid of callbacks, but gets rid of callback hell and leads to more concise code
+
+
+L253 Chaining Promises
+    Whatever is returned from a promise becomes the fulfilled value of the promise, which is important note when chain consuming promises
+
+    Instead of callback hell with the right arrow indentation of chains, promises have a more maintainable flat chain of promises 
+
+    Promises are a more powerful and elegant solution to handle asynchronous code
+
+    A common mistake in chaining promises is to chain the .then() method on the new nested promise directly within the callback, leading to callback hell
+
