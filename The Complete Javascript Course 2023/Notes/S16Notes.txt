@@ -406,3 +406,21 @@ L263 Error Handling With try...catch
         If the code execution in the 'try' code block fails, then it switches to the 'catch' code block with the Error object passed from the try block
 
         This can be used to catch errors in async functions, and it is good practice to use it for that purpose
+
+
+L264 Returning Values from Async Functions
+    If you are using try-catch statements to catch errors in asyncs, you will have to throw the error TWICE in both the try and catch blocks, otherewise the return value of the async will still be the promise that was fulfilled with the resolved value being the first thrown error:
+        This is important if you are mixing .then()/.catch() promise methods on the async function
+
+    Otherwise, if you don't mind the stopping the code execution on error, you can get rid of the try-catch statement and just throw the error once
+
+    For now, you can only use await within an async function (BUT there is a proposal looking to change this):
+        So the way around this is to create an async Immediately-Invoked Function Expressions (IIFE)
+
+        In the try-catch code blocks, it is NOT NECESSARY to throw errors since:
+            1. Throwing an error within a nested await async function will propagate outwards
+            2. The IIFE async function will be thrown away 
+            3. There is no need to mix .then()/.catch() with async/await that needs the promise to properly fulfill or reject
+
+    Just like how can we chain consume promises using .then(), we can also chain async functions using await on nested asyncs
+
