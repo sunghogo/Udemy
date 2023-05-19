@@ -337,3 +337,10 @@ L257 Asynchronous Behind the Scenes: The Event Loop
 
             So Microtask Queue can technically starve the Callback Queue if microtasks keep adding new microtasks
 
+
+L258 The Event Loop in Practice
+    Can create a new Promise that is immediately resolved used Promise.resolve('Resovled value')
+
+    Global Execution Context -> Microtask Queue -> Callback Queue
+
+    Microtask Queue callbacks can STARVE the Callback Queue, so you cannot use timers for high precision applications
