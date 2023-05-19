@@ -422,5 +422,12 @@ L264 Returning Values from Async Functions
             2. The IIFE async function will be thrown away 
             3. There is no need to mix .then()/.catch() with async/await that needs the promise to properly fulfill or reject
 
+        In this async model: 
+            1. awaits are used as .then()
+            2. the catch('error') {} block is used as .catch()
+            3. everything else after the try-catch statement is used as .finally() 
+
     Just like how can we chain consume promises using .then(), we can also chain async functions using await on nested asyncs
 
+
+L265 Running Promises in Parallel

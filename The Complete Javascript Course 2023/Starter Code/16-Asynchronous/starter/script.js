@@ -24,6 +24,14 @@ const renderCountry = function (data, className = '') {
   countriesContainer.style.opacity = 1;
 };
 
+const getJSON = function (url, errorMsg = 'Something went wrong') {
+  return fetch(url).then(response => {
+    if (!response.ok) throw new Error(`${errorMsg} ${response.status}`);
+
+    return response.json();
+  });
+};
+
 const renderError = function (msg) {
   countriesContainer.insertAdjacentText('beforeend', msg);
   countriesContainer.style.opacity = 1;
@@ -301,9 +309,6 @@ function whereAmI() {
 }
 }
 
-
-*/
-
 // L262 Consuming Promises with Async/Await
 // L263 Error Handling With try...catch
 // L264 Returning Values from Async Functions
@@ -374,3 +379,23 @@ console.log('1: Will get location');
 // } catch (err) {
 //   alert(err.message);
 // }
+*/
+
+// L265 Running Promises in Parallel
+
+const getThreeCountries = async function (c1, c2, c3) {
+  try {
+    const data = [];
+    [...arguments].map(
+      async c =>
+        await getJSON(`https://restcountries.com/v2/name/${c}`).then(country =>
+          data.push(country[0].capital)
+        )
+    );
+    console.log(data);
+  } catch (err) {
+    console.error(`${err.message} 💥`);
+  }
+};
+
+getThreeCountries('portugal', 'canada', 'tanzania');
