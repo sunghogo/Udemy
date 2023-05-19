@@ -102,7 +102,6 @@ setTimeout(() => {
   }, 1000);
 }, 1000);
 }
-*/
 
 // L251 Promises and the Fetch API
 // L252 Consuming Promises
@@ -197,3 +196,16 @@ setTimeout(() => {
     getCountryData('Australia');
   });
 }
+*/
+
+// L258 The Event Loop in Practice
+console.log('Test start'); // 1st
+setTimeout(() => console.log('0 sec timer'), 0); // 5th
+Promise.resolve('Resolved promise 1').then(res => console.log(res)); // 3rd
+
+Promise.resolve('Resolved promise 2').then(res => {
+  for (let i = 0; i < 1000000000; i++) {}
+  console.log(res);
+}); // 4th
+
+console.log('Test end'); // 2nd
