@@ -21,12 +21,12 @@ const renderCountry = function (data, className = '') {
       </article>
       `;
   countriesContainer.insertAdjacentHTML('beforeend', html);
-  //   countriesContainer.style.opacity = 1;
+  countriesContainer.style.opacity = 1;
 };
 
 const renderError = function (msg) {
   countriesContainer.insertAdjacentText('beforeend', msg);
-  //   countriesContainer.style.opacity = 1;
+  countriesContainer.style.opacity = 1;
 };
 ///////////////////////////////////////
 /*
@@ -247,10 +247,10 @@ wait(1)
 
 Promise.resolve('fulfills immediately').then(x => console.log(x));
 Promise.reject('rejects immediately').then(x => console.error(x));
-*/
 
 // L260 Promisifying the Geolocation API
-const getPosition = function () {
+{
+  const getPosition = function () {
   return new Promise(function (resolve, reject) {
     // navigator.geolocation.getCurrentPosition(
     //   position => resolve(position),
@@ -299,5 +299,38 @@ function whereAmI() {
       countriesContainer.style.opacity = 1;
     });
 }
+}
 
-btn.addEventListener('click', whereAmI);
+
+*/
+
+// L262 Consuming Promises with Async/Await
+const getPosition = function () {
+  return new Promise(function (resolve, reject) {
+    navigator.geolocation.getCurrentPosition(resolve, reject);
+  });
+};
+
+const whereAmI = async function () {
+  // Geolocation
+  const pos = await getPosition();
+  const { latitude: lat, longitude: lng } = pos.coords;
+
+  // Reverse geocoding
+  const resGeo = await fetch(`https://geocode.xyz/${lat},${lng}?geoit=json`);
+  const dataGeo = await resGeo.json();
+  const country = dataGeo.country;
+  console.log(country);
+
+  // Country data
+  // fetch(`https://restcountries.com/v2/name/${country}`).then(res =>
+  //   console.log(res)
+  // );
+  const res = await fetch(`https://restcountries.com/v2/name/${country}`);
+  const data = await res.json();
+  console.log(data);
+  renderCountry(data[0]);
+};
+
+whereAmI();
+console.log('FIRST'); // Shows that async
