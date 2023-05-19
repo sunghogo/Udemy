@@ -367,3 +367,7 @@ L260 Promisifying the Geolocation API
     You can can pass resolve and reject arguments in the Promise executor function directly as the callback function of asynchronous function we are trying to promisfying if all we are resolving the passed arguments of the callback
 
     Can also promisfy the old XMLHttpRequest() construction function for AJAX calls
+
+
+L261 Coding Challenge #2
+    'img element'.onload and 'img element'.onerror are properties that you have to ASSIGN a callback function to
