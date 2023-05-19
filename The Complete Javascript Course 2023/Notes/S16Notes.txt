@@ -344,3 +344,14 @@ L258 The Event Loop in Practice
     Global Execution Context -> Microtask Queue -> Callback Queue
 
     Microtask Queue callbacks can STARVE the Callback Queue, so you cannot use timers for high precision applications
+
+
+L259 Building a Simple Promise
+    new Promise(function(resolve, reject) { "executor function body" }) constructor function is used to create new Promise objects that take in an 'executor' function as a parameter, which also takes in the 'resolve' and 'reject' paramenters:
+        The executor function contains the asynchronous behavior that is being handled by the promise, is called IMMEDIATELY as soon as it is consumed, and will produce a result value
+
+        Calling resolve('fulfilled value') will make the Promise fulfilled / resolved, and pass the 'fulfilled value' to the .then() handler 
+
+        Calling reject('rejected value') will make the Promise as rejected, and pass the 'rejected value' (usually a new Error()) eventually to the error and .catch() handler
+
+    Usually, promises are only consumed and only build promises to wrap/convert old callback based functions/asynchronous behavior into promises/promise based, aka "promisifying"

@@ -196,7 +196,6 @@ setTimeout(() => {
     getCountryData('Australia');
   });
 }
-*/
 
 // L258 The Event Loop in Practice
 console.log('Test start'); // 1st
@@ -208,4 +207,19 @@ Promise.resolve('Resolved promise 2').then(res => {
   console.log(res);
 }); // 4th
 
-console.log('Test end'); // 2nd
+console.log('Test end'); //
+*/
+
+// L259 Building a Simple Promise
+const lotteryPromise = new Promise(function (resolve, reject) {
+  console.log('Loterry draw is happening 🔮');
+  setTimeout(function () {
+    if (Math.random() >= 0.5) {
+      resolve('You WIN 💰');
+    } else {
+      reject(new Error('You lost your money 💩'));
+    }
+  }, 2000);
+});
+
+lotteryPromise.then(res => console.log(res)).catch(err => console.error(err));
