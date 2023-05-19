@@ -305,6 +305,7 @@ function whereAmI() {
 */
 
 // L262 Consuming Promises with Async/Await
+// L263 Error Handling With try...catch
 const getPosition = function () {
   return new Promise(function (resolve, reject) {
     navigator.geolocation.getCurrentPosition(resolve, reject);
@@ -312,25 +313,42 @@ const getPosition = function () {
 };
 
 const whereAmI = async function () {
-  // Geolocation
-  const pos = await getPosition();
-  const { latitude: lat, longitude: lng } = pos.coords;
+  try {
+    // Geolocation
+    const pos = await getPosition();
+    const { latitude: lat, longitude: lng } = pos.coords;
 
-  // Reverse geocoding
-  const resGeo = await fetch(`https://geocode.xyz/${lat},${lng}?geoit=json`);
-  const dataGeo = await resGeo.json();
-  const country = dataGeo.country;
-  console.log(country);
+    // Reverse geocoding
+    const resGeo = await fetch(`https://geocode.xyz/${lat},${lng}?geoit=json`);
+    if (!resGeo.ok) throw new Error('Problem getting location data');
 
-  // Country data
-  // fetch(`https://restcountries.com/v2/name/${country}`).then(res =>
-  //   console.log(res)
-  // );
-  const res = await fetch(`https://restcountries.com/v2/name/${country}`);
-  const data = await res.json();
-  console.log(data);
-  renderCountry(data[0]);
+    const dataGeo = await resGeo.json();
+    const country = dataGeo.country;
+    console.log(country);
+    if (!country) throw new Error('Problem getting country due to throttling');
+
+    // Country data
+    const res = await fetch(`https://restcountries.com/v2/name/${country}`);
+    if (!res.ok) throw new Error('Problem getting country');
+
+    const data = await res.json();
+    console.log(data);
+    renderCountry(data[0]);
+  } catch (err) {
+    console.error(`${err} 💥`);
+    renderError(`💥 ${err.message}`);
+  }
 };
 
 whereAmI();
 console.log('FIRST'); // Shows that async
+
+// try...catch example
+try {
+  let y = 1;
+  const x = 2;
+  // x = 3;
+  y = 3;
+} catch (err) {
+  alert(err.message);
+}
