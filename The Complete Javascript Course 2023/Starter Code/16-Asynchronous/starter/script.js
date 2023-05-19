@@ -385,14 +385,18 @@ console.log('1: Will get location');
 
 const getThreeCountries = async function (c1, c2, c3) {
   try {
-    const data = [];
-    [...arguments].map(
-      async c =>
-        await getJSON(`https://restcountries.com/v2/name/${c}`).then(country =>
-          data.push(country[0].capital)
-        )
-    );
-    console.log(data);
+    // Awaits will run sequentially
+    // const [data1] = await getJSON(`https://restcountries.com/v2/name/${c1}`);
+    // const [data2] = await getJSON(`https://restcountries.com/v2/name/${c2}`);
+    // const [data3] = await getJSON(`https://restcountries.com/v2/name/${c3}`);
+
+    const data = await Promise.all([
+      getJSON(`https://restcountries.com/v2/name/${c1}`),
+      getJSON(`https://restcountries.com/v2/name/${c2}`),
+      getJSON(`https://restcountries.com/v2/name/${c3}`),
+    ]);
+
+    console.log(data.map(d => d[0].capital));
   } catch (err) {
     console.error(`${err.message} 💥`);
   }
