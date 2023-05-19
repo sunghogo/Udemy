@@ -431,3 +431,7 @@ L264 Returning Values from Async Functions
 
 
 L265 Running Promises in Parallel
+    In Developer Console -> Network, you can see the waterafall of what and when files/data has been and downloaded
+
+    Promise.all('array of promises') is a static Promise constructor method that returns a new Promise that will run all the promises in the array at the same time/in parallel:
+        Promise.all() shortcircuits when one promise rejects
