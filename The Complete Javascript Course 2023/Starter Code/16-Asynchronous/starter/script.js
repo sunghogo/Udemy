@@ -212,7 +212,7 @@ console.log('Test end'); //
 
 // L259 Building a Simple Promise
 const lotteryPromise = new Promise(function (resolve, reject) {
-  console.log('Loterry draw is happening 🔮');
+  console.log('Lottery draw is happening 🔮');
   setTimeout(function () {
     if (Math.random() >= 0.5) {
       resolve('You WIN 💰');
@@ -223,3 +223,28 @@ const lotteryPromise = new Promise(function (resolve, reject) {
 });
 
 lotteryPromise.then(res => console.log(res)).catch(err => console.error(err));
+
+// Promisfying setTimeout
+const wait = function (seconds) {
+  return new Promise(resolve => setTimeout(resolve, seconds * 1000));
+};
+
+wait(1)
+  .then(() => {
+    console.log('I waited for 1 seconds');
+    return wait(1);
+  })
+  .then(() => {
+    console.log('I waited for 2 seconds');
+    return wait(1);
+  })
+  .then(() => {
+    console.log('I waited for 3 seconds');
+    return wait(1);
+  })
+  .then(() => {
+    console.log('I waited for 4 seconds');
+  });
+
+Promise.resolve('fulfills immediately').then(x => console.log(x));
+Promise.reject('rejects immediately').then(x => console.error(x));
