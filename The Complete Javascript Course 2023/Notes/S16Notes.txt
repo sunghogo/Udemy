@@ -275,7 +275,7 @@ L254 Handling Rejected Promises
 
     'DOM selector'.insertAdjacentText('position', 'message') method is used to insert text instead of HTML
 
-    .finally('callback function'('response/error object') { "callback function body") Promise method will ALWAYS call the callback method regardless whether the Promise was fulfilled or rejected:
+    .finally('callback function'('response/error object') { "callback function body" }) Promise method will ALWAYS call the callback method regardless whether the Promise was fulfilled or rejected:
         Useful for when we need a callback to happen regardless of the result of the promise (e.g. hiding the web loading spinner)
 
 
@@ -339,7 +339,7 @@ L257 Asynchronous Behind the Scenes: The Event Loop
 
 
 L258 The Event Loop in Practice
-    Can create a new Promise that is immediately resolved used Promise.resolve('Resovled value')
+    Can create a new Promise that is immediately resolved using Promise.resolve('Fulfilled value') or failed using Promise.reject('Rejected value')
 
     Global Execution Context -> Microtask Queue -> Callback Queue
 
@@ -354,4 +354,8 @@ L259 Building a Simple Promise
 
         Calling reject('rejected value') will make the Promise as rejected, and pass the 'rejected value' (usually a new Error()) eventually to the error and .catch() handler
 
+        Don't have to pass both resolve and reject in the arguments, only pass the one used
+
     Usually, promises are only consumed and only build promises to wrap/convert old callback based functions/asynchronous behavior into promises/promise based, aka "promisifying"
+
+    You can promisfy timers for more manageable asynchronous behavior and avoid callback hell
