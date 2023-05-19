@@ -306,6 +306,8 @@ function whereAmI() {
 
 // L262 Consuming Promises with Async/Await
 // L263 Error Handling With try...catch
+// L264 Returning Values from Async Functions
+
 const getPosition = function () {
   return new Promise(function (resolve, reject) {
     navigator.geolocation.getCurrentPosition(resolve, reject);
@@ -321,34 +323,54 @@ const whereAmI = async function () {
     // Reverse geocoding
     const resGeo = await fetch(`https://geocode.xyz/${lat},${lng}?geoit=json`);
     if (!resGeo.ok) throw new Error('Problem getting location data');
-
     const dataGeo = await resGeo.json();
     const country = dataGeo.country;
-    console.log(country);
     if (!country) throw new Error('Problem getting country due to throttling');
 
     // Country data
     const res = await fetch(`https://restcountries.com/v2/name/${country}`);
     if (!res.ok) throw new Error('Problem getting country');
-
     const data = await res.json();
-    console.log(data);
     renderCountry(data[0]);
+
+    return `You are in ${dataGeo.city}, ${dataGeo.country}`;
   } catch (err) {
     console.error(`${err} 💥`);
     renderError(`💥 ${err.message}`);
+
+    // Reject promise returned from async function
+    throw err;
   }
 };
 
-whereAmI();
-console.log('FIRST'); // Shows that async
+console.log('1: Will get location');
+// const city = whereAmI();
+// console.log(city); // Promise
+
+// Mixing asyncs with promise .then()
+// whereAmI()
+//   .then(city => console.log(`2: ${city}`))
+//   .catch(err => console.log(`2: ${err.message} 💥`))
+//   .finally(() => console.log('3: Finished getting location'));
+
+// Pure asyncs
+(async _ => {
+  try {
+    const city = await whereAmI();
+    console.log(`2: ${city}`); // Doesn't run if error is thrown in the await above
+  } catch (err) {
+    console.error(`2: ${err.message} 💥`);
+  }
+  console.log('3: Finished getting location');
+})();
+// console.log('FIRST'); // Shows that async
 
 // try...catch example
-try {
-  let y = 1;
-  const x = 2;
-  // x = 3;
-  y = 3;
-} catch (err) {
-  alert(err.message);
-}
+// try {
+//   let y = 1;
+//   const x = 2;
+//   // x = 3;
+//   y = 3;
+// } catch (err) {
+//   alert(err.message);
+// }
