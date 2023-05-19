@@ -393,3 +393,16 @@ L262 Consuming Promises with Async/Await
     Using async/await allows asynchronous code to feel synchronous, but it is just really syntactic sugar over the the .then() method in promises behind the scenes
 
     async/await are used often with .then() mehod consuming promises
+
+
+L263 Error Handling With try...catch
+    try...catch has been in JS since before ES6, and has nothing to do with async/await:
+        try {
+            "code block"
+        } catch('error') {
+            "code block"
+        }
+
+        If the code execution in the 'try' code block fails, then it switches to the 'catch' code block with the Error object passed from the try block
+
+        This can be used to catch errors in async functions, and it is good practice to use it for that purpose
