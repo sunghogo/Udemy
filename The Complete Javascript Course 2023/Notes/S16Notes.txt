@@ -371,3 +371,5 @@ L260 Promisifying the Geolocation API
 
 L261 Coding Challenge #2
     'img element'.onload and 'img element'.onerror are properties that you have to ASSIGN a callback function to
+
+    img.addEventListener('event', 'callback') with 'event' = 'load' / 'error' achieves the same thing as img.onload and img.onerror but more widely used due to its flexibilty
