@@ -359,3 +359,11 @@ L259 Building a Simple Promise
     Usually, promises are only consumed and only build promises to wrap/convert old callback based functions/asynchronous behavior into promises/promise based, aka "promisifying"
 
     You can promisfy timers for more manageable asynchronous behavior and avoid callback hell
+
+
+L260 Promisifying the Geolocation API
+    navigator.geolocation.getCurrentPosition() is a callback-based API that we can promisfy
+
+    You can can pass resolve and reject arguments in the Promise executor function directly as the callback function of asynchronous function we are trying to promisfying if all we are resolving the passed arguments of the callback
+
+    Can also promisfy the old XMLHttpRequest() construction function for AJAX calls
