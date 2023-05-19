@@ -128,6 +128,8 @@ const imgPaths = [
   'imgChallenge16/img-3.jpg',
 ];
 
+const imgContainer = document.querySelector('.images');
+
 const wait = seconds => {
   return new Promise(resolve => setTimeout(resolve, seconds * 1000));
 };
@@ -135,18 +137,18 @@ const wait = seconds => {
 // 1,, 2., 3.
 function createImage(imgPath) {
   return new Promise((resolve, reject) => {
-    const imgEl = document.createElement('img');
+    const img = document.createElement('img');
 
-    imgEl.onload = () => {
-      document
-        .querySelector('.container')
-        .insertAdjacentElement('afterBegin', imgEl);
+    img.addEventListener('load', () => {
+      imgContainer.append(img);
+      resolve(img);
+    });
 
-      resolve(imgEl);
-    };
-    imgEl.onerror = reject;
+    img.addEventListener('error', () => {
+      reject(new Error('Image not found'));
+    });
 
-    imgEl.src = imgPath;
+    img.src = imgPath;
   });
 }
 
@@ -154,10 +156,7 @@ function createImage(imgPath) {
 const displayImage = function (path) {
   return createImage(path)
     .then(img => wait(2).then(_ => img))
-    .then(img => {
-      img.style.display = 'none';
-      return img;
-    })
+    .then(img => (img.style.display = 'none'))
     .catch(err => console.log(err));
 };
 
