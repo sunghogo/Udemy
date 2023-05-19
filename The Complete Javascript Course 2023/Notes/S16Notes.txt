@@ -373,3 +373,23 @@ L261 Coding Challenge #2
     'img element'.onload and 'img element'.onerror are properties that you have to ASSIGN a callback function to
 
     img.addEventListener('event', 'callback') with 'event' = 'load' / 'error' achieves the same thing as img.onload and img.onerror but more widely used due to its flexibilty
+
+
+L262 Consuming Promises with Async/Await
+    async/await (ES2017/ES8) introduced an easier way to consume promises
+
+    'async' keyword in front of a function declataion turns the function into an asynchronous function that will run in the backgroun
+        async function() {} 
+
+        Returns a promise (converts the return value to a promise if it already isn't a promise )
+
+        Inside an async function, we can have one or more 'await' statements that will STOP code exeuction until the awaited promise is fulfilled:
+            await 'Promise'
+
+            The value of the whole await statement is the resolved value of the promise, and can be assigned to a variable
+
+            This is not code blocking  because stopping an asynchronous function running the background does not stop code execution
+
+    Using async/await allows asynchronous code to feel synchronous, but it is just really syntactic sugar over the the .then() method in promises behind the scenes
+
+    async/await are used often with .then() mehod consuming promises
