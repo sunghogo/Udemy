@@ -435,3 +435,6 @@ L265 Running Promises in Parallel
 
     Promise.all('array of promises') is a static Promise constructor method that returns a new Promise that will run all the promises in the array at the same time/in parallel:
         Promise.all() shortcircuits when one promise rejects
+
+
+L266 Other Promise Combinators: race, allSettled and any

@@ -379,10 +379,8 @@ console.log('1: Will get location');
 // } catch (err) {
 //   alert(err.message);
 // }
-*/
 
 // L265 Running Promises in Parallel
-
 const getThreeCountries = async function (c1, c2, c3) {
   try {
     // Awaits will run sequentially
@@ -403,3 +401,6 @@ const getThreeCountries = async function (c1, c2, c3) {
 };
 
 getThreeCountries('portugal', 'canada', 'tanzania');
+*/
+
+// L266 Other Promise Combinators: race, allSettled and any
