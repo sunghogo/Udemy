@@ -1,3 +1,7 @@
+L1 How to Get Help
+L2 Join Our Community
+L3 Course Resources
+
 How to Get Help:
 1) Udemy QA
 2) Twitter: @ste_grider
@@ -40,3 +44,27 @@ I use Iterm2 as my terminal - https://www.iterm2.com/
 
 Inside my terminal, I run the shell https://github.com/robbyrussell/oh-my-zsh with the default theme 'Robby Russell'
 
+
+L4 Let's Build an App!
+L5 Critical Questions
+    JSX is a mixture of HTML elements and JS that React uses to write HTML using JSX functions called "Components":
+        1. Component declaration
+            function 'Component Name' () {
+            return (<div> ... </div>)  
+            } 
+            
+        2. Component call
+            <'Component Name' />
+
+Quiz 1: Core Concepts
+    1) The primary goals of React are to...
+        Show HTML to the user and change that HTML when the user does something
+    2) Components are used to tell React what content we want to show on the screen. How is a component created?
+        By creating a function that returns JSX
+    3) ...
+    4) ...
+
+
+L7 Node Setup
+L8 Creating a React Project
+    "node -v" to check node version
