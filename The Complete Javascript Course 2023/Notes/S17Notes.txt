@@ -49,6 +49,66 @@ L270 An Overview of Modern JavaScript Development
 
 L271 An Overview of Modules in JavaScript
     Module: 
-        Resuable piece of code that encapsulates implementation details;
+        Resuable piece of code that encapsulates implementation details
 
         Usually a standalone file, but it doesn't have to be
+
+        We can import ("Dependency") and export ("Public API") module code 
+
+        Module Benefits in Software Design:
+            1. Compose software: Modules are small building blocks that we put together to build complex applications
+
+            2. Isolate components: Modules can be developed in isolation without thinking about the entire codebase
+
+            3. Abstract code: Implement low=level code in modules and import these abstraction into other modules
+
+            4. Organized code: Modules naturally lead to a more organized codebase
+
+            5. Reuse code: Modules allow us to easily reuse the same code, even across multiple projects
+    
+    Native JavaScript (ES6) Modules:
+        Modules stored in files, exactly one module per file
+
+        ES6 Module:
+            1. Top-level variables: Scoped to module (so can only be seen by exported)
+            2. Default Mode: Strict mode
+            3. Top-level this: undefined
+            4. Imports and exports: YES
+            5. HTML lnking: <script type="module">
+            6. File downloading: Asynchronous
+
+        Script:
+            1. Top-level variables: Global
+            2. Default Mode: "Sloppy" mode
+            3. Top-level this: window
+            4. Imports and exports: NO
+            5. HTML lnking: <script>
+            6. File downloading: Synchronous (unless we use async or defer attributes on script tag)
+
+
+        imports and exports can only happen at the top-level
+
+        imports are hoisted
+
+    How ES6 Modules are imported:
+        Parsing the main script (read the code without execution) is when imports are hoisted
+        ->
+        ASYNCHRONOUS downloading of modules (but run synchronously)
+        ->
+        Linking imports of main script to module exports ("live connection" so that exported values are NOT COPIED to imports, but imports are reference to the exported values):
+            Other modules systems cannot affect imported module values like this, but JS does
+        ->
+        Execution of modules
+        ->
+        Execution of main script
+
+        Import Modules Before Execution:
+            Modules are imported SYNCHRONOUSLY (as in, the main script is only executed AFTER all the imported modules are downloaded and executed)
+
+            Possible thanks to top-level ("static") imports, which makes imports known BEFORE execution
+
+            This makes budnling and dead code elimination possible
+
+
+
+
