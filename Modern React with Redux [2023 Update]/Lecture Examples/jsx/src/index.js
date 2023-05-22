@@ -11,11 +11,16 @@ const root = ReactDOM.createRoot(el);
 // 4) Create a component
 function App() {
   // JSX can reference variables and other expressions using {}, but can only properly render numbers, strings, arrays?
-  let message = "Bye there!";
-  if (Math.random() > 0.5) {
-    message = "Hello there!";
-  }
-  return <h1>{message}</h1>;
+
+  // let message = "Bye there!";
+  // if (Math.random() > 0.5) {
+  //   message = "Hello there!";
+  // }
+
+  // const date = new Date();
+  // const time = date.toLocaleTimeString();
+
+  return <h1>{new Date().toLocaleTimeString()}</h1>;
 }
 
 // 5) Show the component on the screen
