@@ -433,8 +433,23 @@ L264 Returning Values from Async Functions
 L265 Running Promises in Parallel
     In Developer Console -> Network, you can see the waterafall of what and when files/data has been and downloaded
 
-    Promise.all('array of promises') is a static Promise constructor method that returns a new Promise that will run all the promises in the array at the same time/in parallel:
-        Promise.all() shortcircuits when one promise rejects
+    Promise.all('array of promises') (ES6/ES2015) is a static Promise constructor method that returns a new Promise that will run all the input promises at the same time/in parallel, and settles (then fulfills) if ALL of them resolves:
+        Promise.all() shortcircuits and rejects when one promise rejects
 
 
 L266 Other Promise Combinators: race, allSettled and any
+    Promise.race('array of promises') (ES6/ES2015) is a static Promise constructor method that returns a new Promise that will SETTLE/shortcircuit as soon as one of the input promises SETTLES (regardless of whether it was fulfilled or rejected):
+        The SETTLED value of the new returned promise is the settled value of the input promise that won the race, and will EITHER fulfill or reject depending on the input promise
+
+        Practically, Promsie.race() is useful to end never-ending or long-running promise chains by using a timeout promise
+
+    Promise.allSettled('array of promises') (ES11/ES2020) is a static Promise constructor method that will return a new array of Promises of all the STETTLED promises (whether fulfilled or rejected):
+        The returned promise will always fulfill as long as the input promises are settled
+
+    Promise.any('array of promises') (ES12/ES2021) is a static Promise constructor method that will return a new Promise of that will SETTLE(and then fulfill) as soon as one of the input promises FULFILL (rejected promises are ignored):
+        The returned promise will SETTLE (and then reject) if there are no fulfilled promises
+        
+        The main difference between Promise.race() is that:
+            Promise.any() settles on the first FULFILLED promise, and becomes fulfilled
+
+            Promise.race() settles on the first SETTLED promise, and becomes fulfilled OR rejected depending on that settled promise
