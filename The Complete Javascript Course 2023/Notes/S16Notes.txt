@@ -453,3 +453,6 @@ L266 Other Promise Combinators: race, allSettled and any
             Promise.any() settles on the first FULFILLED promise, and becomes fulfilled
 
             Promise.race() settles on the first SETTLED promise, and becomes fulfilled OR rejected depending on that settled promise
+
+
+L267 Coding Challenge #3
