@@ -215,7 +215,7 @@ GOOD LUCK �
       });
 
       img.addEventListener('error', () => {
-        reject(new Error('Image not found'));
+        reject(new Error(`${imgPath.split('/')[1]} not found`));
       });
 
       img.src = imgPath;
@@ -227,28 +227,34 @@ GOOD LUCK �
   }
 
   // Part 1
-  async function loadNPause(path) {
-    try {
-      const img = await createImage(path);
-      await wait(2);
-      if (img.reason) throw img;
-      img.style.display = 'none';
-    } catch (err) {
-      console.error(`${err}`);
-      throw err;
+  async function loadNPause() {
+    for (const path of imgPaths) {
+      try {
+        const img = await createImage(path);
+        await wait(2);
+        img.style.display = 'none';
+      } catch (err) {
+        console.error(`${err}`);
+        throw err;
+      }
     }
   }
 
-  (async () => {
-    await loadNPause(imgPaths[0]);
-    await loadNPause(imgPaths[1]);
-    await loadNPause(imgPaths[2]);
-  })();
+  // loadNPause();
 
   // Part 2
   async function loadAll(imgArr) {
-    const imgs = imgArr.map(createImage);
-    // console.log(imgs);
+    try {
+      const imgs = imgArr.map(async img => await createImage(img));
+      // console.log(imgs);
+
+      const imgsEl = await Promise.all(imgs);
+      console.log(imgsEl);
+
+      imgsEl.forEach(img => img.classList.add('parallel'));
+    } catch (err) {
+      console.error(`${err}`);
+    }
   }
 
   loadAll(imgPaths);
