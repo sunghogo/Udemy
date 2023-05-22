@@ -6,7 +6,8 @@ L269 Section Roadmap
 L270 An Overview of Modern JavaScript Development
     Modern JavaScript Development:
         Development: 
-            We now divide our project into multple modules to make our project more organized and maintainable
+            We now divide our project into multple modules to make our project more organized and maintainable:
+                Before we used to divide into multiple scripts and send them
             
             Can include 3rd-party modules
 
@@ -44,3 +45,10 @@ L270 An Overview of Modern JavaScript Development
             Production means the application is used by real users in the real world
 
         Development -> Build Process -> Production
+
+
+L271 An Overview of Modules in JavaScript
+    Module: 
+        Resuable piece of code that encapsulates implementation details;
+
+        Usually a standalone file, but it doesn't have to be
