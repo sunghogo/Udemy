@@ -19,8 +19,18 @@ function App() {
 
   // const date = new Date();
   // const time = date.toLocaleTimeString();
+  // return <h1>{time}</h1>;
+  // return <h1>{new Date().toLocaleTimeString()}</h1>;
 
-  return <h1>{new Date().toLocaleTimeString()}</h1>;
+  const name = "Samantha";
+  const age = 23;
+
+  // You can mix in plain text and multiple variables similar to template literals in JS
+  return (
+    <h1>
+      Hi, my name is {name} and my age is {age}
+    </h1>
+  );
 }
 
 // 5) Show the component on the screen
