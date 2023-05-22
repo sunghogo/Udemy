@@ -404,3 +404,67 @@ getThreeCountries('portugal', 'canada', 'tanzania');
 */
 
 // L266 Other Promise Combinators: race, allSettled and any
+
+// Promise.race
+(async function () {
+  const res = await Promise.race([
+    getJSON(`https://restcountries.com/v2/name/italy`),
+    getJSON(`https://restcountries.com/v2/name/egypt`),
+    getJSON(`https://restcountries.com/v2/name/mexico`),
+  ]);
+  console.log(res[0]);
+})();
+
+const timeout = function (sec) {
+  return new Promise((_, reject) =>
+    setTimeout(() => reject(new Error('Request timed out')), sec * 1000)
+  );
+};
+
+Promise.race([
+  getJSON(`https://restcountries.com/v2/name/tanzania`),
+  timeout(0.1),
+])
+  .then(res => console.log(res[0]))
+  .catch(err => console.error(err)); // then resolved Tanzania data or caught rejected timeout error
+
+// Promise.allSettled
+Promise.allSettled([
+  Promise.resolve('Success'),
+  Promise.resolve('Another Success'),
+  Promise.reject('Error'),
+  Promise.reject(new Error('Error!!!')),
+])
+  .then(res => console.log(res))
+  .catch(err => console.error(err)); // arr[4] with all the promises since they all settled
+
+(async () => {
+  const results = await Promise.allSettled([
+    Promise.resolve('Success'),
+    Promise.resolve('Another Success'),
+    Promise.reject('Error'),
+    Promise.reject(new Error('Error!!!')),
+  ]);
+  results.forEach(result =>
+    console.log(result.value ? result.value : result.reason)
+  ); // iterate and access fulfilled and rejected values from output promise array
+})();
+
+Promise.all([
+  Promise.resolve('Success'),
+  Promise.resolve('Another Success'),
+  Promise.reject('Error'),
+  Promise.reject(new Error('Error!!!')),
+])
+  .then(res => console.log(res))
+  .catch(err => console.error(err)); // shortcircuits with caught rejected error
+
+// Promise.any [ES2021]
+Promise.any([
+  Promise.resolve('Success'),
+  Promise.resolve('Another Success'),
+  Promise.reject('Error'),
+  Promise.reject(new Error('Error!!!')),
+])
+  .then(res => console.log(res))
+  .catch(err => console.error(err)); // shortcirits with first fulfilled promise value
