@@ -409,7 +409,7 @@ L263 Error Handling With try...catch
 
 
 L264 Returning Values from Async Functions
-    If you are using try-catch statements to catch errors in asyncs, you will have to throw the error TWICE in both the try and catch blocks, otherewise the return value of the async will still be the promise that was fulfilled with the resolved value being the first thrown error:
+    If you are using try-catch statements to catch errors in asyncs, you will have to throw the error TWICE in both the try and catch blocks, otherwise the return value of the async will still be the promise that was fulfilled with the resolved value being the first thrown error:
         This is important if you are mixing .then()/.catch() promise methods on the async function
 
     Otherwise, if you don't mind stopping the code execution on error, you can get rid of the try-catch statement and just throw the error once
@@ -433,8 +433,10 @@ L264 Returning Values from Async Functions
 L265 Running Promises in Parallel
     In Developer Console -> Network, you can see the waterafall of what and when files/data has been and downloaded
 
-    Promise.all('array of promises') (ES6/ES2015) is a static Promise constructor method that returns a new Promise that will run all the input promises at the same time/in parallel, and settles (then fulfills) if ALL of them resolves:
+    Promise.all('array of promises') (ES6/ES2015) is a static Promise constructor method that returns a new Promise that will run all the input promises at the same time/in parallel, and settles (then fulfills) if ALL of them resolves OR if there are no promises:
         Promise.all() shortcircuits and rejects when one promise rejects
+
+        When the return promise resolves, its fulfilled value is an array of all the RESOLVED VALUES of the input promises
 
 
 L266 Other Promise Combinators: race, allSettled and any
@@ -456,3 +458,10 @@ L266 Other Promise Combinators: race, allSettled and any
 
 
 L267 Coding Challenge #3
+    It is now allowed to use catch instead of catch ('error') in try-catch statements
+
+    Remeber with error handling in async/await with try-catch, throwing errors at catch will propagate the error outward, and stop the parent execution context
+
+    Unlike for and for-of loops, .forEach() array methods iterates and executes the callbacks on all the array elements simultaneously
+
+    Remember you can extract the resolved values of input promises into an array using Promise.all() (other Promise combinator methods and consuming promises with .then cannot directly do this)
