@@ -1,0 +1,46 @@
+L268 Section Intro
+
+
+L269 Section Roadmap
+
+L270 An Overview of Modern JavaScript Development
+    Modern JavaScript Development:
+        Development: 
+            We now divide our project into multple modules to make our project more organized and maintainable
+            
+            Can include 3rd-party modules
+
+            Node Package Manager(NPM):
+                Originally developed for Node.js, but is now the go to repository for all kinds of packages in modern JS development 
+ 
+                Contains open-source packages to include 3rd-party code in our own code (e.g React, jQuery, Leaflet, etc.)
+
+                NPM is both repository in which packages lives, and the program we use on the computer to install and manage these packages
+
+        Build Process:
+            One big JS bundle is built which will deployed to the web server for production
+
+            Bundling - Joins all the modules into one file:
+                Important for two reasons:
+                    1. Older browsers don't support modules
+                    2. Better for performance to send less files, and bundling step compresses the code
+
+            Transpiling/Polyfilling - Convert modern JS back to ES5:
+                Transpiling - Converts code writtern in (newer) ES versions to other (older) ones
+
+                Polyfilling - Implements features in JS that is unavailable in the current JS environment; Commonly used for features that can't be transpiled
+
+                Usually done using a tool called Babel
+
+            We don't do the build process ourselves, and use build tools:
+                Webpack and Parcel are the common "JS Bundlers" developer tools:
+                    Webpack is the more popular one but can be more configuration intensive
+
+                    Parcel is 0 configuration and requires no setup code
+
+                These development tools are also on NPM
+
+        Production: 
+            Production means the application is used by real users in the real world
+
+        Development -> Build Process -> Production
