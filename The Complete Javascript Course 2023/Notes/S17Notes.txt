@@ -3,6 +3,7 @@ L268 Section Intro
 
 L269 Section Roadmap
 
+
 L270 An Overview of Modern JavaScript Development
     Modern JavaScript Development:
         Development: 
@@ -97,7 +98,7 @@ L271 An Overview of Modules in JavaScript
 
                 Possible thanks to top-level ("static") imports, which makes imports known BEFORE execution
 
-                This makes budnling and dead code elimination possible
+                This makes bundling and dead code elimination possible
         ->
         ASYNCHRONOUS downloading of modules (but run synchronously)
         ->
@@ -107,7 +108,4 @@ L271 An Overview of Modules in JavaScript
         Execution of modules
         ->
         Execution of main script
-        
-
-
 
