@@ -91,7 +91,13 @@ L271 An Overview of Modules in JavaScript
         imports are hoisted
 
     How ES6 Modules are imported:
-        Parsing the main script (read the code without execution) is when imports are hoisted
+        Parsing the main script (read the code without execution) is when imports are hoisted:
+            Import Modules Before Execution:
+                Modules are imported SYNCHRONOUSLY (as in, the main script is only executed AFTER all the imported modules are downloaded and executed)
+
+                Possible thanks to top-level ("static") imports, which makes imports known BEFORE execution
+
+                This makes budnling and dead code elimination possible
         ->
         ASYNCHRONOUS downloading of modules (but run synchronously)
         ->
@@ -101,14 +107,7 @@ L271 An Overview of Modules in JavaScript
         Execution of modules
         ->
         Execution of main script
-
-        Import Modules Before Execution:
-            Modules are imported SYNCHRONOUSLY (as in, the main script is only executed AFTER all the imported modules are downloaded and executed)
-
-            Possible thanks to top-level ("static") imports, which makes imports known BEFORE execution
-
-            This makes budnling and dead code elimination possible
-
+        
 
 
 
