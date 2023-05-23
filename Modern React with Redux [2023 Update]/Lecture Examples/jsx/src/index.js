@@ -22,14 +22,32 @@ function App() {
   // return <h1>{time}</h1>;
   // return <h1>{new Date().toLocaleTimeString()}</h1>;
 
-  const name = "Samantha";
-  const age = 23;
+  // // You can mix in plain text and multiple variables similar to template literals in JS
+  // const name = "Samantha";
+  // const age = 23;
 
-  // You can mix in plain text and multiple variables similar to template literals in JS
+  // return (
+  //   <h1>
+  //     Hi, my name is {name} and my age is {age}
+  //   </h1>
+  // );
+
+  // JSX Prop(ertie)s System is similar to HTML attributes, and customize an element using property=value pairs
+  // Trying to display an object doesn't work, but providing it to a prop as options is OK
+  const inputType = "number";
+  const minValue = 5;
+
+  const message = "Enter age";
+
   return (
-    <h1>
-      Hi, my name is {name} and my age is {age}
-    </h1>
+    <input
+      type={inputType}
+      min={minValue}
+      max={10}
+      list={[1, 2, 3]}
+      style={{ border: "3px solid red", color: "red" }}
+      alt={message}
+    />
   );
 }
 
