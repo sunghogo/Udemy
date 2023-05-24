@@ -50,7 +50,6 @@ lastPost.then(last => console.log(last));
 // Not very clean
 const lastPost2 = await getLastPost();
 console.log(lastPost2);
-*/
 
 // 274. The Module Pattern
 const ShoppingCart2 = (function () {
@@ -83,3 +82,17 @@ ShoppingCart2.addToCart('pizza', 2);
 console.log(ShoppingCart2);
 console.log(ShoppingCart2.shippingCost); // Not accessible because not exported and made private
 console.dir(ShoppingCart2);
+*/
+
+// L275 CommonJS Modules
+
+// Export
+// export.addToCart = function (product, quantity) {
+//     cart.push({ product, quantity });
+//     console.log(
+//       `${quantity} ${product} added to cart (shipping cost is ${shippingCost})`
+//     );
+//   };
+
+// Import
+// const { addToCart } = require('./shoppingCart.js')
