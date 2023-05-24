@@ -109,3 +109,60 @@ L271 An Overview of Modules in JavaScript
         ->
         Execution of main script
 
+
+L272 Exporting and Importing in ES6 Modules
+    For module files, it's convention to using camelcase names
+
+    Importing modules:
+        import 'module path':
+            './' path is relative to the module file that is importing, not the HTML file
+
+            If we want to import modules in a JS file, then we have specify in HTML that the JS file is of <script type="module" src="JS file path"></script>
+
+        Code in all the modules that are imported is parsed and executed first
+
+        Import statements are hoisted to the top
+
+        All modules are executed in "use strict" mode by default
+
+        All variables declared inside a module are scoped to this module, and all top-level variables are private (unlike scripts)
+
+    Exporting modules:
+        Two types of exports:
+            1. Named exports - specify/name exports
+            2. Default exports - export only one (default) thing per module
+
+        export 'variable/function/etc... declaration'
+        OR
+        export {'export name 1', 'export name 2', etc...}:
+            Need to be followed up in the importing module:
+                import {'variable/function/etc... name'} from 'imported module path'
+
+            exports are typically listed at the end of the module
+
+            exports can only happen in top-level code (and not nested in blocks)
+
+    'as' keyword can be used to set a different name to the variables/functions from BOTH import and export statements
+
+    '*' can be used to import or export everything:
+        import/export * as 'namespace object name' (from 'module path')
+
+        import * can be specified into a namespace object using 'as':
+            Imports has to be referenced as a property/method of the specified namespace
+
+    Exporting modules are basically exporting like a public API, just like a class
+
+    'default' keyword is used to specify the one VALUE that we want to export:
+        export default 'expression'
+
+        import 'any name' from 'imported module path'
+
+        Since there is only one default value exported, we can specify it using any name without {}
+
+    You can mix multiple named and default imports/exports, but in practice this is not done due to messy code
+
+    The preferred style is to use one default export per module, but this is not a rigid rule
+
+    Exports are live connections, so imports are NOT copies of the original variables and objects of the exports:
+        Mutating them in the import module also mutates them in the export modules since imports are pointers to the same placein memory of the exports
+
