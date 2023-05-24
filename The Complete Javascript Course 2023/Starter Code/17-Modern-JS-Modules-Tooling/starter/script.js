@@ -24,3 +24,26 @@ add('apples', 4);
 
 // Exports are live connections
 console.log(cart);
+
+// L273 Top-Level await (ES2022)
+// console.log('Start fetching');
+// const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+// const data = await res.json();
+// console.log(data);
+// console.log('Something');
+
+const getLastPost = async function () {
+  const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+  const data = await res.json();
+  console.log(data);
+
+  return { title: data.at(-1).title, text: data.at(-1).body };
+};
+
+const lastPost = getLastPost();
+console.log(lastPost); // Pending Promise
+lastPost.then(last => console.log(last));
+
+// Not very clean
+const lastPost2 = await getLastPost();
+console.log(lastPost2);
