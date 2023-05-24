@@ -178,3 +178,18 @@ L273 Top-Level await (ES2022)
     JSON Placeholder API contains fake data abouts posts, comments, etc.
 
     .at('index') (ES2022/ES13) array method can be used to retrieve element from array using postiive and negative numbers for the index
+
+
+L274 The Module Pattern
+    Main goal of module pattern used before native ES6 modules is to:
+     1. Encapsulate functionality to have private data 
+     2. To expose a public API
+
+     Best achieved using an IIFE to return an object with the methods and propertyies you want accessible publicly, and assigned it the results to a variable/"namespace"
+
+     This works due to closure
+
+     Problems arise if wanted one module per file, since we need to create different scripts and link them all in the HTML file:
+            1. Order of linked scripts MATTER
+            2. All the variables are living in the global scope
+            3. Can't use a module bundler to bundle them all together
