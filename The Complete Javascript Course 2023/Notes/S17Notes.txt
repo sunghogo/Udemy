@@ -166,3 +166,15 @@ L272 Exporting and Importing in ES6 Modules
     Exports are live connections, so imports are NOT copies of the original variables and objects of the exports:
         Mutating them in the import module also mutates them in the export modules since imports are pointers to the same placein memory of the exports
 
+
+L273 Top-Level await (ES2022)
+    await can now be used outside of async function for top-level modules and functions (ES2022/ES13):
+        Using top-level awaits will BLOCK the entire execution of the module now, which may not be something we want
+
+        Can now use top-level await to extract fulfilled promise values instead of having to use .then() or async/awaits
+
+        Top-level awaits in an exporting module will also BLOCK the execution of the importing module, allowing control of code execution across modules
+
+    JSON Placeholder API contains fake data abouts posts, comments, etc.
+
+    .at('index') (ES2022/ES13) array method can be used to retrieve element from array using postiive and negative numbers for the index
