@@ -193,3 +193,23 @@ L274 The Module Pattern
             1. Order of linked scripts MATTER
             2. All the variables are living in the global scope
             3. Can't use a module bundler to bundle them all together
+
+    
+L275 CommonJS Modules
+    Besides Module Pattern and native ES6 modules, there were other module systems used in the past:
+        1. AMD modules
+        2. CommonJS modules
+
+    CommonJS modules are important because they have been used by Node.js almost for all its existence (until recent replacement by ES6 modules):
+        As a consequence, almost all the modules in the NPM repository still use the CommonJS system
+
+    Remeber Node.js is a way of running JS on a web server outside of the browser
+
+    CommonJS:
+        One file is one module
+
+        export.'name of the export' = 'expression':
+            This export keyword is an object defined in Node.jS and does NOT run in our browser
+
+        const { 'name of import' } = require('module path'):
+            Once again, this require keyword is defined only in Node.js and NOT the browser
