@@ -237,3 +237,47 @@ L276 A Brief Introduction to the Command Line
     mv 'filename' 'new directory' (UNIX) to move files to another directory/folder
 
     rmdir 'directory name' (UNIX/Windows) to delete directories
+
+
+L277 Introduction to NPM
+    Node Package Manager (NPM) is both a software on our computer and a package repository
+
+    Back in the days, we would include external libraries right into the HTML using <script> and expose global variables, but this creates problems for big projects:
+        1. This is not manageable, and loading all our scripts in the html will become messy
+        2. We would download library files to our computer directly, and would have to change it in the <script> tag every time it was updated
+        3. Before NPM, there was no single repository that contained all the packages we might need, so we would have to manually download and manage them
+
+    Check for Node.js/NPM installation and version
+        node -v / npm -v:
+
+        npm v6 < is good
+
+    To initialize a project, and create a package.json file, go into the project directory and:
+        npm init
+
+        This will ask a couple questions:
+            Name of the package (which defaults to whatever is in the parenthesescd)
+
+    To install a library/dependency:
+        npm install 'dependency name'
+        or
+        npm i 'dependency name'
+
+        This will:
+            1. Creates/adds the dependency to the "dependency" property in package.json and package-lock.json
+            2. Creates/adds the dependency to the node_modules directory
+
+        npm i:
+            Using this command without specifying anything will reach into the package.json file and automatically download any dependency
+
+    To actually use the depndency, it would be difficult without a module bundler since many libraries use the CommonJS module system that does NOT WORK in JS browser environment
+
+    Popular libraries:
+        Lodash - A collection of ton of useful functions for arrays, objects, functions, dates, and more:
+            "lodash-es" is the ES version that works natively with JS 
+
+    Lodash:
+        cloneDeep() function is able to clone a deeply nested object that no longer references the original on heap
+
+    If you want to move or share you project to another computer and check it into version control like git, NEVER include the huge node_modules folder:
+        Use the package.json file and 'npm i' to reinstall any dependencies again
