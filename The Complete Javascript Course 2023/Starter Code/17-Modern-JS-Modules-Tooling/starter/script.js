@@ -98,7 +98,9 @@ console.dir(ShoppingCart2);
 // const { addToCart } = require('./shoppingCart.js')
 
 // L277 Introduction to NPM
-import cloneDeep from './node_modules/lodash-es/cloneDeep.js';
+// L278 Bundling With Parcel and NPM Scripts
+// import cloneDeep from './node_modules/lodash-es/cloneDeep.js';
+import cloneDeep from 'lodash-es';
 
 const state = {
   cart: [
@@ -116,3 +118,16 @@ state.user.loggedIn = true;
 const stateDeepClone = cloneDeep(state);
 state.user.loggedIn = false;
 console.log(stateDeepClone); // user: {loggedIn: true}
+
+// Import code from before
+import add, { cart } from './shoppingCart.js';
+add('pizza', 2);
+add('bread', 5);
+add('apples', 4);
+
+console.log(cart);
+
+// Hot module replacement
+if (module.hot) {
+  module.hot.accept();
+}
