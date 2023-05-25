@@ -213,3 +213,27 @@ L275 CommonJS Modules
 
         const { 'name of import' } = require('module path'):
             Once again, this require keyword is defined only in Node.js and NOT the browser
+
+    
+L276 A Brief Introduction to the Command Line
+    In VS Code integrated terminal, the shell used will be different depending on the OS (UNIX/Max vs Windows)
+
+    ls (UNIX) / dir (Windows) will show the files in the current directory/folder
+
+    cd 'directory name' (UNIX/WINDOWS) to change directory:
+        cd .. to move to parent directory
+        cd 'directory name'
+        cd ../.. to move up 2 directories
+
+    clear (UNIX/WINDOWS) to clear the terminal log
+
+    mkdir 'directory name' (UNIX/Windows) to make a new directory/folder
+
+    touch 'filename 1' 'filename 2' 'etc...' (UNIX) to create or update date accessed a file
+
+    rm 'filename' (UNIX) and del (Windows) to delete files:
+        -r flag recursively deletes all files in a directory, and then the directory itself
+
+    mv 'filename' 'new directory' (UNIX) to move files to another directory/folder
+
+    rmdir 'directory name' (UNIX/Windows) to delete directories
