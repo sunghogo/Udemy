@@ -281,3 +281,65 @@ L277 Introduction to NPM
 
     If you want to move or share you project to another computer and check it into version control like git, NEVER include the huge node_modules folder:
         Use the package.json file and 'npm i' to reinstall any dependencies again
+
+
+L278 Bundling With Parcel and NPM Scripts
+    Parcel is just another build tool that is on NPM, and easy to setup and use:
+        npm i parcel --save-dev:
+            '--save-dev' specifies this dependency as a "devDependency" in package.json
+            
+            A "devDependency" is a tool we need to build our application, but is not included in our code
+
+        parcel 'index.html':
+            This will build and start the development server
+
+            This does not work with locally installed pacakges, only globally installed packages
+
+        parcel build 'index.html':
+            This will do the final build with compression and dead code elimination
+
+            Delete "main" property in package-json if entry point is HTML (parcel.html) since this will create an error as "main" specifies entry point for npm
+
+    To still be able to work with parcel we can use:
+        1. NPX - An application build into NPM:
+            npx parcel 'index.html'
+
+            This will:
+                1. Bundle up all the modules imported in index.html and its scripts/modules
+                2. Start a development server
+
+        2. NPM scripts - Running locally installed packages in the command line using scripts in package.json (this is how it's done in practice):
+            Specify "script name": "cl commands" in package.json
+
+            Can then run the scripts using:
+                npm run 'script name'
+
+    NPM commands:
+        npm i 'dependency'@'version'
+
+        npm uninstall 'dependency'
+
+        npm i 'dependency' -g:
+            This will install the package globally instead of locally, and will allow us to use commands (like "live-server")
+
+            However, tools will recommend developers to install the packages locally so that they can always stay on top of the latest version
+
+    Parcel:
+        Parcel will bundle the files and create a dist directory, which contains the files actually sent to our endusers:
+            The build step will have Parcel  inject and modify its own code so that the dependencies are directly inside the same script
+
+            Everytime we save the original files, Parcel will rebuild its dist files
+
+        Hot Module Reloading - Whenever we change one of the modules and trigger a rebuild, the new modified bundle with automatically will be injected into the browser without having to reload:
+            Useful for maintaining state
+
+            Requires this line of code in the module that is only read and executed by Parcel:
+                if (module.hot) {
+                  module.hot.accept();
+                }
+
+        Parcel will also parse dependency paths, so in import statement, we only need to specify the dependency name as found in package.json:
+            Works with all kinds assets like HTML, CSS, SaSS files, images, and modules (ES6 and CommonJS)
+
+    Wheneer we are done developing, we have to build the final bundle that is compressed and has dead code elimination:
+        parcel build 'index.html'
