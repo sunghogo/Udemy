@@ -1,8 +1,11 @@
 // L281 Let's Fix Some Bad Code: Part 1
+// L283 Let's Fix Some Bad Code: Part 2
+
+'strict mode';
 
 // Change all var declaratiosn to const/lim
 
-const budget = [
+const budget = Object.freeze([
   { value: 250, description: 'Sold old TV 📺', user: 'jonas' },
   { value: -45, description: 'Groceries 🥑', user: 'jonas' },
   { value: 3500, description: 'Monthly salary 👩‍💻', user: 'jonas' },
@@ -11,78 +14,83 @@ const budget = [
   { value: -20, description: 'Candy 🍭', user: 'matilda' },
   { value: -125, description: 'Toys 🚂', user: 'matilda' },
   { value: -1800, description: 'New Laptop 💻', user: 'jonas' },
-];
+]);
+// budget[0].value = 10000;
+// budget[9] = 'jonas'; // Unacceptable
 
 // limits -> spendingLimits
-const spendingLimits = {
+const spendingLimits = Object.freeze({
   jonas: 1500,
   matilda: 100,
-};
+});
+// spendingLimits.jay = 200; // Unacceptable
+// console.log(spendingLimits);
 
 // Refactor repeated code into functions
-const getLimit = user => spendingLimits?.[user] ?? 0;
+// Pass in all arguments used so it doesn't have to look up in the scope chain
+const getLimit = (limits, user) => limits?.[user] ?? 0;
 
 // add -> addExpense
-const addExpense = function (value, description, user = 'jonas') {
-  // if (!user) user = 'jonas'; // Use default parameers
-  user = user.toLowerCase();
+// Impure function
+// Is now a pure function :D
+const addExpense = function (
+  state,
+  limits,
+  value,
+  description,
+  user = 'jonas'
+) {
+  // Use default parameers
+  // Avoid data mutations
+  const cleanUser = user.toLowerCase();
 
-  // let lim;
-  // if (spendingLimits[user]) {
-  //   lim = spendingLimits[user];
-  // } else {
-  //   lim = 0;
-  // }
   // Use ternary operator
-  // const limit = spendingLimits[user] ? spendingLimits[user] : 0;
   // Cleaner code by using optional chaining and null coalescing operator
-  const limit = getLimit(user);
-
-  if (value <= limit) {
-    // budget.push({ value: -value, description: description, user: user });
-    // With enchanged literal syntax, don't need to repeat
-    budget.push({ value: -value, description, user });
-  }
+  // Use refactored function directly into the conditional
+  // With enchanged literal syntax, don't need to repeat
+  // Do not mutate original data
+  return value <= getLimit(limits, cleanUser)
+    ? [...state, { value: -value, description, user: cleanUser }]
+    : state;
 };
-addExpense(10, 'Pizza 🍕');
-addExpense(100, 'Going to movies 🍿', 'Matilda');
-addExpense(200, 'Stuff', 'Jay');
-console.log(budget);
+const newBudget1 = addExpense(budget, spendingLimits, 10, 'Pizza 🍕');
+const newBudget2 = addExpense(
+  newBudget1,
+  spendingLimits,
+  100,
+  'Going to movies 🍿',
+  'Matilda'
+);
+const newBudget3 = addExpense(newBudget2, spendingLimits, 200, 'Stuff', 'Jay');
+// console.log(newBudget1);
+// console.log(newBudget2);
+console.log(newBudget3);
 
-const checkExpenses = function () {
-  for (const entry of budget) {
-    // let lim;
-    // if (spendingLimits[entry.user]) {
-    //   lim = spendingLimits[entry.user];
-    // } else {
-    //   lim = 0;
-    // }
-    // Cleaner code using optional chaining and null coalescing operator
-    // Call code as a function in the conditional directly
-    if (entry.value < -getLimit(entry.user)) {
-      entry.flag = 'limit';
-    }
-  }
-};
-checkExpenses();
+// Impure function
+// Pure function :D
+const checkExpenses = (state, limits) =>
+  // Cleaner code using optional chaining and null coalescing operator
+  // Call refactored code as a function in the conditional directly
+  // Do not mutate original state
+  state.map(entry =>
+    entry.value < -getLimit(limits, entry.user)
+      ? { ...entry, flag: 'limit' }
+      : entry
+  );
+const finalBudget = checkExpenses(newBudget3, spendingLimits);
+console.log(finalBudget);
 
-const logBigExpenses = function (bigLimit) {
-  let output = '';
-  for (const entry of budget)
-    output +=
-      entry.value <= -bigLimit ? `${entry.description.slice(-2)} / ` : '';
-  // {
-  //   if (entry.value <= -bigLimit) {
-  // output += entry.description.slice(-2) + ' / '; // Emojis are 2 chars
-  // Use template literals
-  // output += `${entry.description.slice(-2)} / `;
-  // }
-  // }
+// Impure function due to console.log
+const logBigExpenses = function (state, bigLimit) {
   // Replace if statement with ternary
+  // Avoid mutating output string variable
+  const bigExpenses = state
+    .filter(entry => entry.value <= -bigLimit)
+    .map(entry => entry.description.slice(-2))
+    .join(' / ');
+  // .reduce((str, cur) => `${str} / ${cur.description.slice(-2)}`, '');
 
-  output = output.slice(0, -2); // Remove last '/ '
-  console.log(output);
+  console.log(bigExpenses);
 };
 
-console.log(budget);
-logBigExpenses(500);
+logBigExpenses(finalBudget, 500);
