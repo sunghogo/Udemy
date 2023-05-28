@@ -166,3 +166,180 @@ L272 Exporting and Importing in ES6 Modules
     Exports are live connections, so imports are NOT copies of the original variables and objects of the exports:
         Mutating them in the import module also mutates them in the export modules since imports are pointers to the same placein memory of the exports
 
+
+L273 Top-Level await (ES2022)
+    await can now be used outside of async function for top-level modules and functions (ES2022/ES13):
+        Using top-level awaits will BLOCK the entire execution of the module now, which may not be something we want
+
+        Can now use top-level await to extract fulfilled promise values instead of having to use .then() or async/awaits
+
+        Top-level awaits in an exporting module will also BLOCK the execution of the importing module, allowing control of code execution across modules
+
+    JSON Placeholder API contains fake data abouts posts, comments, etc.
+
+    .at('index') (ES2022/ES13) array method can be used to retrieve element from array using postiive and negative numbers for the index
+
+
+L274 The Module Pattern
+    Main goal of module pattern used before native ES6 modules is to:
+     1. Encapsulate functionality to have private data 
+     2. To expose a public API
+
+     Best achieved using an IIFE to return an object with the methods and propertyies you want accessible publicly, and assigned it the results to a variable/"namespace"
+
+     This works due to closure
+
+     Problems arise if wanted one module per file, since we need to create different scripts and link them all in the HTML file:
+            1. Order of linked scripts MATTER
+            2. All the variables are living in the global scope
+            3. Can't use a module bundler to bundle them all together
+
+    
+L275 CommonJS Modules
+    Besides Module Pattern and native ES6 modules, there were other module systems used in the past:
+        1. AMD modules
+        2. CommonJS modules
+
+    CommonJS modules are important because they have been used by Node.js almost for all its existence (until recent replacement by ES6 modules):
+        As a consequence, almost all the modules in the NPM repository still use the CommonJS system
+
+    Remeber Node.js is a way of running JS on a web server outside of the browser
+
+    CommonJS:
+        One file is one module
+
+        export.'name of the export' = 'expression':
+            This export keyword is an object defined in Node.jS and does NOT run in our browser
+
+        const { 'name of import' } = require('module path'):
+            Once again, this require keyword is defined only in Node.js and NOT the browser
+
+    
+L276 A Brief Introduction to the Command Line
+    In VS Code integrated terminal, the shell used will be different depending on the OS (UNIX/Max vs Windows)
+
+    ls (UNIX) / dir (Windows) will show the files in the current directory/folder
+
+    cd 'directory name' (UNIX/WINDOWS) to change directory:
+        cd .. to move to parent directory
+        cd 'directory name'
+        cd ../.. to move up 2 directories
+
+    clear (UNIX/WINDOWS) to clear the terminal log
+
+    mkdir 'directory name' (UNIX/Windows) to make a new directory/folder
+
+    touch 'filename 1' 'filename 2' 'etc...' (UNIX) to create or update date accessed a file
+
+    rm 'filename' (UNIX) and del (Windows) to delete files:
+        -r flag recursively deletes all files in a directory, and then the directory itself
+
+    mv 'filename' 'new directory' (UNIX) to move files to another directory/folder
+
+    rmdir 'directory name' (UNIX/Windows) to delete directories
+
+
+L277 Introduction to NPM
+    Node Package Manager (NPM) is both a software on our computer and a package repository
+
+    Back in the days, we would include external libraries right into the HTML using <script> and expose global variables, but this creates problems for big projects:
+        1. This is not manageable, and loading all our scripts in the html will become messy
+        2. We would download library files to our computer directly, and would have to change it in the <script> tag every time it was updated
+        3. Before NPM, there was no single repository that contained all the packages we might need, so we would have to manually download and manage them
+
+    Check for Node.js/NPM installation and version
+        node -v / npm -v:
+
+        npm v6 < is good
+
+    To initialize a project, and create a package.json file, go into the project directory and:
+        npm init
+
+        This will ask a couple questions:
+            Name of the package (which defaults to whatever is in the parenthesescd)
+
+    To install a library/dependency:
+        npm install 'dependency name'
+        or
+        npm i 'dependency name'
+
+        This will:
+            1. Creates/adds the dependency to the "dependency" property in package.json and package-lock.json
+            2. Creates/adds the dependency to the node_modules directory
+
+        npm i:
+            Using this command without specifying anything will reach into the package.json file and automatically download any dependency
+
+    To actually use the depndency, it would be difficult without a module bundler since many libraries use the CommonJS module system that does NOT WORK in JS browser environment
+
+    Popular libraries:
+        Lodash - A collection of ton of useful functions for arrays, objects, functions, dates, and more:
+            "lodash-es" is the ES version that works natively with JS 
+
+    Lodash:
+        cloneDeep() function is able to clone a deeply nested object that no longer references the original on heap
+
+    If you want to move or share you project to another computer and check it into version control like git, NEVER include the huge node_modules folder:
+        Use the package.json file and 'npm i' to reinstall any dependencies again
+
+
+L278 Bundling With Parcel and NPM Scripts
+    Parcel is just another build tool that is on NPM, and easy to setup and use:
+        npm i parcel --save-dev:
+            '--save-dev' specifies this dependency as a "devDependency" in package.json
+            
+            A "devDependency" is a tool we need to build our application, but is not included in our code
+
+        parcel 'index.html':
+            This will build and start the development server
+
+            This does not work with locally installed pacakges, only globally installed packages
+
+        parcel build 'index.html':
+            This will do the final build with compression and dead code elimination
+
+            Delete "main" property in package-json if entry point is HTML (parcel.html) since this will create an error as "main" specifies entry point for npm
+
+    To still be able to work with parcel we can use:
+        1. NPX - An application build into NPM:
+            npx parcel 'index.html'
+
+            This will:
+                1. Bundle up all the modules imported in index.html and its scripts/modules
+                2. Start a development server
+
+        2. NPM scripts - Running locally installed packages in the command line using scripts in package.json (this is how it's done in practice):
+            Specify "script name": "cl commands" in package.json
+
+            Can then run the scripts using:
+                npm run 'script name'
+
+    NPM commands:
+        npm i 'dependency'@'version'
+
+        npm uninstall 'dependency'
+
+        npm i 'dependency' -g:
+            This will install the package globally instead of locally, and will allow us to use commands (like "live-server")
+
+            However, tools will recommend developers to install the packages locally so that they can always stay on top of the latest version
+
+    Parcel:
+        Parcel will bundle the files and create a dist directory, which contains the files actually sent to our endusers:
+            The build step will have Parcel  inject and modify its own code so that the dependencies are directly inside the same script
+
+            Everytime we save the original files, Parcel will rebuild its dist files
+
+        Hot Module Reloading - Whenever we change one of the modules and trigger a rebuild, the new modified bundle with automatically will be injected into the browser without having to reload:
+            Useful for maintaining state
+
+            Requires this line of code in the module that is only read and executed by Parcel:
+                if (module.hot) {
+                  module.hot.accept();
+                }
+
+        Parcel will also parse dependency paths, so in import statement, we only need to specify the dependency name as found in package.json:
+            Works with all kinds assets like HTML, CSS, SaSS files, images, and modules (ES6 and CommonJS)
+
+    Wheneer we are done developing, we have to build the final bundle that is compressed and has dead code elimination:
+        parcel build 'index.html'
