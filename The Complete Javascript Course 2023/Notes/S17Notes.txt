@@ -468,3 +468,13 @@ L282 Declarative and Functional JavaScript Principles
         2. Use the spread operator (...)
         3. Use the ternary (conditional) operator
         4. Use template literals
+
+
+L283 Let's Fix Some Bad Code: Part 2
+    Object.freeze('object') is used to make an object IMMUTABLE:
+        Only freeze the first level of the object / does not do a deep freeze:
+            There are 3rd party libraries to do a deep freeze
+
+    A function that produces side-effects are called "Impure Functions"
+
+    In the real world, would use currying to create a chain of operations without the use intermediate variables and composing to create one function which will then perform all these operations at once
