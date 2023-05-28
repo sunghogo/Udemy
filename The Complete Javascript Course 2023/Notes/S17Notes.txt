@@ -343,3 +343,41 @@ L278 Bundling With Parcel and NPM Scripts
 
     Wheneer we are done developing, we have to build the final bundle that is compressed and has dead code elimination:
         parcel build 'index.html'
+
+
+L279 Configuring Babel and Polyfilling
+    It's still important to transpile and polyfill our JS back into ES5 since many people have older OS
+
+    Parcel automatically uses Babel to transpile our code with good default settings
+
+    Babel is a JS compiler:
+        https://babeljs.io/docs/
+
+        A Babel transform plugin is a specific JS feature we want to transpile:
+            Instead of using single plugins, Babel uses presets which are a bunch of plugins bundled together
+
+        Babel can only transpile ES6 syntax (arrow functions, const/let, classes, spread operator), BUT not really for real new features added to the language like Promise:
+            For the features that are not easily transpiled, we polyfill them
+
+            Babel used to do polyfilling but now recommends importing another library, CoreJS
+
+    Parcel uses the @babel/preset-env:
+        This preset will automatically select which JS features should be compiled based on browser support
+
+        This only includes final features that passed the 4 stages of the ECMA process
+
+        Need to manually in include experimental plugins for features that are not finalized yet
+
+    Core-JS is a library used for polyfilling:
+        npm i core-js
+
+        import 'core-js/stable'
+
+        This will polyfill everything even if they are not used:
+            We can instead cherrypick the ones we use like this:
+                import 'core-js/stable/array/find'
+
+    Regenerator-Runtime is a library used to polyfill async functions:
+        npm i regenerator-runtime/runtime
+
+        import 'regenerator-runtime/runtime'
