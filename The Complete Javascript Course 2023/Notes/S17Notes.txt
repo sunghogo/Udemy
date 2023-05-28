@@ -425,3 +425,46 @@ L280 Review: Writing Clean and Modern JavaScript
 
 
 L281 Let's Fix Some Bad Code: Part 1
+
+
+L282 Declarative and Functional JavaScript Principles
+    Two fundamentally different ways of writing code (paradigms):
+        1. Imperative
+        2. Declarative
+
+    Imperative:
+        1. Programmer explains "HOW to do things"
+        2. We explain to the computer every single step it has to follow to achieve a result
+        3. Example: Step-by-step recipe of a cake
+
+    Declarative:
+        1. Programmer tells "WHAT to do"
+        2. We simply describe the way the computer should achieve the result
+        3. the HOW (step-by-step instructions) gets abstracted away
+        4. Example: Description of a cake
+
+    The declarative paradigm is a really big and popular programming paradigm, that has given rise to a sub-paradigm called functional programming that is now the modern way of writing JS code
+
+    Functional Programming:
+        1. Declarative programming paradigm
+        2. Based on the idea of writing software by combining many PURE FUNCTIONS, avoid SIDE EFFECTS and MUTATING DATA
+
+        Side-effect: Modification (mutation) of any data OUTSIDE of the function (mutating external variables. logging to console, writing DOM, etc.)
+
+        Pure function: Function without side-effects. Does not depend on external variables. GIVEN THE SAME INPUTS, ALWAYS RETURNS THE SAME OUTPUTS.
+
+        Immutability: State (data) is NEVER modified! Instead, state is copied and the copy is mutated and returned.
+
+        Examples: React (state is immutable), Redux
+
+    Functional Programming Techniques:
+        1. Try to avoid data mutations
+        2. Use built-in methods that don't produce side effects
+        3. Do data transformations with methods such as .map(), .filter(), and .reduce()
+        4. Try to avoid side effects in functions: this is of course not always possible or necessary!
+
+    Declarative Syntax:
+        1. Use array and object destructuring
+        2. Use the spread operator (...)
+        3. Use the ternary (conditional) operator
+        4. Use template literals
