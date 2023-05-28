@@ -422,3 +422,6 @@ L280 Review: Writing Clean and Modern JavaScript
             1. Consume promises with async/await for beat readability
             2. Whenever possible, run promises in Parallel (Promise.all)
             3. Handle errors and promise rejects
+
+
+L281 Let's Fix Some Bad Code: Part 1

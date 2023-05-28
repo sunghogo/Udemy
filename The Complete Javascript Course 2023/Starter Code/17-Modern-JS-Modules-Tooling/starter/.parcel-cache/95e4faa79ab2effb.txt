@@ -23,7 +23,7 @@
 154C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\node_modules\lodash-es\_assocIndexOf.js133295168801151121 0
 163C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\node_modules\core-js\features\symbol\metadata.js133297713838428040 0
 159C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\node_modules\core-js\stable\promise\index.js133297713833105176 0
-127C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\package.json133297714156257415 0
+127C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\package.json133297719559725072 0
 156C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\node_modules\svgo\plugins\cleanupAttrs.js133295180159332989 0
 146C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\node_modules\csso\cjs\index.cjs133295180161568718 0
 161C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\node_modules\core-js\actual\typed-array\set.js133297713844219036 0
@@ -34,7 +34,7 @@
 151C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\node_modules\csso\lib\replace\atrule133295180169401268 1
 166C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\node_modules\core-js\internals\engine-v8-version.js133297713811940806 0
 152C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\node_modules\core-js\internals\uid.js133297713851016742 0
-132C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\package-lock.json133297714156604654 0
+132C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\package-lock.json133297719560109896 0
 145C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\node_modules\dotenv-expand\lib133295180231089619 1
 164C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\node_modules\core-js\features\instance\reverse.js133297713842872714 0
 137C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\node_modules\path-type133295180154508289 1
@@ -49,10 +49,10 @@
 161C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\node_modules\entities\lib\encode-trie.d.ts.map133295180160515211 0
 159C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\node_modules\caniuse-lite\data\regions\MD.js133295180179069748 0
 164C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\node_modules\core-js\full\typed-array\for-each.js133297713826747856 0
-145C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\node_modules\@msgpackr-extract133297714156213431 1
+145C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\node_modules\@msgpackr-extract133297719559659615 1
 149C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\node_modules\lodash-es\uniqWith.js133295168810135709 0
 142C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\node_modules\posthtml\types133295180186283712 1
-119C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\dist133297715305154352 1
+119C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\dist133297720506485053 1
 162C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\node_modules\core-js\actual\object\to-string.js133297713848913418 0
 150C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\node_modules\nth-check\package.json133295180153942936 0
 157C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\node_modules\source-map-js\source-map.d.ts133295180159136826 0
@@ -84,7 +84,7 @@
 158C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\node_modules\type-fest\ts41\kebab-case.d.ts133295180161553999 0
 161C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\node_modules\core-js\features\regexp\search.js133297713843193631 0
 176C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\node_modules\caniuse-lite\data\features\html-media-capture.js133295180176485318 0
-127C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\node_modules133297714156213431 1
+127C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\node_modules133297719559659615 1
 148C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\node_modules\lodash-es\flatMap.js133295168806515374 0
 162C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\node_modules\@parcel\codeframe\src\codeframe.js133295180318696871 0
 171C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\node_modules\core-js\proposals\string-left-right-trim.js133297713846304093 0
@@ -97,7 +97,7 @@
 190C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\node_modules\css-select\node_modules\dom-serializer\lib\esm\foreignNames.js133295180387853830 0
 144C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\node_modules\htmlnano\test.js133295180187500452 0
 161C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\node_modules\cosmiconfig\dist\loaders.d.ts.map133295180167491875 0
-124C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\script.js133297714132266222 0
+124C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\script.js133297719840886905 0
 146C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\node_modules\lodash-es\clone.js133295168805813305 0
 147C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\node_modules\braces\lib\parse.js133295180157124184 0
 130C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\shoppingCart.js133294183399609031 0
@@ -115,7 +115,7 @@
 159C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\node_modules\caniuse-lite\data\regions\VI.js133295180184464556 0
 164C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\node_modules\core-js\modules\esnext.set.filter.js133297713820715529 0
 163C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\node_modules\core-js\features\clear-immediate.js133297713807925395 0
-146C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\node_modules\.package-lock.json133297714156793011 0
+146C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\node_modules\.package-lock.json133297719560321288 0
 173C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\node_modules\@parcel\transformer-postcss\lib\loadConfig.js133295180251803078 0
 134C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\node_modules\@babel133295180141333464 1
 181C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\node_modules\core-js\modules\es.typed-array.uint8-clamped-array.js133297713818120136 0
@@ -148,7 +148,7 @@
 167C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\node_modules\core-js\features\array\last-index-of.js133297713836324094 0
 181C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\node_modules\caniuse-lite\data\features\stricttransportsecurity.js133295180182663826 0
 155C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\node_modules\@parcel\workers\src\threads133295180239199761 1
-133C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\node_modules\@lmdb133297714156213431 1
+133C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\node_modules\@lmdb133297719559659615 1
 167C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\node_modules\core-js\features\async-iterator\find.js133297713824939329 0
 163C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\node_modules\@parcel\core\test\fixtures\main-mjs133295180383337451 1
 147C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\node_modules\dotenv\package.json133295180222049451 0
@@ -8581,7 +8581,7 @@
 164C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\node_modules\caniuse-lite\data\features\stream.js133295180182643762 0
 179C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\node_modules\caniuse-lite\data\features\subresource-integrity.js133295180182759379 0
 165C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\node_modules\caniuse-lite\data\features\svg-css.js133295180182803142 0
-130C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\dist\index.html133297715305004139 0
+130C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\dist\index.html133297717856249178 0
 169C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\node_modules\caniuse-lite\data\features\svg-filters.js133295180182823294 0
 171C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\node_modules\caniuse-lite\data\features\tabindex-attr.js133295180183096918 0
 175C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\node_modules\caniuse-lite\data\features\template-literals.js133295180183142080 0
@@ -10028,7 +10028,7 @@
 141C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\node_modules\.bin\svgo.ps1133295181307733165 0
 143C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\node_modules\.bin\terser.cmd133295181307733165 0
 141C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\dist\index.0ee76810.js.map133295228070437171 0
-137C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\dist\index.8cfc62b9.js133297714207251369 0
-141C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\dist\index.8cfc62b9.js.map133297714207307128 0
+137C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\dist\index.8cfc62b9.js133297720506390291 0
+141C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\dist\index.8cfc62b9.js.map133297720506461323 0
 137C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\dist\index.f87ed9b3.js133297715305014671 0
 141C:\Users\leina\Desktop\Udemy\The Complete Javascript Course 2023\Starter Code\17-Modern-JS-Modules-Tooling\starter\dist\index.f87ed9b3.js.map133297715305144371 0
