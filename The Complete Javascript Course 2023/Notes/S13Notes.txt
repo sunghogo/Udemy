@@ -5,3 +5,4 @@ L183. Section Roadmap
 
 
 L184. PROJECT: "Bankist" Website
+    href="#' will make the page jump to the top as the default behavior
