@@ -60,3 +60,21 @@ L185 How the DOM Really Works
 
     Inheritance of Methods and Properties:
         All the child types will have access to the properties and methods of all their parent node types
+
+
+L186 Selecting, Creating, and Deleting Elements
+    'document' is not the real DOM element, and need to select the actual document element
+
+    document selector properties:
+        1. document.documentElement
+        2. document.head
+        3. document.body
+
+    document selector methods:
+        1. document.querySelector(''/./#'selector name') (returns Node)
+        2. document.querySelectorAll(''/./#'selector name') (returns NodeList) 
+        3. document.getElementId('element ID')
+        4. document.getElementsByTagName('element tag') (returns HTMLCollection):
+            HTMLCollection is different from NodeList:
+                - HTMLCollection is a "live" connection meaning that if the DOM changes, then this collection is also immediately updated
+        5. document.getElementsByClassName('class name')

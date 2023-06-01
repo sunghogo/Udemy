@@ -1,5 +1,7 @@
 'use strict';
 
+// L184. PROJECT: "Bankist" Website
+// L186 Selecting, Creating, and Deleting Elements
 ///////////////////////////////////////
 // Modal window
 
@@ -29,3 +31,26 @@ document.addEventListener('keydown', function (e) {
     closeModal();
   }
 });
+
+// L186 Selecting, Creating, and Deleting Elements
+// Selecting Element
+console.log(document.documentElement);
+console.log(document.head);
+console.log(document.body);
+
+// Same as
+console.log(document.querySelector('head'));
+console.log(document.querySelector('body'));
+
+document.querySelector('.header');
+const allSections = document.querySelectorAll('.header');
+console.log(allSections);
+
+document.getElementById('section--1');
+const allButtons = document.getElementsByTagName('button');
+console.log(allButtons);
+
+console.log(document.getElementsByClassName('btn'));
+
+// Creating and inserting elements
+// .insertAdjacentHTML
