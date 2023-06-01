@@ -6,3 +6,57 @@ L183. Section Roadmap
 
 L184. PROJECT: "Bankist" Website
     href="#' will make the page jump to the top as the default behavior
+
+
+L185 How the DOM Really Works
+    DOM is the interface between JS code and HTML documents rendered in the web browser:
+        1. Allows us to make JS interact with the browser
+        2. We can write JS to:
+         - create, modify, and delete HTML elements
+         - set styles, classes, and attributes - listen and respond to events
+        3. DOM tree is generated from an HTML document, which we can then interact with
+        4. DOM is a very complex API that contains lots of methods and properties to interact with the DOM tree
+    
+    All these DOM methods and properties are organized into these different types of JS objects called "Node":
+        Node properties and methods:
+            1. Node.textContent / Node.value
+            2. Node.childNdoes
+            3. Node.parentNode
+            4. Node.cloneNode()
+
+        Node type has a couple of "child" types:
+            1. Element / HTMLElement (e.g. <P>Paragraph<P>):
+                Element type properties and methods:
+                    1. Element.innerHTML
+                    2. Element.classList
+                    3. Element.children
+                    4. Element.parentElement
+                    5. Element.append()
+                    6. Element.remove()
+                    7. Element.insertAdjacentHTML()
+                    8. Element.querySelector()
+                    9. Element.closest()
+                    10. Element.matches()
+                    11. Element.scrollIntoView()
+                    12. Element.setAttribute()
+
+                Element Node also has "child" types, one different type of HTMLElement per HTML element (e.g. HTMLButtonElement, HTMLDivElement, etc...)
+            2. Text (e.g. <p>PARAGRAPH<p>)
+            3. Comment (e.g. <!--COMMENT-->)
+            4. Document
+                Document type properties and methods:
+                    1. Document.querySelector()
+                    2. Document.createElement()
+                    3. Document.getElementById()
+
+    Node and Window types are also a "child" type of EventTarget:
+        EventTarget properties and methods:
+            1. EventTarger.addEventListener()
+            2. EventTarger.removeEventListener()
+
+        Window type is a Global object that has lots of methods and properties, many unrelated to DOM
+
+    We do not manually create these types, as they happened automatically behind the scenes
+
+    Inheritance of Methods and Properties:
+        All the child types will have access to the properties and methods of all their parent node types
