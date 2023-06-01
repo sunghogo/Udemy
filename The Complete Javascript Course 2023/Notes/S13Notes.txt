@@ -78,3 +78,20 @@ L186 Selecting, Creating, and Deleting Elements
             HTMLCollection is different from NodeList:
                 - HTMLCollection is a "live" connection meaning that if the DOM changes, then this collection is also immediately updated
         5. document.getElementsByClassName('class name')
+
+    document element insertion/creation/modification methods:
+        1. document.insertAdjacentHTML()
+        2. document.createElement('element type') (only creates a LIVE DOM element that can only be at one place2)
+        3. 'element'.classList.add/remove('class name')
+        4. 'element'.prepend('element')
+        5. 'element'.append('element')
+        6. 'element'.cloneNode(true)
+        7. 'element'.before('element')
+        8. 'element'.after('element')
+        9. 'element'.remove() (Recent addition to DOM) 
+        10. 'element'.parentNode.removeChild('element') (Old way to remove elements)
+
+    element properties:
+        1. 'element'.value
+        2. 'element'.textContent
+        3. 'element'.innerHTML
