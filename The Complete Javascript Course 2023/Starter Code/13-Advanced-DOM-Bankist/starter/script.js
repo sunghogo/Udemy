@@ -33,6 +33,7 @@ document.addEventListener('keydown', function (e) {
 });
 
 // L186 Selecting, Creating, and Deleting Elements
+// L187 Styles, Attributes and Classes
 // Selecting Element
 console.log(document.documentElement);
 console.log(document.head);
@@ -74,3 +75,29 @@ document
     // message.remove();
     message.parentNode.removeChild(message); // Old way
   });
+
+// Styles
+message.style.backgroundColor = '#37383d';
+message.style.width = '120%';
+
+console.log(message.style.color); // '', Only works for styles we set outselves
+console.log(message.style.backgroundColor); // rgb(55, 56, 61)
+
+console.log(getComputedStyle(message));
+console.log(getComputedStyle(message).color);
+console.log(getComputedStyle(message).height);
+
+message.style.height =
+  Number.parseFloat(getComputedStyle(message).height, 10) + 30 + 'px';
+
+document.documentElement.style.setProperty('--color-primary', 'orangered');
+
+// Attributes
+const logo = document.querySelector('.nav__logo');
+console.log(logo.alt);
+console.log(logo.src);
+console.log(logo.className);
+
+// Non-standard
+console.log(logo.designer); // undefined
+console.log(logo.getAttribute('designer')); // "Jonas"
