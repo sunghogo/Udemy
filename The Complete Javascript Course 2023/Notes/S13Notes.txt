@@ -123,13 +123,37 @@ L187 Styles, Attributes and Classes
         This means custom properties can be accessed using:
             document.documentElement.style.setProperty(--'custom property name', 'value')
 
-    Remember we can also access HTML attributes using attribute properties:
+    Remember we can also access/set HTML attributes using attribute properties:
         'element'.'attribute name'
 
-        'element'.className is used to access the class name of the element instead of ".class"
+        'element'.className is used to access/set the class name of the element instead of ".class"
 
         JS we automatically create these properties for attributes specified in the HTML:
             This only works for standard attributes, not custom ones
             
-        To access nonstnard attribtues:
+        To access nonstandard attribtues:
             'element'.getAttribute("'attribute'")
+
+        To set nonstandard attributes:
+            'element'.setAttribute("'attribute'", 'value')
+
+        For the src/href attribute:
+            1. 'element'.src will give the absolute URL
+            2. .getAttribute("src") will give the relative URL as shown in the HTML
+
+    Data attributes are a special type of attribute:
+        data-'data property name'='value'
+
+        This is accessed using:
+            'element'.dataset.'data property name'
+
+            Remember properties are in camelcase in this format
+
+    Classes can be access and modified using the the following methods:
+        1. 'element'.classList.add('class 1', class 2', etc...)
+        2. 'element'.classList.remove('class 1', class 2', etc...)
+        3. 'element'.classList.toggle('class')
+        4. 'element'.classList.contains('class')
+
+        You can also set classes using 'element'.className but this is not recommended as the value will override all the existing classes
+
