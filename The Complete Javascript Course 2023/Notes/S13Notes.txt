@@ -66,7 +66,7 @@ L186 Selecting, Creating, and Deleting Elements
     'document' is not the real DOM element, and need to select the actual document element
 
     document selector properties:
-        1. document.documentElement
+        1. document.documentElement (refers to the root <html> element)
         2. document.head
         3. document.body
 
@@ -121,7 +121,7 @@ L187 Styles, Attributes and Classes
         Custom properties are declared and accessed using '--' (e.g. --main-color: pink')
 
         This means custom properties can be accessed using:
-            document.documentElement.style.setProperty(--'custom property name', 'value')
+            document.documentElement.style.setProperty("--'custom property name'", 'value')
 
     Remember we can also access/set HTML attributes using attribute properties:
         'element'.'attribute name'
@@ -157,3 +157,18 @@ L187 Styles, Attributes and Classes
 
         You can also set classes using 'element'.className but this is not recommended as the value will override all the existing classes
 
+*** COURSE WAS SLIGHTLY REVISED ON 6/3/2023 SO LESSON NUMBERS WILL BE DIFFERENT ****
+
+L180 Implementing Smooth Scrolling
+    'element'.getBoundingClientRect() returns an object containing the the element's:
+        1. x/y coords (relative to topleft corner)
+        2. width/height 
+        3. top/bottom/left/right
+
+        All of these are relative the current viewport
+
+    'event'.target property returns the element the event occuring
+
+    window.pageXOffset/pageYOffset returns the current scrolling offset
+
+    document.documentElement.clientHeight/clientWidth returns the viewport height/width
