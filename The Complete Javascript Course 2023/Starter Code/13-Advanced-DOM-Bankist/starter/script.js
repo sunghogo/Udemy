@@ -2,6 +2,7 @@
 
 // L184. PROJECT: "Bankist" Website
 // L186 Selecting, Creating, and Deleting Elements
+// L180 Implementing Smooth Scrolling
 ///////////////////////////////////////
 // Modal window
 
@@ -32,6 +33,24 @@ document.addEventListener('keydown', function (e) {
   }
 });
 
+const btnScrollTo = document.querySelector('.btn--scroll-to');
+const section1 = document.querySelector('#section--1');
+
+btnScrollTo.addEventListener('click', function (e) {
+  const s1coords = section1.getBoundingClientRect();
+  console.log(s1coords);
+
+  console.log(e.target.getBoundingClientRect());
+
+  console.log(`Current Scroll (X/Y)`, window.pageXOffset, window.pageYOffset);
+
+  console.log(
+    `height/width viewport`,
+    document.documentElement.clientHeight,
+    document.documentElement.clientWidth
+  );
+});
+/*
 // L186 Selecting, Creating, and Deleting Elements
 // L187 Styles, Attributes and Classes
 // Selecting Element
@@ -125,3 +144,4 @@ console.log(logo.classList.contains('c')); // not includes as in arrays
 
 // Don't use as it overrides all existing classes with only one class
 logo.className = 'jonas';
+*/
