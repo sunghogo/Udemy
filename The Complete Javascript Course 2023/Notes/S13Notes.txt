@@ -95,3 +95,41 @@ L186 Selecting, Creating, and Deleting Elements
         1. 'element'.value
         2. 'element'.textContent
         3. 'element'.innerHTML
+
+
+L187 Styles, Attributes and Classes
+    Remember you can set element styles using the style property:
+        'element'.style.'style prop name'
+
+        The style properties are:
+            1. In camelcase
+            2. Will be in-line styles in the HTML
+            3. Values need the corresponding measurement values in string
+
+        Accessing the style property to reveal the values only works for the styles we SET OURSELVES
+
+    getComputedStyle('element') is used to access the properties and values of an element:
+        This returns an object with all the style properties
+            
+        .'style prop name' on top of this function is used to access individual style properties
+
+        This can be used to with Number.parseFloat('style properties value', 10) to retrieve number values with the measurements
+
+    CSS has "custom properties" which are like variables:
+        This is usually declared in CSS under :root pseudo-class that selects the root element of the DOM tree (the <html> element tag):
+
+        Custom properties are declared and accessed using '--' (e.g. --main-color: pink')
+
+        This means custom properties can be accessed using:
+            document.documentElement.style.setProperty(--'custom property name', 'value')
+
+    Remember we can also access HTML attributes using attribute properties:
+        'element'.'attribute name'
+
+        'element'.className is used to access the class name of the element instead of ".class"
+
+        JS we automatically create these properties for attributes specified in the HTML:
+            This only works for standard attributes, not custom ones
+            
+        To access nonstnard attribtues:
+            'element'.getAttribute("'attribute'")
