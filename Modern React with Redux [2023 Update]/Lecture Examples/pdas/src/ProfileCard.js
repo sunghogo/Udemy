@@ -1,6 +1,10 @@
 function ProfileCard(props) {
-  console.log(props);
-  return <div>Profile Card!!!</div>;
+  return (
+    <div>
+      <div>Title is {props.title}</div>
+      <div>Handle is {props.handle}</div>
+    </div>
+  );
 }
 
 export default ProfileCard;
