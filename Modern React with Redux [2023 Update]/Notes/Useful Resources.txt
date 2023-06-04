@@ -1,11 +1,15 @@
-React/JSX into JS code:
-babeljs.io/repl
+Section 2:
+    React/JSX into JS code:
+    babeljs.io/repl
 
-JSX Cheatsheet:
-https://jsx-notes.vercel.app/
+    JSX Cheatsheet:
+    https://jsx-notes.vercel.app/
 
-React Developer Tools Extension for Browsers:
-https://react.dev/learn/react-developer-tools
+Section 3:
+    React Developer Tools Extension for Browsers:
+    https://react.dev/learn/react-developer-tools
 
-CSS Libraries:
-https://bulma.io
+    CSS Libraries:
+    https://bulma.io
+
+Section 4:
