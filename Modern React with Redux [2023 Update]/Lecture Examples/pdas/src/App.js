@@ -20,21 +20,33 @@ function App() {
     <div>
       <div>Personal Digital Assistants</div>
 
-      <ProfileCard
-        title={Profiles.Alexa.title}
-        handle={Profiles.Alexa.handle}
-        image={Profiles.Alexa.image}
-      />
-      <ProfileCard
-        title={Profiles.Cortana.title}
-        handle={Profiles.Cortana.handle}
-        image={Profiles.Cortana.image}
-      />
-      <ProfileCard
-        title={Profiles.Siri.title}
-        handle={Profiles.Siri.handle}
-        image={Profiles.Siri.image}
-      />
+      <div className="container">
+        <section className="section">
+          <div className="columns">
+            <div className="column is-4">
+              <ProfileCard
+                title={Profiles.Alexa.title}
+                handle={Profiles.Alexa.handle}
+                image={Profiles.Alexa.image}
+              />
+            </div>
+            <div className="column is-4">
+              <ProfileCard
+                title={Profiles.Cortana.title}
+                handle={Profiles.Cortana.handle}
+                image={Profiles.Cortana.image}
+              />
+            </div>
+            <div className="column is-4">
+              <ProfileCard
+                title={Profiles.Siri.title}
+                handle={Profiles.Siri.handle}
+                image={Profiles.Siri.image}
+              />
+            </div>
+          </div>
+        </section>
+      </div>
     </div>
   );
 }
