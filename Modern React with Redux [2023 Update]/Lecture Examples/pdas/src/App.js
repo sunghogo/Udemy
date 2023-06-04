@@ -9,9 +9,9 @@ import SiriImage from "./images/siri.png";
 // console.log(SiriImage);
 
 const Profiles = {
-  Alexa: { title: "Alexa", handle: "@alexa99" },
-  Cortana: { title: "Cortana", handle: "@cortana32" },
-  Siri: { title: "Siri", handle: "@siri01" },
+  Alexa: { title: "Alexa", handle: "@alexa99", image: AlexaImage },
+  Cortana: { title: "Cortana", handle: "@cortana32", image: CortanaImage },
+  Siri: { title: "Siri", handle: "@siri01", image: SiriImage },
 };
 
 function App() {
@@ -22,12 +22,18 @@ function App() {
       <ProfileCard
         title={Profiles.Alexa.title}
         handle={Profiles.Alexa.handle}
+        image={Profiles.Alexa.image}
       />
       <ProfileCard
         title={Profiles.Cortana.title}
         handle={Profiles.Cortana.handle}
+        image={Profiles.Cortana.image}
       />
-      <ProfileCard title={Profiles.Siri.title} handle={Profiles.Siri.handle} />
+      <ProfileCard
+        title={Profiles.Siri.title}
+        handle={Profiles.Siri.handle}
+        image={Profiles.Siri.image}
+      />
     </div>
   );
 }
