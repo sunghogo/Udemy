@@ -10,15 +10,34 @@ import SiriImage from "./images/siri.png";
 // console.log(SiriImage);
 
 const Profiles = {
-  Alexa: { title: "Alexa", handle: "@alexa99", image: AlexaImage },
-  Cortana: { title: "Cortana", handle: "@cortana32", image: CortanaImage },
-  Siri: { title: "Siri", handle: "@siri01", image: SiriImage },
+  Alexa: {
+    title: "Alexa",
+    handle: "@alexa99",
+    image: AlexaImage,
+    description: "Alexa was created by Amazon and helps you buy things",
+  },
+  Cortana: {
+    title: "Cortana",
+    handle: "@cortana32",
+    image: CortanaImage,
+    description: "Cortana was made by Microsfot. Who knows what it does?",
+  },
+  Siri: {
+    title: "Siri",
+    handle: "@siri01",
+    image: SiriImage,
+    description: "Siri was made by Apple and is being phased out",
+  },
 };
 
 function App() {
   return (
     <div>
-      <div>Personal Digital Assistants</div>
+      <section className="hero is-primary">
+        <div className="hero-body">
+          <p className="title">Personal Digital Assistants</p>
+        </div>
+      </section>
 
       <div className="container">
         <section className="section">
@@ -28,6 +47,7 @@ function App() {
                 title={Profiles.Alexa.title}
                 handle={Profiles.Alexa.handle}
                 image={Profiles.Alexa.image}
+                description={Profiles.Alexa.description}
               />
             </div>
             <div className="column is-4">
@@ -35,6 +55,7 @@ function App() {
                 title={Profiles.Cortana.title}
                 handle={Profiles.Cortana.handle}
                 image={Profiles.Cortana.image}
+                description={Profiles.Alexa.description}
               />
             </div>
             <div className="column is-4">
@@ -42,6 +63,7 @@ function App() {
                 title={Profiles.Siri.title}
                 handle={Profiles.Siri.handle}
                 image={Profiles.Siri.image}
+                description={Profiles.Alexa.description}
               />
             </div>
           </div>

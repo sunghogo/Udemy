@@ -1,5 +1,5 @@
 // We can destructure the props object directly in the arguments to clean up code
-function ProfileCard({ title, handle, image }) {
+function ProfileCard({ title, handle, image, description }) {
   //   const { title, handle } = props;
 
   return (
@@ -15,6 +15,9 @@ function ProfileCard({ title, handle, image }) {
           <p className="title is-4">{title}</p>
           <p className="title is-6">{handle}</p>
         </div>
+
+        <br></br>
+        <div className="content">{description}</div>
       </div>
     </div>
   );
