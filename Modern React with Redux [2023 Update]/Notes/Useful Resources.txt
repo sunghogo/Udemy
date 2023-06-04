@@ -3,3 +3,6 @@ babeljs.io/repl
 
 JSX Cheatsheet:
 https://jsx-notes.vercel.app/
+
+React Developer Tools Extension for Browsers:
+https://react.dev/learn/react-developer-tools
