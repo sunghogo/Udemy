@@ -1,15 +1,19 @@
 Section 2: Creating Content with JSX
     React/JSX into JS code:
-    babeljs.io/repl
+        babeljs.io/repl
 
     JSX Cheatsheet:
-    https://jsx-notes.vercel.app/
+        https://jsx-notes.vercel.app/
 
 Section 3: Building with Reusable Components
     React Developer Tools Extension for Browsers:
-    https://react.dev/learn/react-developer-tools
+        https://react.dev/learn/react-developer-tools
 
     CSS Libraries:
-    https://bulma.io
+        https://bulma.io
 
 Section 4: State: How to Change Your App
+    Listing of event names:
+        https://reactjs.org/docs/events.html
+        https://react.dev/reference/react-dom/components/common#common-props 
+    
