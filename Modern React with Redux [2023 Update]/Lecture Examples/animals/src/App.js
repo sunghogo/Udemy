@@ -1,21 +1,28 @@
 import { useState } from "react";
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  //   console.log(useState(50));
+  const [animals, setAnimals] = useState([]);
 
   const handleClick = () => {
-    setCount(count + 1);
+    const prob = Math.random();
+    let type;
+    while (!type && type !== "retry") {
+      type =
+        prob < 0.33
+          ? "cow"
+          : prob < 0.66
+          ? "bird"
+          : prob < 0.99
+          ? "horse"
+          : "retry";
+    }
+    setAnimals([...animals, type]);
   };
-
-  // NEVER GOING TO...
-  // count = 123
 
   return (
     <div>
       <button onClick={handleClick}>Add Animal</button>
-      <div>Number of animals: {count}</div>
+      <div>{animals}</div>
     </div>
   );
 }
