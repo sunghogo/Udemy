@@ -3,6 +3,8 @@ import { useState } from "react";
 function App() {
   const [count, setCount] = useState(0);
 
+  //   console.log(useState(50));
+
   const handleClick = () => {
     setCount(count + 1);
   };
