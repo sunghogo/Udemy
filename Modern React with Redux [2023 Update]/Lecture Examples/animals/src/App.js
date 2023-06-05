@@ -1,10 +1,12 @@
 import { useState } from "react";
+import AnimalShow from "./Animal";
 
 function getRandomAnimal() {
   const animals = ["bird", "cat", "cow", "dog", "gator", "horse"];
 
   return animals[Math.floor(Math.random() * animals.length)];
 }
+
 function App() {
   const [animals, setAnimals] = useState([]);
 
@@ -12,10 +14,14 @@ function App() {
     setAnimals([...animals, getRandomAnimal()]);
   };
 
+  const renderedAnimals = animals.map((animal, i) => {
+    return <AnimalShow type={animal} key={i} />;
+  });
+
   return (
     <div>
       <button onClick={handleClick}>Add Animal</button>
-      <div>{animals.join(" ")}</div>
+      <div>{renderedAnimals}</div>
     </div>
   );
 }
