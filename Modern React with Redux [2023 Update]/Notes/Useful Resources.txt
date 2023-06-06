@@ -17,3 +17,6 @@ Section 4: State: How to Change Your App
         https://reactjs.org/docs/events.html
         https://react.dev/reference/react-dom/components/common#common-props 
     
+Section 6: How to Handle Forms
+    State updates cheat sheet:
+        https://state-updates.vercel.app/
