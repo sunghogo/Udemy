@@ -5,7 +5,10 @@ function App() {
   const [books, setBooks] = useState([]);
 
   const createBook = (title) => {
-    const updatedBooks = [...books, { id: 123, title }];
+    const updatedBooks = [
+      ...books,
+      { id: Math.round(Math.random() * 99999), title },
+    ];
     setBooks(updatedBooks);
   };
   const handleBook = () => {};
@@ -13,7 +16,7 @@ function App() {
 
   return (
     <div>
-      {books.map((e) => e.title).join(" ")}
+      {books.map((e) => e.id).join(" ")}
       <BookCreate onCreate={createBook} />
     </div>
   );
