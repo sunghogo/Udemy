@@ -5,7 +5,7 @@ function ImageList({ images }) {
     return <ImageShow image={image} />;
   });
 
-  return <div>{renderedImages} </div>;
+  return <div>{renderedImages}</div>;
 }
 
 export default ImageList;
