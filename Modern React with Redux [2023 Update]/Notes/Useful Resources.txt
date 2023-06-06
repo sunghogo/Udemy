@@ -20,3 +20,7 @@ Section 4: State: How to Change Your App
 Section 6: How to Handle Forms
     State updates cheat sheet:
         https://state-updates.vercel.app/
+
+    Development and Practice Application Random Pictures API:
+        https://picusm.photos
+        
