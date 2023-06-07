@@ -12,7 +12,11 @@ function Button({
   rounded,
 }) {
   // Underlying/Wrapper Element
-  return <button className="bg-red-500">{children}</button>;
+  return (
+    <button className="px-3 py-1.5 border border-blue-700 bg-blue-500 text-white">
+      {children}
+    </button>
+  );
 }
 
 Button.propTypes = {
