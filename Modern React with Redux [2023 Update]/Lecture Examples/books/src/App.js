@@ -31,10 +31,15 @@ function App() {
     setBooks(updatedBooks);
   };
 
-  const editBookById = (id, newTitle) => {
+  const editBookById = async (id, newTitle) => {
+    const response = await axios.put(`http://localhost:3001/books/${id}`, {
+      title: newTitle,
+    });
+
     const updatedBooks = books.map((book) =>
       book.id === id ? { ...book, title: newTitle } : book
     );
+
     setBooks(updatedBooks);
   };
 
