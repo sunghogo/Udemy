@@ -2,22 +2,26 @@ import Button from "./Button";
 import { GoBell, GoCloudDownload, GoDatabase } from "react-icons/go";
 
 function App() {
+  const handleClick = () => {
+    console.log("Click!!!");
+  };
+
   return (
     <div>
       <div>
-        <Button success rounded outline>
+        <Button success rounded outline onClick={handleClick}>
           <GoBell />
           Click Me!!!
         </Button>
       </div>
       <div>
-        <Button danger outline>
+        <Button danger outline onMouseEnter={handleClick}>
           <GoCloudDownload />
           Buy Now!
         </Button>
       </div>
       <div>
-        <Button warning>
+        <Button warning onMouseLeave={handleClick}>
           <GoDatabase />
           See Deal!
         </Button>

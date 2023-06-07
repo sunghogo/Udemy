@@ -11,6 +11,7 @@ function Button({
   danger,
   outline,
   rounded,
+  ...rest
 }) {
   // Later classNames styling will take priority for conflicting styles (but not for all styling?)
   const classes = className("flex items-center px-3 py-1.5 border", {
@@ -29,10 +30,13 @@ function Button({
     "text-yellow-500": outline && warning,
     "text-red-500": outline && danger,
   });
-  console.log(classes);
 
   // Underlying/Wrapper Element
-  return <button className={classes}>{children}</button>;
+  return (
+    <button className={classes} {...rest}>
+      {children}
+    </button>
+  );
 }
 
 Button.propTypes = {
