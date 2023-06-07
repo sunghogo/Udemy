@@ -24,3 +24,6 @@ Section 6: How to Handle Forms
     Development and Practice Application Random Pictures API:
         https://picusm.photos
         
+Section 7: Data Persistence with API Requests
+    REST Client VSCode Extension
+        
