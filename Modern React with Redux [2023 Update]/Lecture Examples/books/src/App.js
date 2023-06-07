@@ -6,6 +6,12 @@ import axios from "axios";
 function App() {
   const [books, setBooks] = useState([]);
 
+  const fetchBooks = async () => {
+    const response = await axios.get("http://localhost:3001/books");
+
+    setBooks(response.data);
+  };
+
   const createBook = async (title) => {
     if (title === "") return;
     const response = await axios.post("http://localhost:3001/books", {
