@@ -1,5 +1,14 @@
 // Wrapper
-function Button({ children }) {
+function Button({
+  children,
+  primary,
+  secondary,
+  success,
+  warning,
+  danger,
+  outline,
+  rounded,
+}) {
   // Underlying/Wrapper Element
   return <button>{children}</button>;
 }

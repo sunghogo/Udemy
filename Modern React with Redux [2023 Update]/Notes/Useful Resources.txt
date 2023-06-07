@@ -16,7 +16,11 @@ Section 4: State: How to Change Your App
     Listing of event names:
         https://reactjs.org/docs/events.html
         https://react.dev/reference/react-dom/components/common#common-props 
-    
+
+Section 5:  Using an API with React
+    JS Library to make API calls:
+        npm i axios
+
 Section 6: How to Handle Forms
     State updates cheat sheet:
         https://state-updates.vercel.app/
@@ -25,5 +29,13 @@ Section 6: How to Handle Forms
         https://picusm.photos
         
 Section 7: Data Persistence with API Requests
-    REST Client VSCode Extension
+    Library for Test/Development DB Server using a json file:
+        npm i json-server
+
+    Extension for Test/Development REST API: 
+        REST Client VSCode Extension
+
+Section 10:
+    Library to Validate Props:
+        npm i prop-types
         
