@@ -12,25 +12,16 @@ function Button({
   outline,
   rounded,
 }) {
-  const finalClassName = className("px-3", "py-1.5", {
-    "bg-blue-500": primary,
-    "border-blue-700": primary,
-    // "bg-blue-500": secondary,
-    // "border-blue-700": secondary,
-    // "bg-blue-500": success,
-    // "border-blue-700": success,
-    // "bg-blue-500": warning,
-    // "border-blue-700": warning,
-    // "bg-blue-500": danger,
-    // "border-blue-700": danger,
+  const classes = className("px-3 py-1.5 border", {
+    "border-blue-500 bg-blue-500 text-white": primary,
+    "border-gray-900 bg-gray-900 text-white": secondary,
+    "border-green-500 bg-green-500 text-white": success,
+    "border-yellow-400 bg-yellow-400 text-white": warning,
+    "border-red-500 bg-red-500 text-white": danger,
   });
 
   // Underlying/Wrapper Element
-  return (
-    <button className="px-3 py-1.5 border border-blue-700 bg-blue-500 text-white">
-      {children}
-    </button>
-  );
+  return <button className={classes}>{children}</button>;
 }
 
 Button.propTypes = {
