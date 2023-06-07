@@ -12,6 +12,7 @@ function App() {
     setBooks(response.data);
   };
 
+  // Second argument: [] = only first render, No argument = after every 1st/rerender, ['variable'] = after every 1st/rerender if 'variable' changed
   useEffect(() => {
     fetchBooks();
   }, []);
