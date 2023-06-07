@@ -8,7 +8,7 @@ function App() {
   // Second argument: [] = only first render, No argument = after every 1st/rerender, ['variables'] = after every 1st/rerender if one of the 'variables' changed
   useEffect(() => {
     fetchBooks();
-  }, []);
+  }, [fetchBooks]);
 
   return (
     <div className="app">
