@@ -37,7 +37,7 @@ function App() {
     });
 
     const updatedBooks = books.map((book) =>
-      book.id === id ? { ...book, title: newTitle } : book
+      book.id === id ? { ...book, ...response.data } : book
     );
 
     setBooks(updatedBooks);
