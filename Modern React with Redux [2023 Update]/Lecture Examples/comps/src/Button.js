@@ -12,13 +12,15 @@ function Button({
   outline,
   rounded,
 }) {
-  // Later classNames styling will take priority for conflicting styles
-  const classes = className("px-3 py-1.5 border", {
-    "border-blue-500 bg-blue-500 text-white": primary,
-    "border-gray-900 bg-gray-900 text-white": secondary,
-    "border-green-500 bg-green-500 text-white": success,
-    "border-yellow-400 bg-yellow-400 text-white": warning,
-    "border-red-500 bg-red-500 text-white": danger,
+  // Later classNames styling will take priority for conflicting styles (but not for all styling?)
+  const classes = className("flex items-center px-3 py-1.5 border", {
+    "border-blue-500 bg-blue-500": primary,
+    "border-gray-900 bg-gray-900": secondary,
+    "border-green-500 bg-green-500": success,
+    "border-yellow-400 bg-yellow-400": warning,
+    "border-red-500 bg-red-500": danger,
+    "text-white":
+      (primary || secondary || success || warning || danger) && !outline,
     "rounded-full": rounded,
     "bg-white": outline,
     "text-blue-500": outline && primary,
@@ -27,6 +29,7 @@ function Button({
     "text-yellow-500": outline && warning,
     "text-red-500": outline && danger,
   });
+  console.log(classes);
 
   // Underlying/Wrapper Element
   return <button className={classes}>{children}</button>;

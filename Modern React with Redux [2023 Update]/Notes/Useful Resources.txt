@@ -37,11 +37,18 @@ Section 7: Data Persistence with API Requests
 
 Section 10:
     PropTypes Library to Validate Props:
+        https://www.npmjs.com/package/prop-types
         npm i prop-types
 
     Tailwind CSS Library/Framework:
         https://tailwindcss.com/docs/guides/create-react-app
 
-    classnames Library to build up className string
+    classnames Library to build up className string:
+        https://www.npmjs.com/package/classnames
+        npm i classnames
+
+    react-icons Library to access many different icon libraries:
+        https://react-icons.github.io/react-icons
+        npm i react-icons
 
         
