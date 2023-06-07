@@ -19,14 +19,18 @@ function App() {
 
   const createBook = async (title) => {
     if (title === "") return;
+
     const response = await axios.post("http://localhost:3001/books", {
       title,
     });
+
     const updatedBooks = [...books, response.data];
     setBooks(updatedBooks);
   };
 
-  const deleteBookById = (id) => {
+  const deleteBookById = async (id) => {
+    await axios.delete(`http://localhost:3001/books/${id}`);
+
     const updatedBooks = books.filter((book) => book.id !== id);
     setBooks(updatedBooks);
   };
@@ -39,7 +43,6 @@ function App() {
     const updatedBooks = books.map((book) =>
       book.id === id ? { ...book, ...response.data } : book
     );
-
     setBooks(updatedBooks);
   };
 
