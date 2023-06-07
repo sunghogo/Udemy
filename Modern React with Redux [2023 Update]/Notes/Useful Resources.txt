@@ -9,7 +9,7 @@ Section 3: Building with Reusable Components
     React Developer Tools Extension for Browsers:
         https://react.dev/learn/react-developer-tools
 
-    CSS Libraries:
+    Bulma CSS Library:
         https://bulma.io
 
 Section 4: State: How to Change Your App
@@ -38,4 +38,8 @@ Section 7: Data Persistence with API Requests
 Section 10:
     Library to Validate Props:
         npm i prop-types
+
+    Tailwind CSS Library/Framework:
+        https://tailwindcss.com/docs/guides/create-react-app
+
         
