@@ -7,8 +7,17 @@ function Dropdown({ options }) {
     setIsOpen((currentIsOpen) => !currentIsOpen);
   };
 
-  const renderedOptions = options.map((option, index) => {
-    return <div key={option.value}>{option.label}</div>;
+  const handleOptionClick = (option) => {
+    setIsOpen(false);
+    console.log(option);
+  };
+
+  const renderedOptions = options.map((option) => {
+    return (
+      <div key={option.value} onClick={() => handleOptionClick(option)}>
+        {option.label}
+      </div>
+    );
   });
 
   return (
