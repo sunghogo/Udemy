@@ -8,8 +8,10 @@ function Modal({ onClose, children, actionBar }) {
         onClick={onClose}
       ></div>
       <div className="absolute inset-40 pg-10 bg-white">
-        {children}
-        {actionBar}
+        <div className="flex flex-col justify-between h-full">
+          {children}
+          <div className="flex justify-end">{actionBar}</div>
+        </div>
       </div>
     </div>,
     document.querySelector(".modal-container")
