@@ -16,10 +16,17 @@ function NavigationProvider({ children }) {
     };
   }, []);
 
+  function navigate(to) {
+    window.history.pushState({}, "", to);
+    setCurrentPath(to);
+  }
+
   return (
-    <NavigationContext.Provider value={{}}>
-      {currentPath}
-      {children}
+    <NavigationContext.Provider value={{ currentPath, navigate }}>
+      <div>
+        {currentPath}
+        {children}
+      </div>
     </NavigationContext.Provider>
   );
 }
