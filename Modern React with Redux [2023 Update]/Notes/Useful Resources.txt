@@ -58,3 +58,7 @@ Section 13: Making Navigation Reusable
             https://www.reactrouter.com
         Wouter
         React-Location
+
+Section 14: Creating Portals with ReactDOM
+    Generate random text:
+        https://www.lipsum.com
