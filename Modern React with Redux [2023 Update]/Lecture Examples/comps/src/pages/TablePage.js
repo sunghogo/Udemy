@@ -8,10 +8,12 @@ function TablePage() {
     { name: "Lime", color: "bg-green-500", score: 4 },
   ];
 
-  //   <div className={`p-2 m-3 ${fruit.color}`} />
   const config = [
     { label: "Name", render: (fruit) => fruit.name },
-    { label: "Color", render: (fruit) => fruit.color },
+    {
+      label: "Color",
+      render: (fruit) => <div className={`p-2 m-3 ${fruit.color}`} />,
+    },
     { label: "Score", render: (fruit) => fruit.score },
   ];
 
