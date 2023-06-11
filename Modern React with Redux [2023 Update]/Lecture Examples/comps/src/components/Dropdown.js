@@ -8,6 +8,7 @@ function Dropdown({ options, value, onChange }) {
 
   useEffect(() => {
     const handler = (event) => {
+      // Check if there is a reference to any element first
       if (!divEl.current) {
         return;
       }
