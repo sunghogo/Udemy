@@ -1,4 +1,14 @@
 function Table({ data }) {
+  const renderedRows = data.map((fruit) => {
+    return (
+      <tr key={fruit.name}>
+        <td>{fruit.name}</td>
+        <td>{fruit.color}</td>
+        <td>{fruit.score}</td>
+      </tr>
+    );
+  });
+
   return (
     <table>
       <thead>
@@ -8,6 +18,7 @@ function Table({ data }) {
           <th>Score</th>
         </tr>
       </thead>
+      <tbody>{renderedRows}</tbody>
     </table>
   );
 }
