@@ -1,6 +1,6 @@
 function Table({ data, config, keyFn }) {
   const renderedHeaders = config.map((column) => {
-    return <th key={column.label}>{column.label}</th>;
+    return column.header?.() || <th key={column.label}>{column.label}</th>;
   });
 
   const renderedRows = data.map((rowData) => {
