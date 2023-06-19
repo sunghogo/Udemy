@@ -28,17 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.firstButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // firstButton
             // 
-            this.button1.Location = new System.Drawing.Point(348, 378);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(119, 38);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.firstButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.firstButton.BackColor = System.Drawing.SystemColors.Control;
+            this.firstButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.firstButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.firstButton.Image = global::secondProject.Properties.Resources._5610944;
+            this.firstButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.firstButton.Location = new System.Drawing.Point(344, 307);
+            this.firstButton.Name = "firstButton";
+            this.firstButton.Size = new System.Drawing.Size(185, 80);
+            this.firstButton.TabIndex = 0;
+            this.firstButton.Text = "first button";
+            this.firstButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.firstButton.UseVisualStyleBackColor = false;
+            this.firstButton.Click += new System.EventHandler(this.firstButton_Click);
+            this.firstButton.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.firstButton_KeyPress);
             // 
             // mainForm
             // 
@@ -46,11 +56,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
             this.ClientSize = new System.Drawing.Size(939, 489);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.firstButton);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "mainForm";
-            this.Text = "Reports";
+            this.Text = "Button";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
@@ -58,7 +68,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button firstButton;
     }
 }
 
