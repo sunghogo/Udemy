@@ -151,5 +151,19 @@ namespace secondProject
         {
             controlBoxLabel2.Text = "Combobox selected value changed";
         }
+
+        //25. Datetimepicker in c sharp for beginners
+        private void dateTimePickerButton_Click(object sender, EventArgs e)
+        {
+            DateTime birthday = dateTimePicker1.Value;
+            dateTimePickerLabel1.Text = birthday.AddYears(2).ToShortDateString();
+            dateTimePickerLabel2.Text = birthday.AddYears(-2).ToShortDateString();
+            MessageBox.Show(birthday.ToString());
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            MessageBox.Show(dateTimePicker1.Value.ToShortDateString());
+        }
     }
 }

@@ -42,6 +42,10 @@
             this.comboBoxButton = new System.Windows.Forms.Button();
             this.controlBoxLabel1 = new System.Windows.Forms.Label();
             this.controlBoxLabel2 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerButton = new System.Windows.Forms.Button();
+            this.dateTimePickerLabel1 = new System.Windows.Forms.Label();
+            this.dateTimePickerLabel2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,7 +60,7 @@
             this.firstButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.firstButton.Location = new System.Drawing.Point(56, 48);
             this.firstButton.Name = "firstButton";
-            this.firstButton.Size = new System.Drawing.Size(252, 80);
+            this.firstButton.Size = new System.Drawing.Size(284, 80);
             this.firstButton.TabIndex = 0;
             this.firstButton.Text = "first button";
             this.firstButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -172,7 +176,6 @@
             this.comboBox1.Location = new System.Drawing.Point(488, 275);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(159, 33);
-            this.comboBox1.Sorted = true;
             this.comboBox1.TabIndex = 10;
             this.comboBox1.Text = "Choose";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
@@ -206,12 +209,57 @@
             this.controlBoxLabel2.TabIndex = 13;
             this.controlBoxLabel2.Text = "label2";
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CustomFormat = "dd/MM/yyyy hh.mm";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(488, 471);
+            this.dateTimePicker1.MaxDate = new System.DateTime(9000, 1, 1, 0, 0, 0, 0);
+            this.dateTimePicker1.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(273, 31);
+            this.dateTimePicker1.TabIndex = 14;
+            this.dateTimePicker1.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
+            // dateTimePickerButton
+            // 
+            this.dateTimePickerButton.Location = new System.Drawing.Point(784, 471);
+            this.dateTimePickerButton.Name = "dateTimePickerButton";
+            this.dateTimePickerButton.Size = new System.Drawing.Size(118, 30);
+            this.dateTimePickerButton.TabIndex = 15;
+            this.dateTimePickerButton.Text = "button1";
+            this.dateTimePickerButton.UseVisualStyleBackColor = true;
+            this.dateTimePickerButton.Click += new System.EventHandler(this.dateTimePickerButton_Click);
+            // 
+            // dateTimePickerLabel1
+            // 
+            this.dateTimePickerLabel1.AutoSize = true;
+            this.dateTimePickerLabel1.Location = new System.Drawing.Point(493, 531);
+            this.dateTimePickerLabel1.Name = "dateTimePickerLabel1";
+            this.dateTimePickerLabel1.Size = new System.Drawing.Size(76, 25);
+            this.dateTimePickerLabel1.TabIndex = 16;
+            this.dateTimePickerLabel1.Text = "label1";
+            // 
+            // dateTimePickerLabel2
+            // 
+            this.dateTimePickerLabel2.AutoSize = true;
+            this.dateTimePickerLabel2.Location = new System.Drawing.Point(498, 584);
+            this.dateTimePickerLabel2.Name = "dateTimePickerLabel2";
+            this.dateTimePickerLabel2.Size = new System.Drawing.Size(76, 25);
+            this.dateTimePickerLabel2.TabIndex = 17;
+            this.dateTimePickerLabel2.Text = "label2";
+            // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
-            this.ClientSize = new System.Drawing.Size(1006, 587);
+            this.ClientSize = new System.Drawing.Size(1038, 646);
+            this.Controls.Add(this.dateTimePickerLabel2);
+            this.Controls.Add(this.dateTimePickerLabel1);
+            this.Controls.Add(this.dateTimePickerButton);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.controlBoxLabel2);
             this.Controls.Add(this.controlBoxLabel1);
             this.Controls.Add(this.comboBoxButton);
@@ -251,6 +299,10 @@
         private System.Windows.Forms.Button comboBoxButton;
         private System.Windows.Forms.Label controlBoxLabel1;
         private System.Windows.Forms.Label controlBoxLabel2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button dateTimePickerButton;
+        private System.Windows.Forms.Label dateTimePickerLabel1;
+        private System.Windows.Forms.Label dateTimePickerLabel2;
     }
 }
 
