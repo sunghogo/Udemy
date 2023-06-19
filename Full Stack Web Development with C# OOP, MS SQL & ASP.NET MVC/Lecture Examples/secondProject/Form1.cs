@@ -53,20 +53,27 @@ namespace secondProject
             //    }
             //}
 
-            //18. Button
+            // 18. Button
             firstButton.Text = "changed";
 
-            //22.Radiobutton
+            // 22.Radiobutton
             {
                 radioButton1.Checked = false;
                 bool control = radioButton1.Checked;
             }
 
-            //23.Checbox in c sharp
+            // 23.Checbox in c sharp
             {
                 checkBox1.Checked = false;
                 bool control = checkBox1.Checked;
             }
+
+            // 24.Combobox in c sharp programming
+            comboBox1.Items.Add("Wednesday");
+            comboBox1.Items.Add("Thursday");
+            comboBox1.Items.Add("Friday");
+            comboBox1.Items.Add("Saturday");
+            //comboBox1.SelectedIndex = 1;
         }
 
         private void firstButton_Click(object sender, EventArgs e)
@@ -124,6 +131,25 @@ namespace secondProject
         private void checkBox1_CheckStateChanged(object sender, EventArgs e)
         {
             MessageBox.Show("Check state changed");
+        }
+
+        //24. Combobox in c sharp programming
+        private void comboBoxButton_Click(object sender, EventArgs e)
+        {
+            //string selectedItem = comboBox1.SelectedItem.ToString();
+            //MessageBox.Show(selectedItem);
+            int valueOrder = comboBox1.SelectedIndex;
+            MessageBox.Show(valueOrder.ToString());
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            controlBoxLabel1.Text = "Combobox selected index changed";
+        }
+
+        private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
+        {
+            controlBoxLabel2.Text = "Combobox selected value changed";
         }
     }
 }
