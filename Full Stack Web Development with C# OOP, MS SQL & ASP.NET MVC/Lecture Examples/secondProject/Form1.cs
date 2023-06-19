@@ -57,8 +57,16 @@ namespace secondProject
             firstButton.Text = "changed";
 
             //22.Radiobutton
-            radioButton1.Checked = false;
-            bool control = radioButton1.Checked;
+            {
+                radioButton1.Checked = false;
+                bool control = radioButton1.Checked;
+            }
+
+            //23.Checbox in c sharp
+            {
+                checkBox1.Checked = false;
+                bool control = checkBox1.Checked;
+            }
         }
 
         private void firstButton_Click(object sender, EventArgs e)
@@ -104,7 +112,18 @@ namespace secondProject
         //22.Radiobutton
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            MessageBox.Show("check changed");
+            MessageBox.Show("Check changed");
+        }
+
+        //23.Checbox in c sharp
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            MessageBox.Show("Check changed");
+        }
+
+        private void checkBox1_CheckStateChanged(object sender, EventArgs e)
+        {
+            MessageBox.Show("Check state changed");
         }
     }
 }
