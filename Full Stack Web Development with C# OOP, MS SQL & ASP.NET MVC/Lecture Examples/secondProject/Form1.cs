@@ -67,5 +67,13 @@ namespace secondProject
         {
             firstButton.Text = "Enter";
         }
+
+        //19. Label
+        private void labelControl_Click(object sender, EventArgs e)
+        {
+            firstLabel.Text = "first label";
+            firstLabel.BackColor = Color.Red;
+            firstLabel.ForeColor = Color.White;
+        }
     }
 }
