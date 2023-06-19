@@ -75,5 +75,26 @@ namespace secondProject
             firstLabel.BackColor = Color.Red;
             firstLabel.ForeColor = Color.White;
         }
+
+        // 20. Textbox in c#
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != ','))
+            //{
+            //    e.Handled = true;
+            //}
+
+            //// Only allow one decimal point
+            //if (e.KeyChar == '.' && ((sender as TextBox).Text.IndexOf('.') > -1))
+            //{
+            //    e.Handled = true;
+            //}
+        }
+
+        private void textButton_Click(object sender, EventArgs e)
+        {
+            string labelText = textBox1.Text;
+            textLabel.Text = labelText;
+        }
     }
 }

@@ -32,6 +32,9 @@
             this.firstLabel = new System.Windows.Forms.Label();
             this.labelControl = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textLabel = new System.Windows.Forms.Label();
+            this.textButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // firstButton
@@ -84,12 +87,46 @@
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "linkLabel1";
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(387, 73);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(290, 184);
+            this.textBox1.TabIndex = 4;
+            this.textBox1.Text = "first text";
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            // 
+            // textLabel
+            // 
+            this.textLabel.AutoSize = true;
+            this.textLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textLabel.Location = new System.Drawing.Point(387, 292);
+            this.textLabel.Name = "textLabel";
+            this.textLabel.Size = new System.Drawing.Size(106, 37);
+            this.textLabel.TabIndex = 5;
+            this.textLabel.Text = "label1";
+            // 
+            // textButton
+            // 
+            this.textButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textButton.Location = new System.Drawing.Point(544, 292);
+            this.textButton.Name = "textButton";
+            this.textButton.Size = new System.Drawing.Size(122, 45);
+            this.textButton.TabIndex = 6;
+            this.textButton.Text = "button1";
+            this.textButton.UseVisualStyleBackColor = true;
+            this.textButton.Click += new System.EventHandler(this.textButton_Click);
+            // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
             this.ClientSize = new System.Drawing.Size(939, 489);
+            this.Controls.Add(this.textButton);
+            this.Controls.Add(this.textLabel);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.labelControl);
             this.Controls.Add(this.firstLabel);
@@ -110,6 +147,9 @@
         private System.Windows.Forms.Label firstLabel;
         private System.Windows.Forms.Button labelControl;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label textLabel;
+        private System.Windows.Forms.Button textButton;
     }
 }
 
