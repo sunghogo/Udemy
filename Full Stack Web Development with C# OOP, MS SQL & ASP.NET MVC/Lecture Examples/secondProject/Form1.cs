@@ -55,6 +55,10 @@ namespace secondProject
 
             //18. Button
             firstButton.Text = "changed";
+
+            //22.Radiobutton
+            radioButton1.Checked = false;
+            bool control = radioButton1.Checked;
         }
 
         private void firstButton_Click(object sender, EventArgs e)
@@ -95,6 +99,12 @@ namespace secondProject
         {
             string labelText = textBox1.Text;
             textLabel.Text = labelText;
+        }
+
+        //22.Radiobutton
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            MessageBox.Show("check changed");
         }
     }
 }
