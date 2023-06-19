@@ -14,9 +14,11 @@ C:\Users\leina\Desktop\Udemy\Full Stack Web Development with C# OOP, MS SQL & AS
 C:\Users\leina\Desktop\Udemy\Full Stack Web Development with C# OOP, MS SQL & ASP.NET MVC\Lecture Examples\secondProject\bin\Debug\secondProject.pdb
 C:\Users\leina\Desktop\Udemy\Full Stack Web Development with C# OOP, MS SQL & ASP.NET MVC\Lecture Examples\secondProject\obj\Debug\secondProject.csproj.AssemblyReference.cache
 C:\Users\leina\Desktop\Udemy\Full Stack Web Development with C# OOP, MS SQL & ASP.NET MVC\Lecture Examples\secondProject\obj\Debug\secondProject.csproj.SuggestedBindingRedirects.cache
-C:\Users\leina\Desktop\Udemy\Full Stack Web Development with C# OOP, MS SQL & ASP.NET MVC\Lecture Examples\secondProject\obj\Debug\secondProject.mainForm.resources
 C:\Users\leina\Desktop\Udemy\Full Stack Web Development with C# OOP, MS SQL & ASP.NET MVC\Lecture Examples\secondProject\obj\Debug\secondProject.Properties.Resources.resources
 C:\Users\leina\Desktop\Udemy\Full Stack Web Development with C# OOP, MS SQL & ASP.NET MVC\Lecture Examples\secondProject\obj\Debug\secondProject.csproj.GenerateResource.cache
 C:\Users\leina\Desktop\Udemy\Full Stack Web Development with C# OOP, MS SQL & ASP.NET MVC\Lecture Examples\secondProject\obj\Debug\secondProject.csproj.CoreCompileInputs.cache
 C:\Users\leina\Desktop\Udemy\Full Stack Web Development with C# OOP, MS SQL & ASP.NET MVC\Lecture Examples\secondProject\obj\Debug\secondProject.exe
 C:\Users\leina\Desktop\Udemy\Full Stack Web Development with C# OOP, MS SQL & ASP.NET MVC\Lecture Examples\secondProject\obj\Debug\secondProject.pdb
+C:\Users\leina\Desktop\Udemy\Full Stack Web Development with C# OOP, MS SQL & ASP.NET MVC\Lecture Examples\secondProject\obj\Debug\secondProject.frmGetData.resources
+C:\Users\leina\Desktop\Udemy\Full Stack Web Development with C# OOP, MS SQL & ASP.NET MVC\Lecture Examples\secondProject\obj\Debug\secondProject.mainForm.resources
+C:\Users\leina\Desktop\Udemy\Full Stack Web Development with C# OOP, MS SQL & ASP.NET MVC\Lecture Examples\secondProject\obj\Debug\secondProject.frmShowData.resources
