@@ -1,0 +1,15 @@
+C:\Users\leina\Desktop\Udemy\Full Stack Web Development with C# OOP, MS SQL & ASP.NET MVC\Lecture Examples\Section 4 - Variables in C#\Variables\bin\Debug\net6.0\Variables.exe
+C:\Users\leina\Desktop\Udemy\Full Stack Web Development with C# OOP, MS SQL & ASP.NET MVC\Lecture Examples\Section 4 - Variables in C#\Variables\bin\Debug\net6.0\Variables.deps.json
+C:\Users\leina\Desktop\Udemy\Full Stack Web Development with C# OOP, MS SQL & ASP.NET MVC\Lecture Examples\Section 4 - Variables in C#\Variables\bin\Debug\net6.0\Variables.runtimeconfig.json
+C:\Users\leina\Desktop\Udemy\Full Stack Web Development with C# OOP, MS SQL & ASP.NET MVC\Lecture Examples\Section 4 - Variables in C#\Variables\bin\Debug\net6.0\Variables.dll
+C:\Users\leina\Desktop\Udemy\Full Stack Web Development with C# OOP, MS SQL & ASP.NET MVC\Lecture Examples\Section 4 - Variables in C#\Variables\bin\Debug\net6.0\Variables.pdb
+C:\Users\leina\Desktop\Udemy\Full Stack Web Development with C# OOP, MS SQL & ASP.NET MVC\Lecture Examples\Section 4 - Variables in C#\Variables\obj\Debug\net6.0\Variables.csproj.AssemblyReference.cache
+C:\Users\leina\Desktop\Udemy\Full Stack Web Development with C# OOP, MS SQL & ASP.NET MVC\Lecture Examples\Section 4 - Variables in C#\Variables\obj\Debug\net6.0\Variables.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\leina\Desktop\Udemy\Full Stack Web Development with C# OOP, MS SQL & ASP.NET MVC\Lecture Examples\Section 4 - Variables in C#\Variables\obj\Debug\net6.0\Variables.AssemblyInfoInputs.cache
+C:\Users\leina\Desktop\Udemy\Full Stack Web Development with C# OOP, MS SQL & ASP.NET MVC\Lecture Examples\Section 4 - Variables in C#\Variables\obj\Debug\net6.0\Variables.AssemblyInfo.cs
+C:\Users\leina\Desktop\Udemy\Full Stack Web Development with C# OOP, MS SQL & ASP.NET MVC\Lecture Examples\Section 4 - Variables in C#\Variables\obj\Debug\net6.0\Variables.csproj.CoreCompileInputs.cache
+C:\Users\leina\Desktop\Udemy\Full Stack Web Development with C# OOP, MS SQL & ASP.NET MVC\Lecture Examples\Section 4 - Variables in C#\Variables\obj\Debug\net6.0\Variables.dll
+C:\Users\leina\Desktop\Udemy\Full Stack Web Development with C# OOP, MS SQL & ASP.NET MVC\Lecture Examples\Section 4 - Variables in C#\Variables\obj\Debug\net6.0\refint\Variables.dll
+C:\Users\leina\Desktop\Udemy\Full Stack Web Development with C# OOP, MS SQL & ASP.NET MVC\Lecture Examples\Section 4 - Variables in C#\Variables\obj\Debug\net6.0\Variables.pdb
+C:\Users\leina\Desktop\Udemy\Full Stack Web Development with C# OOP, MS SQL & ASP.NET MVC\Lecture Examples\Section 4 - Variables in C#\Variables\obj\Debug\net6.0\Variables.genruntimeconfig.cache
+C:\Users\leina\Desktop\Udemy\Full Stack Web Development with C# OOP, MS SQL & ASP.NET MVC\Lecture Examples\Section 4 - Variables in C#\Variables\obj\Debug\net6.0\ref\Variables.dll
