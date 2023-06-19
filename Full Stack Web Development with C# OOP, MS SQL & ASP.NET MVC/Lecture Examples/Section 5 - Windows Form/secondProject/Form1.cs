@@ -10,11 +10,13 @@ using System.Windows.Forms;
 
 namespace secondProject
 {
-    public partial class Form1 : Form
+    public partial class mainForm : Form
     {
-        public Form1()
+        public mainForm()
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e) { }
     }
 }
