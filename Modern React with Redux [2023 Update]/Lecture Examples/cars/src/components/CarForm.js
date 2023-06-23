@@ -1,12 +1,23 @@
 import { useSelector, useDispatch } from "react-redux";
-import { changeName } from "../store";
+import { changeName, changeCost } from "../store";
 
 function CarForm() {
   const dispatch = useDispatch();
-  const name = useSelector((state) => state.form.name);
+  const { name, cost } = useSelector((state) => ({
+    name: state.form.name,
+    cost: state.form.cost,
+  }));
+
+  // FIXME: Potential rerender bug because useSelector returns a new object everytime
+  console.log("Car Form Rerender");
 
   const handleNameChange = (event) => {
     dispatch(changeName(event.target.value));
+  };
+
+  const handleCostChange = (event) => {
+    const carCost = parseInt(event.target.value) || 0;
+    dispatch(changeCost(carCost));
   };
 
   return (
@@ -20,6 +31,16 @@ function CarForm() {
               className="input is-expanded"
               value={name}
               onChange={handleNameChange}
+            />
+          </div>
+
+          <div className="field">
+            <label className="label">Cost</label>
+            <input
+              className="input is-expanded"
+              value={cost || ""}
+              onChange={handleCostChange}
+              type="number"
             />
           </div>
         </div>
