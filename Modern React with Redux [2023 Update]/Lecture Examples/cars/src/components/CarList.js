@@ -4,6 +4,7 @@ import { removeCar } from "../store";
 function CarList() {
   const dispatch = useDispatch();
 
+  // FIXME: Rerender bug because useSelector returns a new object everytime
   const cars = useSelector(({ cars: { data, searchTerm } }) =>
     data.filter((car) =>
       car.name.toLowerCase().includes(searchTerm.toLowerCase())
