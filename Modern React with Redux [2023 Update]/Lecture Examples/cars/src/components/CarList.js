@@ -5,16 +5,22 @@ function CarList() {
   const dispatch = useDispatch();
 
   // FIXME: Rerender bug because useSelector returns a new object everytime
-  const { cars, name } = useSelector(({ form, cars: { data, searchTerm } }) => {
-    const filteredCars = data.filter((car) =>
-      car.name.toLowerCase().includes(searchTerm.toLowerCase())
-    );
+  //   const { cars, name } = useSelector(({ form, cars: { data, searchTerm } }) => {
+  //     const filteredCars = data.filter((car) =>
+  //       car.name.toLowerCase().includes(searchTerm.toLowerCase())
+  //     );
 
-    return {
-      cars: filteredCars,
-      name: form.name,
-    };
-  });
+  //     return {
+  //       cars: filteredCars,
+  //       name: form.name,
+  //     };
+  //   });
+
+  const searchTerm = useSelector(({ cars: { searchTerm } }) => searchTerm);
+  const cars = useSelector(({ cars: { data } }) => data).filter((car) =>
+    car.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+  const name = useSelector(({ form: { name } }) => name);
 
   const handleCarDelete = (car) => {
     dispatch(removeCar(car.id));
