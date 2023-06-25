@@ -1,5 +1,46 @@
 {
-  "users": [{ "id": 1, "name": "Myra" }],
+  "users": [
+    {
+      "id": 1,
+      "name": "Myra"
+    },
+    {
+      "name": "Gerard Flatley",
+      "id": 2
+    },
+    {
+      "name": "Kelvin Moore",
+      "id": 3
+    },
+    {
+      "name": "Joshua Torphy III",
+      "id": 4
+    },
+    {
+      "name": "Meredith Heaney",
+      "id": 5
+    },
+    {
+      "name": "Cheryl Hoeger",
+      "id": 6
+    },
+    {
+      "name": "Terrence Ortiz",
+      "id": 7
+    },
+    {
+      "name": "Leland Bailey",
+      "id": 8
+    },
+    {
+      "name": "Ann Bauch",
+      "id": 9
+    },
+    {
+      "name": "Bill Waters",
+      "id": 10
+    }
+  ],
   "albums": [],
   "photos": []
 }
