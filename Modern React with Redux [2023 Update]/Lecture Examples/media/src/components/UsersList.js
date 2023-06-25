@@ -18,8 +18,8 @@ function UsersList() {
     // dispatch returns a promise that ALWAYS RESOLVES whether the promise is fulfilled or rejected so need to unwrap() into a new promise
     dispatch(fetchUsers())
       .unwrap()
-      .then(() => console.log("SUCCESS"))
-      .catch(() => console.log("FAIL"));
+      .catch((err) => setLoadingUsersError(err))
+      .finally(() => setIsLoadingUsers(false));
   }, [dispatch]);
 
   const handleUserAdd = () => {
