@@ -1,92 +1,16 @@
 {
   "users": [
     {
-      "name": "Kelvin Moore",
+      "name": "Myra",
+      "id": 1
+    },
+    {
+      "name": "Dewey Botsford",
+      "id": 2
+    },
+    {
+      "name": "Manuel Abernathy",
       "id": 3
-    },
-    {
-      "name": "Joshua Torphy III",
-      "id": 4
-    },
-    {
-      "name": "Meredith Heaney",
-      "id": 5
-    },
-    {
-      "name": "Cheryl Hoeger",
-      "id": 6
-    },
-    {
-      "name": "Terrence Ortiz",
-      "id": 7
-    },
-    {
-      "name": "Leland Bailey",
-      "id": 8
-    },
-    {
-      "name": "Ann Bauch",
-      "id": 9
-    },
-    {
-      "name": "Bill Waters",
-      "id": 10
-    },
-    {
-      "name": "Maria Jones",
-      "id": 11
-    },
-    {
-      "name": "Randall Heidenreich",
-      "id": 12
-    },
-    {
-      "name": "Julia Reinger",
-      "id": 13
-    },
-    {
-      "name": "Mrs. Ruth Jast V",
-      "id": 14
-    },
-    {
-      "name": "Johnny Aufderhar",
-      "id": 15
-    },
-    {
-      "name": "Lauren Windler",
-      "id": 16
-    },
-    {
-      "name": "Herman Ruecker PhD",
-      "id": 17
-    },
-    {
-      "name": "Jordan Rath",
-      "id": 18
-    },
-    {
-      "name": "Ramon Durgan",
-      "id": 19
-    },
-    {
-      "name": "Leslie Hettinger-Kessler",
-      "id": 20
-    },
-    {
-      "name": "Darryl Daniel",
-      "id": 21
-    },
-    {
-      "name": "Bradford Johnson",
-      "id": 22
-    },
-    {
-      "name": "Amos Considine",
-      "id": 23
-    },
-    {
-      "name": "May Robel",
-      "id": 24
     }
   ],
   "albums": [],
