@@ -1,14 +1,6 @@
 {
   "users": [
     {
-      "id": 1,
-      "name": "Myra"
-    },
-    {
-      "name": "Gerard Flatley",
-      "id": 2
-    },
-    {
       "name": "Kelvin Moore",
       "id": 3
     },
