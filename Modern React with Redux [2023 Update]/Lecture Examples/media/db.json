@@ -25,6 +25,17 @@
       "id": 7
     }
   ],
-  "albums": [{ "id": 10, "title": "Hiking Trip", "userId": 1 }],
+  "albums": [
+    {
+      "id": 10,
+      "title": "Hiking Trip",
+      "userId": 1
+    },
+    {
+      "userId": 1,
+      "title": "Bespoke Metal Chips",
+      "id": 11
+    }
+  ],
   "photos": []
 }
