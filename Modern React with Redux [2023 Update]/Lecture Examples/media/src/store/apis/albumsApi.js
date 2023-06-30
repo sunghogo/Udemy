@@ -10,7 +10,7 @@ const albumsApi = createApi({
   // this is where we specify the various requests and endpoint
   endpoints(builder) {
     return {
-      // Name of the hook used for this request: albumsApi.useFetchAlbumsQuery()
+      // Name of the generated  hook used for this request: albumsApi.useFetchAlbumsQuery()
       fetchAlbums: builder.query({
         query: (user) => {
           return {
@@ -25,3 +25,6 @@ const albumsApi = createApi({
     };
   },
 });
+
+export const { useFetchAlbumsQuery } = albumsApi;
+export { albumsApi };
