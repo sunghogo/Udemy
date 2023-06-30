@@ -55,6 +55,16 @@
       "userId": 1,
       "title": "Gorgeous Plastic Pizza",
       "id": 15
+    },
+    {
+      "userId": 1,
+      "title": "Intelligent Cotton Chicken",
+      "id": 16
+    },
+    {
+      "userId": 1,
+      "title": "Recycled Plastic Chicken",
+      "id": 17
     }
   ],
   "photos": []
