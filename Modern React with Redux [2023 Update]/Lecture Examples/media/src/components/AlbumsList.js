@@ -5,9 +5,11 @@ import ExpandablePanel from "./ExpandablePanel";
 import Button from "./Button";
 
 function AlbumsList({ user }) {
+  // results object returned from calling query hook has a couple properties
   // data = reponse data, error = null/Error object, isLoading = boolean if loading 1st time
   // isFetching = boolean if loading, refetch = function to rerun query
   const { data, error, isLoading } = useFetchAlbumsQuery(user);
+  // mutations hook returns the actual mutation function and the results object
   const [addAlbum, results] = useAddAlbumMutation();
 
   const handleAddAlbum = () => {
