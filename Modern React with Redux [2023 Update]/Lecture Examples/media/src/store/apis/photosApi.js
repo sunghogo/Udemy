@@ -1,4 +1,6 @@
-import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query";
+// @reduxjs/toolkit/query also has createApi that DOES NOT create custom hooks
+import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+import { faker } from "@faker-js/faker";
 
 const photosApi = createApi({
   reducerPath: "photos",
@@ -7,9 +9,45 @@ const photosApi = createApi({
   }),
   endpoints(builder) {
     return {
-      fetchPhotos: builder.query({}),
-      addPhoto: builder.mutation({}),
-      removePhoto: builder.mutation({}),
+      fetchPhotos: builder.query({
+        query: (album) => {
+          return {
+            url: "/photos",
+            params: {
+              albumId: album.id,
+            },
+            method: "GET",
+          };
+        },
+      }),
+      addPhoto: builder.mutation({
+        query: (album) => {
+          return {
+            url: "/photos",
+            method: "POST",
+            body: {
+              albumId: album.id,
+              // 150 x 150 photo, always random phototrue
+              url: faker.image.abstract(150, 150, true),
+            },
+          };
+        },
+      }),
+      removePhoto: builder.mutation({
+        query: (photo) => {
+          return {
+            url: `/photos/${photo.id}`,
+            method: "DELETE",
+          };
+        },
+      }),
     };
   },
 });
+
+export const {
+  useFetchPhotosQuery,
+  useAddPhotoMutation,
+  useRemovePhotoMutation,
+} = photosApi;
+export { photosApi };
