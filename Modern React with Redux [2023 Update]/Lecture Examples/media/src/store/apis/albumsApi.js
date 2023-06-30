@@ -29,7 +29,12 @@ const albumsApi = createApi({
         // Tags have to ben array containing a string or object with with type and id
         // Tags property can also be a callback that is passed result, error, arg parameter, that returns the tag array
         providesTags: (result, error, user) => {
-          return [{ type: "Album", id: user.id }];
+          const tags = result.map((album) => {
+            return { type: "Album", id: album.id };
+          });
+          tags.push({ type: "UsersAlbums", id: user.id });
+
+          return tags;
         },
         query: (user) => {
           return {
@@ -43,7 +48,7 @@ const albumsApi = createApi({
       }),
       addAlbum: builder.mutation({
         invalidatesTags: (reult, error, user) => {
-          return [{ type: "Album", id: user.id }];
+          return [{ type: "UsersAlbums", id: user.id }];
         },
         query: (user) => {
           return {
@@ -58,7 +63,7 @@ const albumsApi = createApi({
       }),
       removeAlbum: builder.mutation({
         invalidatesTags: (reult, error, album) => {
-          return [{ type: "Album", id: album.userId }];
+          return [{ type: "Album", id: album.id }];
         },
         query: (album) => {
           return {

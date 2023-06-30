@@ -46,6 +46,21 @@
       "userId": 2,
       "title": "Electronic Bronze Computer",
       "id": 20
+    },
+    {
+      "userId": 2,
+      "title": "Awesome Steel Gloves",
+      "id": 21
+    },
+    {
+      "userId": 1,
+      "title": "Handmade Wooden Mouse",
+      "id": 22
+    },
+    {
+      "userId": 3,
+      "title": "Luxurious Frozen Pizza",
+      "id": 23
     }
   ],
   "photos": []
