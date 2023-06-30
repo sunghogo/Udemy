@@ -1,12 +1,25 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { faker } from "@faker-js/faker";
 
+// DEV ONLY!!!
+const pause = (duration) => {
+  return new Promise((resolve) => {
+    setTimeout(resolve, duration);
+  });
+};
+
 const albumsApi = createApi({
   // Specify store reducer path where all the API states object will be stored
   reducerPath: "albums",
   // fetchBaseQuery is a RTK configured version of fetch()
   baseQuery: fetchBaseQuery({
     baseUrl: "http://localhost:3005",
+    // fetchFn property is used to override the fetch function
+    fetchFn: async (...args) => {
+      // ReMOVE FOR PRODUCTION
+      await pause(1000);
+      return fetch(...args);
+    },
   }),
   // this is where we specify the various requests and endpoint
   endpoints(builder) {
