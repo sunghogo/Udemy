@@ -15,7 +15,7 @@ function AlbumsListItem({ album }) {
       <Button
         className="mr-2"
         onClick={handleRemoveAlbum}
-        loading={results.isLoadng}
+        loading={results.isLoading}
       >
         <GoTrash />
       </Button>

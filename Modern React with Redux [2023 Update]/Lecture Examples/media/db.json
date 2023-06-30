@@ -5,56 +5,27 @@
       "id": 1
     },
     {
-      "name": "Shirley Baumbach",
+      "name": "Mr. Doug Boehm MD",
+      "id": 2
+    },
+    {
+      "name": "Alberta Harris",
       "id": 3
     },
     {
-      "name": "Mr. Vincent Wolf",
+      "name": "Ellen Collier",
       "id": 4
     },
     {
-      "name": "Antoinette Thompson",
+      "name": "Dr. Cheryl Cormier",
       "id": 5
-    },
-    {
-      "name": "Dr. Kenneth Hodkiewicz",
-      "id": 6
-    },
-    {
-      "name": "Luis Jacobs",
-      "id": 7
     }
   ],
   "albums": [
     {
       "userId": 1,
-      "title": "Bespoke Metal Chips",
-      "id": 11
-    },
-    {
-      "userId": 1,
-      "title": "Modern Rubber Hat",
-      "id": 12
-    },
-    {
-      "userId": 1,
-      "title": "Elegant Plastic Pizza",
-      "id": 13
-    },
-    {
-      "userId": 3,
-      "title": "Luxurious Bronze Cheese",
-      "id": 14
-    },
-    {
-      "userId": 1,
       "title": "Gorgeous Plastic Pizza",
       "id": 15
-    },
-    {
-      "userId": 1,
-      "title": "Intelligent Cotton Chicken",
-      "id": 16
     },
     {
       "userId": 1,
@@ -65,6 +36,16 @@
       "userId": 1,
       "title": "Refined Cotton Bike",
       "id": 18
+    },
+    {
+      "userId": 2,
+      "title": "Small Rubber Computer",
+      "id": 19
+    },
+    {
+      "userId": 2,
+      "title": "Electronic Bronze Computer",
+      "id": 20
     }
   ],
   "photos": []
