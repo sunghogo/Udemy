@@ -40,6 +40,21 @@
       "userId": 1,
       "title": "Modern Rubber Hat",
       "id": 12
+    },
+    {
+      "userId": 1,
+      "title": "Elegant Plastic Pizza",
+      "id": 13
+    },
+    {
+      "userId": 3,
+      "title": "Luxurious Bronze Cheese",
+      "id": 14
+    },
+    {
+      "userId": 1,
+      "title": "Gorgeous Plastic Pizza",
+      "id": 15
     }
   ],
   "photos": []
