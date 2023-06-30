@@ -5,16 +5,24 @@
       "id": 1
     },
     {
-      "name": "Dewey Botsford",
-      "id": 2
-    },
-    {
       "name": "Shirley Baumbach",
       "id": 3
     },
     {
-      "name": "Dr. Abel Wisozk",
+      "name": "Mr. Vincent Wolf",
       "id": 4
+    },
+    {
+      "name": "Antoinette Thompson",
+      "id": 5
+    },
+    {
+      "name": "Dr. Kenneth Hodkiewicz",
+      "id": 6
+    },
+    {
+      "name": "Luis Jacobs",
+      "id": 7
     }
   ],
   "albums": [],
