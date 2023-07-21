@@ -1,3 +1,7 @@
 Section 25: [Appendix B] - Basics of Typescript:
     To see easy TS -> JS equivalent conversions:
         https://www.typescriptlang.org/play/
+
+    Typescript Compiler (ts-node tool to compile and execute in one click):
+        npm i -g typescript ts-node
+        tsc --help
