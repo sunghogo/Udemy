@@ -8,3 +8,9 @@ Section 25: [Appendix B] - Basics of Typescript:
 
     Axios Dependency:
         npm install axios@0.27.2
+
+    Fake JSON API:
+        https://jsonplaceholder.typicode.com
+    
+    Initialize package.json:
+        npm init -y
