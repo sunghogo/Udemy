@@ -1,0 +1,3 @@
+Section 25: [Appendix B] - Basics of Typescript:
+    To see easy TS -> JS equivalent conversions:
+        https://www.typescriptlang.org/play/
