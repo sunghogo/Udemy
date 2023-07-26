@@ -12,5 +12,11 @@ const myCar = carMakers.pop();
 // Prevent incompatible  values
 // carMakers.push(100);
 
-// Help with 'map'
+// Help with 'map', 'forEach', 'filter', 'reduce'
 carMakers.map((car: string): string => car.toUpperCase());
+
+// Flexible types
+const importantDates = [new Date(), '2030-10-10'];
+const importantDates2: (Date | string)[] = [];
+importantDates2.push('2030-10-10');
+importantDates2.push(new Date());
