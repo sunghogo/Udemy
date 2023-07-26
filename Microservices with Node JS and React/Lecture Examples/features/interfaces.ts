@@ -6,6 +6,10 @@ interface Vehicle {
   summary(): string;
 }
 
+interface Reportable {
+  summary(): string;
+}
+
 const oldCivic = {
   name: 'civic',
   // year: 2000,
@@ -35,5 +39,10 @@ const printVehicle2 = (vehicle: Vehicle): void => {
   console.log(vehicle.summary());
 };
 
+const printSummary = (item: Reportable): void => {
+  console.log(item.summary());
+};
+
 // printVehicle(oldCivic);
-printVehicle2(oldCivic);
+// printVehicle2(oldCivic);
+printSummary(oldCivic);
