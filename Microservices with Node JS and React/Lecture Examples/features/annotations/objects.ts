@@ -10,8 +10,8 @@ const profile = {
   },
 };
 
-// can ignore name error
-const { age, name }: { age: number; name: string } = profile;
+// can ignore name error or change variable name from name to nameObj to avoid top-level variable name duplication
+const { age, name: nameObj }: { age: number; name: string } = profile;
 
 const {
   coords: { lat, lng },
