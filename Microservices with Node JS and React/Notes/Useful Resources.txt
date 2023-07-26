@@ -12,5 +12,10 @@ Section 25: [Appendix B] - Basics of Typescript:
     Fake JSON API:
         https://jsonplaceholder.typicode.com
     
-    Initialize package.json:
+    Initialize package.json (without installing any modules):
         npm init -y
+
+    Install Parcel bundler:
+        npm install -g parcel-bundler
+        OR 
+        npx parcel index.html
