@@ -1,0 +1,5 @@
+.NET Documentation:
+https://learn.microsoft.com/en-us/dotnet/.NET Documentation
+
+Other Useful Resources:
+https://tutorials.eu/50-interview-questions-for-your-csharp-interview/
