@@ -1,0 +1,15 @@
+C:\Users\Daniel\Desktop\Udemy\Complete C# Masterclass\HelloWorldNoTopLevel\HelloWorldNoTopLevel\bin\Debug\net6.0\HelloWorldNoTopLevel.exe
+C:\Users\Daniel\Desktop\Udemy\Complete C# Masterclass\HelloWorldNoTopLevel\HelloWorldNoTopLevel\bin\Debug\net6.0\HelloWorldNoTopLevel.deps.json
+C:\Users\Daniel\Desktop\Udemy\Complete C# Masterclass\HelloWorldNoTopLevel\HelloWorldNoTopLevel\bin\Debug\net6.0\HelloWorldNoTopLevel.runtimeconfig.json
+C:\Users\Daniel\Desktop\Udemy\Complete C# Masterclass\HelloWorldNoTopLevel\HelloWorldNoTopLevel\bin\Debug\net6.0\HelloWorldNoTopLevel.dll
+C:\Users\Daniel\Desktop\Udemy\Complete C# Masterclass\HelloWorldNoTopLevel\HelloWorldNoTopLevel\bin\Debug\net6.0\HelloWorldNoTopLevel.pdb
+C:\Users\Daniel\Desktop\Udemy\Complete C# Masterclass\HelloWorldNoTopLevel\HelloWorldNoTopLevel\obj\Debug\net6.0\HelloWorldNoTopLevel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Daniel\Desktop\Udemy\Complete C# Masterclass\HelloWorldNoTopLevel\HelloWorldNoTopLevel\obj\Debug\net6.0\HelloWorldNoTopLevel.AssemblyInfoInputs.cache
+C:\Users\Daniel\Desktop\Udemy\Complete C# Masterclass\HelloWorldNoTopLevel\HelloWorldNoTopLevel\obj\Debug\net6.0\HelloWorldNoTopLevel.AssemblyInfo.cs
+C:\Users\Daniel\Desktop\Udemy\Complete C# Masterclass\HelloWorldNoTopLevel\HelloWorldNoTopLevel\obj\Debug\net6.0\HelloWorldNoTopLevel.csproj.CoreCompileInputs.cache
+C:\Users\Daniel\Desktop\Udemy\Complete C# Masterclass\HelloWorldNoTopLevel\HelloWorldNoTopLevel\obj\Debug\net6.0\HelloWorldNoTopLevel.sourcelink.json
+C:\Users\Daniel\Desktop\Udemy\Complete C# Masterclass\HelloWorldNoTopLevel\HelloWorldNoTopLevel\obj\Debug\net6.0\HelloWorldNoTopLevel.dll
+C:\Users\Daniel\Desktop\Udemy\Complete C# Masterclass\HelloWorldNoTopLevel\HelloWorldNoTopLevel\obj\Debug\net6.0\refint\HelloWorldNoTopLevel.dll
+C:\Users\Daniel\Desktop\Udemy\Complete C# Masterclass\HelloWorldNoTopLevel\HelloWorldNoTopLevel\obj\Debug\net6.0\HelloWorldNoTopLevel.pdb
+C:\Users\Daniel\Desktop\Udemy\Complete C# Masterclass\HelloWorldNoTopLevel\HelloWorldNoTopLevel\obj\Debug\net6.0\HelloWorldNoTopLevel.genruntimeconfig.cache
+C:\Users\Daniel\Desktop\Udemy\Complete C# Masterclass\HelloWorldNoTopLevel\HelloWorldNoTopLevel\obj\Debug\net6.0\ref\HelloWorldNoTopLevel.dll
