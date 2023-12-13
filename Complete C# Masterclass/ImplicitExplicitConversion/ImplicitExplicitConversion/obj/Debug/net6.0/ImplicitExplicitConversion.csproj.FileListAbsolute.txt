@@ -1,0 +1,15 @@
+C:\Users\Daniel\Desktop\Udemy\Complete C# Masterclass\ImplicitExplicitConversion\ImplicitExplicitConversion\bin\Debug\net6.0\ImplicitExplicitConversion.exe
+C:\Users\Daniel\Desktop\Udemy\Complete C# Masterclass\ImplicitExplicitConversion\ImplicitExplicitConversion\bin\Debug\net6.0\ImplicitExplicitConversion.deps.json
+C:\Users\Daniel\Desktop\Udemy\Complete C# Masterclass\ImplicitExplicitConversion\ImplicitExplicitConversion\bin\Debug\net6.0\ImplicitExplicitConversion.runtimeconfig.json
+C:\Users\Daniel\Desktop\Udemy\Complete C# Masterclass\ImplicitExplicitConversion\ImplicitExplicitConversion\bin\Debug\net6.0\ImplicitExplicitConversion.dll
+C:\Users\Daniel\Desktop\Udemy\Complete C# Masterclass\ImplicitExplicitConversion\ImplicitExplicitConversion\bin\Debug\net6.0\ImplicitExplicitConversion.pdb
+C:\Users\Daniel\Desktop\Udemy\Complete C# Masterclass\ImplicitExplicitConversion\ImplicitExplicitConversion\obj\Debug\net6.0\ImplicitExplicitConversion.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Daniel\Desktop\Udemy\Complete C# Masterclass\ImplicitExplicitConversion\ImplicitExplicitConversion\obj\Debug\net6.0\ImplicitExplicitConversion.AssemblyInfoInputs.cache
+C:\Users\Daniel\Desktop\Udemy\Complete C# Masterclass\ImplicitExplicitConversion\ImplicitExplicitConversion\obj\Debug\net6.0\ImplicitExplicitConversion.AssemblyInfo.cs
+C:\Users\Daniel\Desktop\Udemy\Complete C# Masterclass\ImplicitExplicitConversion\ImplicitExplicitConversion\obj\Debug\net6.0\ImplicitExplicitConversion.csproj.CoreCompileInputs.cache
+C:\Users\Daniel\Desktop\Udemy\Complete C# Masterclass\ImplicitExplicitConversion\ImplicitExplicitConversion\obj\Debug\net6.0\ImplicitExplicitConversion.sourcelink.json
+C:\Users\Daniel\Desktop\Udemy\Complete C# Masterclass\ImplicitExplicitConversion\ImplicitExplicitConversion\obj\Debug\net6.0\ImplicitExplicitConversion.dll
+C:\Users\Daniel\Desktop\Udemy\Complete C# Masterclass\ImplicitExplicitConversion\ImplicitExplicitConversion\obj\Debug\net6.0\refint\ImplicitExplicitConversion.dll
+C:\Users\Daniel\Desktop\Udemy\Complete C# Masterclass\ImplicitExplicitConversion\ImplicitExplicitConversion\obj\Debug\net6.0\ImplicitExplicitConversion.pdb
+C:\Users\Daniel\Desktop\Udemy\Complete C# Masterclass\ImplicitExplicitConversion\ImplicitExplicitConversion\obj\Debug\net6.0\ImplicitExplicitConversion.genruntimeconfig.cache
+C:\Users\Daniel\Desktop\Udemy\Complete C# Masterclass\ImplicitExplicitConversion\ImplicitExplicitConversion\obj\Debug\net6.0\ref\ImplicitExplicitConversion.dll
