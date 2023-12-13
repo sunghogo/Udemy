@@ -77,6 +77,23 @@ namespace DataTypes
             //int dIDivInt = d1 / num1; // error
             Console.WriteLine("d1/num1 is " + dIDiv);
 
+            // declare and initialize string
+            // class is 'String', but coding standard is to use lowercase to declare string type
+            string myName = "Daniel";
+
+            // string concatenation
+            string message = "My name is " + myName;
+
+            // String class methods
+            string capsMessage = message.ToUpper();
+            string lowerMessage = message.ToLower();
+
+            // string objects are immutable on heap so resassigning a string variable just changes the pointer to the newly created string object
+            message = message.ToUpper();
+
+            Console.WriteLine(lowerMessage);
+            Console.WriteLine(message);
+
 
             Console.Read();
         }
