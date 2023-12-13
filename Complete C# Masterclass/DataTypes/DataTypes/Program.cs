@@ -102,6 +102,10 @@ namespace DataTypes
             // includes datatypes/objects such as string, class, Array, etc.
             // copying this reference will just point to the same object in memory
 
+            /// <summary>
+            /// This is a way to add comments onto hovered methods/classes
+            /// </summary>
+
             Console.Read();
         }
     }
