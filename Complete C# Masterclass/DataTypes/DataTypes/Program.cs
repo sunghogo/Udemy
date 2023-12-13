@@ -94,6 +94,13 @@ namespace DataTypes
             Console.WriteLine(lowerMessage);
             Console.WriteLine(message);
 
+            // value type store actual data directly on the stack (unless part of reference type in heap)
+            // includes datatypes like int, float, long, double, char, bool, decimal, struct, enum
+            // nullable values available using '?': int?, double?, etc.
+
+            // reference type store memory location of actual data
+            // includes datatypes/objects such as string, class, Array, etc.
+            // copying this reference will just point to the same object in memory
 
             Console.Read();
         }
