@@ -12,7 +12,7 @@ int main() {
     // Best practice to declare variables closest to where they are first used
 
     // Local vs global variables
-    // int age {18};
+    // int age {18}; // local variable usable only within main()
 
     cout << "Enter the width of the room: ";
     int roomWidth {0};
