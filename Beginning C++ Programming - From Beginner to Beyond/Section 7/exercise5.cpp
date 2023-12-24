@@ -1,6 +1,15 @@
 #include <vector>
 using namespace std;
 
+/*
+Declaring, Initializing and Accessing an Array
+Declare an array of 10  integers named arr  and initialize the array so that all 10 integers are 0 .
+
+Then assign 100  to the first element of the array and 1000  to the last element of the array.
+
+You can find my solution by clicking on the solution.txt file on the left pane. But please make sure you give it a go yourself first, and only check the solution if you really get stuck.
+*/
+
 vector<int> use_array() {
     //----DO NOT MODIFY THE CODE ABOVE THIS LINE----
     //----WRITE YOUR CODE BELOW THIS LINE----
