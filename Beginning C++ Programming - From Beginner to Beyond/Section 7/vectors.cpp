@@ -14,7 +14,7 @@ using namespace std;
 
     Vector Methods:
         .at(index) // does bounds checking
-        .push_back(appended_element) // automatically allocates required space
+        .push_back(appended_element) // automatically allocates required space ... also for primitive types (vectors), we are creating copies, not references
         .size() // gives size of vector
 */
 
