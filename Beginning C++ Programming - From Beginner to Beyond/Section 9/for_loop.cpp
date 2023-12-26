@@ -3,7 +3,11 @@
 using namespace std;
 
 /*
-    For Loop:
+    for (initialization; condition; increment) {
+        statement;
+    }
+
+    for Loop:
         Initialization: initialize int i {0} or assign int i = 0
         Condition: use < and >, or <= and >=
         Increment: ++i, i++ is the same
