@@ -1,5 +1,5 @@
 C/C++ Configurations:
-    CTRL + SHIFT + P
+    CTRL + SHIFT + P ->
     C/C++: Edit Configurations (UI)
         Compiler path:
             C:\...\mingw64\bin\g++.exe
@@ -16,3 +16,38 @@ Configure Default Build Tasks:
             "-std=c++20",
             "${fileDirname}\\*.cpp",
     Now you can compile all .cpp files in a folder and build .exe using Terminal -> Build Task
+
+Debugging:
+    Run -> Add Configuration... ->
+    C++ (GDB/LLDB) -> g++.exe Build and debug active file
+    This will start debugger, as well as create .vscode\launch.json:
+        {
+            // Use IntelliSense to learn about possible attributes.
+            // Hover to view descriptions of existing attributes.
+            // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+            "version": "0.2.0",
+            "configurations": [
+                    {
+                    "name": "g++ - Build and debug active file",
+                    "type": "cppdbg",
+                    "request": "launch",
+                    "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                    "args": [],
+                    "stopAtEntry": false,
+                    "cwd": "${fileDirname}",
+                    "environment": [],
+                    "externalConsole": false,
+                    "MIMode": "gdb",
+                    "miDebuggerPath": "C:\\msys64\\ucrt64\\bin\\gdb.exe",
+                    "setupCommands": [
+                        {
+                        "description": "Enable pretty-printing for gdb",
+                        "text": "-enable-pretty-printing",
+                        "ignoreFailures": true
+                        }
+                    ],
+                    "preLaunchTask": "C/C++: g++.exe build active file"
+                    }
+                ]
+            }
+    Select .cpp file -> Run -> Start Debugging
