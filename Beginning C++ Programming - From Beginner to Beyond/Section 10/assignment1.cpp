@@ -95,6 +95,15 @@ How did you handle displaying the leading spaces in each row of the pyramid?
 Now that you completed the assignment, how might approach the problem differently if you had to solve it again?
 */
 
+/*
+Answers:
+1. I used nested for loops. The outer loop iterates through each character in the array, and uses the i variable to calculate the pyramid level, and the number of spaces. The inner loops first iterate from the start to the current character, then back to start, requiring the use of an iteration variable to specify the indices.
+
+2. The leading/ending spaces can be calculated for each level by subtracting the number of characters from the maximum number of characters at the (bottom level. The number of characters at each level for L >= 1 is (2L - 1). Since this number will always be even, you can divide (2L - 1) by 2 to calculate the number of leading spaces.
+
+3. None as calculating the number of spaces upfront is more efficient then iteratively adding the spaces.
+*/
+
 #include <iostream>
 #include <string>
 
