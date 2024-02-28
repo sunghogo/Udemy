@@ -21,6 +21,7 @@ Debugging:
     Run -> Add Configuration... ->
     C++ (GDB/LLDB) -> g++.exe Build and debug active file
     This will start debugger, as well as create .vscode\launch.json:
+        WINDOWS:
         {
             // Use IntelliSense to learn about possible attributes.
             // Hover to view descriptions of existing attributes.
@@ -38,7 +39,7 @@ Debugging:
                     "environment": [],
                     "externalConsole": false,
                     "MIMode": "gdb",
-                    "miDebuggerPath": "C:\\msys64\\ucrt64\\bin\\gdb.exe",
+                    "miDebuggerPath": "C:\\mingw64\\bin\\gdb.exe",
                     "setupCommands": [
                         {
                         "description": "Enable pretty-printing for gdb",
@@ -50,4 +51,36 @@ Debugging:
                     }
                 ]
             }
+
+            LINUX:
+            {
+                // Use IntelliSense to learn about possible attributes.
+                // Hover to view descriptions of existing attributes.
+                // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+                "version": "0.2.0",
+                "configurations": [
+                {
+                    "name": "g++ - Build and debug active file",
+                    "type": "cppdbg",
+                    "request": "launch",
+                    "program": "${fileDirname}/${fileBasenameNoExtension}",
+                    "args": [],
+                    "stopAtEntry": false,
+                    "cwd": "${fileDirname}",
+                    "environment": [],
+                    "externalConsole": false,
+                    "MIMode": "gdb",
+                    "miDebuggerPath": "/usr/bin/gdb",
+                    "setupCommands": [
+                    {
+                        "description": "Enable pretty-printing for gdb",
+                        "text": "-enable-pretty-printing",
+                        "ignoreFailures": true
+                    }
+                    ],
+                    "preLaunchTask": "C/C++: g++ build active file"
+                }
+                ]
+            }
+            
     Select .cpp file -> Run -> Start Debugging
