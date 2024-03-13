@@ -1,6 +1,6 @@
 [submodule "GitHub Actions - The Complete Guide"]
 	path = GitHub Actions - The Complete Guide
 	url = https://github.com/sunghogo/-GitHub-Actions---The-Complete-Guide.git
-[submodule "Design & Develop Video Games. Learn C# in Unity Engine. Code Your first 3D Unity games for web, Mac & PC"]
-	path = "Design & Develop Video Games. Learn C# in Unity Engine. Code Your first 3D Unity games for web, Mac & PC"
-	url = git@github.com:sunghogo/Design-Develop-Video-Games.-Learn-C-in-Unity-Engine.-Code-Your-first-3D-Unity-games-for-web-Mac-PC.git
+[submodule "GameDevtv Unity C#"]
+	path = "GameDevtv Unity C#"
+	url = git@github.com:sunghogo/GameDevtv-Unity-CSharp.git
