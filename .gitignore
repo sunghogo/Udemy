@@ -5,3 +5,4 @@ theory-lectures-v2-SMALLER.pdf
 .vs/
 *.exe
 .mono/
+*.sh
