@@ -4,6 +4,6 @@
 [submodule "GameDevtv Unity C#"]
 	path = "GameDevtv Unity C#"
 	url = git@github.com:sunghogo/GameDevtv-Unity-CSharp.git
-[submodule "C-Sharp-Basics-for-Beginners"]
-	path = C-Sharp-Basics-for-Beginners
+[submodule "C# Basics for Beginners"]
+	path = "C# Basics for Beginners"
 	url = git@github.com:sunghogo/C-Sharp-Basics-for-Beginners.git
