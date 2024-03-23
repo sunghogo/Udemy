@@ -7,3 +7,6 @@
 [submodule "C# Basics for Beginners"]
 	path = "C# Basics for Beginners"
 	url = git@github.com:sunghogo/C-Sharp-Basics-for-Beginners.git
+[submodule "C# Intermediate Classes Interfaces and OOP"]
+	path = "C# Intermediate Classes Interfaces and OOP"
+	url = https://github.com/sunghogo/C-Sharp-Intermediate-Classes-Interfaces-and-OOP.git
