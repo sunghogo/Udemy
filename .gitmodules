@@ -10,3 +10,6 @@
 [submodule "C# Intermediate Classes Interfaces and OOP"]
 	path = "C# Intermediate Classes Interfaces and OOP"
 	url = https://github.com/sunghogo/C-Sharp-Intermediate-Classes-Interfaces-and-OOP.git
+[submodule "C# Advanced Topics Prepare for Technical Interviews"]
+	path = "C# Advanced Topics Prepare for Technical Interviews"
+	url = git@github.com:sunghogo/C-Sharp-Advanced-Topics-Prepare-for-Technical-Interviews.git
