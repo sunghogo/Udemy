@@ -10,3 +10,6 @@
 [submodule "C# Advanced Topics Prepare for Technical Interviews"]
 	path = "C# Advanced Topics Prepare for Technical Interviews"
 	url = git@github.com:sunghogo/C-Sharp-Advanced-Topics-Prepare-for-Technical-Interviews.git
+[submodule "GameDevTV Unity"]
+	path = GameDevTV Unity
+	url = git@github.com:sunghogo/GameDevTV-Unity.git
