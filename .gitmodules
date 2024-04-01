@@ -3,13 +3,13 @@
 	url = https://github.com/sunghogo/-GitHub-Actions---The-Complete-Guide.git
 [submodule "C# Basics for Beginners"]
 	path = "C# Basics for Beginners"
-	url = git@github.com:sunghogo/C-Sharp-Basics-for-Beginners.git
+	url = https://github.com/sunghogo/C-Sharp-Basics-for-Beginners.git
 [submodule "C# Intermediate Classes Interfaces and OOP"]
 	path = "C# Intermediate Classes Interfaces and OOP"
 	url = https://github.com/sunghogo/C-Sharp-Intermediate-Classes-Interfaces-and-OOP.git
 [submodule "C# Advanced Topics Prepare for Technical Interviews"]
 	path = "C# Advanced Topics Prepare for Technical Interviews"
-	url = git@github.com:sunghogo/C-Sharp-Advanced-Topics-Prepare-for-Technical-Interviews.git
+	url = https://github.com/sunghogo/C-Sharp-Advanced-Topics-Prepare-for-Technical-Interviews.git
 [submodule "GameDevTV Unity"]
 	path = GameDevTV Unity
-	url = git@github.com:sunghogo/GameDevTV-Unity.git
+	url = https://github.com/sunghogo/GameDevTV-Unity.git
