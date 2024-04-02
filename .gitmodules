@@ -13,3 +13,6 @@
 [submodule "GameDevTV Unity"]
 	path = GameDevTV Unity
 	url = https://github.com/sunghogo/GameDevTV-Unity.git
+[submodule "Shader Development from Scratch for Unity with Cg"]
+	path = Shader Development from Scratch for Unity with Cg
+	url = https://github.com/sunghogo/Shader-Development-from-Scratch-for-Unity-with-Cg.git
