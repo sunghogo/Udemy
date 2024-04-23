@@ -16,3 +16,6 @@
 [submodule "Shader Development from Scratch for Unity with Cg"]
 	path = Shader Development from Scratch for Unity with Cg
 	url = https://github.com/sunghogo/Shader-Development-from-Scratch-for-Unity-with-Cg.git
+[submodule "Complete Blender Creator Learn 3D Modelling for Beginners"]
+	path = Complete Blender Creator Learn 3D Modelling for Beginners
+	url = https://github.com/sunghogo/Complete-Blender-Creator-Learn-3D-Modelling-for-Beginners.git
