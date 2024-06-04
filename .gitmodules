@@ -22,8 +22,8 @@
 [submodule "The Complete Javascript Course 2023"]
 	path = The Complete Javascript Course 2023
 	url = https://github.com/sunghogo/The-Complete-Javascript-Course-2023.git
-[submodule "Modern-React-with-Redux-2023-Update"]
-	path = Modern-React-with-Redux-2023-Update
+[submodule "Modern React with Redux 2023 Update"]
+	path = Modern React with Redux 2023 Update
 	url = https://github.com/sunghogo/Modern-React-with-Redux-2023-Update.git
 [submodule "Beginning-Cpp-Programming"]
 	path = Beginning-Cpp-Programming
