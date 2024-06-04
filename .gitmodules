@@ -19,3 +19,6 @@
 [submodule "Complete Blender Creator Learn 3D Modelling for Beginners"]
 	path = Complete Blender Creator Learn 3D Modelling for Beginners
 	url = https://github.com/sunghogo/Complete-Blender-Creator-Learn-3D-Modelling-for-Beginners.git
+[submodule "The Complete Javascript Course 2023"]
+	path = The Complete Javascript Course 2023
+	url = https://github.com/sunghogo/The-Complete-Javascript-Course-2023.git
