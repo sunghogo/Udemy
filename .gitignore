@@ -1,3 +1,4 @@
 .vscode/
+.mono/
 .vs/
 *.sh
