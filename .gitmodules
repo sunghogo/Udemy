@@ -31,3 +31,6 @@
 [submodule "Computer Graphics with Modern OpenGL and C++"]
 	path = Computer Graphics with Modern OpenGL and C++
 	url = https://github.com/sunghogo/Computer-Graphics-with-Modern-OpenGL-and-Cpp.git
+[submodule "Modern React with Redux 2024 Update"]
+	path = Modern React with Redux 2024 Update
+	url = https://github.com/sunghogo/Modern-React-with-Redux-2024-Update.git
