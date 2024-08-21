@@ -34,3 +34,6 @@
 [submodule "Modern React with Redux 2024 Update"]
 	path = Modern React with Redux 2024 Update
 	url = https://github.com/sunghogo/Modern-React-with-Redux-2024-Update.git
+[submodule "The Coding Interview Bootcamp Algorithms Data Structures"]
+	path = The Coding Interview Bootcamp Algorithms Data Structures
+	url = https://github.com/sunghogo/The-Coding-Interview-Bootcamp-Algorithms-Data-Structures.git
