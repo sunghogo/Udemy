@@ -40,3 +40,6 @@
 [submodule "Complete Linear Algebra Theory and Implementation"]
 	path = Complete Linear Algebra Theory and Implementation
 	url = https://github.com/sunghogo/Complete-Linear-Algebra-Theory-and-Implementation.git
+[submodule "Master Calculus 1 Using Python"]
+	path = Master Calculus 1 Using Python
+	url = https://github.com/sunghogo/Master-Calculus-1-Using-Python.git
