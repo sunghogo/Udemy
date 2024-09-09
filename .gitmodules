@@ -37,3 +37,6 @@
 [submodule "The Coding Interview Bootcamp Algorithms Data Structures"]
 	path = The Coding Interview Bootcamp Algorithms Data Structures
 	url = https://github.com/sunghogo/The-Coding-Interview-Bootcamp-Algorithms-Data-Structures.git
+[submodule "Complete Linear Algebra Theory and Implementation"]
+	path = Complete Linear Algebra Theory and Implementation
+	url = https://github.com/sunghogo/Complete-Linear-Algebra-Theory-and-Implementation.git
