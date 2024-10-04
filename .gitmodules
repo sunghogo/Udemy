@@ -43,3 +43,6 @@
 [submodule "Master Calculus 1 Using Python"]
 	path = Master Calculus 1 Using Python
 	url = https://github.com/sunghogo/Master-Calculus-1-Using-Python.git
+[submodule "C++ Data Structures and Algorithms"]
+	path = C++ Data Structures and Algorithms
+	url = https://github.com/sunghogo/Cpp-Data-Structures-and-Algorithms.git
