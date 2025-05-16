@@ -46,3 +46,9 @@
 [submodule "C++ Data Structures and Algorithms"]
 	path = C++ Data Structures and Algorithms
 	url = https://github.com/sunghogo/Cpp-Data-Structures-and-Algorithms.git
+[submodule "Complete Blender Megacourse"]
+	path = Complete Blender Megacourse
+	url = https://github.com/sunghogo/Complete-Blender-Megacourse.git
+[submodule "Modern Computer Graphics With Modern OpenGL"]
+	path = Modern Computer Graphics With Modern OpenGL
+	url = https://github.com/sunghogo/Computer-Graphics-with-Modern-OpenGL
